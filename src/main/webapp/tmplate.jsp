@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
-<%@ include file="/WEB-INF/common.jspf" %>
+<%-- <%@ include file="/WEB-INF/common.jspf"%> --%>
 
 <!DOCTYPE>
 
@@ -13,22 +13,17 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-<script type="text/javascript">
-
-var myApp = angular.module('myApp',["ngAnimate","ngSanitize"]);
-
-myApp.controller('myController',function($scope){
-	
-});
-
-</script>
-
 <title>template.jsp</title>
+
+</style>
 
 </head>
 
-<body data-ng-controller="myController">
-	
+<body>
+
+
+
+
 </body>
 
 </html>
