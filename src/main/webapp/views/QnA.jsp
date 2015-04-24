@@ -1,23 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="/WEB-INF/common.jspf" %>
+<%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 
 <!DOCTYPE>
 
-<html data-ng-app="myApp">
+<html data-ng-app="myApp2">
 
 <head>
 
 <meta charset="UTF-8">
 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
 <script type="text/javascript">
 
-var myApp = angular.module('myApp',["ngAnimate","ngSanitize"]);
+var myApp2 = angular.module('myApp2',["ngAnimate","ngSanitize"]);
 
-myApp.controller('myController',function($scope,$http){	
+myApp2.controller('myController2',function($scope,$http){	
 	
 	$http.get("http://www.w3schools.com/angular/customers.php")
 	 .success(function (response) {$scope.names = response.records;});
@@ -57,7 +62,7 @@ myApp.controller('myController',function($scope,$http){
 
 </head>
 
-<body data-ng-controller="myController">
+<body data-ng-controller="myController2">
 	<header class="container">
 		<h1 align="center">문의 게시판</h1>
 		
