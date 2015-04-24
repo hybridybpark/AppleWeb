@@ -4,8 +4,13 @@
 <!DOCTYPE>
 <html>
 <head>
+<<<<<<< HEAD
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>로그인</title>
+=======
 <meta charset="UTF-8">
 <title>Insert title here</title>
+>>>>>>> 72b71856a91b43d0f6d721c5e145dd885bdb2c28
 </head>
 <body>
 	
