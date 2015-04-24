@@ -41,41 +41,28 @@ myApp.controller('myController',function($scope,$http){
     		$scope.myVar = -1;		
     	}
     };
-
 });
-	
-// $(document).ready(function(){
-// 	var students_score = ["#p1","#p2","#p3","#p4","#p5"];
-// 	for(var i=0;i<5;i++){		
-// 		$(students_score[i]).mousedown(function(){
-// 			alert(students_score[i]+"");
-// 	        $(students_score[i]).attr("class","active");
-// 	        $(students_score[i]).siblings().attr("class","");
-// 	    });
-// 	};
-// });
-
 $(document).ready(function(){
-		$("#p1").mousedown(function(){
-	        $("#p1").attr("class","active");
-	        $("#p1").siblings().attr("class","");
-	    });
-		$("#p2").mousedown(function(){
-	        $("#p2").attr("class","active");
-	        $("#p2").siblings().attr("class","");
-	    });
-		$("#p3").mousedown(function(){
-	        $("#p3").attr("class","active");
-	        $("#p3").siblings().attr("class","");
-	    });
-		$("#p4").mousedown(function(){
-	        $("#p4").attr("class","active");
-	        $("#p4").siblings().attr("class","");
-	    });
-		$("#p5").mousedown(function(){
-	        $("#p5").attr("class","active");
-	        $("#p5").siblings().attr("class","");
-	    });
+	$("#p1").mousedown(function(){
+        $("#p1").attr("class","active");
+        $("#p1").siblings().attr("class","");
+    });
+	$("#p2").mousedown(function(){
+        $("#p2").attr("class","active");
+        $("#p2").siblings().attr("class","");
+    });
+	$("#p3").mousedown(function(){
+        $("#p3").attr("class","active");
+        $("#p3").siblings().attr("class","");
+    });
+	$("#p4").mousedown(function(){
+        $("#p4").attr("class","active");
+        $("#p4").siblings().attr("class","");
+    });
+	$("#p5").mousedown(function(){
+        $("#p5").attr("class","active");
+        $("#p5").siblings().attr("class","");
+    });
 });
 
 
@@ -93,37 +80,36 @@ $(document).ready(function(){
   	 
 
 </style>
-<title>AdminPage.jsp</title>
+<title>NeighborPage.jsp</title>
 
 </head>
 
 <body data-ng-controller="myController">
 	<header class="container">
-		<h1 align="center">가입 페이지</h1>
+		<h1 align="center">입점 페이지</h1>
 		<ul class="nav navbar-nav navbar-right">
-	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
 	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
-	      </ul>      
+	      </ul>
 	</header>
-	
-	<!-- 	Category -->
-	<section class="container">
-		<div class="navbar-header">
-	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">        
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <p>Category</p>
-	    </button>    
-	</div>
+		<!-- 	Category -->
+		<section class="container">
+			<div class="navbar-header">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">        
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <p>Category</p>
+			    </button>    
+			</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="nav nav-tabs nav-justified">
-			<li><a href="AdminPage.jsp">가입 요청</a></li>
-			<li><a href="NeighborPage.jsp">입점 요청</a></li>
-			<li><a href="MemberPage.jsp">회원목록</a></li>
-		</ul>
-	</div>
-	
+			<ul class="nav nav-tabs nav-justified">
+				<li><a href="AdminPage.jsp">가입 요청</a></li>
+				<li><a href="NeighborPage.jsp">입점 요청</a></li>
+				<li><a href="MemberPage.jsp">회원목록</a></li>
+			</ul>
+		</div>
+		
 		<!-- Table -->
 		<table style="width: 100%; border: 1px solid black;" class="table table-hover">
 			<thead>
