@@ -13,7 +13,7 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-<title>template.jsp</title>
+<title>ALL.jsp</title>
 
 
 
@@ -22,7 +22,14 @@
 <body>
 
 
-
+ALL.jsp
+<div class="row">
+			  <div class="col-xs-6 col-md-3" data-ng-repeat="x in shops">
+			    <div class="thumbnail">
+			      <img src="{{x.image}}" alt="..." data-ng-click="imageClick($index)">			     
+			    </div>
+			  </div>			 
+			</div>
 
 </body>
 
