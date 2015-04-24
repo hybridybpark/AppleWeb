@@ -122,22 +122,22 @@ myApp2.controller('myController2',function($scope,$http){
   
 <tbody>
 
-  <tr text-align="center">
-		<th>제목</th>
-		<td><input type="text" name="title" size="50"></td>
-	</tr>
-	<tr align="center" >
-		<th>내용</th>
-		<td>
-<!-- 		<div class="textarea" style="overflow:scroll; text-align:center; width:500px; height:150px; padding:10px; background-color:white;"> -->
-			<form role="form">
-			<div class="form-group">
-<!-- 			<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;"></textarea> -->
-			<textarea style=width: 300px; rows="8"></textarea>
-		</div>
-		</form>
-		</td>
-	</tr>
+	  <tr text-align="center">
+			<th>제목</th>
+			<td><input type="text" name="title" size="50"></td>
+		</tr>
+			<tr align="center" >
+				<th>내용</th>
+				<td>
+		<!-- 		<div class="textarea" style="overflow:scroll; text-align:center; width:500px; height:150px; padding:10px; background-color:white;"> -->
+					<form role="form">
+					<div class="form-group">
+		<!-- 			<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;"></textarea> -->
+					<textarea style=width: 300px; rows="8"></textarea>
+					</div>
+				</form>
+			</td>
+		</tr>
 	<tr>
 		<th scope="row">비밀번호</th>
 	  	 <td><input id="password" name="password" fw-filter="isFill" fw-label="비밀번호" fw-msg="" value="" type="password"  /></td>
@@ -150,31 +150,32 @@ myApp2.controller('myController2',function($scope,$http){
 	<tr class="">
 		<th scope="row">자동발송금지<br/>보안문자</th>
 	       <td>
-	         <img src="/AppleWeb/views/untitled.png"  />                        <p><input id="captcha" name="captcha" fw-filter="isFill" fw-label="인증키" fw-msg="" class="inputTypeText" value="" type="text"  /> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
+	         <img src="/AppleWeb/image/untitled.png"  />                        
+	         <p><input id="captcha" name="captcha" fw-filter="isFill" fw-label="인증키" fw-msg="" class="inputTypeText" value="" type="text"  /> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
 	       </td>
 	    </tr>
 	<tr class="agree ">
 		<th scope="row">개인정보<br/>보호정책</th>
 	       <td>
-<textarea id="privacy_agreement" name="privacy_agreement" fw-filter="" fw-label="개인정보보호정책" fw-msg="" >■ 개인정보의 수집·이용 목적
+<textarea id="privacy_agreement" name="privacy_agreement" fw-filter="" fw-label="개인정보보호정책" fw-msg="" >
+	■ 개인정보의 수집·이용 목적
 	서비스 제공 및 계약의 이행, 구매 및 대금결제, 물품배송 또는 청구지 발송, 회원관리 등을 위한 목적 
 	■ 수집하려는 개인정보의 항목이름, 주소, 연락처, 이메일 등 
 	■ 개인정보의 보유 및 이용 기간
 	회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외없이 해당정보를 파기합니다.</textarea><br/>
-	개인정보취급방침에 대하여 동의하십니까? <input id="privacy_agreement_radio0" name="privacy_agreement_radio" fw-filter="isFill" fw-label="개인정보보호정책" fw-msg="" value="T" type="radio"  /><label for="privacy_agreement_radio0" >동의함</label>
-<input id="privacy_agreement_radio1" name="privacy_agreement_radio" fw-filter="isFill" fw-label="개인정보보호정책" fw-msg="" value="F" type="radio" checked="checked"  /><label for="privacy_agreement_radio1" >동의안함</label>                    </td>
-	  </tr>
-</tbody>
-	<tr align="center">
-	   	<td colspan="2"> <br>
-			<input type="submit" value="글쓰기">
-			<input type="reset" value="취소">
-		</td>
- 	 </tr>
-</table>
-	</section>
-	
-	
+	개인정보취급방침에 대하여 동의하십니까? 
+			<input id="privacy_agreement_radio0" name="privacy_agreement_radio" fw-filter="isFill" fw-label="개인정보보호정책" fw-msg="" value="T" type="radio"  /><label for="privacy_agreement_radio0" >동의함</label>
+			<input id="privacy_agreement_radio1" name="privacy_agreement_radio" fw-filter="isFill" fw-label="개인정보보호정책" fw-msg="" value="F" type="radio" checked="checked"  /><label for="privacy_agreement_radio1" >동의안함</label>                    
+			</td>
+	 	</tr>
+	</tbody>
+		<tr align="center">
+	   		<td colspan="2"> <br>
+				<input type="submit" value="글쓰기">
+				<input type="reset" value="취소">
+			</td>
+ 	 	</tr>
+	</table>
+</section>
 </body>
-
 </html>
