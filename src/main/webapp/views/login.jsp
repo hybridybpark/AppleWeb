@@ -26,7 +26,12 @@ var myApp = angular.module('myApp',[]);
 
 myApp.controller('loginCtrl',function($scope,$http,$location){	
 	
-	//scope.$apply(function() { $location.path("/route"); });	
+	//scope.$apply(function() { $location.path("/route"); });
+	$scope.loginClick = function() {		
+		//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
+		window.localStorage.setItem("MEMBERID", $scope.num);
+		window.location="http://localhost:8080/AppleWeb/views/start.jsp";
+	};
 	$scope.cancelClick = function() {		
 		//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
 		window.location="http://localhost:8080/AppleWeb/views/start.jsp";
@@ -60,14 +65,14 @@ h1{
 		<div class="form-group">
 			<label class="col-sm-6 control-label">사업자번호:</label>
 			<div class="col-sm-3">
-				<input type="text" ng-model="num" placeholder="사업자번호">
+				<input type="text" data-ng-model="num" placeholder="사업자번호">
 			</div>
 		</div>
 		
 		<div class="form-group">
 			<label class="col-sm-6 control-label">비밀번호:</label>
 			<div class="col-sm-3">
-				<input type="password" ng-model="pwd" placeholder="비밀번호">
+				<input type="password" data-ng-model="pwd" placeholder="비밀번호">
 			</div>
 		</div>	
 		<div class="row">

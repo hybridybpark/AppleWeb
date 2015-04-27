@@ -3,6 +3,11 @@
 
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 
+<%
+	String memberId = (String)session.getAttribute("MEMBERID");
+	boolean login = memberId == null ? false : true;	
+%>
+
 <!DOCTYPE>
 
 <html data-ng-app="myApp">
@@ -23,6 +28,7 @@ var myApp = angular.module('myApp',[]);
 
 myApp.controller('startController',function($scope,$http,$location){	
 	$scope.url1 = 'http://placehold.it/320x180';
+	$scope.url2 = "ShopList.jsp";
 	$scope.shops = shops=[
 	{name:'shop1',image:$scope.url1},
 	{name:'shop2',image:$scope.url1},
@@ -36,9 +42,10 @@ myApp.controller('startController',function($scope,$http,$location){
 	
 	$scope.imageClick = function(index) {
 		alert(index+"");		
+		$scope.url2 = "ChainList.jsp";
 	};
 	
-	$scope.url2 = "ShopList.jsp";
+	
 	
 	$scope.tabs = tabs = [
 	{num:0,name:'ALL',type:'',address:'ALL.jsp'},
@@ -97,9 +104,13 @@ myApp.controller('startController',function($scope,$http,$location){
 body { padding-top: 70px; }
 #search 
 	{
-	width: 80%;
+	
 	border: 1px solid red;
+	size: 80%;
 	}
+.navbar .navbar-fixed-top{
+	background-color: white;
+}
 </style>
 <title>start.jsp</title>
 
@@ -107,27 +118,45 @@ body { padding-top: 70px; }
 
 <body data-ng-controller="startController">
 	<header class="container">
-	 <nav class="navbar navbar-fixed-top">
-	  <div class="container-fluid">
+	 <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="start.jsp">WebSiteName</a>
+	      <a class="navbar-brand" href="start.jsp">AppleProject</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">    		
-	      <form class="navbar-form navbar-left" role="search">
-	        <div class="form-group">
-	          <input id="search" type="text" class="form-control" placeholder="주소를 입력해주세요.">
-	        </div>
-	        <button type="submit" class="btn btn-default">찾기</button>
-      	</form>	      	
-		  <ul class="nav navbar-nav navbar-right">
+	      	      	
+		  	<ul class="nav navbar-nav navbar-right">
+		  	<%
+		  		if (login){//로그인
+		  	%>
+		  	<li><a href=""><span class="glyphicon glyphicon-user"></span> <%=memberId %>님 환영합니다.</a></li>
+		  	<li><a href="start.jsp" onclick="<%session.invalidate();%>"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
+		  	<%
+		  		}else{//비로그인
+		  	%>
 	        <li><a href="Join.jsp"><span class="glyphicon glyphicon-user"></span> 회원가입</a></li>
 	        <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
-	      </ul>      
+	        <%
+		  		}
+	        %>
+	      	</ul> 
+	      	<ul class="nav navbar-nav navbar-right">
+<!-- 		        <li><button type="submit" class="btn btn-default">찾기</button></li> -->
+      		</ul>
+	      	
+	      	<form class="navbar-form" role="search">
+	        <div class="form-group" style="display:inline;">
+          		<div class="input-group" style="display:table;">
+            		<span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
+           	 		<input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">            		
+          		</div>
+        	</div>	        
+      		</form>     
 	    </div>
 	  </div>
 	</nav>
@@ -153,12 +182,12 @@ body { padding-top: 70px; }
 	</section>
 	<footer>
 	<div>
-                <p class="text-center">
-                    <small><strong> Apple</strong></small><br>
-                    <small>대표 : Apple(주) ㆍ 주소 :  이대역 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br>
-                    <small>Copyrightⓒ All rights reserved.</small>
-                </p>
-            </div>
+         <p class="text-center">
+             <small><strong> Apple</strong></small><br>
+             <small>대표 : Apple(주) ㆍ 주소 :  이대역 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br>
+             <small>Copyrightⓒ All rights reserved.</small>
+         </p>
+     </div>
 	</footer>
 </body>
 
