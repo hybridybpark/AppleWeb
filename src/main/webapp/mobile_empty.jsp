@@ -13,23 +13,16 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-<title>ALL.jsp</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-
+<title>Mobile Empty</title>
 
 </head>
 
 <body>
 
-
-<h4>ALL.jsp </h4>
-<div class="row">
-			  <div class="col-xs-6 col-md-3" data-ng-repeat="x in shops">
-			    <div class="thumbnail">
-			      <img src="{{x.image}}" alt="..." data-ng-click="imageClick($index)">			     
-			    </div>
-			  </div>			 
-			</div>
 
 </body>
 

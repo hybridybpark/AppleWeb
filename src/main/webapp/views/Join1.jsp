@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<<<<<<< HEAD
+
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script
@@ -9,11 +9,11 @@
 
 
 <html>
-=======
+
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 <!DOCTYPE>
 <html data-ng-app="myApp">
->>>>>>> db7211c7cf89e2049b4fe34830149ee555e6e1ab
+
 
 <head>
 <meta charset="UTF-8">

@@ -47,6 +47,7 @@ myApp.controller('chainCtrl',function($scope,$http,$location){
 
 <body class="container" data-ng-controller="chainCtrl" style="border: 1px solid blue;">
 	<div class="header">
+		<br>
 		<img alt="StarBucks" src="http://placehold.it/800x150&text=StarBucks">
 	</div>
 	<h3>매장 찾기</h3>
@@ -59,7 +60,7 @@ myApp.controller('chainCtrl',function($scope,$http,$location){
             <div class="media-body">
                 <h4 class="media-heading">{{x.name}}</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>                
-                <a href="">상세정보 보기</a>
+                <a href="Menu.jsp">상세정보 보기</a>
             </div>
          </li>         
          </ul>
