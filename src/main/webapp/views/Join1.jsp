@@ -13,10 +13,6 @@
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 <!DOCTYPE>
 <html data-ng-app="myApp">
-<<<<<<< HEAD
-=======
-
->>>>>>> 767763621d039b34a2c9bf869e3be9588468900d
 
 <head>
 <meta charset="UTF-8">
