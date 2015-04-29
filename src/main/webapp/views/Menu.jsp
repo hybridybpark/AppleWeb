@@ -20,15 +20,17 @@
 	margin: 0px auto;
 	padding: 20px;
 	width: 940px;
+	overflow: auto;
 }
 
 #header {
 	padding: 20px;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 #content {
-	height:700px;
+	height:1100px;
 	width: 900px;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -62,16 +64,16 @@
 
 
 <body>
-
-	<div id="container">
-		<div id="header">
+<div id="header">
 			<h2>가게이름</h2>
 		</div>
+	<div id="container">
+		
 		<div id="content">
 			<h3>MENU-</h3>
 			<div class="box">
 				<div class="image">
-					<img src="http://placehold.it/200x100" />
+					<img src="/AppleWeb/image/jajang.jpg" />
 					<div class="text">
 						<p>라면</p>
 						<p>5000원</p>
