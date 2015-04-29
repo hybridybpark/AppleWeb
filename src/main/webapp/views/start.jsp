@@ -108,8 +108,9 @@ body { padding-top: 70px; }
 	border: 1px solid red;
 	size: 80%;
 	}
-.navbar .navbar-fixed-top{
+.navbar-default{
 	background-color: white;
+	
 }
 </style>
 <title>start.jsp</title>
