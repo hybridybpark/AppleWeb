@@ -43,7 +43,9 @@ myApp.controller('businessCtrl',function($scope,$http,$location){
 	<div>
 		<ul class="nav nav-tabs nav-justified">
 		  <li role="presentation"><a href="#">예약목록</a></li>
-		  <li role="presentation" class="active"><a href="#">상점목록</a></li>		  
+		  <li role="presentation" class="active"><a href="#">상점목록</a></li>
+		  <li role="presentation"><a href="#">상점등록</a></li>		  
+		  <li role="presentation"><a href="#">상점문의</a></li>	
 		</ul>
 	</div>
 	<br>
