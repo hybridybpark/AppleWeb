@@ -30,7 +30,7 @@ myApp.controller('loginCtrl',function($scope,$http,$location){
 	$scope.cancelClick = function() {		
 		//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
 		window.location="http://localhost:8080/AppleWeb/views/start.jsp";
-	};
+	};	
 });
 </script>
 <style type="text/css">

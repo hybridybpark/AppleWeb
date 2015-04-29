@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<<<<<<< HEAD
+
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script
@@ -9,11 +9,10 @@
 
 
 <html>
-=======
+
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 <!DOCTYPE>
 <html data-ng-app="myApp">
->>>>>>> db7211c7cf89e2049b4fe34830149ee555e6e1ab
 
 <head>
 <meta charset="UTF-8">
@@ -27,8 +26,17 @@
 
 <script type="text/javascript">
 var myApp = angular.module('myApp',[]);
-
-<<<<<<< HEAD
+myApp.controller('userCtrl',function($scope,$http,$location){	
+	
+	//scope.$apply(function() { $location.path("/route"); });	
+	$scope.cancelClick = function() {		
+		//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
+		window.location="http://localhost:8080/AppleWeb/views/start.jsp";
+	};
+});
+</script>
+<style>
+h1{
     text-align: center;
 }
 
@@ -116,16 +124,7 @@ var myApp = angular.module('myApp',[]);
                     <input type="tel" class="form-control onlyNumber" id="phoneNumber" data-rule-required="true" placeholder="- 없이 숫자만 입력하세요." maxlength="11">
                 </div>
             </div>
-            <div class="form-group">
-                <label for="inputPhoneNumber" class="col-lg-2 control-label">성별</label>
-                <div class="col-lg-10">
-                    <select class="form-control" id="gender">
-                        <option value="M">남</option>
-                        <option value="F">여</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
+             <div class="form-group">
                 <label for="inputEmailReceiveYn" class="col-lg-2 control-label">이메일 수신여부</label>
                 <div class="col-lg-10">
                     <label class="radio-inline">
@@ -150,8 +149,12 @@ var myApp = angular.module('myApp',[]);
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
                     <button type="submit" class="btn btn-default">가입 요청</button>
+                </div> 
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button id="cancelClick" type="submit" class="btn btn-default">취소</button>
                 </div>
             </div>
+            
         </form>
 			<hr/>
 			
@@ -163,73 +166,6 @@ var myApp = angular.module('myApp',[]);
                     <small>Copyrightⓒ All rights reserved.</small>
                 </p>
             </div>
-=======
-myApp.controller('userCtrl',function($scope,$http,$location){	
-	
-	//scope.$apply(function() { $location.path("/route"); });	
-	$scope.cancelClick = function() {		
-		//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
-		window.location="http://localhost:8080/AppleWeb/views/start.jsp";
-	};
-});
-</script>
-</head>
 
-<body data-ng-controller="userCtrl">
-<div class="container">
-<h1>신규 회원 가입</h1>
-
-<hr>
-
-<form class="form-horizontal" role="form">
-	<div class="form-group">
-		<label class="col-sm-2 control-label">사업자명 :</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" data-ng-model="bussinessName" placeholder="사업자명">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">사업자번호 :</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" data-ng-model="bussinessNumber" placeholder="사업자번호">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">연락처 :</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" data-ng-model="phoneNumber" placeholder="연락처">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">비밀번호 :</label>
-		<div class="col-sm-10">
-			<input type="password" class="form-control" data-ng-model="passw1" placeholder="비밀번호">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">비밀번호확인:</label>
-		<div class="col-sm-10">
-			<input type="password" class="form-control" data-ng-model="passw2" placeholder="비밀번호확인">
-		</div>
-	</div>
-	<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-    	<div class="btn-group">
-     	<button type="submit" class="btn btn-primary" data-ng-click="submitClick()">
-			<span class="glyphicon glyphicon-user"></span>가입 요청
-		</button>
-		<button type="button" class="btn btn-primary" data-ng-click="cancelClick()">
-			<span class="glyphicon glyphicon-user"></span> 취소
-		</button>		
-		</div>		
-    </div>
-  	</div>	
-</form>	
-		
-	
-<hr>
->>>>>>> db7211c7cf89e2049b4fe34830149ee555e6e1ab
-
-</div>
 </body>
 </html>
