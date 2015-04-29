@@ -103,15 +103,17 @@ myApp.controller('startController',function($scope,$http,$location){
 <style type="text/css">
 body { padding-top: 70px; }
 #search 
-	{
+	{	
 	
-	border: 1px solid red;
 	size: 80%;
 	}
-.navbar .navbar-fixed-top{
+.navbar-default{
 	background-color: white;
+	
 }
 </style>
+<link href="/AppleWeb/Frameworks/simple-sidebar.css" rel="stylesheet">
+
 <title>start.jsp</title>
 
 </head>
@@ -135,7 +137,7 @@ body { padding-top: 70px; }
 		  		if (login){//로그인
 		  	%>
 		  	<li><a href=""><span class="glyphicon glyphicon-user"></span> <%=memberId %>님 환영합니다.</a></li>
-		  	<li><a href="start.jsp" onclick="<%session.invalidate();%>"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
+		  	<li><a href="start.jsp" onclick="<%session.setAttribute("MEMBERID", "");%>"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
 		  	<%
 		  		}else{//비로그인
 		  	%>
@@ -160,16 +162,17 @@ body { padding-top: 70px; }
 	    </div>
 	  </div>
 	</nav>
-	</header>
+	</header>	
+	
 	<section class="container">
-	<div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">        
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <p>Category</p>
-    </button>    
-	</div>
+		<div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">        
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <p>Category</p>
+	    </button>    
+		</div>
 	
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav nav-tabs nav-justified">
