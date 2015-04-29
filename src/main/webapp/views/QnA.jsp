@@ -46,6 +46,7 @@ myApp2.controller('myController2',function($scope,$http){
 	
 });
 
+
 </script>
 <style type="text/css">
 	
@@ -132,8 +133,8 @@ myApp2.controller('myController2',function($scope,$http){
 		<!-- 		<div class="textarea" style="overflow:scroll; text-align:center; width:500px; height:150px; padding:10px; background-color:white;"> -->
 					<form role="form">
 					<div class="form-group">
-		<!-- 			<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;"></textarea> -->
-					<textarea style=width: 300px; rows="8"></textarea>
+					<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;"></textarea>
+<!-- 					<textarea style=width: 300px; rows="8"></textarea> -->
 					</div>
 				</form>
 			</td>
@@ -177,5 +178,7 @@ myApp2.controller('myController2',function($scope,$http){
  	 	</tr>
 	</table>
 </section>
+
+
 </body>
 </html>
