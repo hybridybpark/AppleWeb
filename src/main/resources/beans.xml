@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+<context:property-placeholder location="classpath:/db.properties"/>
+
+<context:component-scan base-package="webapp.service"/>
+
+
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+	<property name="driverClassName" value="${oracle.classname}"/>	
+	<property name="url" value="${oracle.url}"/>
+	<property name="username" value="${oracle.user}"/>
+	<property name="password" value="${oracle.password}"/>	
+</bean>
+
+<!-- mybatis -->
+
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"/>
+	<property name="mapperLocations">
+		<list>
+			<value>classpath:/com/Apple/Dao/xml/ChainDao.xml</value>
+		</list>
+	</property>
+</bean>
+
+<!-- <mybatis-spring:scan base-package="com.Apple.Dao"/> -->
+
+<bean class="com.Apple.Service.ChainService">
+	<property name="dataSource" ref="dataSource"/>
+	<property name="chaindao" ref="chainDao"/>
+</bean>
+
+<bean id="chainDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	<property name="mapperInterface" value="com.Apple.Dao.ChainDao"></property>
+</bean>
+
+</beans>
