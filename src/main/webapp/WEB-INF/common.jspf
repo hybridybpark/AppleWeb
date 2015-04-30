@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/taglib.jspf" %>
 <c:url value="/Frameworks/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" var="cssjquerymobile"></c:url>
-<c:url value="/Frameworks/jquery-2.1.3.js" var="jquery"/>
+<c:url value="/Frameworks/jquery/jquery-2.1.3.min.js" var="jquery"/>
 <c:url value="/Frameworks/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js" var="jquerymobile"/>
 <c:url value="/Frameworks/cordova.js" var="cordova"></c:url>
 <c:url value="/Frameworks/angular-1.3.15/angular.min.js" var="angular"></c:url>
@@ -14,13 +14,13 @@
  
  
 <link rel="stylesheet" type="text/css" href="${cssjquerymobile }">
-<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script> -->
 <script type="text/javascript" src="${jquery}"></script>
 <script type="text/javascript" src="${jquerymobile}"></script>
 <script type="text/javascript" src="${angular}"></script>
 <%-- <script type="text/javascript" src="${cordova}"></script> --%>
 <script type="text/javascript" src="${angularsanitize}"></script>
 <script type="text/javascript" src="${angularanimate}"></script>
-<script type="text/javascript" src="${map}"></script>
+<%-- <script type="text/javascript" src="${map}"></script> --%>
 <link rel="stylesheet" type="text/css" href="${cssbootstrap}"/>
 <script type="text/javascript" src="${bootstrap}"></script>
