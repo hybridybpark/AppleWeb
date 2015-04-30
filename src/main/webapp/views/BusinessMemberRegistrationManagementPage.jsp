@@ -108,43 +108,54 @@
 				</div>
 			<div class="col-sm-4">
 					<input type="text" class="input_text_bbs" title="검색" name="SearchText" id="SearchText" value="" placeholder="가격 입력" />
-					<input type="submit" value="등록" name="sa" style="color:#000;font:12px/1 굴림, Gulim, sans-serif;"/>
+				</div>
 				</div>
 				</div>
 			  <br>
 		<div class="panel-body">
 <!-- 		수정 할곳  -->
 <!-- 		수정 할곳  -->
-<div align="center">
-		<tr>
-				<th>메뉴 설명</th>
+		<div align="center">
+		<table>
+			<tr >
+				<th ></th>
 				<td>
+				
 					<form role="form">
+					메뉴 설명
 					<div class="form-group">
 					<textarea cols="50" rows="3" onclick="onLoadTextArea();" style="resize: none; border:1px solid lightgray; width: 500px; height: 100px;">Some long text…</textarea>
+					<input type="submit" value="추가" name="sa" style="color:#000;font:12px/1 굴림, Gulim, sans-serif;"/>
 					</div>
 				</form>
+				
 			</td>
 		</tr>
+		</table>
 		</div>
 		<div class="panel-body">
+		<div align="center">
+		<table>
 			<tr>
-				<th>메뉴 등록리스트</th>
+				<th></th>
 				<td>
 					<form role="form">
+					메뉴 등록리스트
 					<div class="form-group">
-					<textarea name="content" class="textarea form-control" style="overflow:scroll;resize: none;width:100%;border:1px solid lightgray;overflow:visible;text-overflow:ellipsis;" rows=0 ></textarea>
+					<textarea cols="50" rows="3" onclick="onLoadTextArea();" style="resize: none; border:1px solid lightgray; width: 900px; height: 150px;">Some long text…</textarea>
 					</div>
 				</form>
 			</td>
 		</tr>
+		</table>
+		</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 			<div class="btn-group" role="group">			
 				<button class="btn btn-success" data-ng-click="loginClick()">
-					<span class=""></span>메뉴 등록
+					<span class=""></span>등록
 				</button>
 			</div>
 			<div class="col-sm-4">				
