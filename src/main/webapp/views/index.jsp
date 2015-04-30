@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Start2</title>
+    <title>index</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/AppleWeb/Frameworks/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@ myApp.controller('startController',function($scope,$http,$location){
     padding: 0 15px;
     min-height: 568px;
     background-color: #fff;
-}
+	}
 
 	@media(min-width:768px) {
 	    #page-wrapper {
@@ -201,6 +201,37 @@ myApp.controller('startController',function($scope,$http,$location){
         border-left: 0px solid #e7e7e7;
     }
 	}
+	
+	#cont{
+
+	position : fixed;
+	
+	left: 50%;
+	
+	height: 0px;
+	
+	}
+	
+	 
+	
+	#float_layer{
+	
+	top: 200px;
+	
+	margin-left: 200px;
+	
+	text-align: center;
+	
+	}
+	
+	.fixed-bottom-right{
+		position: fixed;
+		bottom: auto;
+		top: 105px;
+		left: 90%;
+		margin-bottom: 0 auto;
+		z-index: 900;
+	}
 </style>
 
 </head>
@@ -210,9 +241,9 @@ myApp.controller('startController',function($scope,$http,$location){
     	<header>
         <!-- Navigation -->
         <div class="navbar-xs" style="background-color: gray;">
-        	<div class="navbar-default"  style="background-color: lightgray;">
+        	<div class="navbar-default"  style="background-color: #f5f5f5;">
         		<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-		            <div class="navbar-header">
+		            <div class="navbar-header" style="padding-left: 40px;">
 		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 		                    <span class="sr-only">Toggle navigation</span>
 		                    <span class="icon-bar"></span>
@@ -221,9 +252,29 @@ myApp.controller('startController',function($scope,$http,$location){
 		                </button>
 		                <a class="navbar-brand" href="start2.jsp">start2</a>
 		            </div>
+		            <ul class="nav navbar-nav navbar-left"  style="padding-left: 40px;">
+		            	<li>
+		            		<img alt="" src="/AppleWeb/image/main1.jpg" style="height: 20px;">		            		
+		            	</li>
+		            	<li>
+		            		<img alt="" src="/AppleWeb/image/main2.jpg" style="height: 20px;">		            		
+		            	</li>
+		            	<li>
+		            		<img alt="" src="/AppleWeb/image/main3.jpg" style="height: 20px;">		            		
+		            	</li>
+		            	<li>
+		            		<img alt="" src="/AppleWeb/image/main4.jpg" style="height: 20px;">		            		
+		            	</li>
+		            	<li>
+		            		<img alt="" src="/AppleWeb/image/main5.jpg" style="height: 20px;">		            		
+		            	</li>
+		            	<li>
+		            		<img alt="" src="/AppleWeb/image/main6.jpg" style="height: 20px;">		            		
+		            	</li>
+		            </ul>
 		            <!-- /.navbar-header -->
 <!-- 					<ul class="nav navbar-top-links navbar-right"> -->
-		            <ul class="nav navbar-nav navbar-right">
+		            <ul class="nav navbar-nav navbar-right" style="padding-right: 40px;">
 		                <%
 				  		if (login){//로그인
 					  	%>
@@ -326,18 +377,7 @@ myApp.controller('startController',function($scope,$http,$location){
 		                        		<img alt="" src="/AppleWeb/image/category/category_qa1.jpg" data-ng-show="show8"   style="width: 150px;">
 		                        	</a>
 		                        </li>
-		                        <li style="width: 150px;">
-		                        	<a href=""  style="background-color: white;">예약목록</a>
-		                        	<ul class="nav nav-second-level">
-		                                <li class="list-group-item">
-		                                    <p>13:00</p>
-		                                    <p>예약명</p>
-		                                    <p>예약이름</p>
-		                                    <p>3명</p>
-		                                    <button class="btn">상세보기</button>
-		                                </li>                                                                
-		                            </ul>                        	
-		                        </li>                        
+		                            
 		                    </ul>
 		                </div>
 		                <!-- /.sidebar-collapse -->
@@ -347,7 +387,7 @@ myApp.controller('startController',function($scope,$http,$location){
         		
         	
         
-        <hr>
+        <hr style="border: 1px solid red;">
             	
 <!--                 <div class="input-group custom-search-form"> -->
 <!--                     <input type="text" class="form-control" placeholder="Search..."> -->
@@ -361,17 +401,25 @@ myApp.controller('startController',function($scope,$http,$location){
 				
 				
                 <!-- /input-group -->
-                
-            	<div style="text-align: center;">
-            		<img alt="" src="/AppleWeb/image/h119200_620.jpg" width="620">
-            		<ul>
-            			<li><img alt="" src="/AppleWeb/image/h119200_620.jpg" width="620"></li>
-            			<li><img alt="" src="/AppleWeb/image/h119200_620.jpg" width="620"></li>
-            			<li><img alt="" src="/AppleWeb/image/h119200_620.jpg" width="620"></li>
-            			<li><img alt="" src="/AppleWeb/image/h119200_620.jpg" width="620"></li>
-            		</ul>
+                <div class="row">
+            	<div style="text-align: center;" class="col-sm-4 col-sm-offset-3">           	
+            	
+            	<img alt="" src="/AppleWeb/image/h119200_620.jpg" width="620" data-ng-show="true">
+            	<img alt="" src="/AppleWeb/image/drive_620.jpg" width="620" data-ng-show="false">
+            	<img alt="" src="/AppleWeb/image/garosugil_620.jpg" width="620" data-ng-show="false">
+            	
+            	<div class="col-sm-3"  style="margin-top: -20px; ">
+            		<input type="radio" aria-label="..." style="margin-left: 0px;">
+            		<input type="radio" aria-label="..." style="margin-left: 0px;">
+            		<input type="radio" aria-label="..." style="margin-left: 0px;">
             	</div>
-            	<hr>
+            			
+            	</div>            	
+            	<div align="right" class="col-sm-5">
+            		<img alt="" src="/AppleWeb/image/h119037a_z.jpg" width="180" data-ng-show="true">
+            		</div>	
+            	</div>
+            	<hr  style="border: 1px solid red;">
                 <div class="row">
                     <div class="col-lg-12">
                         <div data-ng-include="url2"></div>
@@ -380,10 +428,42 @@ myApp.controller('startController',function($scope,$http,$location){
                 </div>
                 <!-- /.row -->
             </div>
-            <!-- /.container-fluid -->
+            <!-- /.container-fluid -->   
+            
         </div>
         <!-- /#page-wrapper -->
-
+		
+		<!-- floating layout -->
+		
+		
+		<div id="cont">
+			<div id="float_layer">
+				<div class="panel panel-default">
+				  <div class="panel-heading">Panel heading without title</div>
+				  <div class="panel-body">
+				    Panel content
+				  </div>
+				</div>	
+			</div>
+		</div>
+		<div class="fixed-bottom-right">
+		   <!-- 우측광고 삽입 -->
+		   <div class="panel panel-default">
+				  <div class="panel-heading">예약목록</div>
+				  <div class="panel-body">
+				    	<ul class="list-group">
+		                                <li class="list-group-item">
+		                                    <p>13:00</p>
+		                                    <p>예약명</p>
+		                                    <p>예약이름</p>
+		                                    <p>3명</p>
+		                                    <button class="btn">상세보기</button>
+		                                </li>                                                                
+		                            </ul>            
+				  </div>				  
+				</div>	
+		</div>
+		
     </section>
 
     <footer>
