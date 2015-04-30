@@ -113,6 +113,7 @@
 			  <br>
 		<div class="panel-body">
 <!-- 		수정 할곳  -->
+<!-- 		수정 할곳  -->
 		<tr align="center" >
 				<th>메뉴 설명</th>
 				<td>
