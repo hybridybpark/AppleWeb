@@ -43,6 +43,7 @@
 
 
 <style type="text/css">
+
 .NoScroll {
         overflow:hidden;
     }
@@ -114,7 +115,8 @@
 		<div class="panel-body">
 <!-- 		수정 할곳  -->
 <!-- 		수정 할곳  -->
-		<tr align="center" >
+<div align="center">
+		<tr>
 				<th>메뉴 설명</th>
 				<td>
 					<form role="form">
@@ -124,6 +126,7 @@
 				</form>
 			</td>
 		</tr>
+		</div>
 		<div class="panel-body">
 			<tr>
 				<th>메뉴 등록리스트</th>
