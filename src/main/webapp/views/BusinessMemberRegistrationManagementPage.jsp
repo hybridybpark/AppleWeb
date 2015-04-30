@@ -28,8 +28,25 @@
 	wrapDiv.style.textAlign = 'center';
 	wrapDiv.appendChild(writeButton);
 	document.body.appendChild(wrapDiv);
+	
+	function onFitSizeOfTextArea()
+    {
+        var textArea = event.srcElement;
+        while( textArea.clientHeight < textArea.scrollHeight )
+        {
+            textArea.rows = textArea.rows + 1;
+        }
+        textArea.className = "NoScroll";
+    }
 
 </script>
+
+
+<style type="text/css">
+.NoScroll {
+        overflow:hidden;
+    }
+</style>
 
 
 </head>
@@ -100,7 +117,7 @@
 				<td>
 					<form role="form">
 					<div class="form-group">
-					<textarea name="content" class="textarea form-control" rows="5"></textarea>
+					<textarea cols="50" rows="3" onclick="onLoadTextArea();" style="resize: none; border:1px solid lightgray; width: 500px; height: 100px;">Some long text…</textarea>
 					</div>
 				</form>
 			</td>
@@ -111,7 +128,7 @@
 				<td>
 					<form role="form">
 					<div class="form-group">
-					<textarea name="content" class="textarea form-control" rows="5" ></textarea>
+					<textarea name="content" class="textarea form-control" style="overflow:scroll;resize: none;width:100%;border:1px solid lightgray;overflow:visible;text-overflow:ellipsis;" rows=0 ></textarea>
 					</div>
 				</form>
 			</td>
