@@ -133,7 +133,7 @@ myApp2.controller('myController2',function($scope,$http){
 		<!-- 		<div class="textarea" style="overflow:scroll; text-align:center; width:500px; height:150px; padding:10px; background-color:white;"> -->
 					<form role="form">
 					<div class="form-group">
-					<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;resize: none;"></textarea>
+					<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;resize: none;width:100%;border:1 solid lightgray;overflow:visible;text-overflow:ellipsis;" rows=30></textarea>
 <!-- 					<textarea style=width: 300px; rows="8"></textarea> -->
 					</div>
 				</form>
@@ -152,13 +152,13 @@ myApp2.controller('myController2',function($scope,$http){
 		<th scope="row">자동발송금지<br/>보안문자</th>
 	       <td>
 	         <img src="/AppleWeb/image/untitled.png"  />                        
-	         <p><input id="captcha" name="captcha" fw-filter="isFill" fw-label="인증키" fw-msg="" class="inputTypeText" value="" type="text"  /> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
+	         <p><input id="captcha" name="captcha" fw-filter="isFill" fw-label="인증키" fw-msg="" class="inputTypeText" value="" type="text"  /> <br> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
 	       </td>
 	    </tr>
 	<tr class="agree ">
 		<th scope="row">개인정보<br/>보호정책</th>
 	       <td>
-<textarea id="privacy_agreement" name="privacy_agreement" fw-filter="" fw-label="개인정보보호정책" fw-msg="" style="resize: none;" >
+<textarea id="privacy_agreement" name="privacy_agreement" fw-filter="" fw-label="개인정보보호정책" fw-msg="" style="overflow:scroll;resize: none;width:100%;border:1px solid lightgray;overflow:visible;text-overflow:ellipsis;" rows=0 readonly>
 	■ 개인정보의 수집·이용 목적
 	서비스 제공 및 계약의 이행, 구매 및 대금결제, 물품배송 또는 청구지 발송, 회원관리 등을 위한 목적 
 	■ 수집하려는 개인정보의 항목이름, 주소, 연락처, 이메일 등 
