@@ -78,9 +78,12 @@ h1{
 		<div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
-			<div class="btn-group" role="group">			
-				<button class="btn btn-success" data-ng-click="loginClick()">
-					<span class="glyphicon glyphicon-user"></span>로그인
+			<div class="btn-group" role="group">	
+				<a href="index.jsp">
+					<img alt="" src="/AppleWeb/image/btn_login.gif">
+				</a>		
+				<button class="btn btn-success" data-ng-click="loginClick()" image="/AppleWeb/image/btn_login.gif">
+<!-- 					<span class="glyphicon glyphicon-user"></span>로그인 -->
 				</button>
 				<button class="btn btn-success" data-ng-click="cancelClick()">
 					<span class="glyphicon glyphicon-user"></span>취소
