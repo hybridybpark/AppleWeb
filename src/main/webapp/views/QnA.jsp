@@ -133,7 +133,7 @@ myApp2.controller('myController2',function($scope,$http){
 		<!-- 		<div class="textarea" style="overflow:scroll; text-align:center; width:500px; height:150px; padding:10px; background-color:white;"> -->
 					<form role="form">
 					<div class="form-group">
-					<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;"></textarea>
+					<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;resize: none;"></textarea>
 <!-- 					<textarea style=width: 300px; rows="8"></textarea> -->
 					</div>
 				</form>
@@ -158,7 +158,7 @@ myApp2.controller('myController2',function($scope,$http){
 	<tr class="agree ">
 		<th scope="row">개인정보<br/>보호정책</th>
 	       <td>
-<textarea id="privacy_agreement" name="privacy_agreement" fw-filter="" fw-label="개인정보보호정책" fw-msg="" >
+<textarea id="privacy_agreement" name="privacy_agreement" fw-filter="" fw-label="개인정보보호정책" fw-msg="" style="resize: none;" >
 	■ 개인정보의 수집·이용 목적
 	서비스 제공 및 계약의 이행, 구매 및 대금결제, 물품배송 또는 청구지 발송, 회원관리 등을 위한 목적 
 	■ 수집하려는 개인정보의 항목이름, 주소, 연락처, 이메일 등 
