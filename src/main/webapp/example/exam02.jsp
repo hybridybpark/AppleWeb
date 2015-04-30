@@ -1,28 +1,164 @@
-<%@ page contentType="text/html; charset=euc-kr" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
 <html>
 <head>
-<script>
-function reSize(name){
-    var width = eval("document."+name+".width");
-    var height = eval("document."+name+".height");
-    var temp = 0; 
-    var max_width= 1280;   // ÀÌ¹ÌÁöÀÇ ÃÖ´ë Å©±â     
-    
-    if ( width > max_width ) {  // ÀÌ¹ÌÁö°¡ 1280º¸´Ù Å©´Ù¸é ³Êºñ¸¦ 1280À¸·Î ¸Â¿ì°í ºñÀ²¿¡ ¸ÂÃç ¼¼·Î°ªÀ» º¯°æÇÑ´Ù.      
-       height = height/(width / max_width);
-       eval("document."+which+".width = max_width");     
-       eval("document."+which+".height = height");
-    }     
+<meta charset="UTF-8">
+<title>Menu</title>
+
+<style>
+#line {
+	border: 0.5px solid black;
 }
-</script>
-<title>»çÁø</title>
+
+#head {
+	height: 100px;
+	width: 800px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+.container {
+	margin: 0px auto;
+	padding: 20px;
+}
+
+#content {
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 0.5px solid orange;
+	overflow: hidden;
+}
+
+.text {
+	text-align: center;
+}
+</style>
+
+
 </head>
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="window.focus(); window.resizeTo(photo.width+10, photo.height+29); ">
- <center>
-  <a href="javascript:window.close()">
-   <img src="AppleWeb/image/col.jpg"  name="photo" border="0" alt="±×¸²À» Å¬¸¯ÇÏ½Ã¸é Ã¢ÀÌ ´İÈü´Ï´Ù">
-  </a>
- </center>
+
+
+
+<body>
+
+	<div class="container">
+
+		<div id="head" class="text-align: center">
+			<div class="form-group">
+				<div class="col-md-4">
+					<h2>ê°€ê²Œì´ë¦„</h2>
+				</div>
+				<div class="col-md-4">
+					<small>ê°€ê²Œì„¤ëª…ì…ë‹ˆë‹¤.ì €í¬ê°€ê²ŒëŠ”ëë‚´ì¤˜ìš”</small>
+				</div>
+				<div class="col-md-4">
+					<h4>â˜†â˜†â˜†â˜†â˜†</h4>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<hr>
+
+
+		<div id="content">
+			<h3>MENU-</h3>
+			<table >
+		<tr>
+			<th><img src="/AppleWeb/image/A2.jpg" style="width: 200px; height:auto;" hspace="50"></th>
+			<th><img src="/AppleWeb/image/col.jpg" style="width: 200px; height:auto;" hspace="50"></th>
+			<th><img src="/AppleWeb/image/A2.jpg" style="width: 200px; height:auto;" hspace="50"></th>
+		</tr>
+		<tr>
+			<td class="text">ê°€ê²©</td>
+			<td class="text">ê°€ê²©</td>
+			<td class="text">ê°€ê²©</td>
+		</tr>
+		<tr>
+			<td class="text">5000</td>
+			<td class="text">6000</td>
+			<td class="text">7000</td>
+		</tr>
+			</table>
+			
+			</div>
+		</div>
+	</div>
+	<!-- ë©”ë‰´ ë””í…Œì¼ ì •ë³´ ë“¤ì–´ê°€ëŠ” ë¶€ë¶„ -->
+
+	<div id="container">
+		<div id="content">
+
+			<div>
+				<div class="col-md-4">
+					<!-- ì„ íƒëœ ì´ë¯¸ì§€(idë¥¼ í†µí•´ ì—°ê²°) -->
+					<div class="img" id="click1">
+						<img src="/AppleWeb/image/col.jpg" />
+						<div class="text">
+							<hr>
+							<div>
+								<div>ê°€ê²©</div>
+								<hr>
+								<div>
+									<input type="radio" name="rPrice" value="5000" />5000 <input
+										type="radio" name="rPrice" value="6000" checked="checked" />6000
+									<input type="radio" name="rPrice" value="7000" />7000
+								</div>
+							</div>
+							<hr>
+							<div>
+								<div>ì˜µì…˜1</div>
+								<hr>
+								<div>
+									<input type="radio" name="rOption1" value="option" />ì˜µì…˜1 <input
+										type="radio" name="rOption1" value="option" checked="checked" />ì˜µì…˜2
+									<input type="radio" name="rOption1" value="option" />ì˜µì…˜3
+								</div>
+							</div>
+							<hr>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="text">ì´ìŒì‹ì€ ë§¤ìš°ë§›ìˆìŠµë‹ˆë‹¤ ì–´ì„œ ì‚¬ë“œì„¸ìš”</div>
+				</div>
+				<div>
+				<div>ì˜µì…˜1</div>
+								<hr>
+								<div>
+									<input type="radio" name="rOption1" value="option" />ì˜µì…˜1 <input
+										type="radio" name="rOption1" value="option" checked="checked" />ì˜µì…˜2
+									<input type="radio" name="rOption1" value="option" />ì˜µì…˜3
+								</div>
+				</div>
+				<div class="col-md-4">
+					<h1></h1>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="footer">
+		<p class="text-center">
+			<small><strong> Apple</strong></small><br> <small>ëŒ€í‘œ :
+				Apple(ì£¼) ã† ì£¼ì†Œ : ì´ëŒ€ì—­ ã† ì‚¬ì—…ìë“±ë¡ë²ˆí˜¸:123-12-12345 ã† ì „í™” : 064-123-1234</small><br>
+			<small>Copyrightâ“’ All rights reserved.</small>
+		</p>
+	</div>
 </body>
-<script>reSize("photo");</script>
+
 </html>
