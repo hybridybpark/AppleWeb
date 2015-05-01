@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.Apple.Dao.MenuDao">
+    <select id="selectAll" resultMap="menuList">
+        SELECT * 
+        FROM MENU
+    </select>
+    
+    <resultMap type="com.Apple.Model.Menu" id="menuList">
+        
+        <result property="Mname" column="MENUNAME"/>
+        <result property="Mprice" column="MENUPRICE"/>
+        <result property="Mimage" column="MENUIMAGE"/>
+        <result property="Mcategory" column="MENUCATEGORY"/>
+        <result property="Mdesc" column="MENUDESC"/>
+        <result property="Bnumber" column="BUSINESSNUMBER"/>
+        <result property="Sname" column="SHOPNAME"/>
+        
+    </resultMap>
+    
+</mapper>
