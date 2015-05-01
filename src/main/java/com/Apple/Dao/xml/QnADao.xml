@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Apple.Dao.QnADao">
+	<select id="selectAll" resultMap="qnaList" >
+		SELECT *
+		FROM qna		
+	</select>	 
+	
+	<resultMap type="com.Apple.Model.QnA" id="qnaList">
+	    
+	    <result property="name" column="WRITERNAME"/>
+	    <result property="phone" column="WRITERPHONE"/>
+	    <result property="title" column="TITLE"/>
+	    <result property="wdate" column="WRITEDATE"/>
+	    <result property="content" column="CONTENT"/>
+	    <result property="password" column="PASSWORD"/>
+	    <result property="replycontent" column="REPLYCONTENT"/>
+	    <result property="rdate" column="REPLYDATE"/>
+	    
+	        
+	</resultMap>
+	<insert id="insert" parameterType="com.Apple.Model.QnA">
+	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate})
+	    
+	</insert>
+	
+	
+	
+	<delete id="delete" parameterType="String" >
+	    DELETE from qna WHERE(TITLE=#{title})
+	</delete>
+	
+</mapper>
+

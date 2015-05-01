@@ -18,16 +18,15 @@
 <meta charset="UTF-8">
 <title>Menu</title>
 
-<style>
+<style type="text/css">
 #line {
 	border: 0.5px solid black;
 }
 
 #head {
 	height: 100px;
-	width: 800px;
 	padding: 10px;
-	border: 1px solid black;
+	border: 0.5px solid black;
 }
 
 .container {
@@ -44,6 +43,10 @@
 
 .text {
 	text-align: center;
+}
+
+th, tr, td {
+	padding: 20px;
 }
 </style>
 
@@ -75,83 +78,89 @@
 
 		<div id="content">
 			<h3>MENU-</h3>
-			<table >
-		<tr>
-			<th><img src="/AppleWeb/image/A2.jpg" style="width: 200px; height:auto;" hspace="50"></th>
-			<th><img src="/AppleWeb/image/col.jpg" style="width: 200px; height:auto;" hspace="50"></th>
-			<th><img src="/AppleWeb/image/A2.jpg" style="width: 200px; height:auto;" hspace="50"></th>
-		</tr>
-		<tr>
-			<td class="text">가격</td>
-			<td class="text">가격</td>
-			<td class="text">가격</td>
-		</tr>
-		<tr>
-			<td class="text">5000</td>
-			<td class="text">6000</td>
-			<td class="text">7000</td>
-		</tr>
+			<table>
+				<tr>
+					<th><img src="/AppleWeb/image/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/image/col.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/image/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+				</tr>
+				<tr>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+				</tr>
+				<tr>
+					<td class="text">5000</td>
+					<td class="text">6000</td>
+					<td class="text">7000</td>
+				</tr>
+				<tr>
+					<th><img src="/AppleWeb/image/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/image/col.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/image/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+				</tr>
+				<tr>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+				</tr>
+				<tr>
+					<td class="text">5000</td>
+					<td class="text">6000</td>
+					<td class="text">7000</td>
+				</tr>
+				<tr>
+					<th><img src="/AppleWeb/image/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/image/col.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/image/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+				</tr>
+				<tr>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+				</tr>
+				<tr>
+					<td class="text">5000</td>
+					<td class="text">6000</td>
+					<td class="text">7000</td>
+				</tr>
+
 			</table>
-			
-			</div>
+
 		</div>
 	</div>
 	<!-- 메뉴 디테일 정보 들어가는 부분 -->
-
 	<div id="container">
 		<div id="content">
-
-			<div>
-				<div class="col-md-4">
-					<!-- 선택된 이미지(id를 통해 연결) -->
-					<div class="img" id="click1">
-						<img src="/AppleWeb/image/col.jpg" />
-						<div class="text">
-							<hr>
-							<div>
-								<div>가격</div>
-								<hr>
-								<div>
-									<input type="radio" name="rPrice" value="5000" />5000 <input
-										type="radio" name="rPrice" value="6000" checked="checked" />6000
-									<input type="radio" name="rPrice" value="7000" />7000
-								</div>
-							</div>
-							<hr>
-							<div>
-								<div>옵션1</div>
-								<hr>
-								<div>
-									<input type="radio" name="rOption1" value="option" />옵션1 <input
-										type="radio" name="rOption1" value="option" checked="checked" />옵션2
-									<input type="radio" name="rOption1" value="option" />옵션3
-								</div>
-							</div>
-							<hr>
-							
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="text">이음식은 매우맛있습니다 어서 사드세요</div>
-				</div>
-				<div>
-				<div>옵션1</div>
-								<hr>
-								<div>
-									<input type="radio" name="rOption1" value="option" />옵션1 <input
-										type="radio" name="rOption1" value="option" checked="checked" />옵션2
-									<input type="radio" name="rOption1" value="option" />옵션3
-								</div>
-				</div>
-				<div class="col-md-4">
-					<h1></h1>
-				</div>
-			</div>
+			<table>
+				<tr>
+					<th><img src="/AppleWeb/image/A2.jpg" style="width: 200px; height: auto;" hspace="50"></th>
+					<th class="text-align: center">가게정보: 우리가게는 멋진가게입니다 좋아요!</th>
+				</tr>
+				<tr>
+					<th>가격</th>
+					<th></th>
+				</tr>
+				<tr>
+					<th>
+						<input type="radio" name="rPrice" value="5000" />5000 
+						<input type="radio" name="rPrice" value="6000" checked="checked" />6000
+						<input type="radio" name="rPrice" value="7000" />7000 
+					</th>
+				</tr>
+			</table>
 
 		</div>
 	</div>
-
 	<div class="footer">
 		<p class="text-center">
 			<small><strong> Apple</strong></small><br> <small>대표 :
