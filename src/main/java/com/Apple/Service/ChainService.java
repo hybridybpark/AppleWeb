@@ -4,28 +4,36 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.Apple.Dao.ChainDao;
 import com.Apple.Model.Chain;
 
+@Service
 public class ChainService {
-	DataSource dataSource;
-	ChainDao chaindao;
 	
-	public DataSource getDataSource() {
-		return dataSource;
-	}
-	public void setDataSource(DataSource dataSource) {
-		this.dataSource = dataSource;
-	}
-	public ChainDao getChaindao() {
-		return chaindao;
-	}
-	public void setChaindao(ChainDao chaindao) {
-		this.chaindao = chaindao;
-	}
+	@Autowired
+	DataSource dataSource;
+	
+	@Autowired
+	ChainDao chainDao;
+	
+//	public DataSource getDataSource() {
+//		return dataSource;
+//	}
+//	public void setDataSource(DataSource dataSource) {
+//		this.dataSource = dataSource;
+//	}
+//	public ChainDao getChainDao() {
+//		return chainDao;
+//	}
+//	public void setChainDao(ChainDao chainDao) {
+//		this.chainDao = chainDao;
+//	}
 	
 	public List<Chain> selectAll(){
-		List<Chain> list = chaindao.selectAll();
+		List<Chain> list = chainDao.selectAll();
 		
 		return list;
 	}
