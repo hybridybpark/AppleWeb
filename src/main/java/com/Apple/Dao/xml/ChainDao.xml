@@ -11,8 +11,12 @@
 	    <result property="name" column="CHAINNAME"/>
 	    <result property="desc" column="CHAINDESC"/>
 	    <result property="image" column="CHAINIMAGE"/>
+	    <result property="sid" column="SID"/>
 	    
 	        
 	</resultMap>	
 	
+	<insert id="insert" parameterType="com.Apple.Model.Chain">
+	    INSERT INTO chains values(#{name},#{image},#{desc},null)	    
+	</insert>
 </mapper>

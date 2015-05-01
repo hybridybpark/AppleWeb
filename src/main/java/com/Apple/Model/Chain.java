@@ -4,6 +4,7 @@ public class Chain {
 	public String name;
 	public String desc;
 	public String image;
+	public int sid;
 	public String getName() {
 		return name;
 	}
@@ -21,5 +22,11 @@ public class Chain {
 	}
 	public void setImage(String image) {
 		this.image = image;
+	}
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
 	}
 }

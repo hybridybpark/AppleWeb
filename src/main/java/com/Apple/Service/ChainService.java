@@ -38,5 +38,9 @@ public class ChainService {
 		return list;
 	}
 	
+	public void insert(Chain chain){
+		chainDao.insert(chain);
+	}
+	
 	
 }

@@ -5,4 +5,6 @@ import com.Apple.Model.Chain;
 
 public interface ChainDao {
 	public List<Chain> selectAll();
+	
+	public void insert(Chain chain);
 }

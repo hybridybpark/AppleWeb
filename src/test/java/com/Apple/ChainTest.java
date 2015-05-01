@@ -30,9 +30,17 @@ public class ChainTest {
 	
 	@Test
 	public void testSelectAll() throws Exception {
-		log.info("############################################### testSelectAll");		
+		log.info("############################################### testSelectAll");	
 		
 		ChainService service = factory.getBean(ChainService.class);
+		
+		Chain chain = new Chain();
+		
+		chain.setDesc("설명");
+		chain.setImage("이미지 경로");
+		chain.setName("이름2");
+		
+		service.insert(chain);
 		
 		List<Chain> list = service.selectAll();
 		
