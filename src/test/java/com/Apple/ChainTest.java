@@ -36,7 +36,12 @@ public class ChainTest {
 		
 		List<Chain> list = service.selectAll();
 		
-		log.info(list);
+		for(Chain c : list){
+			log.info(c.getName());
+			log.info(c.getImage());
+			log.info(c.getDesc());
+		}
+		
 	}
 
 }

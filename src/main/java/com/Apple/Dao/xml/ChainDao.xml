@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.Apple.Dao.ChainDao">
-	<select id="selectAll" resultType="com.Apple.Model.Chain">
+	<select id="selectAll" resultMap="chainList" >
 		SELECT *
 		FROM chains				
 	</select>	 
 	
+	<resultMap type="com.Apple.Model.Chain" id="chainList">
+	    
+	    <result property="name" column="CHAINNAME"/>
+	    <result property="desc" column="CHAINIMAGE"/>
+	    <result property="image" column="CHAINDESC"/>
+	    
+	        
+	</resultMap>
 </mapper>
