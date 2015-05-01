@@ -11,7 +11,7 @@
 
 <context:property-placeholder location="classpath:/db.properties"/>
 
-<context:component-scan base-package="webapp.service"/>
+
 
 
 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
@@ -25,23 +25,21 @@
 
 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	<property name="dataSource" ref="dataSource"/>
-	<property name="mapperLocations">
-		<list>
-			<value>classpath:/com/Apple/Dao/xml/ChainDao.xml</value>
-		</list>
-	</property>
+	<property name="mapperLocations" value="classpath:/com/Apple/Dao/xml/*.xml"/>	
 </bean>
 
-<!-- <mybatis-spring:scan base-package="com.Apple.Dao"/> -->
+<mybatis-spring:scan base-package="com.Apple.Dao"/>
 
-<bean class="com.Apple.Service.ChainService">
-	<property name="dataSource" ref="dataSource"/>
-	<property name="chaindao" ref="chainDao"/>
-</bean>
+<context:component-scan base-package="com.Apple.Service"/>
 
-<bean id="chainDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
-	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
-	<property name="mapperInterface" value="com.Apple.Dao.ChainDao"></property>
-</bean>
+<!-- <bean class="com.Apple.Service.ChainService"> -->
+<!-- 	<property name="dataSource" ref="dataSource"/> -->
+<!-- 	<property name="chainDao" ref="chainDao"/> -->
+<!-- </bean> -->
+
+<!-- <bean id="chainDao" class="org.mybatis.spring.mapper.MapperFactoryBean"> -->
+<!-- 	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property> -->
+<!-- 	<property name="mapperInterface" value="com.Apple.Dao.ChainDao"></property> -->
+<!-- </bean> -->
 
 </beans>

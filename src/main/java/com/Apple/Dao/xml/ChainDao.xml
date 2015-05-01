@@ -7,8 +7,12 @@
 	</select>	 
 	
 	<resultMap type="com.Apple.Model.Chain" id="chainList">
+	    
 	    <result property="name" column="CHAINNAME"/>
-	    <result property="desc" column="CHAINIMAGE"/>
-	    <result property="image" column="CHAINDESC"/>
-	</resultMap>
+	    <result property="desc" column="CHAINDESC"/>
+	    <result property="image" column="CHAINIMAGE"/>
+	    
+	        
+	</resultMap>	
+	
 </mapper>
