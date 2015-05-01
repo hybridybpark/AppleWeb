@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 
 <!DOCTYPE>
@@ -20,9 +21,13 @@
 
 <script type="text/javascript">
 
-var myApp2 = angular.module('myApp2',["ngAnimate","ngSanitize"]);
+var myApp2 = angular.module('myApp2',[]);
 
 myApp2.controller('myController2',function($scope,$http){	
+	
+	$scope.data = ${requestScope.list};
+	
+	alert($scope.date);
 	
 	$http.get("http://www.w3schools.com/angular/customers.php")
 	 .success(function (response) {$scope.names = response.records;});
