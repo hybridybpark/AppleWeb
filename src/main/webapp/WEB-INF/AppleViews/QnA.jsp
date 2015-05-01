@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 
 <!DOCTYPE>
@@ -183,11 +183,7 @@ myApp2.controller('myController2',function($scope,$http){
  	 	</tr>
 	</table>
 </section>
-<c:forEach items="${list}" var="item">
-	${item.name }<br>
-	${item.phone }<br>
-	${item.tile }
-</c:forEach>
+
 
 </body>
 </html>
