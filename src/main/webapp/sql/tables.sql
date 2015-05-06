@@ -1,1 +1,1 @@
-create table 
+SELECT * FROM chains WHERE CHAINNAME='STARBUCKS'; 

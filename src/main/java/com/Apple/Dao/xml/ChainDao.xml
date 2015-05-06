@@ -6,8 +6,8 @@
 		FROM chains				
 	</select>	 
 	
-	<select id="selectOneChain" resultMap="chainList" parameterType="String">
-	    SELECT * FROM chains WHERE 
+	<select id="selectOneChain" parameterType="String" resultType="com.Apple.Model.Chain">
+	    SELECT * FROM chains WHERE CHAINNAME=#{chainname}
 	</select>
 	
 	<resultMap type="com.Apple.Model.Chain" id="chainList">

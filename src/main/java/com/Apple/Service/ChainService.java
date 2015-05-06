@@ -42,5 +42,9 @@ public class ChainService {
 		chainDao.insert(chain);
 	}
 	
+	public Chain selectOneChain(String chainname){
+		return chainDao.selectOneChain(chainname);
+	}
+	
 	
 }
