@@ -52,7 +52,7 @@ myApp.controller('chainCtrl',function($scope,$http,$location){
 		<ul class="media-list" data-ng-repeat="x in chainlist">
         <li class="media">
             <a href="#" class="pull-left">
-                <img src="{{x.image}}" class="media-object" alt="Sample Image">
+                <img src="{{x.image}}" class="media-object" alt="Sample Image" style="width: 200px;height: 200px;">
             </a>
             <div class="media-body">
                 <h4 class="media-heading">{{x.name}}</h4>
