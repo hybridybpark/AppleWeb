@@ -1,6 +1,7 @@
 package com.Apple.Dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.Apple.Model.Chain;
 import com.Apple.Model.QnA;
@@ -10,5 +11,6 @@ public interface QnADao {
 	
 	public void insert(QnA qna);
 	
-	public void delete(String title);
+	public void delete(String password);
+
 }

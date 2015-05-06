@@ -20,14 +20,14 @@
 	        
 	</resultMap>
 	<insert id="insert" parameterType="com.Apple.Model.QnA">
-	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate})
-	    
+<!-- 	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate}) -->
+	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},null,null,null)
 	</insert>
 	
 	
 	
 	<delete id="delete" parameterType="String" >
-	    DELETE from qna WHERE(TITLE=#{title})
+	    DELETE from qna WHERE(TITLE=#{password})
 	</delete>
 	
 </mapper>

@@ -1,5 +1,9 @@
 package com.Apple.Model;
 
+import java.util.Map;
+
+import com.Apple.Dao.QnADao;
+
 public class QnA {
 	public String name;
 	public String phone;
@@ -58,5 +62,5 @@ public class QnA {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
-
+	
 }
