@@ -53,4 +53,9 @@ public class QnAService {
 		qnadao.delete(password);
 	}
 	
+	// DB update 수정
+	public void update(String title){
+		qnadao.update(title);
+	}
+	
 }
