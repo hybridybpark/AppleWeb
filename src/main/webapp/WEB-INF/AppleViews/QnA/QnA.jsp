@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 
@@ -21,25 +19,16 @@
 
 <script type="text/javascript">
 
+// 게시판내 목록 출력
 var myApp2 = angular.module('myApp2',[]);
 
 myApp2.controller('myController2',function($scope,$http){	
 	
-	$scope.data = ${requestScope.list};
+	$http.get("http://localhost:8080/AppleWeb/Apple/qna/list.json").success(function(data) {
+		$scope.list = data;
+	});
 	
-	alert($scope.date);
-	
-	$http.get("http://www.w3schools.com/angular/customers.php")
-	 .success(function (response) {$scope.names = response.records;});
-	
-	$scope.itemClick = function(index) {
-		$scope.message = "Number : "+(index+1)+ " Name : "+$scope.names[index].Name
-										      + " Country : "+$scope.names[index].Country;
-// 											  + " Date : "+$scope.;
-// 											  &tc='+new Date().getTime();
-		alert($scope.names[index].Name+" clicked");
-		alert($scope.message);
-	};
+	// 내용확인 및 덧글
     $scope.myVar = -1;
     $scope.toggle = function(index) {
     	if($scope.myVar != index){
@@ -50,6 +39,87 @@ myApp2.controller('myController2',function($scope,$http){
     };
 	
 });
+
+// 보안문자
+document.domain = '';
+
+function check(upCd) {
+	if( upCd == "LOGON" ) {	//로그인
+		if ( !parent.chkMainValue() ) return;
+	}
+		
+	var f = document.chkFrm;
+	if( f.answer.value == "" ) {
+		alert("보안문자를 입력하세요.");
+		f.answer.focus();
+    	return ;
+	}
+	f.upCd.value = upCd;
+	f.target = "iframe1";
+
+	f.action = "captchaSubmit.jsp";
+
+	f.submit();		
+
+}
+
+
+function tmpEnter(event){
+	if(event.keyCode == 13) {
+		parent.tmpSubmit();
+	}
+}		
+
+
+function audio() {
+
+	var f = document.chkFrm;
+
+	f.target = "iframe1";
+
+	f.action = "audioCaptcha.jsp";
+
+	f.submit();	
+
+}
+
+function tmp() {
+
+}
+
+// 숫자만 입력받기
+function onlyNumber(){
+	var code = window.event.keyCode;
+	
+	if ((code > 34 && code < 41) || (code > 47 && code < 58) || (code > 95 && code < 106) || code == 8 || code == 9 || code == 13 || code == 46){
+		window.event.returnValue = true;
+		return;
+	}
+	window.event.returnValue = false;
+}
+
+//커서 이동
+function checkSize(){
+	if(document.chkFrm.answer.value.length >= 5){
+		if(parent.document.getElementById("loginBtn")){
+			parent.document.getElementById("loginBtn").focus();
+		}
+	}
+}
+
+// 입력받아서 승인
+function doSubmit() {
+	if(boardFrm.title.value == "") {
+		alert("제목을 입력해주세요")
+		return;
+	}
+	if(boardFrm.content.value == "") {
+		alert("내용을 입력하세요")
+		return;
+	}
+	
+	boardFrm.submit()
+}
 
 </script>
 
@@ -69,16 +139,14 @@ myApp2.controller('myController2',function($scope,$http){
 
 </head>
 
+<!-- Title-->
 <body data-ng-controller="myController2">
 	<header class="container">
 		<h1 align="center">문의 게시판</h1>
-		
-		
-	
 	</header>
+	
+	
 	<section class="container">
-  	
-		
 		<!-- Table -->
 		<table class="table table-hover">
 			<thead>
@@ -89,16 +157,20 @@ myApp2.controller('myController2',function($scope,$http){
 					<th>날짜</th>
 				</tr>
 			</thead>
-			<tbody data-ng-repeat="x in names">
-			 	<tr align="center">
-			 		<td>{{$index +1}}</td>
-	    			<td><a href="" ng-click="toggle($index)">{{ x.Name }}</a></td>
-	    			<td>{{ x.Country }}</td>
-<!-- 	    			<td>{{ x.Date }}</td> -->
+			<tbody>
+			 	<tr align="center" data-ng-repeat="x in list">			 	
+			 		<td>{{$index + 1}}</td>
+	    			<td><a href="" ng-click="toggle($index)">	    					
+								{{x.title}}</a></td>
+	    			<td>{{x.name}}</td>
+					<td>{{x.wdate}}</td>
 	  			</tr>
-	  			<tr data-ng-show="myVar == $index"><td>test</td></tr>
+	  			<tr data-ng-show="myVar == $index"><td colspan="4">
+								${item.replycontent}
 	  		</tbody> 			
 		</table>
+		
+<!-- 		게시판 페이지 -->
 	<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
@@ -125,46 +197,52 @@ myApp2.controller('myController2',function($scope,$http){
 		<div class="col-sm-4"></div>
 	</div>	
 	
+	
+<!-- 	문의하기 작성하는곳 -->
 	<table style="width: 50%;" align="center">
-  
+  <form role="form" action="http://localhost:8080/AppleWeb/Apple/QnA.do">
 <tbody>
 	 <tr text-align="center">
 			<th>작성자</th>
 			<td><input type="text" name="pname" size="10"></td>
 		</tr><br>
 		
+			<tr text-align="center">
+			<th>전화번호</th>
+			<td><input type="text" name="phone" size="20"></td>
+		</tr><br>
+		
 	  <tr text-align="center">
 			<th>제목</th>
 			<td><input type="text" name="title" size="20"></td>
 		</tr><br>
+	
 			<tr align="center" >
 				<th>내용</th>
 				<td>
-		<!-- 		<div class="textarea" style="overflow:scroll; text-align:center; width:500px; height:150px; padding:10px; background-color:white;"> -->
-					<form role="form">
+					
 					<div class="form-group">
 					<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;resize: none;width:100%;border:1 solid lightgray;overflow:visible;text-overflow:ellipsis;" rows=30></textarea>
-<!-- 					<textarea style=width: 300px; rows="8"></textarea> -->
 					</div>
-				</form>
+				
 			</td>
 		</tr>
 	<tr>
 		<th scope="row">비밀번호</th>
 	  	 <td><input id="password" name="password" fw-filter="isFill" fw-label="비밀번호" fw-msg="" value="" type="password"  /></td>
 	       </tr>
-<!-- 	<tr class="radioType displaynone"> -->
-<!-- 		<th scope="row">비밀글설정</th> -->
-<!-- 	     <td><input id="secure0" name="secure" fw-filter="isFill" fw-label="비밀글설정" fw-msg="" value="F" type="radio" checked="checked"  /><label for="secure0" >공개글</label> -->
-<!-- 	<input id="secure1" name="secure" fw-filter="isFill" fw-label="비밀글설정" fw-msg="" value="T" type="radio"  /><label for="secure1" >비밀글</label></td> -->
-<!-- 	   	  </tr> -->
+	       
 	<tr class="">
 		<th scope="row">자동발송금지<br/>보안문자</th>
 	       <td>
-	         <img src="/AppleWeb/src/main/webapp/WEB-INF/Images/QnA/untitled.png"/>                       
-	         <p><input id="captcha" name="captcha" fw-filter="isFill" fw-label="인증키" fw-msg="" class="inputTypeText" value="" type="text"  /> <br> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
+	       <p>아래 이미지의 보안문자를 공백없이 입력해주세요.</p>
+	         <img src="/AppleWeb/Images/QnA/untitled.png"/> 
+	         <p><input id="captcha" name="captcha" fw-filter="isFill" fw-label="인증키" fw-msg="" class="inputTypeText" value="" type="text"  />
+	         	<span class="btn btn_w_s"><span><a href="javascript:audio();" title="보안문자 인증 음성으로 듣기">음성으로 듣기</a></span></span>
+				<span class="btn btn_w_s mt5"><span style="width:81px; text-align:center"><a href="javascript:location.reload();" title="새로고침">새로고침</a></span></span></p>
 	       </td>
 	    </tr>
+	
 	<tr class="agree ">
 		<th scope="row">개인정보<br/>보호정책</th>
 	       <td>
@@ -182,13 +260,12 @@ myApp2.controller('myController2',function($scope,$http){
 	</tbody>
 		<tr align="center">
 	   		<td colspan="2"> <br>
-				<input type="submit" value="글쓰기">
+				<input type="submit" value="글쓰기" onclick="doSubmit()">
 				<input type="reset" value="취소">
 			</td>
  	 	</tr>
+ 	 	</form>
 	</table>
 </section>
-
-
 </body>
 </html>
