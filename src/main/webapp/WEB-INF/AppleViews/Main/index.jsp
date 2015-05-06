@@ -6,7 +6,7 @@
 	boolean login = memberId == null ? false : true;	
 %>
 <!DOCTYPE html>
-<html data-ng-app="myApp">
+<html data-ng-app="MainApp">
 
 <head>
 
@@ -60,80 +60,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script type="text/javascript">
-var myApp = angular.module('myApp',[]);
 
-myApp.controller('startController',function($scope,$http,$location){	
-	$scope.url1 = 'http://placehold.it/320x180';
-	$scope.url2 = "ShopList.jsp";
-	$scope.shops = shops=[
-	{name:'shop1',image:$scope.url1},
-	{name:'shop2',image:$scope.url1},
-	{name:'shop3',image:$scope.url1},
-	{name:'shop4',image:$scope.url1},
-	{name:'shop5',image:$scope.url1},
-	{name:'shop6',image:$scope.url1},
-	{name:'shop7',image:$scope.url1},
-	{name:'shop8',image:$scope.url1}
-	];
-	
-	$scope.imageClick = function(index) {
-		alert(index+"");		
-		$scope.url2 = "ChainList.jsp";
-	};
-	
-	
-	
-	$scope.tabs = tabs = [
-	{num:0,name:'ALL',type:'',address:'ALL.jsp',image:'/AppleWeb/image/category/category_all.jpg'},
-	{num:1,name:'CAFE',type:'',address:'CAFE.jsp',image:'/AppleWeb/image/category/category_cafe1.jpg'},
-	{num:2,name:'한식',type:'',address:'KOREANFOOD.jsp',image:'/AppleWeb/image/category/category_korean.jpg'},
-	{num:3,name:'중식',type:'',address:'CHINESEFOOD.jsp',image:'/AppleWeb/image/category/category_china.jpg'},
-	{num:4,name:'양식',type:'',address:'WESTERNFOOD.jsp',image:'/AppleWeb/image/category/category_american.jpg'},
-	{num:5,name:'일식',type:'',address:'JAPANESEFOOD.jsp',image:'/AppleWeb/image/category/category_japan.jpg'},
-	{num:6,name:'분식',type:'',address:'FLOURFOOD.jsp',image:'/AppleWeb/image/category/category_sanck.jpg'},
-	{num:7,name:'Q&A',type:'',address:'QnA.jsp',image:'/AppleWeb/image/category/category_qa.jpg'}];
-	
-	$scope.tabClick = function(index) {		
-		for(var i=0;i<8;i++){
-			if(i==index){
-				tabs[i].type = "active";
-			}else{
-				tabs[i].type = "";
-			}
-		}
-		if(index==7){
-			$scope.url2 = "QnA.jsp";
-		}else{
-			$scope.url2 = tabs[index].address;		
-		}
-	};
-	
-	$http.get("http://www.w3schools.com/angular/customers.php")
-	 .success(function (response) {$scope.names = response.records;});
-	
-	$scope.itemClick = function(index) {
-		$scope.message = "Number : "+(index+1)+ " Name : "+$scope.names[index].Name
-										      + " Country : "+$scope.names[index].Country;
-//											  + " Date : "+$scope.;
-//											  &tc='+new Date().getTime();
-		alert($scope.names[index].Name+" clicked");
-		alert($scope.message);
-	};
-   $scope.myVar = -1;
-   $scope.toggle = function(index) {
-   	if($scope.myVar != index){
-       	$scope.myVar = index;
-   	}else{
-   		$scope.myVar = -1;		
-   	}
-   };
-	
-   $scope.cancelClick = function() {
-	   alert("cancel");
-		$scope.$apply(function() { $location.path("http://localhost:8080/AppleWeb/views/start.jsp"); });		
-		location.replace("http://localhost:8080/AppleWeb/views/start.jsp");
-	};
-});
 </script>
 
 <style type="text/css">
@@ -236,7 +163,7 @@ myApp.controller('startController',function($scope,$http,$location){
 
 </head>
 
-<body data-ng-controller="startController">
+<body data-ng-controller="indexController">
 	
     	<header>
         <!-- Navigation -->
@@ -254,22 +181,22 @@ myApp.controller('startController',function($scope,$http,$location){
 		            </div>
 		            <ul class="nav navbar-nav navbar-left"  style="padding-left: 40px;">
 		            	<li>
-		            		<img alt="" src="/AppleWeb/image/main1.jpg" style="height: 20px;">		            		
+		            		<img alt="" src="/AppleWeb/Images/Main/main1.jpg" style="height: 20px;">		            		
 		            	</li>
 		            	<li>
-		            		<img alt="" src="/AppleWeb/image/main2.jpg" style="height: 20px;">		            		
+		            		<img alt="" src="/AppleWeb/Images/Main/main2.jpg" style="height: 20px;">		            		
 		            	</li>
 		            	<li>
-		            		<img alt="" src="/AppleWeb/image/main3.jpg" style="height: 20px;">		            		
+		            		<img alt="" src="/AppleWeb/Images/Main/main3.jpg" style="height: 20px;">		            		
 		            	</li>
 		            	<li>
-		            		<img alt="" src="/AppleWeb/image/main4.jpg" style="height: 20px;">		            		
+		            		<img alt="" src="/AppleWeb/Images/Main/main4.jpg" style="height: 20px;">		            		
 		            	</li>
 		            	<li>
-		            		<img alt="" src="/AppleWeb/image/main5.jpg" style="height: 20px;">		            		
+		            		<img alt="" src="/AppleWeb/Images/Main/main5.jpg" style="height: 20px;">		            		
 		            	</li>
 		            	<li>
-		            		<img alt="" src="/AppleWeb/image/main6.jpg" style="height: 20px;">		            		
+		            		<img alt="" src="/AppleWeb/Images/Main/main6.jpg" style="height: 20px;">		            		
 		            	</li>
 		            </ul>
 		            <!-- /.navbar-header -->
@@ -297,7 +224,7 @@ myApp.controller('startController',function($scope,$http,$location){
         <div class="container">
         <div class="row" style="vertical-align: middle; text-align: center; height: 100px;">					
 					<div class="col-md-offset-3 col-md-6">
-						<h1><a href="/"><img src="/AppleWeb/image/hlogo.gif" alt="menupan.com 매일매일 맛있게" style="width: 172px;" /></a></h1>
+						<h1><a href="/"><img src="/AppleWeb/Images/Main/hlogo.gif" alt="menupan.com 매일매일 맛있게" style="width: 172px;" /></a></h1>
 						<div class="input-group">							
 						    <input type="text" class="form-control" placeholder="Search for...">
 						      <span class="input-group-btn">
@@ -331,50 +258,50 @@ myApp.controller('startController',function($scope,$http,$location){
 		                       
 		                        <li>
 		                        	<a ng-mouseenter="show1 = true" ng-mouseleave="show1 = false" style="padding: 0px;" ng-click="tabClick(0)">
-		                        		<img alt="" src="/AppleWeb/image/category/category_all.jpg" data-ng-show="!show1"   style="width: 150px;">
-		                        		<img alt="" src="/AppleWeb/image/category/category_all1.jpg" data-ng-show="show1"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_all.jpg" data-ng-show="!show1"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_all1.jpg" data-ng-show="show1"   style="width: 150px;">
 		                        	</a>
 		                        </li>
 		                        <li>
 		                        	<a ng-mouseenter="show2 = true" ng-mouseleave="show2 = false" style="padding: 0px;" ng-click="tabClick(1)">
-		                        		<img alt="" src="/AppleWeb/image/category/category_cafe.jpg" data-ng-show="!show2"   style="width: 150px;">
-		                        		<img alt="" src="/AppleWeb/image/category/category_cafe1.jpg" data-ng-show="show2"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_cafe.jpg" data-ng-show="!show2"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_cafe1.jpg" data-ng-show="show2"   style="width: 150px;">
 		                        	</a>
 		                        </li>
 		                        <li>
 		                        	<a ng-mouseenter="show3 = true" ng-mouseleave="show3 = false" style="padding: 0px;" ng-click="tabClick(2)">
-		                        		<img alt="" src="/AppleWeb/image/category/category_korean.jpg" data-ng-show="!show3"   style="width: 150px;">
-		                        		<img alt="" src="/AppleWeb/image/category/category_korean1.jpg" data-ng-show="show3"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_korean.jpg" data-ng-show="!show3"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_korean1.jpg" data-ng-show="show3"   style="width: 150px;">
 		                        	</a>
 		                        </li>
 		                        <li>
 		                        	<a ng-mouseenter="show4 = true" ng-mouseleave="show4 = false" style="padding: 0px;" ng-click="tabClick(3)">
-		                        		<img alt="" src="/AppleWeb/image/category/category_china.jpg" data-ng-show="!show4"   style="width: 150px;">
-		                        		<img alt="" src="/AppleWeb/image/category/category_china1.jpg" data-ng-show="show4"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_china.jpg" data-ng-show="!show4"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_china1.jpg" data-ng-show="show4"   style="width: 150px;">
 		                        	</a>
 		                        </li>
 		                        <li>
 		                        	<a ng-mouseenter="show5 = true" ng-mouseleave="show5 = false" style="padding: 0px;" ng-click="tabClick(4)">
-		                        		<img alt="" src="/AppleWeb/image/category/category_american.jpg" data-ng-show="!show5"   style="width: 150px;">
-		                        		<img alt="" src="/AppleWeb/image/category/category_american1.jpg" data-ng-show="show5"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_american.jpg" data-ng-show="!show5"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_american1.jpg" data-ng-show="show5"   style="width: 150px;">
 		                        	</a>
 		                        </li>
 		                        <li>
 		                        	<a ng-mouseenter="show6 = true" ng-mouseleave="show6 = false" style="padding: 0px;" ng-click="tabClick(5)">
-		                        		<img alt="" src="/AppleWeb/image/category/category_japan.jpg" data-ng-show="!show6"   style="width: 150px;">
-		                        		<img alt="" src="/AppleWeb/image/category/category_japan1.jpg" data-ng-show="show6"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_japan.jpg" data-ng-show="!show6"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_japan1.jpg" data-ng-show="show6"   style="width: 150px;">
 		                        	</a>
 		                        </li>
 		                        <li>
 		                        	<a ng-mouseenter="show7 = true" ng-mouseleave="show7 = false" style="padding: 0px;" ng-click="tabClick(6)">
-		                        		<img alt="" src="/AppleWeb/image/category/category_sanck.jpg" data-ng-show="!show7"   style="width: 150px;">
-		                        		<img alt="" src="/AppleWeb/image/category/category_sanck1.jpg" data-ng-show="show7"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_sanck.jpg" data-ng-show="!show7"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_sanck1.jpg" data-ng-show="show7"   style="width: 150px;">
 		                        	</a>
 		                        </li>
 		                        <li>
 		                        	<a ng-mouseenter="show8 = true" ng-mouseleave="show8 = false" style="padding: 0px;" ng-click="tabClick(7)">
-		                        		<img alt="" src="/AppleWeb/image/category/category_qa.jpg" data-ng-show="!show8"   style="width: 150px;">
-		                        		<img alt="" src="/AppleWeb/image/category/category_qa1.jpg" data-ng-show="show8"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_qa.jpg" data-ng-show="!show8"   style="width: 150px;">
+		                        		<img alt="" src="/AppleWeb/Images/Main/category/category_qa1.jpg" data-ng-show="show8"   style="width: 150px;">
 		                        	</a>
 		                        </li>
 		                            
@@ -406,9 +333,9 @@ myApp.controller('startController',function($scope,$http,$location){
             	
             	
             	
-            	<img alt="" src="/AppleWeb/image/h119200_620.jpg" width="620" data-ng-show="true">
-            	<img alt="" src="/AppleWeb/image/drive_620.jpg" width="620" data-ng-show="false">
-            	<img alt="" src="/AppleWeb/image/garosugil_620.jpg" width="620" data-ng-show="false">
+            	<img alt="" src="/AppleWeb/Images/Main/h119200_620.jpg" width="620" data-ng-show="true">
+            	<img alt="" src="/AppleWeb/Images/Main/drive_620.jpg" width="620" data-ng-show="false">
+            	<img alt="" src="/AppleWeb/Images/Main/garosugil_620.jpg" width="620" data-ng-show="false">
             	
             	<div class="input-group-right"  style="margin-top: -20px; margin-right: -50%;">
             		<input type="radio" aria-label="..." style="margin-left: 0px;">
@@ -425,7 +352,8 @@ myApp.controller('startController',function($scope,$http,$location){
             	<hr>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div data-ng-include="url2"></div>
+<!--                         <div data-ng-include="url2"></div> -->
+						<div class="page {{pageClass}}" data-ng-view></div>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
