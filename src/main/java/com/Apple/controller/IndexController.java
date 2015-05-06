@@ -12,9 +12,9 @@ public class IndexController {
 	
 	Logger log = Logger.getLogger(IndexController.class);
 	
-	@RequestMapping(value="/", method=RequestMethod.GET)
+	@RequestMapping(value="/in", method=RequestMethod.GET)
 	public String index(){
 		log.info("############################index");
-		return "index";
+		return "/Main/index";
 	}
 }
