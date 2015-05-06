@@ -15,17 +15,26 @@ import com.Apple.Model.Chain;
 import com.Apple.Service.ChainService;
 
 @Controller
-public class IndexController {
+public class ChainListController {
 	
-	Logger log = Logger.getLogger(IndexController.class);
+	Logger log = Logger.getLogger(ChainListController.class);
 	
 	@Autowired
 	ApplicationContext applicationContext;
 	
-	@RequestMapping(value="/", method=RequestMethod.GET)
-	public String index(){
+	@RequestMapping(value="/chain", method=RequestMethod.GET)
+	public String chainList(){
 		log.info("############################index");
-		return "/Main/index";
-	}	
+		return "/Main/ChainList";
+	}
 	
+	@RequestMapping(value="/chain/list.json")
+	@ResponseBody
+	public List<Chain> getChainList(){
+		ChainService service = applicationContext.getBean(ChainService.class);
+		
+		List<Chain> list = service.selectAll();
+		
+		return list;
+	}
 }

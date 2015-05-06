@@ -3,25 +3,6 @@
 
 <%-- <%@ include file="/WEB-INF/common.jspf"%> --%>
 
-<!DOCTYPE>
-
-<html data-ng-app="myApp">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-<title>ALL.jsp</title>
-
-
-
-</head>
-
-<body>
-
-
 <h4>ALL.jsp </h4>
 <div class="row">
 			  <div class="col-xs-6 col-md-3" data-ng-repeat="x in shops">
@@ -31,6 +12,3 @@
 			  </div>			 
 			</div>
 
-</body>
-
-</html>
