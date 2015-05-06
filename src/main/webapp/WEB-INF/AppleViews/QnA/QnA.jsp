@@ -109,6 +109,7 @@ function checkSize(){
 
 // 입력받아서 승인
 function doSubmit() {
+	 alret("저장하시겠습니까?")
 	if(boardFrm.title.value == "") {
 		alert("제목을 입력해주세요")
 		return;
@@ -161,19 +162,36 @@ function reload() {
 					<th>내용</th>
 					<th>작성자</th>
 					<th>날짜</th>
+					<th>조회수</th>
 				</tr>
 			</thead>
-			<tbody>
-			 	<tr align="center" data-ng-repeat="x in list">			 	
+			<tbody  data-ng-repeat="x in list">
+			 	<tr align="center">			 	
 			 		<td>{{$index + 1}}</td>
 	    			<td><a href="" ng-click="toggle($index)">	    					
 								{{x.title}}</a></td>
 	    			<td>{{x.name}}</td>
 					<td>{{x.wdate}}</td>
+					<td><input type="hidden" name="seq" value="${read.seq}"></td>
 	  			</tr>
 	  			<tr data-ng-show="myVar == $index">
-	  			<td colspan="4"> ${item.replycontent} </td>
-				</tr>
+		  			<td colspan="5">
+		  				<div class="panel panel-default">
+		  					<div class="panel-body">
+		  					<p>{{x.content}}</p>	
+		  					<button class="btn">수정</button>	  						  					
+		  							  						  					
+		  					</div>	
+		  					<div class="panel-body">
+		  			  		&#8627<p>{{x.replycontent}}</p>
+		  			 		</div>		  				
+		  				</div>
+		  				<div class="input-group">
+		  					댓글 : <input type="text" size="40"><button class="btn">입력</button>
+		  				</div>
+		  				
+		  			</td>	  			
+				</tr>				
 	  		</tbody> 			
 		</table>
 		
@@ -207,7 +225,7 @@ function reload() {
 	
 <!-- 	문의하기 작성하는곳 -->
 	<table style="width: 50%;" align="center">
-  <form role="form" action="http://localhost:8080/AppleWeb/Apple/QnA.do">
+  <form name="boardFrm" role="form" action="http://localhost:8080/AppleWeb/Apple/QnA.do">
 <tbody>
 	 <tr text-align="center">
 			<th>작성자</th>
