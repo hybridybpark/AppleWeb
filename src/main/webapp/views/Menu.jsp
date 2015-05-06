@@ -31,13 +31,13 @@
 	background-color: white;
 }
 
-#container {
+.container {
 	width: 940px;
 	margin: 0px auto;
 	padding: 20px;
 }
 
-#content {
+.content {
 	width: 800px;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -69,7 +69,7 @@
 
 <body>
 
-	<div id="container">
+	<div class="container">
 
 		<div id="head" class="text-align: center">
 			<div class="form-group">
@@ -88,7 +88,7 @@
 		<hr>
 
 
-		<div id="content">
+		<div class="content">
 			<h3>MENU-</h3>
 			<div class="box">
 				<div class="image">
@@ -176,8 +176,8 @@
 	</div>
 	<!-- 메뉴 디테일 정보 들어가는 부분 -->
 
-	<div id="container">
-		<div id="content">
+	<div class="container">
+		<div class="content">
 
 			<div>
 				<div class="col-md-4">
