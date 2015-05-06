@@ -161,7 +161,7 @@ myApp2.controller('myController2',function($scope,$http){
 	<tr class="">
 		<th scope="row">자동발송금지<br/>보안문자</th>
 	       <td>
-	         <img src="/AppleWeb/image/untitled.png"  />                        
+	         <img src="/AppleWeb/src/main/webapp/WEB-INF/Images/QnA/untitled.png"/>                       
 	         <p><input id="captcha" name="captcha" fw-filter="isFill" fw-label="인증키" fw-msg="" class="inputTypeText" value="" type="text"  /> <br> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
 	       </td>
 	    </tr>

@@ -33,7 +33,7 @@ public class QnAController {
 		
 		model.addAttribute("list", list);
 		
-		return "QnA";
+		return "QnA/QnA";
 	}
 	
 	
