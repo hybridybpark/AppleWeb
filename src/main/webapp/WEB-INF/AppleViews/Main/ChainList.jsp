@@ -26,16 +26,13 @@ var myApp = angular.module('myApp',[]);
 
 myApp.controller('chainCtrl',function($scope,$http,$location){	
 	$scope.url1 = 'http://placehold.it/100&text=지점';
-	$scope.shops = shops=[
-	{name:'shop1',image:$scope.url1},
-	{name:'shop2',image:$scope.url1},
-	{name:'shop3',image:$scope.url1},
-	{name:'shop4',image:$scope.url1},
-	{name:'shop5',image:$scope.url1},
-	{name:'shop6',image:$scope.url1},
-	{name:'shop7',image:$scope.url1},
-	{name:'shop8',image:$scope.url1}
-	];
+	
+	$http.get("../Apple/chain/list.json")
+	.success(function (data) {
+		$scope.chainlist = data;		
+		});
+	
+	
 	//scope.$apply(function() { $location.path("/route"); });	
 	$scope.cancelClick = function() {		
 		//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
@@ -52,7 +49,7 @@ myApp.controller('chainCtrl',function($scope,$http,$location){
 	</div>
 	<h3>매장 찾기</h3>
 	<div class="container">
-		<ul class="media-list" data-ng-repeat="x in shops">
+		<ul class="media-list" data-ng-repeat="x in chainlist">
         <li class="media">
             <a href="#" class="pull-left">
                 <img src="{{x.image}}" class="media-object" alt="Sample Image">
