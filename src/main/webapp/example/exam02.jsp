@@ -116,11 +116,11 @@ th, tr, td {
 					<td class="text">7000</td>
 				</tr>
 				<tr>
-					<th><img src="/AppleWeb/Image/Menu/A2.jpg"
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
-					<th><img src="/AppleWeb/Image/Menu/col.jpg"
+					<th><img src="/AppleWeb/Images/Menu/col.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
-					<th><img src="/AppleWeb/Image/Menu/A2.jpg"
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
 				</tr>
 				<tr>
