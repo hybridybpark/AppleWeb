@@ -148,7 +148,7 @@ th, tr, td {
 				</tr>
 				<tr>
 					<th>가격</th>
-					<th></th>
+					<th>옵션1</th>
 				</tr>
 				<tr>
 					<th>
@@ -156,6 +156,14 @@ th, tr, td {
 						<input type="radio" name="rPrice" value="6000" checked="checked" />6000
 						<input type="radio" name="rPrice" value="7000" />7000 
 					</th>
+						<th>
+						<input type="radio" name="rOption" value="5000" />5000 
+						<input type="radio" name="rOption" value="6000" checked="checked" />6000
+						<input type="radio" name="rOption" value="7000" />7000 
+					</th>
+				</tr>
+				<tr>
+				
 				</tr>
 			</table>
 
