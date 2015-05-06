@@ -6,6 +6,10 @@
 		FROM chains				
 	</select>	 
 	
+	<select id="selectOneChain" parameterType="String" resultType="com.Apple.Model.Chain">
+	    SELECT * FROM chains WHERE CHAINNAME=#{chainname}
+	</select>
+	
 	<resultMap type="com.Apple.Model.Chain" id="chainList">
 	    
 	    <result property="name" column="CHAINNAME"/>

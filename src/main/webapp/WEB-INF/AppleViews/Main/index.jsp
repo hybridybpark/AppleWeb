@@ -12,7 +12,8 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!-- 	<meta name="viewport" content="width=800px, initial-scale=1"> -->
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -52,6 +53,7 @@
 	<!-- Angular JavaScript -->
 	<!-- 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
 	<script src="/AppleWeb/Frameworks/angular-1.3.15/angular.js"></script>
+	<script src="/AppleWeb/Frameworks/angular-1.3.15/angular-route.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,106 +61,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script type="text/javascript">
-
-</script>
+    
+	<script src="/AppleWeb/js/Main/index.js"></script>
+	
+	<link href="/AppleWeb/css/Main/index.css" rel="stylesheet">
 
 <style type="text/css">
-	.navbar-xs{
-		height: 28px;
-	}
-	.navbar-xs .navbar-default .navbar { min-height:28px; height: 28px; }
-	.navbar-xs .navbar-default .navbar .navbar-brand{ padding: 0px 12px;font-size: 16px;line-height: 28px; }
-	.navbar-xs .navbar-default .navbar .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 28px; }
 	
-	.search_wrap {width:980px; height:127px; position:relative;}
-	.search_wrap .h1logo {width:172px; height:42px; position:absolute; left:148px; top:47px;}
-	.search_wrap .search_area { width:429px; height:38px; position:absolute; left:340px; top:49px; }
-	.search_wrap .search_area .search_window { float:left; width:364px; height:30px; border:#d62421 4px solid;}
-	.search_wrap .search_area .search_window input {float:left; width:344px; height:20px; padding:5px 10px; /*background:url('/image/main2013/common_img.png') no-repeat right bottom;*/ line-height:20px;}
-	
-	.search_wrap .search_area .search_btn { float:right; text-indent:-100000px; width:52px; height:38px; background:url('/image/main2013/common_img.png') no-repeat -30px -180px;}
-	
-	.h1logo {width:172px; height:42px; position:absolute; left:148px; top:47px;}
-	
-	#search_input{
-		float:left; width:364px; height:30px; border:#d62421 4px solid;
-	}
-	
-	.navbar-default .sidebar{
-		width: 150px;
-	}	
-	#page-wrapper {
-    padding: 0 15px;
-    min-height: 568px;
-    background-color: #fff;
-	}
-
-	@media(min-width:768px) {
-	    #page-wrapper {
-	        position: inherit;
-	        margin: 0 0 0 150px;
-	        padding: 0 30px;
-	        border-left: 1px solid #e7e7e7;
-	    }
-	}
-	.sidebar ul li {
-    border-bottom: 0px solid #e7e7e7;
-	}
-	
-	@media(min-width:768px) {
-    .sidebar {
-        z-index: 1;
-        position: absolute;
-        width: 250px;
-        margin-top: 30px;
-    }
-
-    .navbar-top-links .dropdown-messages,
-    .navbar-top-links .dropdown-tasks,
-    .navbar-top-links .dropdown-alerts {
-        margin-left: auto;
-    }    
-	}
-	@media(min-width:768px) {
-    #page-wrapper {
-        position: inherit;
-        margin: 0 0 0 250px;
-        padding: 0 30px;
-        border-left: 0px solid #e7e7e7;
-    }
-	}
-	
-	#cont{
-
-	position : fixed;
-	
-	left: 50%;
-	
-	height: 0px;
-	
-	}
-	
-	 
-	
-	#float_layer{
-	
-	top: 200px;
-	
-	margin-left: 200px;
-	
-	text-align: center;
-	
-	}
-	
-	.fixed-bottom-right{
-		position: fixed;
-		bottom: auto;
-		top: 105px;
-		left: 90%;
-		margin-bottom: 0 auto;
-		z-index: 900;
-	}
 </style>
 
 </head>
@@ -352,8 +261,7 @@
             	<hr>
                 <div class="row">
                     <div class="col-lg-12">
-<!--                         <div data-ng-include="url2"></div> -->
-						<div class="page {{pageClass}}" data-ng-view></div>
+                        <div data-ng-include="url2"></div>						
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
