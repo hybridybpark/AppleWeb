@@ -11,11 +11,6 @@ public interface QnADao {
 	
 	public void insert(QnA qna);
 	
-	public void delete(String title);
+	public void delete(String password);
 
-	public static int writeProc(Map<String, Object> paramMap) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 }

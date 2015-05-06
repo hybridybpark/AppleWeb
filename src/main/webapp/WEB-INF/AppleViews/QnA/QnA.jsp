@@ -121,6 +121,12 @@ function doSubmit() {
 	boardFrm.submit()
 }
 
+
+// 취소버튼 초기화
+function reload() { 
+	document.location.reload();     
+}
+
 </script>
 
 
@@ -165,8 +171,9 @@ function doSubmit() {
 	    			<td>{{x.name}}</td>
 					<td>{{x.wdate}}</td>
 	  			</tr>
-	  			<tr data-ng-show="myVar == $index"><td colspan="4">
-								${item.replycontent}
+	  			<tr data-ng-show="myVar == $index">
+	  			<td colspan="4"> ${item.replycontent} </td>
+				</tr>
 	  		</tbody> 			
 		</table>
 		
@@ -247,12 +254,12 @@ function doSubmit() {
 		<th scope="row">개인정보<br/>보호정책</th>
 	       <td>
 <textarea id="privacy_agreement" name="privacy_agreement" fw-filter="" fw-label="개인정보보호정책" fw-msg="" style="overflow:scroll;resize: none;width:100%;border:1px solid lightgray;overflow:visible;text-overflow:ellipsis;" rows=0 readonly>
-	■ 개인정보의 수집·이용 목적
-	서비스 제공 및 계약의 이행, 구매 및 대금결제, 물품배송 또는 청구지 발송, 회원관리 등을 위한 목적 
-	■ 수집하려는 개인정보의 항목이름, 주소, 연락처, 이메일 등 
-	■ 개인정보의 보유 및 이용 기간
-	회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외없이 해당정보를 파기합니다.</textarea><br/>
-	개인정보취급방침에 대하여 동의하십니까? 
+■ 개인정보의 수집·이용 목적
+서비스 제공 및 계약의 이행, 구매 및 대금결제, 물품배송 또는 청구지 발송, 회원관리 등을 위한 목적 
+■ 수집하려는 개인정보의 항목이름, 주소, 연락처, 이메일 등 
+■ 개인정보의 보유 및 이용 기간
+회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외없이 해당정보를 파기합니다.</textarea><br/>
+개인정보취급방침에 대하여 동의하십니까? 
 			<input id="privacy_agreement_radio0" name="privacy_agreement_radio" fw-filter="isFill" fw-label="개인정보보호정책" fw-msg="" value="T" type="radio"  /><label for="privacy_agreement_radio0" >동의함</label>
 			<input id="privacy_agreement_radio1" name="privacy_agreement_radio" fw-filter="isFill" fw-label="개인정보보호정책" fw-msg="" value="F" type="radio" checked="checked"  /><label for="privacy_agreement_radio1" >동의안함</label>                    
 			</td>
@@ -261,7 +268,7 @@ function doSubmit() {
 		<tr align="center">
 	   		<td colspan="2"> <br>
 				<input type="submit" value="글쓰기" onclick="doSubmit()">
-				<input type="reset" value="취소">
+				<input type="reset" value="취소" onclick="reload()">
 			</td>
  	 	</tr>
  	 	</form>

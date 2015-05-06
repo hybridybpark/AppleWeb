@@ -35,6 +35,7 @@ public class QnAService {
 //		this.qnadao = qnadao;
 //	}
 	
+	// DB List 출력
 	public List<QnA> selectAll() {
 		List<QnA> list = qnadao.selectAll();
 		
@@ -42,12 +43,14 @@ public class QnAService {
 		
 	}
 	
+	// DB insert 입력
 	public void insert(QnA qna){
 		qnadao.insert(qna);
 	}
 	
-	public void delete(String title){
-		qnadao.delete(title);
+	// DB delete 삭제
+	public void delete(String password){
+		qnadao.delete(password);
 	}
 	
 }

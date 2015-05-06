@@ -27,7 +27,7 @@
 	
 	
 	<delete id="delete" parameterType="String" >
-	    DELETE from qna WHERE(TITLE=#{title})
+	    DELETE from qna WHERE(TITLE=#{password})
 	</delete>
 	
 </mapper>
