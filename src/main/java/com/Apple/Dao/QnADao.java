@@ -13,4 +13,5 @@ public interface QnADao {
 	
 	public void delete(String password);
 
+	public void update(String title);
 }

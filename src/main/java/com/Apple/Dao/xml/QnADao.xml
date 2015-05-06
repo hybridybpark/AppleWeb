@@ -30,5 +30,9 @@
 	    DELETE from qna WHERE(TITLE=#{password})
 	</delete>
 	
+	<update id="update" parameterType="String">
+	    UPDATE board set title = ? , content = ?
+	</update>
+	
 </mapper>
 
