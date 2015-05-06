@@ -20,8 +20,8 @@
 	        
 	</resultMap>
 	<insert id="insert" parameterType="com.Apple.Model.QnA">
-	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate})
-	    
+<!-- 	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate}) -->
+	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},null,null,null)
 	</insert>
 	
 	
