@@ -128,6 +128,16 @@ function reload() {
 	document.location.reload();     
 }
 
+// 수정&삭제 버튼
+ 	function goURI(text) {
+		if(text == 'modify') {
+			document.readForm.action = "modify_form.do";
+		} else if(text == 'delete') {
+			document.readForm.action = "delete.do";
+		}
+		document.readForm.submit();
+	}
+
 </script>
 
 
@@ -179,7 +189,10 @@ function reload() {
 		  				<div class="panel panel-default">
 		  					<div class="panel-body">
 		  					<p>{{x.content}}</p>	
-		  					<button class="btn">수정</button>	  						  					
+<!-- 		  					<button class="btn">수정</button>	  						  					 -->
+<!-- 		  					<button class="btn">삭제</button>	 -->
+		  					<input type="button" value="수정" onClick="goURI('modify')"/>
+							<input type="button" value="삭제" onClick="goURI('delete')"/>  						  					
 		  							  						  					
 		  					</div>	
 		  					<div class="panel-body">

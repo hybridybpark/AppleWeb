@@ -54,8 +54,8 @@ public class QnAService {
 	}
 	
 	// DB update 수정
-	public void update(String title){
-		qnadao.update(title);
+	public void update(QnA qna){
+		qnadao.update(qna);
 	}
 	
 }
