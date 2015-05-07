@@ -48,5 +48,10 @@ public class IndexController {
 		return list;
 	}
 	
+	@RequestMapping(value="/view/{category}")
+	public String category(@PathVariable String category){
+		return "/Main/"+category;
+	}
+	
 	
 }

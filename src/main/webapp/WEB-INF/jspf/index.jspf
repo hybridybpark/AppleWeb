@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jspf/taglib.jspf" %>
+<%-- <c:url value="/Frameworks/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" var="cssjquerymobile"></c:url> --%>
+<%-- <c:url value="/Frameworks/jquery/jquery-2.1.3.min.js" var="jquery"/> --%>
+<%-- <c:url value="/Frameworks/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js" var="jquerymobile"/> --%>
+<%-- <c:url value="/Frameworks/cordova.js" var="cordova"></c:url> --%>
+<%-- <c:url value="/Frameworks/angular-1.3.15/angular.min.js" var="angular"></c:url> --%>
+<%-- <c:url value="/Frameworks/angular-1.3.15/angular-sanitize.js" var="angularsanitize"></c:url> --%>
+<%-- <c:url value="/Frameworks/angular-1.3.15/angular-animate.js" var="angularanimate"></c:url> --%>
+<%-- <c:url value="/Frameworks/bootstrap-3.3.4-dist/css/bootstrap.min.css" var="cssbootstrap"></c:url> --%>
+<%-- <c:url value="/Frameworks/bootstrap-3.3.4-dist/js/bootstrap.js" var="bootstrap"></c:url> --%>
+<%-- <c:url value="/Frameworks/angular-1.3.15/ng-map.min.js" var="map"></c:url> --%>
+ 
+ 
+<!-- Bootstrap Core CSS -->
+
+<link href="/AppleWeb/Frameworks/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- MetisMenu CSS -->
+
+<link href="/AppleWeb/Frameworks/metisMenu.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+
+<link href="/AppleWeb/Frameworks/sb-admin-2.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+
+<link href="/AppleWeb/Frameworks/font-awesome.min.css" rel="stylesheet">
+   
+<!-- jQuery -->
+
+<script src="/AppleWeb/Frameworks/jquery/jquery-2.1.3.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/AppleWeb/Frameworks/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+
+<script src="/AppleWeb/Frameworks/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/AppleWeb/Frameworks/sb-admin-2.js"></script>
+
+<!-- Angular JavaScript -->
+
+<script src="/AppleWeb/Frameworks/angular-1.3.15/angular.js"></script>
+
+<!-- Angular Route JavaScript -->
+
+<script src="/AppleWeb/Frameworks/angular-1.3.15/angular-route.js"></script>
+
+<!-- Index JavaScript -->
+   
+<script src="/AppleWeb/js/Main/index.js"></script>
+
+<!-- Index css -->
+
+<link href="/AppleWeb/css/Main/index.css" rel="stylesheet">
