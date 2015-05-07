@@ -6,10 +6,22 @@
 	    FROM SHOPINFO
 	</select>
 	
+	<select id="selectAllOrderByMark" resultMap="ShopList">
+	    SELECT *
+	    FROM SHOPINFO
+	    ORDER BY SHOPMARK
+	</select>
+	
 	<select id="selectListByChain" resultMap="ShopList" parameterType="String">
 	    SELECT *
 	    FROM SHOPINFO
 	    WHERE SHOPCHAINNAME=#{shopchainname}
+	</select>
+	
+	<select id="selectListByCategory" resultMap="ShopList" parameterType="String">
+	    SELECT *
+	    FROM SHOPINFO
+	    WHERE SHOPCATEGORY=#{shopcategory}
 	</select>
 	
 	<resultMap type="com.Apple.Model.ShopInfo" id="ShopList">

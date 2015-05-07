@@ -12,6 +12,10 @@ mainApp.controller('indexController',function($scope,$http,$location){	//
 		$scope.url2 = "ChainList.jsp";
 	};
 	
+	$http.get("/AppleWeb/Apple/list/ALL")
+	.success(function (data) {
+		$scope.shops = data;		
+		});	
 	
 	
 	$scope.tabs = tabs = [
