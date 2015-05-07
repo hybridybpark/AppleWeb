@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.Apple.Dao.AccountDao;
 import com.Apple.Model.Account;
+import com.Apple.Model.QnA;
 
 
 
@@ -18,16 +19,23 @@ public class AccountService {
 	@Autowired
 	DataSource dataSource;
 	@Autowired
-	AccountDao accountDao;
+	AccountDao accountdao;
 	
 	
+	
+	//DB 출력
 	public List<Account> selectAll() {
 		
-		List<Account> list = accountDao.selectAll();
+		List<Account> list = accountdao.selectAll();
 				
 		
 		return list;
-		
-		
 	}
+
+	// DB insert 입력
+	public void insert(Account account){
+		accountdao.insert(account);
+	}
+	
+	
 }

@@ -8,4 +8,7 @@ public interface AccountDao {
 	
 	public List<Account> selectAll();
 	
+
+	public void insert(Account account);
+	
 }

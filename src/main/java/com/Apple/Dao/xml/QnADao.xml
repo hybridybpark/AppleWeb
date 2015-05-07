@@ -6,6 +6,7 @@
 		FROM qna		
 	</select>	 
 	
+<!-- 	사용할 DB 변수명 설정 -->
 	<resultMap type="com.Apple.Model.QnA" id="qnaList">
 	    
 	    <result property="name" column="WRITERNAME"/>
@@ -19,19 +20,22 @@
 	    
 	        
 	</resultMap>
+	
+<!-- 	입출력 쿼리문 -->
 	<insert id="insert" parameterType="com.Apple.Model.QnA">
 <!-- 	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate}) -->
 	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},null,null,null)
 	</insert>
 	
 	
-	
+<!-- 	삭제 쿼리문 -->
 	<delete id="delete" parameterType="String" >
-	    DELETE from qna WHERE(TITLE=#{password})
+	    DELETE FROM #{title} WHERE #{password}
 	</delete>
 	
-	<update id="update" parameterType="String">
-	    UPDATE board set title = ? , content = ?
+<!-- 	수정 쿼리문 -->
+	<update id="update" parameterType="com.Apple.Model.QnA">
+	    UPDATE qna set WHERE(title = ? , content = ?, password = ?, wdate=now())
 	</update>
 	
 </mapper>

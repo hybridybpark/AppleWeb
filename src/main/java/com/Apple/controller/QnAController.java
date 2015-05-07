@@ -76,15 +76,21 @@ public class QnAController {
 		return "redirect:/Apple/qna";
 	}
 	
-	//삭제
-//	@RequestMapping("/QnA.do")
-//	public String deleteQnA(@RequestParam Map<String, Object> paramMap) {
-//		
-//		QnAService service = applicationContext.getBean(QnAService.class);
-//		
-//		return "redirect:/Apple/qna";
-//		
-//	}
+	// 게시글 삭제
+	@RequestMapping("/QnA.do")
+	public String deleteQnA(@RequestParam Map<String, Object> paramMap) {
+		
+		QnAService service = applicationContext.getBean(QnAService.class);
+		
+		QnA qna = new QnA();
+		
+		qna.setPassword(paramMap.get("password").toString());
+		
+		qna.setTitle(paramMap.get("title").toString());
+		
+		return "redirect:/Apple/qna";
+		
+	}
 	
 	// 수정
 	
