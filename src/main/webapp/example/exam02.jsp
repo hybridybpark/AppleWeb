@@ -34,7 +34,7 @@
 	padding: 20px;
 }
 
-#content {
+.content {
 	padding: 20px;
 	margin-bottom: 20px;
 	border: 0.5px solid orange;
@@ -76,33 +76,15 @@ th, tr, td {
 		<hr>
 
 
-		<div id="content">
+		<div class="content">
 			<h3>MENU-</h3>
 			<table>
 				<tr>
-					<th><img src="/AppleWeb/image/A2.jpg"
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
-					<th><img src="/AppleWeb/image/col.jpg"
+					<th><img src="/AppleWeb/Images/Menu/col.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
-					<th><img src="/AppleWeb/image/A2.jpg"
-						style="width: 200px; height: auto;" hspace="50"></th>
-				</tr>
-				<tr>
-					<td class="text">가격</td>
-					<td class="text">가격</td>
-					<td class="text">가격</td>
-				</tr>
-				<tr>
-					<td class="text">5000</td>
-					<td class="text">6000</td>
-					<td class="text">7000</td>
-				</tr>
-				<tr>
-					<th><img src="/AppleWeb/image/A2.jpg"
-						style="width: 200px; height: auto;" hspace="50"></th>
-					<th><img src="/AppleWeb/image/col.jpg"
-						style="width: 200px; height: auto;" hspace="50"></th>
-					<th><img src="/AppleWeb/image/A2.jpg"
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
 				</tr>
 				<tr>
@@ -116,11 +98,29 @@ th, tr, td {
 					<td class="text">7000</td>
 				</tr>
 				<tr>
-					<th><img src="/AppleWeb/image/A2.jpg"
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
-					<th><img src="/AppleWeb/image/col.jpg"
+					<th><img src="/AppleWeb/Images/Menu/col.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
-					<th><img src="/AppleWeb/image/A2.jpg"
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+				</tr>
+				<tr>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+				</tr>
+				<tr>
+					<td class="text">5000</td>
+					<td class="text">6000</td>
+					<td class="text">7000</td>
+				</tr>
+				<tr>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/col.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
 						style="width: 200px; height: auto;" hspace="50"></th>
 				</tr>
 				<tr>
@@ -139,16 +139,16 @@ th, tr, td {
 		</div>
 	</div>
 	<!-- 메뉴 디테일 정보 들어가는 부분 -->
-	<div id="container">
-		<div id="content">
+	<div class="container">
+		<div class="content">
 			<table>
 				<tr>
-					<th><img src="/AppleWeb/image/A2.jpg" style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg" style="width: 200px; height: auto;" hspace="50"></th>
 					<th class="text-align: center">가게정보: 우리가게는 멋진가게입니다 좋아요!</th>
 				</tr>
 				<tr>
 					<th>가격</th>
-					<th></th>
+					<th>옵션1</th>
 				</tr>
 				<tr>
 					<th>
@@ -156,6 +156,14 @@ th, tr, td {
 						<input type="radio" name="rPrice" value="6000" checked="checked" />6000
 						<input type="radio" name="rPrice" value="7000" />7000 
 					</th>
+						<th>
+						<input type="radio" name="rOption" value="5000" />5000 
+						<input type="radio" name="rOption" value="6000" checked="checked" />6000
+						<input type="radio" name="rOption" value="7000" />7000 
+					</th>
+				</tr>
+				<tr>
+				
 				</tr>
 			</table>
 

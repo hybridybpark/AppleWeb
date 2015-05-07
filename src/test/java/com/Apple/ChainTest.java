@@ -36,20 +36,24 @@ public class ChainTest {
 		
 		Chain chain = new Chain();
 		
-		chain.setDesc("설명");
-		chain.setImage("이미지 경로");
-		chain.setName("이름2");
+//		chain.setDesc("설명");
+//		chain.setImage("이미지 경로");
+//		chain.setName("이름2");
+//		
+//		service.insert(chain);
+//		
+//		List<Chain> list = service.selectAll();
 		
-		service.insert(chain);
+//		for(Chain c : list){
+//			log.info(c.getName());
+//			log.info(c.getImage());
+//			log.info(c.getDesc());
+//		}
 		
-		List<Chain> list = service.selectAll();
+		chain = service.selectOneChain("STARBUCKS");
 		
-		for(Chain c : list){
-			log.info(c.getName());
-			log.info(c.getImage());
-			log.info(c.getDesc());
-		}
 		
+		log.info(chain.getName());
 	}
 
 
