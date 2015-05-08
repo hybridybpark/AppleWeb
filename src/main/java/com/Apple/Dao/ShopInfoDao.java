@@ -7,5 +7,11 @@ import com.Apple.Model.ShopInfo;
 public interface ShopInfoDao {
 	public List<ShopInfo> selectAll();
 	
+	public List<ShopInfo> selectAllOrderByMark();	
+	
 	public List<ShopInfo> selectListByChain(String shopchainname);
+	
+	public List<ShopInfo> selectListByCategory(String shopcategory);
+	
+	
 }

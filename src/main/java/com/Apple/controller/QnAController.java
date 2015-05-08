@@ -22,7 +22,6 @@ import com.Apple.Model.QnA;
 import com.Apple.Service.QnAService;
 
 @Controller
-@RequestMapping("/")
 public class QnAController {
 	
 	Logger log = Logger.getLogger(QnAController.class);

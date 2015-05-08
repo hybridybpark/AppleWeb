@@ -24,7 +24,17 @@ public class ShopInfoService {
 		return shopInfoDao.selectAll();
 	}
 	
+	public List<ShopInfo> selectAllOrderByMark(){
+		return shopInfoDao.selectAllOrderByMark();
+	}	
+	
 	public List<ShopInfo> selectListByChain(String shopchainname){
 		return shopInfoDao.selectListByChain(shopchainname);
 	}
+	
+	public List<ShopInfo> selectListByCategory(String shopcategory){
+		return shopInfoDao.selectListByCategory(shopcategory);
+	}
+	
+	
 }

@@ -32,13 +32,13 @@ myApp.controller('chainCtrl',function($scope,$http,$location){
 // 		$scope.chainlist = data;		
 // 		});
 	
-	$http.get("http://localhost:8080/AppleWeb/Apple/chain/list/STARBUCKS")
+	$http.get("/AppleWeb/Apple/chain/list/STARBUCKS")
 	.success(function (data) {
 		$scope.chainlist = data;
 		alert(date);
 		});
 	
- 	$http.get("http://localhost:8080/AppleWeb/Apple/chain/chain/STARBUCKS")
+ 	$http.get("/AppleWeb/Apple/chain/chain/STARBUCKS")
  	.success(function (data) {
  		$scope.chain = data;
  		alert(date);
