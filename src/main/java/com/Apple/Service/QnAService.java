@@ -49,8 +49,8 @@ public class QnAService {
 	}
 	
 	// DB delete 삭제
-	public void delete(String password){
-		qnadao.delete(password);
+	public void delete(QnA qna){
+		qnadao.delete(qna);
 	}
 	
 	// DB update 수정

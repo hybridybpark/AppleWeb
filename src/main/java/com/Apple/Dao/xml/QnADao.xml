@@ -26,11 +26,14 @@
 <!-- 	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate}) -->
 	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},null,null,null)
 	</insert>
-	
+	<insert id="insertReply" parameterType="com.Apple.Model.QnA">
+	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate},null)
+	    
+	</insert>
 	
 <!-- 	삭제 쿼리문 -->
-	<delete id="delete" parameterType="String" >
-	    DELETE FROM #{title} WHERE #{password}
+	<delete id="delete" parameterType="com.Apple.Model.QnA" >
+	    DELETE FROM qna WHERE title = #{title} AND password = #{password}
 	</delete>
 	
 <!-- 	수정 쿼리문 -->

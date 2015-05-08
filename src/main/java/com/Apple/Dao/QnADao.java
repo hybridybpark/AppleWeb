@@ -11,7 +11,7 @@ public interface QnADao {
 	
 	public void insert(QnA qna);
 	
-	public void delete(String password);
+	public void delete(QnA qna);
 
 	public void update(QnA qna);
 }
