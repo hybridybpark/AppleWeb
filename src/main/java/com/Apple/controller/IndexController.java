@@ -32,6 +32,12 @@ public class IndexController {
 		return "/Main/index";
 	}
 	
+	@RequestMapping(value="/body", method=RequestMethod.GET)
+	public String index_body(){
+		log.info("############################index");
+		return "/Main/index_body";
+	}
+	
 	@RequestMapping(value="/list/{category}")
 	@ResponseBody
 	public List<ShopInfo> allList(@PathVariable String category){

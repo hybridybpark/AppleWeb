@@ -47,7 +47,7 @@
         z-index: 1;
         position: absolute;
         width: 250px;
-        margin-top: 30px;
+        margin-top: 0px;
     }
 
     .navbar-top-links .dropdown-messages,
