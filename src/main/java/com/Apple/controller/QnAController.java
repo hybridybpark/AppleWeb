@@ -11,6 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,6 +37,13 @@ public class QnAController {
 		log.info("############################QNA GET");		
 		
 		return "QnA/QnA";
+	}
+	
+	@RequestMapping(value="/qna/write", method=RequestMethod.GET)
+	public String qnaWrite(Model model){
+		log.info("############################QNA Write");		
+		
+		return "QnA/QnAWriting";
 	}
 	
 	// 출력
@@ -87,10 +95,32 @@ public class QnAController {
 		
 		qna.setTitle(paramMap.get("title").toString());
 		
+		service.delete(qna);
+		
+		return "redirect:/Apple/qna";
+		
+	}
+	
+	@RequestMapping(value="/QnA.delete2/{title}.{password}", method=RequestMethod.POST)
+	public String deleteQnA2(@PathVariable String title,@PathVariable String password) {
+		
+		QnAService service = applicationContext.getBean(QnAService.class);
+		
+		QnA qna = new QnA();
+		
+		log.info("##################### password : "+password);
+		
+		qna.setPassword(password);
+		
+		qna.setTitle(title);
+		
+		//service.delete(qna);
+		
 		return "redirect:/Apple/qna";
 		
 	}
 	
 	// 수정
+	
 	
 }
