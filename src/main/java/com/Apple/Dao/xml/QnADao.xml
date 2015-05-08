@@ -30,7 +30,7 @@
 	
 <!-- 	삭제 쿼리문 -->
 	<delete id="delete" parameterType="String" >
-	    DELETE FROM #{title} WHERE #{password}
+	    DELETE FROM qna WHERE title = #{title}
 	</delete>
 	
 <!-- 	수정 쿼리문 -->

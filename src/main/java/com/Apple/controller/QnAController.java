@@ -77,7 +77,7 @@ public class QnAController {
 	}
 	
 	// 게시글 삭제
-	@RequestMapping("/QnA.do")
+	@RequestMapping("/QnA.delete")
 	public String deleteQnA(@RequestParam Map<String, Object> paramMap) {
 		
 		QnAService service = applicationContext.getBean(QnAService.class);
