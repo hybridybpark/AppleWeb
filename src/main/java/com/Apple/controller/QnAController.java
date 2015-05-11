@@ -61,8 +61,7 @@ public class QnAController {
 	@RequestMapping("/QnA.do")
 	public String insertQnA(@RequestParam Map<String, Object> paramMap){
 		QnAService service = applicationContext.getBean(QnAService.class);
-		
-		QnA qna = new QnA();
+		QnA qna = new QnA(); 
 		
 		qna.setTitle(paramMap.get("title").toString());
 		
