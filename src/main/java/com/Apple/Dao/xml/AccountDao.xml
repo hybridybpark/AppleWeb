@@ -9,10 +9,19 @@
 	
 	<resultMap type="com.Apple.Model.Account" id="accountList">
 	    <result property="BUSINESSNAME" column="BUSINESSNAME"/>
+	    <result property="BUSINESSNUMBER" column="BUSINESSNUMBER"/>
 	    <result property="PASSWORD" column="PASSWORD" />
 	    <result property="EMAIL" column="EMAIL" />
 	    <result property="PHONE" column="PHONE" />
 	    <result property="EMAILACCEPT" column="EMAILACCEPT" />
 	    <result property="SMSACCEPT" column="SMSACCEPT" />
 	</resultMap>
+	
+	<!-- 	입출력 쿼리문 -->
+	<insert id="insert" parameterType="com.Apple.Model.Account">	    
+	    INSERT INTO ACCOUNT values(#{BUSINESSNUMBER},#{PASSWORD},#{EMAIL},#{PHONE},#{EMAILACCEPT},#{SMSACCEPT},#{BUSINESSNAME})
+	</insert>
+		
 </mapper>
+
+

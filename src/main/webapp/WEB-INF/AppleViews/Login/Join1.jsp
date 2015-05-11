@@ -25,65 +25,47 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	
+<!-- Join JavaScript -->
+   
+<script src="/AppleWeb/js/Login/join.js"></script>
+
+<!-- Join css -->
+
+<link href="/AppleWeb/css/Login/join.css" rel="stylesheet">
 
 <title>회원 가입</title>
 
-<script type="text/javascript">
-	var myApp = angular.module('myApp', []);
-	myApp.controller('userCtrl', function($scope, $http, $location) {
-
-		//scope.$apply(function() { $location.path("/route"); });	
-		$scope.cancelClick = function() {
-			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
-			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
-
-		};
-	});
-</script>
-<style>
-h1 {
-	text-align: center;
-}
-
-.container{
-	margin: 0px auto;
-	padding: 20px;
-}
-
-</style>
 <body ng-app="myApp" ng-controller="userCtrl" class="container">
-
-
-
 
 	<h1>신규 회원 가입</h1>
 
 	<hr>
 	<div>
 	<div>
-		<a href=""> <img src="/AppleWeb/image/join/join.jpg"
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join.jpg"
 			style="position:absolute; top:100px; left:100px; width: 200px; height:auto;" 
 			/>
 		</a>
-		<a href=""> <img src="/AppleWeb/image/join/join2.jpg"
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join2.jpg"
 			style="position:absolute; top:185px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
-		<a href=""> <img src="/AppleWeb/image/join/join3.jpg"
-			onmouseover="this.src='/AppleWeb/image/join/join3_1.jpg'"
-			onmouseout="this.src='/AppleWeb/image/join/join3.jpg'"  
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join3.jpg"
+			onmouseover="this.src='/AppleWeb/Images/Login/join/join3_1.jpg'"
+			onmouseout="this.src='/AppleWeb/Images/Login/join/join3.jpg'"  
 			style="position:absolute; top:225px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
-		<a href=""> <img src="/AppleWeb/image/join/join4.jpg"
-			onmouseover="this.src='/AppleWeb/image/join/join4_1.jpg'"
-			onmouseout="this.src='/AppleWeb/image/join/join4.jpg'"  
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join4.jpg"
+			onmouseover="this.src='/AppleWeb/Images/Login/join/join4_1.jpg'"
+			onmouseout="this.src='/AppleWeb/Images/Login/join/join4.jpg'"
 			style="position:absolute; top:260px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
-		<a href=""> <img src="/AppleWeb/image/join/join5.jpg"
-			onmouseover="this.src='/AppleWeb/image/join/join5_1.jpg'"
-			onmouseout="this.src='/AppleWeb/image/join/join5.jpg'"  
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join5.jpg"
+			onmouseover="this.src='/AppleWeb/Images/Login/join/join5_1.jpg'"
+			onmouseout="this.src='/AppleWeb/Images/Login/join/join5.jpg'"
 			style="position:absolute; top:295px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
@@ -97,8 +79,10 @@ h1 {
 <hr>
 
 	<div class="container">
-	<form class="form-horizontal" role="form" method="post"
-		action="javascript:alert( 'success!' );">
+<!-- 	<form class="form-horizontal" role="form" method="post" -->
+<!-- 		action="javascript:alert( 'success!' );"> -->
+		<form class="form-horizontal" name="boardFrm" role="form" action="http://localhost:8080/AppleWeb/Apple/Join.do">
+		
 		<div class="form-group">
 			<label for="provision" class="col-lg-2 control-label">회원가입약관</label>
 			<div class="col-lg-10" id="provision">
@@ -136,11 +120,12 @@ h1 {
 				</div>
 			</div>
 		</div>
+		
 		<div class="form-group" id="divId">
 			<label for="inputId" class="col-lg-2 control-label">사업자명</label>
 			<div class="col-lg-10">
 				<input type="text" class="form-control onlyAlphabetAndNumber"
-					id="id" data-rule-required="true" placeholder=" 사업자명 "
+					name="BUSINESSNAME" data-rule-required="true" placeholder=" 사업자명 "
 					maxlength="30">
 			</div>
 		</div>
@@ -148,7 +133,7 @@ h1 {
 			<label for="inputId" class="col-lg-2 control-label">사업자번호</label>
 			<div class="col-lg-10">
 				<input type="text" class="form-control onlyAlphabetAndNumber"
-					id="id" data-rule-required="true" placeholder="- 없이 숫자만 입력하세요."
+					name="BUSINESSNUMBER" data-rule-required="true" placeholder="- 없이 숫자만 입력하세요."
 					maxlength="30">
 			</div>
 		</div>
@@ -156,7 +141,7 @@ h1 {
 			<label for="inputPassword" class="col-lg-2 control-label">패스워드</label>
 			<div class="col-lg-10">
 				<input type="password" class="form-control" id="password"
-					name="excludeHangul" data-rule-required="true" placeholder="패스워드"
+					name="PASSWORD" data-rule-required="true" placeholder="패스워드"
 					maxlength="30">
 			</div>
 		</div>
@@ -172,7 +157,7 @@ h1 {
 		<div class="form-group" id="divEmail">
 			<label for="inputEmail" class="col-lg-2 control-label">이메일</label>
 			<div class="col-lg-10">
-				<input type="email" class="form-control" id="email"
+				<input type="email" class="form-control" name="EMAIL"
 					data-rule-required="true" placeholder="이메일" maxlength="40">
 			</div>
 		</div>
@@ -180,7 +165,7 @@ h1 {
 			<label for="inputPhoneNumber" class="col-lg-2 control-label">휴대폰
 				번호</label>
 			<div class="col-lg-10">
-				<input type="tel" class="form-control onlyNumber" id="phoneNumber"
+				<input type="tel" class="form-control onlyNumber" name="PHONE"
 					data-rule-required="true" placeholder="- 없이 숫자만 입력하세요."
 					maxlength="11">
 			</div>
@@ -212,7 +197,7 @@ h1 {
 		</div>
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default">가입 요청</button>
+				<button type="submit" class="btn btn-default" onClick="doSubmit()" data-ng-click="doSubmit()">가입 요청</button>
 			</div>
 			<div class="col-lg-offset-2 col-lg-10">
 				<button id="cancelClick" type="submit" class="btn btn-default">취소</button>
