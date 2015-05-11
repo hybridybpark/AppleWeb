@@ -18,37 +18,15 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
+<!-- Business JavaScript -->
+   
+<script src="/AppleWeb/js/QnA/BusinessMemberRegistrationManagementPage.js"></script>
+
+<!-- Business css -->
+
+<link href="/AppleWeb/css/QnA/business.css" rel="stylesheet">
+
 <title>BusinessMemberRegistrationManagementPage.jsp</title>
-
-<script type="text/javascript">
-
-	var writeButton = document.createElement('button');
-	writeButton.textContent = "Write";
-	var wrapDiv = document.createElement('div');
-	wrapDiv.style.textAlign = 'center';
-	wrapDiv.appendChild(writeButton);
-	document.body.appendChild(wrapDiv);
-	
-	function onFitSizeOfTextArea()
-    {
-        var textArea = event.srcElement;
-        while( textArea.clientHeight < textArea.scrollHeight )
-        {
-            textArea.rows = textArea.rows + 1;
-        }
-        textArea.className = "NoScroll";
-    }
-
-</script>
-
-
-<style type="text/css">
-
-.NoScroll {
-        overflow:hidden;
-    }
-</style>
-
 
 </head>
 
