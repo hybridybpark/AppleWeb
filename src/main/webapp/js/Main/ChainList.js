@@ -24,16 +24,20 @@ mainApp.controller('chainCtrl',function($scope,$http,$location,$cookieStore){
 	
 	$http.get("/AppleWeb/Apple/chain/list/"+$scope.chainname)
 	.success(function (data) {
-		$scope.chainlist = data;
-		alert(date);
+		$scope.chainlist = data;		
 		});
 	
  	$http.get("/AppleWeb/Apple/chain/chain/"+$scope.chainname)
  	.success(function (data) {
- 		$scope.chain = data;
- 		alert(date);
+ 		$scope.chain = data; 		
  		});
 	
+ 	$scope.goDetail = function(index) {
+ 		window.sessionStorage.setItem('SHOPNAME',$scope.chainname[index].shopname);
+ 		window.sessionStorage.setItem('SHOPBUSINESSNUMBER',$scope.chainname[index].businessnumber);
+ 		window.location="/AppleWeb/Apple/menu";
+ 		//$scope.url1 = "/AppleWeb/Apple/menu";
+	};
 	
 	//scope.$apply(function() { $location.path("/route"); });	
 	$scope.cancelClick = function() {		

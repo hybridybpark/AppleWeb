@@ -18,7 +18,7 @@
                 <h4 class="media-heading">{{x.shopname}}</h4>
                 <p>주소 : {{x.shopaddress}}</p>
                 <p>전화 : {{x.shopphone}}</p>                
-                <a href="Menu.jsp">상세정보 보기</a>
+                <a href="" data-ng-click="goDetail($index)">상세정보 보기</a>
             </div>
          </li>         
          </ul>
