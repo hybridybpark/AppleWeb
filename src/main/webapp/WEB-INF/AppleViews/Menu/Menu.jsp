@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script
@@ -12,10 +17,8 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+<script src="/AppleWeb/js/Menu/Menu.js"></script>
 
-<html>
-<head>
-<meta charset="UTF-8">
 <title>Menu</title>
 
 <style>
@@ -67,7 +70,7 @@
 
 
 
-<body>
+<body data-ng-controller="menuCtrl">
 
 	<div class="container">
 
@@ -92,7 +95,7 @@
 			<h3>MENU-</h3>
 			<div class="box">
 				<div class="image">
-					<a href="#click1"> <img src="/AppleWeb/image/col.jpg" />
+					<a href="#click1"> <img src="/AppleWeb/Images/Menu/col.jpg" />
 					</a>
 					<div class="text">
 						<p id="menuName1">메뉴이름</p>
@@ -102,7 +105,7 @@
 			</div>
 			<div class="box">
 				<div class="media">
-					<img src="/AppleWeb/image/A2.jpg" />
+					<img src="/AppleWeb/Images/Menu/A2.jpg" />
 					<div class="text">
 						<p id="menuName2">메뉴이름</p>
 						<p id="menuPrice2">메뉴가격</p>
@@ -165,7 +168,7 @@
 			</div>
 			<div class="box">
 				<div class="image">
-					<img src="/AppleWeb/image/join/join.jpg" />
+					<img src="/AppleWeb/Images/Login/join/join.jpg" />
 					<div class="text">
 						<p id="menuName9">메뉴이름</p>
 						<p id="menuPrice9">메뉴가격</p>
@@ -183,7 +186,7 @@
 				<div class="col-md-4">
 					<!-- 선택된 이미지(id를 통해 연결) -->
 					<div class="img" id="click1">
-						<img src="/AppleWeb/image/col.jpg" />
+						<img src="/AppleWeb/Images/Menu/col.jpg" />
 						<div class="text">
 							<hr>
 							<div>

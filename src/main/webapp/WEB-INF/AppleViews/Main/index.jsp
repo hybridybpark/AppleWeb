@@ -31,8 +31,8 @@
 	
     	<header>
         <!-- Navigation -->
-        <div class="navbar-xs" style="background-color: gray;">
-        	<div class="navbar-default"  style="background-color: #f5f5f5;">
+        <div class="navbar-xs">
+        	<div class="navbar-default"  style="background-color: #f5f5f5; border-bottom: 1px solid red;">
         		<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
 		            <div class="navbar-header" style="padding-left: 40px;">
 		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

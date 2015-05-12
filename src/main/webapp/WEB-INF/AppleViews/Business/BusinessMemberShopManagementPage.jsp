@@ -20,18 +20,16 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
+<!-- Business JavaScript -->
+   
+<script src="/AppleWeb/js/QnA/BusinessMemberShopManagementPage.js"></script>
+
+<!-- Business css -->
+
+<link href="/AppleWeb/css/QnA/business.css" rel="stylesheet">
+
+
 <title>BusinessMemberShopManagementPage.jsp</title>
-
-<script type="text/javascript">
-
-var myApp = angular.module('myApp',[]);
-
-myApp.controller('businessCtrl',function($scope,$http,$location){	
-	
-});
-
-
-</script>
 
 </head>
 

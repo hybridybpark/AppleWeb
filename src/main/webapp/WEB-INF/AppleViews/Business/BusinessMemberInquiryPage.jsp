@@ -20,38 +20,16 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
+<!-- Business JavaScript -->
+   
+<script src="/AppleWeb/js/QnA/BusinessMemberInquiryPage.js"></script>
+
+<!-- Business css -->
+
+<link href="/AppleWeb/css/QnA/business.css" rel="stylesheet">
+
 <title>BusinessMemberInquiryPage.jsp</title>
 
-<script type="text/javascript">
-
-var myApp = angular.module('myApp',[]);
-
-myApp.controller('inquiryCtrl',function($scope,$http,$location){	
-	
-	$scope.inquiry = [1,2,3,4,5,6,7,8];
-	
-	$scope.myVar = -1;
-    $scope.toggle = function(index) {
-    	if($scope.myVar != index){
-        	$scope.myVar = index;
-    	}else{
-    		$scope.myVar = -1;		
-    	}
-    };
-	
-});
-
-</script>
-<style type="text/css">
-
-th{
-	text-align: center;
-}
-td{
-	text-align: center;
-}
-
-</style>
 </head>
 
 <body class="container" data-ng-controller="inquiryCtrl">
