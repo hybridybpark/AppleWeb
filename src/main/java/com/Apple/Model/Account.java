@@ -7,7 +7,14 @@ public class Account {
 	public Integer PHONE;
 	public String EMAILACCEPT;
 	public String SMSACCEPT;
+	public String BUSINESSNAME;
 	
+	public String getBUSINESSNAME() {
+		return BUSINESSNAME;
+	}
+	public void setBUSINESSNAME(String bUSINESSNAME) {
+		BUSINESSNAME = bUSINESSNAME;
+	}
 	public Integer getBUSINESSNUMBER() {
 		return BUSINESSNUMBER;
 	}

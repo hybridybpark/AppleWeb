@@ -61,26 +61,34 @@ public class AccountController {
 	
 	//입력
 	@RequestMapping("/Join.do")
-	public String insertQnA(@RequestParam Map<String, Object> paramMap){
+	public String insertAccount(@RequestParam Map<String, Object> paramMap){
 		AccountService service = applicationContext.getBean(AccountService.class);
 		
 		Account account = new Account();
 		
-		account.setBUSINESSNUMBER((Integer) paramMap.get("bnumber"));
+		account.setBUSINESSNAME(paramMap.get("BUSINESSNAME").toString());
 		
-		account.setPASSWORD(paramMap.get("password").toString());
+		String s = paramMap.get("BUSINESSNUMBER").toString();
+		int a = Integer.parseInt(s);
 		
-		account.setPHONE((Integer) paramMap.get("phone"));
+		account.setBUSINESSNUMBER(a);
 		
-		account.setEMAIL(paramMap.get("email").toString());
+		account.setPASSWORD(paramMap.get("PASSWORD").toString());
 		
-		account.setEMAILACCEPT(paramMap.get("emailaccept").toString());
+		String s2 = paramMap.get("PHONE").toString();
+		int a2 = Integer.parseInt(s2);
 		
-		account.setSMSACCEPT(paramMap.get("smsaccept").toString());
+		account.setPHONE(a2);
+		
+		account.setEMAIL(paramMap.get("EMAIL").toString());
+		
+		account.setEMAILACCEPT("asd");
+		
+		account.setSMSACCEPT("asd");
 		
 		service.insert(account);
 		
-		return "redirect:/Apple/account";
+		return "redirect:/Apple/join";
 	}
 	
 	//삭제
