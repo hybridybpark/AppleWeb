@@ -25,6 +25,11 @@ import com.Apple.Service.QnAService;
 @Controller
 public class BusinessController {
 	
+	@RequestMapping("/business")
+	public String business(){
+		return "Business/BusinessMember";
+	}
+	
 	@RequestMapping("/business/reservation")
 	public String reservation(){
 		return "Business/BusinessMemberReservationManagementPage";

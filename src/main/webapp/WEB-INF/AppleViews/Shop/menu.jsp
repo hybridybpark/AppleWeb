@@ -21,10 +21,13 @@
 
 
 <title>Menu</title>
+<<<<<<< HEAD:src/main/webapp/WEB-INF/AppleViews/Menu/Menu.jsp
 
 
 
 
+=======
+>>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc:src/main/webapp/WEB-INF/AppleViews/Shop/menu.jsp
 </head>
 
 
@@ -32,6 +35,7 @@
 <body>
 
 	<div class="container">
+<<<<<<< HEAD:src/main/webapp/WEB-INF/AppleViews/Menu/Menu.jsp
 
 		<div id="head" class="text-align: center">
 			<div class="form-group">
@@ -50,6 +54,8 @@
 		<hr>
 
 
+=======
+>>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc:src/main/webapp/WEB-INF/AppleViews/Shop/menu.jsp
 		<div class="content">
 			<h3>MENU-</h3>
 			<table >
@@ -157,6 +163,7 @@
 
 		</div>
 	</div>
+<<<<<<< HEAD:src/main/webapp/WEB-INF/AppleViews/Menu/Menu.jsp
 	<div class="footer">
 		<p class="text-center">
 			<small><strong> Apple</strong></small><br> <small>대표 :
@@ -164,6 +171,10 @@
 			<small>Copyrightⓒ All rights reserved.</small>
 		</p>
 	</div>
+=======
+
+	
+>>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc:src/main/webapp/WEB-INF/AppleViews/Shop/menu.jsp
 </body>
 
 </html>

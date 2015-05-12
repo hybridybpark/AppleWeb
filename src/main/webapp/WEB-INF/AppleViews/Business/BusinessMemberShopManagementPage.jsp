@@ -7,7 +7,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="myApp">
+<html data-ng-app="mainApp">
 
 <head>
 
@@ -22,11 +22,11 @@
 
 <!-- Business JavaScript -->
    
-<script src="/AppleWeb/js/QnA/BusinessMemberShopManagementPage.js"></script>
+<script src="/AppleWeb/js/Business/BusinessMemberShopManagementPage.js"></script>
 
 <!-- Business css -->
 
-<link href="/AppleWeb/css/QnA/business.css" rel="stylesheet">
+<link href="/AppleWeb/css/Business/business.css" rel="stylesheet">
 
 
 <title>BusinessMemberShopManagementPage.jsp</title>
@@ -34,19 +34,8 @@
 </head>
 
 
-<body class="container" data-ng-controller="businessCtrl">
-	<div class="header">
-		<h1>사업자 페이지</h1>
-	</div>
-	<div>
-		<ul class="nav nav-tabs nav-justified">
-		  <li role="presentation"><a href="#">예약목록</a></li>
-		  <li role="presentation" class="active"><a href="#">상점목록</a></li>
-		  <li role="presentation"><a href="#">상점등록</a></li>		  
-		  <li role="presentation"><a href="#">상점문의</a></li>	
-		</ul>
-	</div>
-	<br>
+<body class="container" data-ng-controller="shopCtrl">
+	
 	<div class="panel panel-primary">
 		<div class="panel-heading"><h4>상점목록</h4></div>
 		<ul class="list-group">

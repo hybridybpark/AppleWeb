@@ -1,8 +1,13 @@
 
-// angularjs
+/**
+ * 
+ */
 
-	var myApp = angular.module('myApp', []);
-	myApp.controller('userCtrl', function($scope, $http, $location) {
+
+	mainApp.controller('joinCtrl', function($scope, $http, $location) {
+
+
+// angularjs
 
 		//scope.$apply(function() { $location.path("/route"); });	
 		$scope.cancelClick = function() {
@@ -16,4 +21,9 @@
 			
 			boardFrm.submit();
 		};
+
 	});
+
+		
+		
+	

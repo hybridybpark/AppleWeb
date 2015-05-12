@@ -7,7 +7,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="myApp">
+<html data-ng-app="mainApp">
 
 <head>
 
@@ -22,11 +22,11 @@
 
 <!-- Business JavaScript -->
    
-<script src="/AppleWeb/js/QnA/BusinessMemberReservationManagementPage.js"></script>
+<script src="/AppleWeb/js/Business/BusinessMemberReservationManagementPage.js"></script>
 
 <!-- Business css -->
 
-<link href="/AppleWeb/css/QnA/business.css" rel="stylesheet">
+<link href="/AppleWeb/css/Business/business.css" rel="stylesheet">
 
 
 <title>BusinessMemberReservationManagementPage.jsp</title>
@@ -38,19 +38,8 @@
 	pageContext.setAttribute("current", current);
 %>
 
-<body class="container" data-ng-controller="businessCtrl">
-	<div class="header">
-		<h1>사업자 페이지</h1>
-	</div>
-	<div>
-		<ul class="nav nav-tabs nav-justified">
-		  <li role="presentation" class="active"><a href="#">예약목록</a></li>
-		  <li role="presentation"><a href="#">상점목록</a></li>
-		  <li role="presentation"><a href="#">상점등록</a></li>		  
-		  <li role="presentation"><a href="#">상점문의</a></li>			  
-		</ul>
-	</div>
-	<br>
+<body class="container" data-ng-controller="reservationCtrl">
+	
 	
 		<div class="panel panel-primary">
 			<div class="panel-heading"><h4>예약목록</h4></div>

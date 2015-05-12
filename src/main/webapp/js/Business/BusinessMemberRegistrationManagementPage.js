@@ -1,6 +1,8 @@
 
 // angularjs
-
+mainApp.controller('registrationCtrl',function($scope,$http,$location){	
+		
+});
 
 	var writeButton = document.createElement('button');
 	writeButton.textContent = "Write";

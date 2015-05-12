@@ -12,7 +12,7 @@
 
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 <!DOCTYPE>
-<html data-ng-app="myApp">
+<html>
 
 <head>
 <meta charset="UTF-8">
@@ -30,13 +30,32 @@
    
 <script src="/AppleWeb/js/Login/join.js"></script>
 
-<!-- Join css -->
-
-<link href="/AppleWeb/css/Login/join.css" rel="stylesheet">
 
 <title>회원 가입</title>
 
-<body ng-app="myApp" ng-controller="userCtrl" class="container">
+<style>
+h1 {
+	text-align: center;
+}
+
+.container{
+	margin: 0px auto;
+	padding: 20px;
+}
+
+</style>
+
+
+<!-- Join css -->
+
+
+<link href="/AppleWeb/css/Login/join.css" rel="stylesheet">
+
+<body data-ng-controller="joinCtrl" class="container">
+
+<title>회원 가입</title>
+
+
 
 	<h1>신규 회원 가입</h1>
 
@@ -59,13 +78,17 @@
 		</a>
 		<a href=""> <img src="/AppleWeb/Images/Login/join/join4.jpg"
 			onmouseover="this.src='/AppleWeb/Images/Login/join/join4_1.jpg'"
-			onmouseout="this.src='/AppleWeb/Images/Login/join/join4.jpg'"
+
+			onmouseout="this.src='/AppleWeb/Images/Login/join/join4.jpg'"  
+
 			style="position:absolute; top:260px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
 		<a href=""> <img src="/AppleWeb/Images/Login/join/join5.jpg"
 			onmouseover="this.src='/AppleWeb/Images/Login/join/join5_1.jpg'"
-			onmouseout="this.src='/AppleWeb/Images/Login/join/join5.jpg'"
+
+			onmouseout="this.src='/AppleWeb/Images/Login/join/join5.jpg'"  
+
 			style="position:absolute; top:295px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
@@ -207,6 +230,7 @@
 	</form>
 	<hr/>
 </div>
+<<<<<<< HEAD
 	<!-- 푸터 들어가는 부분 -->
 <!-- 	<div> -->
 <!-- 		<p class="text-center"> -->
@@ -215,6 +239,8 @@
 <!-- 			<small>Copyrightⓒ All rights reserved.</small> -->
 <!-- 		</p> -->
 <!-- 	</div> -->
+=======
+>>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc
 
 </body>
 </html>

@@ -7,7 +7,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="myApp">
+<html data-ng-app="mainApp">
 
 <head>
 
@@ -22,29 +22,17 @@
 
 <!-- Business JavaScript -->
    
-<script src="/AppleWeb/js/QnA/BusinessMemberInquiryPage.js"></script>
+<script src="/AppleWeb/js/Business/BusinessMemberInquiryPage.js"></script>
 
 <!-- Business css -->
 
-<link href="/AppleWeb/css/QnA/business.css" rel="stylesheet">
+<link href="/AppleWeb/css/Business/business.css" rel="stylesheet">
 
 <title>BusinessMemberInquiryPage.jsp</title>
 
 </head>
 
-<body class="container" data-ng-controller="inquiryCtrl">
-	<div class="header">
-		<h1>사업자 페이지</h1>
-	</div>
-	<div>
-		<ul class="nav nav-tabs nav-justified">
-		  <li role="presentation"><a href="#">예약목록</a></li>
-		  <li role="presentation"><a href="#">상점목록</a></li>		  
-		  <li role="presentation"><a href="#">상점목록</a></li>
-		  <li role="presentation" class="active"><a href="#">문의</a></li>
-		</ul>
-	</div>
-	<br>
+<body class="container" data-ng-controller="inquiryCtrl">	
 	
 		<div class="panel panel-primary">
 			<div class="panel-heading"><h4>문의목록</h4></div>

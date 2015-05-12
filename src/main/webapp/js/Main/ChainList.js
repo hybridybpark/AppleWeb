@@ -35,7 +35,8 @@ mainApp.controller('chainCtrl',function($scope,$http,$location,$cookieStore){
  	$scope.goDetail = function(index) {
  		window.sessionStorage.setItem('SHOPNAME',$scope.chainname[index].shopname);
  		window.sessionStorage.setItem('SHOPBUSINESSNUMBER',$scope.chainname[index].businessnumber);
- 		window.location="/AppleWeb/Apple/menu";
+ 		$location.path("/shopinfo");
+ 		//window.location="/AppleWeb/Apple/menu";
  		//$scope.url1 = "/AppleWeb/Apple/menu";
 	};
 	
