@@ -1,0 +1,30 @@
+
+#line {
+	border: 0.5px solid black;
+}
+
+#head {
+	height: 100px;
+	padding: 10px;
+	border: 0.5px solid black;
+}
+
+.container {
+	margin: 0px auto;
+	padding: 20px;
+}
+
+.content {
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 0.5px solid orange;
+	overflow: hidden;
+}
+
+.text {
+	text-align: center;
+}
+
+th, tr, td {
+	padding: 20px;
+}

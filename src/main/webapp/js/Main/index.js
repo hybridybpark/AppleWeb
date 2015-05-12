@@ -31,6 +31,10 @@ mainApp.config(function($routeProvider) {
          .when('/qna', {
             templateUrl: '/AppleWeb/Apple/qna',
             controller: 'qnaCtrl'
+        })
+         .when('/shopinfo', {
+            templateUrl: '/AppleWeb/Apple/shopinfo',
+            controller: 'shopinfoCtrl'
         })     
         
          .when('/qna/write', {
@@ -111,7 +115,7 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookieStor
 		if($scope.tempChain=="NONE"){			
 			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
 			//$scope.url1 = "/AppleWeb/Apple/chain";
-			$location.path("/chain");
+			$location.path("/shopinfo");
 		}else if($scope.tempChain=='undefined'){
 			
 		}else{			

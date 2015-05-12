@@ -38,7 +38,7 @@
 	</div>
 	<div>
 		<ul class="nav nav-pills nav-justified" >						
-		  	<li role="presentation" data-ng-repeat="item in btabs" class="item.type" data-ng-click="btabClick($index)" ><a href="">{{item.name}}</a></li>		  			  
+		  	<li role="presentation" data-ng-repeat="item in btabs" class="{{item.type}}" data-ng-click="btabClick($index)" ><a href="">{{item.name}}</a></li>		  			  
 		</ul>
 	</div>
 	<hr>
