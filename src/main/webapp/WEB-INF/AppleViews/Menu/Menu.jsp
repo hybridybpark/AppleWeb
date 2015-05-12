@@ -41,7 +41,7 @@
 				<div class="col-md-4" style="padding : 20px;">
 					<small>가게설명입니다.저희가게는끝내줘요</small>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4" style="padding : 20px;">
 					<h4>☆☆☆☆☆</h4>
 				</div>
 			</div>

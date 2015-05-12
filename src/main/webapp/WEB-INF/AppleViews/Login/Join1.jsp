@@ -208,13 +208,13 @@
 	<hr/>
 </div>
 	<!-- 푸터 들어가는 부분 -->
-	<div>
-		<p class="text-center">
-			<small><strong> Apple</strong></small><br> <small>대표 :
-				Apple(주) ㆍ 주소 : 이대역 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br>
-			<small>Copyrightⓒ All rights reserved.</small>
-		</p>
-	</div>
+<!-- 	<div> -->
+<!-- 		<p class="text-center"> -->
+<!-- 			<small><strong> Apple</strong></small><br> <small>대표 : -->
+<!-- 				Apple(주) ㆍ 주소 : 이대역 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br> -->
+<!-- 			<small>Copyrightⓒ All rights reserved.</small> -->
+<!-- 		</p> -->
+<!-- 	</div> -->
 
 </body>
 </html>
