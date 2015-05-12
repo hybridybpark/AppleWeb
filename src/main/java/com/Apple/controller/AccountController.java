@@ -46,7 +46,7 @@ public class AccountController {
 		log.info("############################Join GET");		
 		
 		return "Login/login";
-	}
+	} 
 	
 	// 출력
 	@ResponseBody
