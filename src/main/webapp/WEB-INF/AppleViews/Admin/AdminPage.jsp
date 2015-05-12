@@ -24,8 +24,11 @@ var myApp = angular.module('myApp',[]);
 
 myApp.controller('myController',function($scope,$http){	
 	
-	$http.get("http://www.w3schools.com/angular/customers.php")
-	 .success(function (response) {$scope.names = response.records;});
+	$http.get("http://localhost:8080/AppleWeb/Apple/admin/list.json").success(function (data) {
+		$scope.names2 = data.records;
+		});
+	
+	
 	
 	$scope.itemClick = function(index) {
 		$scope.message = "Number : "+(index+1)+ " Name : "+$scope.names[index].Name
@@ -101,8 +104,8 @@ $(document).ready(function(){
 	<header class="container">
 		<h1 align="center">가입 페이지</h1>
 		<ul class="nav navbar-nav navbar-right">
-	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
-	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
+	        <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
+	        <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
 	      </ul>      
 	</header>
 	
@@ -118,9 +121,9 @@ $(document).ready(function(){
 	</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav nav-tabs nav-justified">
-			<li><a href="AdminPage.jsp">가입 요청</a></li>
-			<li><a href="NeighborPage.jsp">입점 요청</a></li>
-			<li><a href="MemberPage.jsp">회원목록</a></li>
+			<li><a href="/AppleWeb/Apple/admin/">가입 요청</a></li>
+			<li><a href="/AppleWeb/Apple/neighbor/">입점 요청</a></li>
+			<li><a href="/AppleWeb/Apple/member/">회원목록</a></li>
 		</ul>
 	</div>
 	
@@ -134,10 +137,10 @@ $(document).ready(function(){
 					<th>요청 날짜</th>
 				</tr>
 			</thead>
-			<tbody data-ng-repeat="x in names">
+			<tbody data-ng-repeat="x in names2">
 			 	<tr>
 			 		<td>{{$index +1}}</td>
-	    			<td><a href="" ng-click="toggle($index)">{{ x.Name }}</a></td>
+	    			<td><a href="" ng-click="toggle($index)">{{ x.BUSINESSNUMBER }}</a></td>
 	    			<td class="btn btn-group-inline">	    				
 	    				<button>승인</button>
 						<button>거절</button>	    				

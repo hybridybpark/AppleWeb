@@ -1,11 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
-<html>
-<head>
-<meta charset="UTF-8">
-
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script
@@ -17,159 +12,169 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-<script src="/AppleWeb/js/Menu/Menu.js"></script>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- Menu css -->
+<link href="/AppleWeb/css/Menu/menu.css" rel="stylesheet">
+
 
 <title>Menu</title>
+<<<<<<< HEAD:src/main/webapp/WEB-INF/AppleViews/Menu/Menu.jsp
+
+
+
+
+=======
+>>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc:src/main/webapp/WEB-INF/AppleViews/Shop/menu.jsp
 </head>
 
 
 
-<body data-ng-controller="menuCtrl">
+<body>
 
 	<div class="container">
+<<<<<<< HEAD:src/main/webapp/WEB-INF/AppleViews/Menu/Menu.jsp
+
+		<div id="head" class="text-align: center">
+			<div class="form-group">
+				<div class="col-md-4">
+					<h2>가게이름</h2>
+				</div>
+				<div class="col-md-4" style="padding : 20px;">
+					<small>가게설명입니다.저희가게는끝내줘요</small>
+				</div>
+				<div class="col-md-4" style="padding : 20px;">
+					<h4>☆☆☆☆☆</h4>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<hr>
+
+
+=======
+>>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc:src/main/webapp/WEB-INF/AppleViews/Shop/menu.jsp
 		<div class="content">
 			<h3>MENU-</h3>
-			<div class="box">
-				<div class="image">
-					<a href="#click1"> <img src="/AppleWeb/Images/Menu/col.jpg" />
-					</a>
-					<div class="text">
-						<p id="menuName1">메뉴이름</p>
-						<p id="menuPrice1">메뉴가격</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="media">
-					<img src="/AppleWeb/Images/Menu/A2.jpg" />
-					<div class="text">
-						<p id="menuName2">메뉴이름</p>
-						<p id="menuPrice2">메뉴가격</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="http://placehold.it/200x100" />
-					<div class="text">
-						<p id="menuName3">메뉴이름</p>
-						<p id="menuPrice3">메뉴가격</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="http://placehold.it/200x100" />
-					<div class="text">
-						<p id="menuName4">메뉴이름</p>
-						<p id="menuPrice4">메뉴가격</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="http://placehold.it/200x100" />
-					<div class="text">
-						<p id="menuName5">메뉴이름</p>
-						<p id="menuPrice5">메뉴가격</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="http://placehold.it/200x100" />
-					<div class="text">
-						<p id="menuName6">메뉴이름</p>
-						<p id="menuPrice6">메뉴가격</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="http://placehold.it/200x100" />
-					<div class="text">
-						<p id="menuName7">메뉴이름</p>
-						<p id="menuPrice7">메뉴가격</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="http://placehold.it/200x100" />
-					<div class="text">
-						<p id="menuName8">메뉴이름</p>
-						<p id="menuPrice8">메뉴가격</p>
-					</div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="image">
-					<img src="/AppleWeb/Images/Login/join/join.jpg" />
-					<div class="text">
-						<p id="menuName9">메뉴이름</p>
-						<p id="menuPrice9">메뉴가격</p>
-					</div>
-				</div>
-			</div>
+			<table >
+				<tr>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/col.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+				</tr>
+				<tr height="0">
+					<td class="text" >가격</td>
+					<td class="text" >가격</td>
+					<td class="text" >가격</td>
+				</tr>
+				<tr>
+					<td class="text" >5000</td>
+					<td class="text" >6000</td>
+					<td class="text" >7000</td>
+				</tr>
+				<tr>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/col.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+				</tr>
+				<tr>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+				</tr>
+				<tr>
+					<td class="text">5000</td>
+					<td class="text">6000</td>
+					<td class="text">7000</td>
+				</tr>
+				<tr>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/col.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg"
+						style="width: 200px; height: auto;" hspace="50"></th>
+				</tr>
+				<tr>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+					<td class="text">가격</td>
+				</tr>
+				<tr>
+					<td class="text">5000</td>
+					<td class="text">6000</td>
+					<td class="text">7000</td>
+				</tr>
+
+			</table>
+
 		</div>
 	</div>
 	<!-- 메뉴 디테일 정보 들어가는 부분 -->
-
 	<div class="container">
 		<div class="content">
+			<table>
+				<tr>
+					<th><img src="/AppleWeb/Images/Menu/A2.jpg" style="width: 200px; height: auto;" hspace="50"></th>
+					<th class="text-align: center">메뉴정보: 고추가루를 팍팍 넣은 매운 갈비찜입니다.</th>
+				</tr>
+				<tr>
+					<th>가격</th>
+					<th>크기</th>
+				</tr>
+				<tr>
+					<th>
+						<input type="radio" name="rPrice" value="5000" />5000 
+						<input type="radio" name="rPrice" value="6000" checked="checked" />6000
+						<input type="radio" name="rPrice" value="7000" />7000 
+					</th>
+						<th>
+						<input type="radio" name="rOption" value="big" />대
+						<input type="radio" name="rOption" value="normal" checked="checked" />중
+						<input type="radio" name="rOption" value="small" />소
+					</th>
+				</tr>
+				
+				</table>
+<!-- 				<div style="border: 1px solid gold; padding: 10px; height: auto; min-height: 100px; overflow: auto;"> -->
+				<div class="col-xs-6 col-sm-4"></div>
+				<div class="col-xs-6 col-sm-4" style="padding: 10px; height: auto; min-height: 50px; overflow: auto;">
+   						 <button class="btn btn-success">
+   						 <span class="btn-put-cart">
+       					 장바구니 담기
+    					 </span>
+						 </button>
+						 
+						 <button class="btn btn-default" onclick="closePanel(this);return false;" type="button">
+						 취소
+						 </button>
 
-			<div>
-				<div class="col-md-4">
-					<!-- 선택된 이미지(id를 통해 연결) -->
-					<div class="img" id="click1">
-						<img src="/AppleWeb/Images/Menu/col.jpg" />
-						<div class="text">
-							<hr>
-							<div>
-								<div>가격</div>
-								<hr>
-								<div>
-									<input type="radio" name="rPrice" value="5000" />5000 <input
-										type="radio" name="rPrice" value="6000" checked="checked" />6000
-									<input type="radio" name="rPrice" value="7000" />7000
-								</div>
-							</div>
-							<hr>
-							<div>
-								<div>옵션1</div>
-								<hr>
-								<div>
-									<input type="radio" name="rOption1" value="option" />옵션1 <input
-										type="radio" name="rOption1" value="option" checked="checked" />옵션2
-									<input type="radio" name="rOption1" value="option" />옵션3
-								</div>
-							</div>
-							<hr>
-							
-						</div>
-					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="text">이음식은 매우맛있습니다 어서 사드세요</div>
-				</div>
-				<div>
-				<div>옵션1</div>
-								<hr>
-								<div>
-									<input type="radio" name="rOption1" value="option" />옵션1 <input
-										type="radio" name="rOption1" value="option" checked="checked" />옵션2
-									<input type="radio" name="rOption1" value="option" />옵션3
-								</div>
-				</div>
-				<div class="col-md-4">
-					<h1></h1>
-				</div>
-			</div>
+				<div class="col-xs-6 col-sm-4"></div>
+			
 
 		</div>
 	</div>
+<<<<<<< HEAD:src/main/webapp/WEB-INF/AppleViews/Menu/Menu.jsp
+	<div class="footer">
+		<p class="text-center">
+			<small><strong> Apple</strong></small><br> <small>대표 :
+				Apple(주) ㆍ 주소 : 이대역 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br>
+			<small>Copyrightⓒ All rights reserved.</small>
+		</p>
+	</div>
+=======
 
 	
+>>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc:src/main/webapp/WEB-INF/AppleViews/Shop/menu.jsp
 </body>
 
 </html>
