@@ -35,11 +35,7 @@ public class AccountController {
 	ApplicationContext applicationContext;
 	
 	@RequestMapping(value="/join", method=RequestMethod.GET)
-<<<<<<< HEAD
-	public String accountGET(Model model){
-=======
 	public String joinGET(Model model){
->>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc
 		log.info("############################Join GET");		
 		
 		return "Login/Join1";
