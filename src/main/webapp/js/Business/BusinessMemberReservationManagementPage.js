@@ -2,9 +2,9 @@
 // angularjs
 
 
-var myApp = angular.module('myApp',[]);
 
-myApp.controller('businessCtrl',function($scope,$http,$location){	
+
+mainApp.controller('reservationCtrl',function($scope,$http,$location){	
 	
 	$scope.reservation = [1,2,3,4,5,6,7,8];
 	

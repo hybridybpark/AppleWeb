@@ -105,9 +105,10 @@ h1 {
 																<td width="50">아이디</td>
 																<td><input type="text" name="MemberId" size="13"
 																	onkeypress="if(event.keyCode==13) checkVar();"
+																	data-ng-model="login.id"
 																	tabindex="1" class="input"></td>
 																<td width="75" align="right" rowspan="2"><a
-																	href="javascript:checkVar();"><img
+																	href="" data-ng-click="loginClick()"><img
 																		src="/AppleWeb/Images/Login/btn_login.gif" border="0"
 																		tabindex="5"></a></td>
 															</tr>
@@ -116,6 +117,7 @@ h1 {
 																<td><input type="password" name="MemberPw"
 																	size="13"
 																	onkeypress="if(event.keyCode==13) checkVar();"
+																	data-ng-model="login.pw"
 																	tabindex="2" class="input"></td>
 															</tr>
 															<tr>

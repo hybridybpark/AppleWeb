@@ -36,7 +36,13 @@ mainApp.config(function($routeProvider) {
          .when('/qna/write', {
             templateUrl: '/AppleWeb/Apple/qna/write',
             controller: 'qnaCtrl'
+        })
+        
+        .when('/business', {
+            templateUrl: '/AppleWeb/Apple/business',
+            controller: 'businessCtrl'
         })   
+        
         
         
     
@@ -49,6 +55,27 @@ mainApp.config(function($routeProvider) {
 });
 
 mainApp.controller('indexController',function($scope,$http,$location,$cookieStore){	//	
+	
+	$scope.memberID="";
+	$scope.loginshow=false;
+	
+	if(window.sessionStorage){ 		
+ 		if(window.sessionStorage.getItem('MEMBERID')){ 			
+ 			$scope.memberID = window.sessionStorage.getItem('MEMBERID');
+ 			$scope.loginshow=true;
+ 		}else{
+			
+ 		} 		
+ 	}else{
+ 		alert("wrong");
+ 	}
+	
+	$scope.logout = function() {
+		$scope.memberID="";
+		$scope.loginshow=false;
+		window.sessionStorage.setItem('MEMBERID',"");
+		alert("로그아웃 되었습니다.");
+	}
 	
 	$scope.url1 = "/AppleWeb/Apple/body"
 //	

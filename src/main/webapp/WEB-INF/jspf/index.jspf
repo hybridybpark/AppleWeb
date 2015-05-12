@@ -80,3 +80,7 @@
 <!-- Join JavaScript -->
    
 <script src="/AppleWeb/js/Login/login.js"></script>
+
+<!-- Business JavaScript -->
+   
+<script src="/AppleWeb/js/Business/Business.js"></script>
