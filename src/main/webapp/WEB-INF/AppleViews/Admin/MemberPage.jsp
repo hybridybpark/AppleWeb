@@ -87,8 +87,8 @@ $(document).ready(function(){
 	<header class="container">
 		<h1 align="center">회원 리스트 페이지</h1>
 		<ul class="nav navbar-nav navbar-right">
-	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
-	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
+	         <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
+	        <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
 	      </ul>
 	</header>
 		<!-- 	Category -->
@@ -103,9 +103,9 @@ $(document).ready(function(){
 			</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav nav-tabs nav-justified">
-				<li><a href="AdminPage.jsp">가입 요청</a></li>
-				<li><a href="NeighborPage.jsp">입점 요청</a></li>
-				<li><a href="MemberPage.jsp">회원목록</a></li>
+				<li><a href="/AppleWeb/Apple/admin/">가입 요청</a></li>
+			<li><a href="/AppleWeb/Apple/neighbor/">입점 요청</a></li>
+			<li><a href="/AppleWeb/Apple/member/">회원목록</a></li>
 			</ul>
 		</div>
 		<!-- Table -->
