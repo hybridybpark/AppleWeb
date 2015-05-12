@@ -3,6 +3,51 @@
  */
 var mainApp = angular.module('MainApp',["ngRoute","ngCookies"]);
 
+mainApp.config(function($routeProvider) {
+
+    $routeProvider
+        // home page
+        .when('/', {
+        	templateUrl: '/AppleWeb/Apple/body',
+            controller: 'indexController'
+        })
+
+        // grid page
+        .when('/chain', {
+            templateUrl: '/AppleWeb/Apple/chain',
+            controller: 'chainCtrl'
+        })
+        
+        .when('/join', {
+            templateUrl: '/AppleWeb/Apple/join',
+            controller: 'joinCtrl'
+        })
+        
+        .when('/login', {
+            templateUrl: '/AppleWeb/Apple/login',
+            controller: 'loginCtrl'
+        })
+        
+         .when('/qna', {
+            templateUrl: '/AppleWeb/Apple/qna',
+            controller: 'qnaCtrl'
+        })     
+        
+         .when('/qna/write', {
+            templateUrl: '/AppleWeb/Apple/qna/write',
+            controller: 'qnaCtrl'
+        })   
+        
+        
+    
+	 	// otherwise page
+    	.otherwise({
+    		templateUrl: '/AppleWeb/Apple/body',
+            controller: 'indexController'
+    	});
+
+});
+
 mainApp.controller('indexController',function($scope,$http,$location,$cookieStore){	//	
 	
 	$scope.url1 = "/AppleWeb/Apple/body"
@@ -12,7 +57,8 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookieStor
 	$scope.otherClick = function(pagename) {		
 		
 		//$scope.otherUrl="/AppleWeb/Apple/"+pagename;
-		$scope.url1="/AppleWeb/Apple/"+pagename;
+		//$scope.url1="/AppleWeb/Apple/"+pagename;
+		$location.path("/"+pagename);
 		
 		
 	};	
@@ -37,12 +83,14 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookieStor
 		
 		if($scope.tempChain=="NONE"){			
 			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
-			$scope.url1 = "/AppleWeb/Apple/chain";
+			//$scope.url1 = "/AppleWeb/Apple/chain";
+			$location.path("/chain");
 		}else if($scope.tempChain=='undefined'){
 			
 		}else{			
 			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
-			$scope.url1 = "/AppleWeb/Apple/chain";
+			//$scope.url1 = "/AppleWeb/Apple/chain";
+			$location.path("/chain");
 		}
 	};
 	
@@ -90,6 +138,11 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookieStor
    	}else{
    		$scope.myVar = -1;		
    	}
+   };
+   
+   $scope.brandClick = function() {
+	   //alert("BRAND");
+	   $location.path("/");
    };
 	
    $scope.cancelClick = function() {

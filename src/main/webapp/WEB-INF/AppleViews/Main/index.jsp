@@ -41,7 +41,7 @@
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                </button>
-		                <a class="navbar-brand" href="/AppleWeb/Apple/" data-ng-click="">APPLE</a>
+		                <a class="navbar-brand" href="" data-ng-click="brandClick()">APPLE</a>
 		            </div>
 		            <ul class="nav navbar-nav navbar-left"  style="padding-left: 40px;">
 		            	<li>
@@ -91,7 +91,9 @@
         
         <section>
         
-        	<div class="container" data-ng-include="url1"></div>
+        	<div class="container" data-ng-view></div>
+        	
+<!--         	<div class="container" data-ng-include="url1"></div> -->
         	
         	<div class="fixed-bottom-right">
 		   <!-- 우측광고 삽입 -->

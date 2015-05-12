@@ -1,9 +1,9 @@
 
 // angularjs
 // 게시판내 목록 출력
-var myApp2 = angular.module('myApp2',[]);
 
-myApp2.controller('myController2',function($scope,$http){	
+
+mainApp.controller('qnaCtrl',function($scope,$http,$location){	
 	
 	// 삭제 password name 선언
 	//$scope.inputpassword="w";
@@ -68,6 +68,10 @@ myApp2.controller('myController2',function($scope,$http){
 		}
 		
 		boardFrm.submit();
+	};
+	
+	$scope.goWrite = function() {
+		$location.path("/qna/write");
 	};
 	
 });

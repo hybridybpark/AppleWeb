@@ -12,7 +12,7 @@
 
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
 <!DOCTYPE>
-<html data-ng-app="myApp">
+<html>
 
 <head>
 <meta charset="UTF-8">
@@ -28,18 +28,6 @@
 
 <title>회원 가입</title>
 
-<script type="text/javascript">
-	var myApp = angular.module('myApp', []);
-	myApp.controller('userCtrl', function($scope, $http, $location) {
-
-		//scope.$apply(function() { $location.path("/route"); });	
-		$scope.cancelClick = function() {
-			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
-			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
-
-		};
-	});
-</script>
 <style>
 h1 {
 	text-align: center;
@@ -51,7 +39,7 @@ h1 {
 }
 
 </style>
-<body ng-app="myApp" ng-controller="userCtrl" class="container">
+<body data-ng-controller="joinCtrl" class="container">
 
 
 
@@ -61,29 +49,29 @@ h1 {
 	<hr>
 	<div>
 	<div>
-		<a href=""> <img src="/AppleWeb/image/join/join.jpg"
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join.jpg"
 			style="position:absolute; top:100px; left:100px; width: 200px; height:auto;" 
 			/>
 		</a>
-		<a href=""> <img src="/AppleWeb/image/join/join2.jpg"
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join2.jpg"
 			style="position:absolute; top:185px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
-		<a href=""> <img src="/AppleWeb/image/join/join3.jpg"
-			onmouseover="this.src='/AppleWeb/image/join/join3_1.jpg'"
-			onmouseout="this.src='/AppleWeb/image/join/join3.jpg'"  
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join3.jpg"
+			onmouseover="this.src='/AppleWeb/Images/Login/join/join3_1.jpg'"
+			onmouseout="this.src='/AppleWeb/Images/Login/join/join3.jpg'"  
 			style="position:absolute; top:225px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
-		<a href=""> <img src="/AppleWeb/image/join/join4.jpg"
-			onmouseover="this.src='/AppleWeb/image/join/join4_1.jpg'"
-			onmouseout="this.src='/AppleWeb/image/join/join4.jpg'"  
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join4.jpg"
+			onmouseover="this.src='/AppleWeb/Images/Login/join/join4_1.jpg'"
+			onmouseout="this.src='/AppleWeb/Images/Login/join/join4.jpg'"  
 			style="position:absolute; top:260px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
-		<a href=""> <img src="/AppleWeb/image/join/join5.jpg"
-			onmouseover="this.src='/AppleWeb/image/join/join5_1.jpg'"
-			onmouseout="this.src='/AppleWeb/image/join/join5.jpg'"  
+		<a href=""> <img src="/AppleWeb/Images/Login/join/join5.jpg"
+			onmouseover="this.src='/AppleWeb/Images/Login/join/join5_1.jpg'"
+			onmouseout="this.src='/AppleWeb/Images/Login/join/join5.jpg'"  
 			style="position:absolute; top:295px; left:100px; width: 200px; height: auto;" 
 			/>
 		</a>
@@ -222,14 +210,6 @@ h1 {
 	</form>
 	<hr/>
 </div>
-	<!-- 푸터 들어가는 부분 -->
-	<div>
-		<p class="text-center">
-			<small><strong> Apple</strong></small><br> <small>대표 :
-				Apple(주) ㆍ 주소 : 이대역 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br>
-			<small>Copyrightⓒ All rights reserved.</small>
-		</p>
-	</div>
 
 </body>
 </html>

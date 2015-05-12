@@ -68,3 +68,15 @@
 <!-- ChainList JavaScript -->
    
 <script src="/AppleWeb/js/Main/ChainList.js"></script>
+
+<!-- QnA JavaScript -->
+   
+<script src="/AppleWeb/js/QnA/qna.js"></script>
+
+<!-- Join JavaScript -->
+   
+<script src="/AppleWeb/js/Login/join.js"></script>
+
+<!-- Join JavaScript -->
+   
+<script src="/AppleWeb/js/Login/login.js"></script>

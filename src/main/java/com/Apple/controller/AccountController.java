@@ -35,10 +35,17 @@ public class AccountController {
 	ApplicationContext applicationContext;
 	
 	@RequestMapping(value="/join", method=RequestMethod.GET)
-	public String qnaGET(Model model){
+	public String joinGET(Model model){
 		log.info("############################Join GET");		
 		
 		return "Login/Join1";
+	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String loginGET(Model model){
+		log.info("############################Join GET");		
+		
+		return "Login/login";
 	}
 	
 	// 출력

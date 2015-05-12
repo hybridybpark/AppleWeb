@@ -5,7 +5,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="myApp">
+<html>
 
 <head>
 
@@ -24,23 +24,7 @@
 
 <title>login.jsp</title>
 
-<script type="text/javascript">
-	var myApp = angular.module('myApp', []);
 
-	myApp.controller('loginCtrl', function($scope, $http, $location) {
-
-		//scope.$apply(function() { $location.path("/route"); });
-		$scope.loginClick = function() {
-			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
-			window.localStorage.setItem("MEMBERID", $scope.num);
-			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
-		};
-		$scope.cancelClick = function() {
-			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
-			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
-		};
-	});
-</script>
 <style type="text/css">
 .header {
 	text-align: center;
@@ -124,7 +108,7 @@ h1 {
 																	tabindex="1" class="input"></td>
 																<td width="75" align="right" rowspan="2"><a
 																	href="javascript:checkVar();"><img
-																		src="/AppleWeb/image/btn_login.gif" border="0"
+																		src="/AppleWeb/Images/Login/btn_login.gif" border="0"
 																		tabindex="5"></a></td>
 															</tr>
 															<tr>

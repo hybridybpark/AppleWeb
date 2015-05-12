@@ -4,7 +4,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="myApp2">
+<html>
 
 <head>
 
@@ -30,7 +30,7 @@
 </head>
 
 <!-- Title-->
-<body data-ng-controller="myController2">
+<body data-ng-controller="qnaCtrl">
 	<header class="container">
 		<h1 align="center">문의 게시판</h1>
 	</header>
@@ -109,7 +109,7 @@
 		
 		<tr align="center">
 			<td colspan="2"> <br>
-				<a href="/AppleWeb/Apple/qna/write"><input type="button" value="글쓰기"></a>
+				<a href="" data-ng-click="goWrite()"><input type="button" value="글쓰기"></a>
 			</td>
 		</tr>
 	</body>
