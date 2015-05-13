@@ -2,116 +2,21 @@
     pageEncoding="UTF-8"%>
 
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
+<!-- AdminPage JavaScript -->
+   
+<script src="/AppleWeb/js/Admin/AdminPage.js"></script>
 
-<!DOCTYPE>
+<!-- AdminPage css -->
 
-<html data-ng-app="myApp">
+<link href="/AppleWeb/css/Admin/AdminPage.css" rel="stylesheet">
 
-<head>
-
-<meta charset="UTF-8">
-
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-
-<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-<script type="text/javascript">
-
-var myApp = angular.module('myApp',[]);
-
-myApp.controller('myController',function($scope,$http){	
 	
-	$http.get("http://www.w3schools.com/angular/customers.php")
-	 .success(function (response) {$scope.names = response.records;});
-	
-	$scope.itemClick = function(index) {
-		$scope.message = "Number : "+(index+1)+ " Name : "+$scope.names[index].Name
-										      + " Country : "+$scope.names[index].Country;
-		alert($scope.names[index].Name+" clicked");
-		alert($scope.message);
-	};
-    $scope.myVar = -1;
-    $scope.toggle = function(index) {
-    	if($scope.myVar != index){
-        	$scope.myVar = index;
-    	}else{
-    		$scope.myVar = -1;		
-    	}
-    };
-});
-$(document).ready(function(){
-	$("#p1").mousedown(function(){
-        $("#p1").attr("class","active");
-        $("#p1").siblings().attr("class","");
-    });
-	$("#p2").mousedown(function(){
-        $("#p2").attr("class","active");
-        $("#p2").siblings().attr("class","");
-    });
-	$("#p3").mousedown(function(){
-        $("#p3").attr("class","active");
-        $("#p3").siblings().attr("class","");
-    });
-	$("#p4").mousedown(function(){
-        $("#p4").attr("class","active");
-        $("#p4").siblings().attr("class","");
-    });
-	$("#p5").mousedown(function(){
-        $("#p5").attr("class","active");
-        $("#p5").siblings().attr("class","");
-    });
-});
-
-
-</script>
-<style type="text/css">
-	
-	th {
-		text-align: center;
-	}
-	
-	tr {
-		text-align: center;
-	}
-
-  	 
-
-</style>
-<title>NeighborPage.jsp</title>
-
-</head>
-
-<body data-ng-controller="myController">
-	<header class="container">
-		<h1 align="center">입점 페이지</h1>
-		<ul class="nav navbar-nav navbar-right">
-			 <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
-	        <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
-	      </ul>
-	</header>
-		<!-- 	Category -->
-		<section class="container">
-			<div class="navbar-header">
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">        
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <p>Category</p>
-			    </button>    
-			</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav nav-tabs nav-justified">
-				<li><a href="/AppleWeb/Apple/admin/">가입 요청</a></li>
-				<li><a href="/AppleWeb/Apple/neighbor/">입점 요청</a></li>
-				<li><a href="/AppleWeb/Apple/member/">회원목록</a></li>
-			</ul>
-		</div>
 		
 		<!-- Table -->
-		<table style="width: 100%; border: 1px solid black;" class="table table-hover">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><h4>회원목록</h4></div>
+			<div class="panel-body">
+		<table style="width: 100%;" class="table table-hover">
 			<thead>
 				<tr>
 					<th>번호</th>
@@ -120,17 +25,16 @@ $(document).ready(function(){
 					<th>요청 날짜</th>
 				</tr>
 			</thead>
-			<tbody data-ng-repeat="x in names">
+			<tbody data-ng-repeat="x in names3">
 			 	<tr>
 			 		<td>{{$index +1}}</td>
-	    			<td><a href="" ng-click="toggle($index)">{{ x.Name }}</a></td>
+	    			<td><a href="" ng-click="toggle($index)">{{ x.name }}</a></td>
 	    			<td class="btn btn-group-inline">	    				
 	    				<button>승인</button>
 						<button>거절</button>	    				
 					</td>
 					<td>2015.4.24 오전 11:35</td>
-					<tr data-ng-show="myVar == $index"><td><td align="center">가입자 정보</td></td></tr>
-	  			</tr>
+					<tr data-ng-show="myVar == $index"><td><td align="center">가입자 정보</td></tr>
 	  		</tbody> 			
 		</table>
 	<div class="row">
@@ -157,6 +61,6 @@ $(document).ready(function(){
 		</nav>
 	</div>
 	</div>	
-	</section>
-</body>
-</html>
+	</div>
+	</div>
+	
