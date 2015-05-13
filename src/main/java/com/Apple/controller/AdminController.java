@@ -18,17 +18,31 @@ public class AdminController {
 	
 	@RequestMapping(value="/admin")
 	public String admin(){
+		return "Admin/Admin";
+	}
+	@RequestMapping(value="/admin/qna")
+	public String adminqna(){
+		return "Admin/QnA";
+	}
+	
+	@RequestMapping(value="/admin/adminpage")
+	public String adminpage(){
 		return "Admin/AdminPage";
 	}
 	
-	@RequestMapping(value="/member")
+	@RequestMapping(value="/admin/member")
 	public String member(){
 		return "Admin/MemberPage";
 	}
 	
-	@RequestMapping(value="/neighbor")
+	@RequestMapping(value="/admin/neighbor")
 	public String neighbor(){
 		return "Admin/NeighborPage";
+	}
+	
+	@RequestMapping(value="/admin/login")
+	public String login(){
+		return "Login/AdminLogin";
 	}
 	
 	@Autowired
@@ -44,4 +58,6 @@ public class AdminController {
 		
 		return list;
 	}
+	
+	
 }
