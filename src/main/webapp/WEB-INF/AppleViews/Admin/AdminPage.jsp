@@ -7,6 +7,10 @@
 
 <!DOCTYPE>
 
+<!-- QnA JavaScript -->
+   
+<script src="/AppleWeb/js/Admin/qna.js"></script>
+
 
 <!-- AdminPage JavaScript -->
    

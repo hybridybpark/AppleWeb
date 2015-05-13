@@ -20,6 +20,9 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
+
+
+
 <!-- AdminPage JavaScript -->
    
 <script src="/AppleWeb/js/Admin/AdminPage.js"></script>
@@ -28,6 +31,8 @@
 
 <link href="/AppleWeb/css/Admin/AdminPage.css" rel="stylesheet">
 
+<script src="/AppleWeb/js/Admin/qna.js"></script>
+
 <title>Admin.jsp</title>
 
 </head>
@@ -35,7 +40,6 @@
 <body class="container" data-ng-controller="adminCtrl">
 	<div class="header">
 		<h1>관리자 페이지</h1>
-		<h3>{{pagename}}</h3>
 	</div>
 	<ul class="nav navbar-nav navbar-right">
 	         <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>

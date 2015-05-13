@@ -20,6 +20,10 @@ public class AdminController {
 	public String admin(){
 		return "Admin/Admin";
 	}
+	@RequestMapping(value="/admin/qna")
+	public String adminqna(){
+		return "Admin/QnA";
+	}
 	
 	@RequestMapping(value="/admin/adminpage")
 	public String adminpage(){
@@ -34,6 +38,11 @@ public class AdminController {
 	@RequestMapping(value="/admin/neighbor")
 	public String neighbor(){
 		return "Admin/NeighborPage";
+	}
+	
+	@RequestMapping(value="/admin/login")
+	public String login(){
+		return "Login/AdminLogin";
 	}
 	
 	@Autowired
