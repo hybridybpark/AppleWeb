@@ -30,9 +30,12 @@
 </head>
 
 <!-- Title-->
+
 <body data-ng-controller="qnaCtrl">
+	<div class="panel panel-primary">
+			<div class="panel-heading"><h4>문의게시판</h4></div>
+			<div class="panel-body">
 	<header class="container">
-		<h1 align="center">문의 게시판</h1>
 	</header>
 	
 	<section class="container">
@@ -112,5 +115,8 @@
 				<a href="" data-ng-click="goWrite()"><input type="button" value="글쓰기"></a>
 			</td>
 		</tr>
+		</section>
+		</div>
+		</div>
 	</body>
 </html>

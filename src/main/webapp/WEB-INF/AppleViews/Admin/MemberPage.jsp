@@ -36,7 +36,7 @@
 	    				<button>수정</button>
 						<button>탈퇴</button>	    				
 					</td>
-					<td>2015.4.24 오전 11:35</td>
+					<td>{{x.wdate}}</td>
 					<tr data-ng-show="myVar == $index"><td><td align="center">가입자 정보</td></tr>
 	  		</tbody> 			
 		</table>
