@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Apple.Dao.PostDao">
+	<select id="selectAll" resultMap="postList" >
+		SELECT *
+		FROM post		
+	</select>	 
+	
+<!-- 	사용할 DB 변수명 설정 -->
+	<resultMap type="com.Apple.Model.Post" id="postList">    
+	    
+	     <result property="WRITERNAME" column="WRITERNAME"/>
+		 <result property="WRITERPHONE" column="WRITERPHONE"/>
+		 <result property="MARK" column="MARK"/>
+		 <result property="POSTCONTENT" column="POSTCONTENT"/>
+		 <result property="WRITEDATE" column="WRITEDATE"/>
+		 <result property="SHOPNAME" column="SHOPNAME"/>
+		 <result property="BUSINESSNUMBER" column="BUSINESSNUMBER"/>
+		 <result property="POSTREPLY" column="POSTREPLY"/>
+		 <result property="SID" column="SID"/>
+	    
+	        
+	</resultMap>
+	
+<!-- 	입출력 쿼리문 -->
+	<insert id="insert" parameterType="com.Apple.Model.Post">
+<!-- 	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate}) -->
+	    
+	</insert>
+	<insert id="insertReply" parameterType="com.Apple.Model.Post">
+	    
+	    
+	</insert>
+	
+<!-- 	삭제 쿼리문 -->
+	<delete id="delete" parameterType="com.Apple.Model.Post" >
+<!-- 	    DELETE FROM qna WHERE title = #{title} AND password = #{password} -->
+	</delete>
+	
+<!-- 	수정 쿼리문 -->
+	<update id="update" parameterType="com.Apple.Model.Post">
+<!-- 	    UPDATE qna set WHERE(title = ? , content = ?, password = ?, wdate=now()) -->
+	</update>
+	
+</mapper>
+
