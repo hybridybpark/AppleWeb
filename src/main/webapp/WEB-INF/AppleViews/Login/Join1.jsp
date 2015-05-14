@@ -33,17 +33,6 @@
 
 <title>회원 가입</title>
 
-<style>
-h1 {
-	text-align: center;
-}
-
-.container{
-	margin: 0px auto;
-	padding: 20px;
-}
-
-</style>
 
 
 <!-- Join css -->

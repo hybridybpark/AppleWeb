@@ -25,15 +25,9 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location){
     // 삭제 버튼 
 	$scope.deleteAction = function(index) {
 		$scope.title = $scope.list[index].title;
-		//$scope.password = $scope.list[index].password;
-		//if($scope.password==$scope.inputpassword){
 			$http.post("/AppleWeb/Apple/QnA.delete2/"+$scope.title+"."+$scope.inputpassword).success(function() {
 				location.replace("/AppleWeb/Apple/qna");
 			});
-		//}else{
-			//alert("worng password");
-			//alert($scope.inputpassword+"");
-		//}
 	};
 	
 	$scope.doSubmit = function() {
@@ -62,12 +56,13 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location){
 			alert("보안문자를 입력하세요");
 			return;
 		}
-		if(boardFrm.privacy_agreement_radio.value == "Y") {
+		if(boardFrm.privacy_agreement_radio.value == "N") {
 			alert("약관에 동의해 주세요");
 			return;
 		}
-		
+		//alert($scope.agree+"Adf");
 		boardFrm.submit();
+		$location.path("/qna");
 	};
 	
 	$scope.goWrite = function() {
