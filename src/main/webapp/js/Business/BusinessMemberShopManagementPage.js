@@ -3,7 +3,7 @@
 
 
 
-mainApp.controller('shopCtrl',function($scope,$http,$location){	
+businessApp.controller('shopCtrl',function($scope,$http,$location){	
 	
 });
 

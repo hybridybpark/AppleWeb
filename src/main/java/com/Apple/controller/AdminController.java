@@ -40,11 +40,6 @@ public class AdminController {
 		return "Admin/NeighborPage";
 	}
 	
-	@RequestMapping(value="/admin/login")
-	public String login(){
-		return "Login/AdminLogin";
-	}
-	
 	@Autowired
 	ApplicationContext applicationContext;
 	

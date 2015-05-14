@@ -4,7 +4,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="myApp2">
+<html data-ng-app="qnaApp">
 
 <head>
 
