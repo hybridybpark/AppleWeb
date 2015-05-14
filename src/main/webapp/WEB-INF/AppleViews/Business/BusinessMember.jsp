@@ -36,6 +36,10 @@
 	<div class="header">
 		<h1>사업자 페이지</h1>
 	</div>
+	<ul class="nav navbar-nav navbar-right">
+	         <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
+	        <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
+	      </ul>
 	<div>
 		<ul class="nav nav-pills nav-justified" >						
 		  	<li role="presentation" data-ng-repeat="item in btabs" class="{{item.type}}" data-ng-click="btabClick($index)" ><a href="">{{item.name}}</a></li>		  			  

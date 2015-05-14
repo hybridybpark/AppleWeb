@@ -90,8 +90,8 @@
 ■ 개인정보의 보유 및 이용 기간
 회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외없이 해당정보를 파기합니다.</textarea><br/>
 개인정보취급방침에 대하여 동의하십니까? 
-							<input id="privacy_agreement_radio0" name="privacy_agreement_radio" value="Y" type="radio"  /><label for="privacy_agreement_radio0" >동의함</label>
-							<input id="privacy_agreement_radio1" name="privacy_agreement_radio" value="N" type="radio" checked="checked"  /><label for="privacy_agreement_radio1" >동의안함</label>                    
+							<input id="privacy_agreement_radio0" name="privacy_agreement_radio" value="Y" type="radio" data-ng-model="agree" /><label for="privacy_agreement_radio0" >동의함</label>
+							<input id="privacy_agreement_radio1" name="privacy_agreement_radio" value="N" type="radio" data-ng-model="agree" checked="checked"  /><label for="privacy_agreement_radio1" >동의안함</label>                    
 							</td>
 					 	</tr>
 					</tbody>
