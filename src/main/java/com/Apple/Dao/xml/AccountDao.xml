@@ -15,11 +15,15 @@
 	    <result property="PHONE" column="PHONE" />
 	    <result property="EMAILACCEPT" column="EMAILACCEPT" />
 	    <result property="SMSACCEPT" column="SMSACCEPT" />
+	    <result property="WDATE" column="WDATE"/>
+	    <result property="CONDITION" column="CONDITION"/>
+	    <result property="ADATE" column="ADATE"/>    
+	    
 	</resultMap>
 	
 	<!-- 	입출력 쿼리문 -->
 	<insert id="insert" parameterType="com.Apple.Model.Account">	    
-	    INSERT INTO ACCOUNT values(#{BUSINESSNUMBER},#{PASSWORD},#{EMAIL},#{PHONE},#{EMAILACCEPT},#{SMSACCEPT},#{BUSINESSNAME})
+	    INSERT INTO ACCOUNT values(#{BUSINESSNUMBER},#{PASSWORD},#{EMAIL},#{PHONE},#{EMAILACCEPT},#{SMSACCEPT},#{BUSINESSNAME},#{WDATE},WAIT,NULL)
 	</insert>
 		
 </mapper>

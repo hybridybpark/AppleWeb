@@ -8,7 +8,30 @@ public class Account {
 	public String EMAILACCEPT;
 	public String SMSACCEPT;
 	public String BUSINESSNAME;
+	public String WDATE;
+	public String CONDITION;
 	
+	
+	public String getCONDITION() {
+		return CONDITION;
+	}
+	public void setCONDITION(String cONDITION) {
+		CONDITION = cONDITION;
+	}
+	public String getADATE() {
+		return ADATE;
+	}
+	public void setADATE(String aDATE) {
+		ADATE = aDATE;
+	}
+	public String ADATE;
+	
+	public String getWdate() {
+		return WDATE;
+	}
+	public void setWDATE(String wdate) {
+		WDATE = wdate;
+	}
 	public String getBUSINESSNAME() {
 		return BUSINESSNAME;
 	}
