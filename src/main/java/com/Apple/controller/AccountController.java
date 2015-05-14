@@ -90,6 +90,9 @@ public class AccountController {
 		
 		account.setWDATE(date.toString());
 		 
+		account.setCONDITION("wait");
+		account.setADATE("no date");
+		
 		service.insert(account);
 		
 		return "redirect:/Apple/join";

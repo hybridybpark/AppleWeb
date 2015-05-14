@@ -411,7 +411,6 @@
 	</form>
 	<hr/>
 </div>
-<<<<<<< HEAD
 	<!-- 푸터 들어가는 부분 -->
 <!-- 	<div> -->
 <!-- 		<p class="text-center"> -->
@@ -420,8 +419,6 @@
 <!-- 			<small>Copyrightⓒ All rights reserved.</small> -->
 <!-- 		</p> -->
 <!-- 	</div> -->
-=======
->>>>>>> 3a878eac5cae35edc5aac219348343fbfa669cfc
 
 </body>
 </html>
