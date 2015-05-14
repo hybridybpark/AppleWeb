@@ -20,7 +20,7 @@
 <!-- <mvc:view-controller path="/AppleWeb/main" view-name="index"/> -->
 
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	<property name="prefix" value="/WEB-INF/AppleViews/"/>
+	<property name="prefix" value="/AppleViews/"/>
 	<property name="suffix" value=".jsp"/>
 </bean>
 </beans>
