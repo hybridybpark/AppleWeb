@@ -1,6 +1,7 @@
 /**
  * 
  */
+var mainApp = angular.module('mainApp',[]);
 mainApp.controller('businessCtrl',function($scope,$http,$location){
 	$scope.btabs = [
 	                {name:'예약목록',type:'active',url:'/AppleWeb/Apple/business/reservation'},
