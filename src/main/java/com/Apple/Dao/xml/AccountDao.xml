@@ -23,7 +23,7 @@
 	
 	<!-- 	입출력 쿼리문 -->
 	<insert id="insert" parameterType="com.Apple.Model.Account">	    
-	    INSERT INTO ACCOUNT values(#{BUSINESSNUMBER},#{PASSWORD},#{EMAIL},#{PHONE},#{EMAILACCEPT},#{SMSACCEPT},#{BUSINESSNAME},#{WDATE},WAIT,NULL)
+	    INSERT INTO ACCOUNT values(#{BUSINESSNUMBER},#{PASSWORD},#{EMAIL},#{PHONE},#{EMAILACCEPT},#{SMSACCEPT},#{BUSINESSNAME},#{WDATE},#{CONDITION},#{ADATE})
 	</insert>
 		
 </mapper>
