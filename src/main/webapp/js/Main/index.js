@@ -26,30 +26,12 @@ mainApp.config(function($routeProvider) {
         .when('/login', {
             templateUrl: '/AppleWeb/Apple/login',
             controller: 'loginCtrl'
-        })
-        
-         .when('/qna', {
-            templateUrl: '/AppleWeb/Apple/qna',
-            controller: 'qnaCtrl'
-        })
+        }) 
+         
          .when('/shopinfo', {
             templateUrl: '/AppleWeb/Apple/shopinfo',
             controller: 'shopinfoCtrl'
-        })     
-        
-         .when('/qna/write', {
-            templateUrl: '/AppleWeb/Apple/qna/write',
-            controller: 'qnaCtrl'
-        })
-        
-        .when('/business', {
-            templateUrl: '/AppleWeb/Apple/business',
-            controller: 'businessCtrl'
-        })   
-        
-        
-        
-    
+        })  
 	 	// otherwise page
     	.otherwise({
     		templateUrl: '/AppleWeb/Apple/body',
@@ -89,8 +71,11 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookieStor
 		
 		//$scope.otherUrl="/AppleWeb/Apple/"+pagename;
 		//$scope.url1="/AppleWeb/Apple/"+pagename;
-		$location.path("/"+pagename);
-		
+//		$location.path("/"+pagename);
+//		$location.replace();
+//		window.location.path("/AppleWeb/Apple/"+pagename);
+//		location.replace();
+		$scope.url1 = "/AppleWeb/Apple/"+pagename;
 		
 	};	
 	

@@ -1,8 +1,28 @@
 /**
  * 
  */
+var ShopInfoApp = angular.module('ShopInfoApp',["ngRoute"]);
 
-mainApp.controller('shopinfoCtrl',function($scope,$http,$location,$cookieStore){	
+ShopInfoApp.config(function($routeProvider,$locationProvider) {
+	$routeProvider.when("",{
+		templateUrl: "/AppleWeb/Apple/shopinfo/info",
+		controller: ""
+	});
+	$routeProvider.when("",{
+		templateUrl: "/AppleWeb/Apple/shopinfo/menu",
+		controller: ""
+	});
+	$routeProvider.when("",{
+		templateUrl: "/AppleWeb/Apple/shopinfo/review",
+		controller: ""
+	});
+	$routeProvider.otherwise({
+		templateUrl: "",
+		controller: ""
+	});
+});
+
+ShopInfoApp.controller('shopinfoCtrl',function($scope,$http,$location){	
 	$scope.shopname = window.sessionStorage.getItem('SHOPNAME');
 	$scope.businessnumber = window.sessionStorage.getItem('SHOPBUSINESSNUMBER');
 	

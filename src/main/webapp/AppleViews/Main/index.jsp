@@ -31,8 +31,7 @@
 	
     	<header>
         <!-- Navigation -->
-        
-        
+        	<jsp:include page="TopNav.jsp"></jsp:include>        
         </header>
         
         <section>
