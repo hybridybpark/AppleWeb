@@ -1,6 +1,6 @@
 
 // angularjs
-mainApp.controller('inquiryCtrl',function($scope,$http,$location){	
+businessApp.controller('inquiryCtrl',function($scope,$http,$location){	
 	
 	$scope.inquiry = [1,2,3,4,5,6,7,8];
 	

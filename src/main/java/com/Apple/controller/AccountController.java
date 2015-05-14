@@ -86,6 +86,13 @@ public class AccountController {
 		
 		account.setSMSACCEPT("asd");
 		
+		Date date = new Date();
+		
+		account.setWDATE(date.toString());
+		 
+		account.setCONDITION("wait");
+		account.setADATE("no date");
+		
 		service.insert(account);
 		
 		return "redirect:/Apple/join";

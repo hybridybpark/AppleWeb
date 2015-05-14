@@ -5,7 +5,7 @@
 
 <!DOCTYPE>
 
-<html>
+<html data-ng-app="adminApp">
 
 <head>
 
@@ -20,11 +20,11 @@
 	
 <!-- AdminLogin JavaScript -->
    
-<script src="/AppleWeb/js/Login/AdminLogin.js"></script>
+<script src="/AppleWeb/js/Admin/AdminLogin.js"></script>
 
 <!-- AdminLogin css -->
 
-<link href="/AppleWeb/css/Login/AdminLogin.css" rel="stylesheet">
+<link href="/AppleWeb/css/Admin/AdminLogin.css" rel="stylesheet">
 
 <title>AdminLogin.jsp</title>
 
@@ -54,10 +54,10 @@
 																<td width="50">아이디</td>
 																<td><input type="text" name="MemberId" size="13"
 																	onkeypress="if(event.keyCode==13) checkVar();"
-																	data-ng-model="adminlogin.id"
+																	data-ng-model="adminlogin.adminid"
 																	tabindex="1" class="input"></td>
 																<td width="75" align="right" rowspan="2"><a
-																	href="" data-ng-click="adminloginClick()"><img
+																	href="" data-ng-click="doSubmit()"><img
 																		src="/AppleWeb/Images/Login/btn_login.gif" border="0"
 																		tabindex="5"></a></td>
 															</tr>
@@ -66,7 +66,7 @@
 																<td><input type="password" name="MemberPw"
 																	size="13"
 																	onkeypress="if(event.keyCode==13) checkVar();"
-																	data-ng-model="adminlogin.pw"
+																	data-ng-model="adminlogin.adminpassword"
 																	tabindex="2" class="input"></td>
 															</tr>
 														</tbody>
