@@ -2,8 +2,8 @@
 // angularjs
 // 게시판내 목록 출력
 
-
-mainApp.controller('qnaCtrl',function($scope,$http,$location){	
+var qnaApp = angular.module('qnaApp',[]);
+qnaApp.controller('qnaCtrl',function($scope,$http,$location){	
 	
 	// 삭제 password name 선언
 	//$scope.inputpassword="w";
@@ -66,7 +66,8 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location){
 	};
 	
 	$scope.goWrite = function() {
-		$location.path("/qna/write");
+		window.location = "http://localhost:8080/AppleWeb/Apple/qna/write";
+		location.replace(location);
 	};
 	
 });

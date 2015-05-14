@@ -5,7 +5,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="mainApp">
+<html data-ng-app="businessApp">
 
 <head>
 

@@ -1,6 +1,6 @@
 
 // angularjs
-mainApp.controller('registrationCtrl',function($scope,$http,$location){	
+businessApp.controller('registrationCtrl',function($scope,$http,$location){	
 		
 });
 

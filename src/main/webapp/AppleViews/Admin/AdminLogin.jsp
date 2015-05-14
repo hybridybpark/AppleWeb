@@ -5,7 +5,7 @@
 
 <!DOCTYPE>
 
-<html>
+<html data-ng-app="adminApp">
 
 <head>
 
@@ -20,11 +20,11 @@
 	
 <!-- AdminLogin JavaScript -->
    
-<script src="/AppleWeb/js/Login/AdminLogin.js"></script>
+<script src="/AppleWeb/js/Admin/AdminLogin.js"></script>
 
 <!-- AdminLogin css -->
 
-<link href="/AppleWeb/css/Login/AdminLogin.css" rel="stylesheet">
+<link href="/AppleWeb/css/Admin/AdminLogin.css" rel="stylesheet">
 
 <title>AdminLogin.jsp</title>
 
@@ -57,7 +57,7 @@
 																	data-ng-model="adminlogin.id"
 																	tabindex="1" class="input"></td>
 																<td width="75" align="right" rowspan="2"><a
-																	href="" data-ng-click="adminloginClick()"><img
+																	href="" data-ng-click="doSubmit()"><img
 																		src="/AppleWeb/Images/Login/btn_login.gif" border="0"
 																		tabindex="5"></a></td>
 															</tr>
