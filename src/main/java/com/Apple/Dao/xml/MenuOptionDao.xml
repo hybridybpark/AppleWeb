@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.Apple.Dao.MenuOptionDao">
+    <select id="selectAll" resultMap="menuoptionList">
+        SELECT * 
+        FROM MENUOPTION
+    </select>
+    
+    <resultMap type="com.Apple.Model.MenuOPtion" id="menuoptionList">
+        
+        <result property="Oname" column="OPTIONNAME"/>
+        <result property="OMname" column="MENUNAME"/>
+        <result property="Osid" column="MENUSID"/>
+        <result property="Oprice" column="OPTIONPRICE"/>
+        
+    </resultMap>
+    
+    <!-- 	입출력 쿼리문 -->
+	<insert id="insert" parameterType="com.Apple.Model.MenuOPtion">
+	    INSERT INTO menu values(#{Oname},#{OMname},#{Osid},#{Oprice},null)
+    </insert>
+</mapper>
