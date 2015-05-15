@@ -13,6 +13,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.Apple.Model.Menu;
+import com.Apple.Model.QnA;
 import com.Apple.Service.MenuService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -30,16 +31,29 @@ public class MenuTest {
 		
 		MenuService service = factory.getBean(MenuService.class);
 		
+		Menu m = new Menu();
+		
+		m.setMname("asd");
+		m.setMprice(Integer.parseInt("123"));
+		m.setMimage("12313");
+		m.setMdesc("adfs");
+		m.setMcategory("asdfs");
+		m.setSname("q");
+		m.setBnumber(Integer.parseInt("1231"));
+
+//		service.insert(m);
+		
 		List<Menu> list = service.selectAll();
 		
-		for (Menu m : list) {
-			log.info(m.Mname);
-			log.info(m.Mprice);
-			log.info(m.Mimage);
-			log.info(m.Mdesc);
-			log.info(m.Mcategory);
-			log.info(m.Bnumber);
-			log.info(m.Sname);
+		for (Menu c : list) {
+			log.info(c.Mname);
+			log.info(c.Mprice);
+			log.info(c.Mimage);
+			log.info(c.Mdesc);
+			log.info(c.Mcategory);
+			log.info(c.Bnumber);
+			log.info(c.Sname);
+			
 		}
 		
 	}

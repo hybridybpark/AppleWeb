@@ -3,6 +3,30 @@
  */
 var adminApp = angular.module('adminApp',[]);
 adminApp.controller('adminCtrl',function($scope,$http,$location){
+	
+//	$scope.memberID="";
+//	$scope.loginshow=false;
+//	
+//	if(window.sessionStorage){ 		
+// 		if(window.sessionStorage.getItem('ADMINID')){ 			
+// 			$scope.memberID = window.sessionStorage.getItem('ADMINID');
+// 			$scope.loginshow=true;
+// 		}else{
+// 			window.location = "http://localhost:8080/AppleWeb/Apple/admin/login";
+//			location.reload(location);	
+//			break;
+// 		} 		
+// 	}else{
+// 		alert("wrong");
+// 	}
+//	
+//	$scope.logout = function() {
+//		$scope.memberID="";
+//		$scope.loginshow=false;
+//		window.sessionStorage.setItem('ADMINID',"");
+//		alert("로그아웃 되었습니다.");
+//	}
+	
 	$scope.btabs = [
 	                {name:'가입요청',type:'active',url:'/AppleWeb/Apple/admin/adminpage'},
 	                {name:'입점요청',type:'',url:'/AppleWeb/Apple/admin/neighbor'},

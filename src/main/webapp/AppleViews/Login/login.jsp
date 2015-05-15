@@ -21,24 +21,16 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	
+<!-- Login JavaScript -->
+   
+<script src="/AppleWeb/js/Login/login.js"></script>
+
+<!-- Login css -->
+
+<link href="/AppleWeb/css/Login/login.css" rel="stylesheet">
 
 <title>login.jsp</title>
-
-
-<style type="text/css">
-.header {
-	text-align: center;
-}
-
-.form-horizontal {
-	margin-top: 100px;
-}
-
-h1 {
-	margin-top: 100px;
-	text-align: center;
-}
-</style>
 
 </head>
 
@@ -105,10 +97,10 @@ h1 {
 																<td width="50">아이디</td>
 																<td><input type="text" name="MemberId" size="13"
 																	onkeypress="if(event.keyCode==13) checkVar();"
-																	data-ng-model="login.id"
+																	data-ng-model="login.loginid"
 																	tabindex="1" class="input"></td>
 																<td width="75" align="right" rowspan="2"><a
-																	href="" data-ng-click="loginClick()"><img
+																	href="" data-ng-click="doSubmit()"><img
 																		src="/AppleWeb/Images/Login/btn_login.gif" border="0"
 																		tabindex="5"></a></td>
 															</tr>
@@ -117,7 +109,7 @@ h1 {
 																<td><input type="password" name="MemberPw"
 																	size="13"
 																	onkeypress="if(event.keyCode==13) checkVar();"
-																	data-ng-model="login.pw"
+																	data-ng-model="login.loginpassword"
 																	tabindex="2" class="input"></td>
 															</tr>
 															<tr>
@@ -126,7 +118,7 @@ h1 {
 																	style="padding: 0 6px 0 6px; color: #d4d6df;"></span><a
 																	href="/Mymenupan/member/member_pwsearch.asp">비밀번호찾기</a><span
 																	style="padding: 0 6px 0 6px; color: #d4d6df;">|</span><a
-																	href="/Mymenupan/member/member_check.asp"><b>회원가입</b></a></td>
+																	href="/AppleWeb/Apple/join"><b>회원가입</b></a></td>
 															</tr>
 														</tbody>
 													</table>
