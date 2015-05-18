@@ -6,6 +6,7 @@ public class MenuOption {
 	int MENUSID;
 	int OPTIONPRICE;
 	int OPTIONSID;
+	
 	public String getOPTIONNAME() {
 		return OPTIONNAME;
 	}

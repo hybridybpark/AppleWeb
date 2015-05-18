@@ -23,9 +23,9 @@ adminApp.controller('adminlogin', function($scope, $http, $location) {
 				alert(result.status);
 				alert(result.statusText);
 				if(result.status){
+//					window.sessionStorage.setItem('ADMINID',$scope.login.id);
 					window.location = "http://localhost:8080/AppleWeb/Apple/admin";
-					location.replace(location);
-//					$location.path("http://localhost:8080/AppleWeb/Apple/admin");
+					location.replace(location);					
 				}else{
 					alert(result.statusText);
 				}

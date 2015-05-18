@@ -13,46 +13,42 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.Apple.Model.Menu;
+import com.Apple.Model.MenuOption;
 import com.Apple.Model.QnA;
+import com.Apple.Service.MenuOptionService;
 import com.Apple.Service.MenuService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:/beans.xml")
-public class MenuTest {
+public class MenuOptionTest {
 	
 	@Autowired
 	ApplicationContext factory;
 	
-	static Logger log = Logger.getLogger(MenuTest.class);
+	static Logger log = Logger.getLogger(MenuOptionTest.class);
 
 	@Test
 	public void testSelectAll() {
 		log.info("##############testSelectAll()###########");
 		
-		MenuService service = factory.getBean(MenuService.class);
+		MenuOptionService service = factory.getBean(MenuOptionService.class);
 		
-		Menu m = new Menu();
+		MenuOption m = new MenuOption();
 		
-		m.setMname("asd");
-		m.setMprice(Integer.parseInt("123"));
-		m.setMimage("12313");
-		m.setMdesc("adfs");
-		m.setMcategory("asdfs");
-		m.setSname("q");
-		m.setBnumber(Integer.parseInt("1231"));
+		m.setOPTIONNAME("asdd");
+		m.setMENUNAME("asd");
+		m.setMENUSID(Integer.parseInt("1231"));
+		m.setOPTIONPRICE(Integer.parseInt("1234"));
 
-//		service.insert(m);
+		service.insert(m);
 		
-		List<Menu> list = service.selectAll();
+		List<MenuOption> list = service.selectAll();
 		
-		for (Menu c : list) {
-			log.info(c.Mname);
-			log.info(c.Mprice);
-			log.info(c.Mimage);
-			log.info(c.Mdesc);
-			log.info(c.Mcategory);
-			log.info(c.Bnumber);
-			log.info(c.Sname);
+		for (MenuOption c : list) {
+			log.info(c.getOPTIONNAME());
+			log.info(c.getMENUNAME());
+			log.info(c.getMENUSID());
+			log.info(c.getOPTIONPRICE());
 			
 		}
 		
