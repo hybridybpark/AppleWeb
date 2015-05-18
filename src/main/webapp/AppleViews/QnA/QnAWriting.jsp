@@ -37,7 +37,7 @@
 	
 	<section class="container">
 <!-- 	문의하기 작성하는곳 -->
-	<form name="boardFrm" role="form" action="http://localhost:8080/AppleWeb/Apple/QnA.do">
+	<form name="boardFrm" role="form" action="http://localhost:8080/AppleWeb/Apple/QnA.do" method="post">
 	<div align="center">
 		<table style="width: 50%">
 	<tbody>

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.Apple.Dao.QnADao;
 import com.Apple.Model.QnA;
+import com.Apple.Model.QnAResult;
 import com.Apple.Service.QnAService;
 
 @Controller
@@ -57,21 +59,38 @@ public class QnAController {
 		return list;
 	}
 	
-	//입력
-	@RequestMapping("/QnA.do")
-	public String insertQnA(@RequestParam Map<String, Object> paramMap){
-		QnAService service = applicationContext.getBean(QnAService.class);
-		QnA qna = new QnA(); 
-		
-		qna.setTitle(paramMap.get("title").toString());
-		
-		qna.setContent(paramMap.get("content").toString());
-		
-		qna.setName(paramMap.get("pname").toString());
-		
-		qna.setPhone(paramMap.get("phone").toString());
-		
-		qna.setPassword(paramMap.get("password").toString());
+	//입력	
+//	@RequestMapping(value="/QnA.do", method=RequestMethod.POST)	
+//	public @ResponseBody QnAResult insertQnA(@RequestParam Map<String, Object> paramMap){
+//		QnAService service = applicationContext.getBean(QnAService.class);
+//		QnA qna = new QnA(); 
+//		
+//		qna.setTitle(paramMap.get("title").toString());
+//		
+//		qna.setContent(paramMap.get("content").toString());
+//		
+//		qna.setName(paramMap.get("pname").toString());
+//		
+//		qna.setPhone(paramMap.get("phone").toString());
+//		
+//		qna.setPassword(paramMap.get("password").toString());
+//		
+//		Date date = new Date();
+//		
+//		qna.setWdate(date.toString());
+//		
+//		service.insert(qna);		
+//		
+//		QnAResult result = new QnAResult();
+//		result.setQnA(qna);
+//		result.setStatus(true);
+//		result.setStatusText("QNAWRITE!!");
+//				
+//		return result;
+//	}
+	@RequestMapping(value="/QnA.do", method=RequestMethod.POST)	
+	public @ResponseBody QnAResult insertQnA2(@RequestBody QnA qna){
+		QnAService service = applicationContext.getBean(QnAService.class);		
 		
 		Date date = new Date();
 		
@@ -79,7 +98,12 @@ public class QnAController {
 		
 		service.insert(qna);		
 		
-		return "redirect:/Apple/";
+		QnAResult result = new QnAResult();
+		result.setQnA(qna);
+		result.setStatus(true);
+		result.setStatusText("QNAWRITE!!");
+				
+		return result;
 	}
 	
 	// 게시글 삭제

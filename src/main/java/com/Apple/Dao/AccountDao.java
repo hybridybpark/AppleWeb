@@ -10,4 +10,6 @@ public interface AccountDao {
 	
 	public void insert(Account account);
 	
+	public List<Account> checkAccount(Account account);
+	
 }
