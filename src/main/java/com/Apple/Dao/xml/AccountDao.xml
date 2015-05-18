@@ -7,6 +7,12 @@
 	    FROM ACCOUNT
 	</select>
 	
+	<select id="checkAccount" resultMap="accountList" parameterType="com.Apple.Model.Account">
+	    SELECT *
+	    FROM ACCOUNT
+	    WHERE BUSINESSNUMBER=#{BUSINESSNUMBER} AND PASSWORD=#{PASSWORD}
+	</select>
+	
 	<resultMap type="com.Apple.Model.Account" id="accountList">
 	    <result property="BUSINESSNAME" column="BUSINESSNAME"/>
 	    <result property="BUSINESSNUMBER" column="BUSINESSNUMBER"/>

@@ -37,5 +37,9 @@ public class AccountService {
 		accountdao.insert(account);
 	}
 	
+	public List<Account> checkAccount(Account account){
+		return accountdao.checkAccount(account);
+	}
+	
 	
 }

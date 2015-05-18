@@ -58,28 +58,34 @@ public class AccountController {
 		log.info("############################Login POST");
 		log.info("###########"+login.getBUSINESSNUMBER());
 		log.info("###########"+login.getPASSWORD());
-		AccountService service = applicationContext.getBean(AccountService.class);
+		AccountService service = applicationContext.getBean(AccountService.class);		
 		
-		List<Account> list = service.selectAll();
-		Account account = list.get(0);
-		log.info("###########"+account.getBUSINESSNUMBER());
-		log.info("###########"+account.getPASSWORD());
+		List<Account> list = service.checkAccount(login);
 		
 		AccountResult result = new AccountResult();
-		result.setLogin(account);
+		result.setLogin(login);
 		
-		if(account.getBUSINESSNUMBER().equals(account.getBUSINESSNUMBER())){
-			if(account.getPASSWORD().equals(account.getPASSWORD())){
-				result.setStatus(true);
-				result.setStatusText("LOGIN!!");
-			}else{
-				result.setStatus(false);
-				result.setStatusText("WORNG PW");
-			}			
+		if(list.size()==1){
+			result.setStatus(true);
+			result.setStatusText("LOGIN!!");
 		}else{
 			result.setStatus(false);
-			result.setStatusText("WORNG ID");
-		}		
+			result.setStatusText("WRONG INPUT!!");
+		}
+		
+		
+		
+//		if(account.getBUSINESSNUMBER().equals(account.getBUSINESSNUMBER())){
+//			if(account.getPASSWORD().equals(account.getPASSWORD())){
+//				
+//			}else{
+//				result.setStatus(false);
+//				result.setStatusText("WORNG PW");
+//			}			
+//		}else{
+//			result.setStatus(false);
+//			result.setStatusText("WORNG ID");
+//		}		
 		return result;
 	}
 	

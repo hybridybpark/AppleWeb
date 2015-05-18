@@ -33,6 +33,7 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location){
 	
 	$scope.doSubmit = function() {
 		 alert("저장하시겠습니까?");
+		 
 		if(boardFrm.pname.value == "") {
 			alert("이름을 입력하세요");
 			return;
@@ -61,9 +62,40 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location){
 			alert("약관에 동의해 주세요");
 			return;
 		}
+		
+		$scope.qnadata = {
+				name: boardFrm.pname.value,
+				phone: boardFrm.phone.value,
+				title:boardFrm.title.value,
+				content:boardFrm.content.value,
+				password:boardFrm.password.value
+					};
 		//alert($scope.agree+"Adf");
-		boardFrm.submit();
-		$location.path("/qna");
+//		boardFrm.submit().success(){
+//			$location.path("/qna");
+//		};		
+		var result = $http.post("http://localhost:8080/AppleWeb/Apple/QnA.do",$scope.qnadata);
+		result.success(function(result,status,headers,config) {
+			alert(result.status);
+			alert(result.statusText);
+			if(result.status){
+//				window.sessionStorage.setItem('ADMINID',$scope.login.id);
+//				window.location = "http://localhost:8080/AppleWeb/Apple/admin";
+//				location.replace(location);					
+				$location.path("/qna")
+			}else{
+				alert(result.statusText);
+			}
+//			alert(status);
+//			alert(headers);
+//			alert(config);
+//			if(data){
+//				window.location = "http://localhost:8080/AppleWeb/Apple/admin";
+//				location.replace(location);
+//			}else{
+//				alert(data);
+//			}
+		});
 	};
 	
 	$scope.goWrite = function() {

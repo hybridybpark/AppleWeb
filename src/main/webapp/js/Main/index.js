@@ -75,12 +75,12 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 	$scope.loginshow=false;
 	$scope.rightView=true;
 	
-	$rootScope.$on('$routeChangeStart', function(event, next, current) {
-		if (typeof current != 'undefined') {
-    		$templateCache.removeAll();
-       		console.log("current.templateUrl=" + current.templateUrl);
-		}
-	});
+//	$rootScope.$on('$routeChangeStart', function(event, next, current) {
+//		if (typeof current != 'undefined') {
+//    		$templateCache.removeAll();
+//       		console.log("current.templateUrl=" + current.templateUrl);
+//		}
+//	});
 
 	
 //	alert($.cookie('SITE'));
@@ -156,6 +156,7 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
 			//$scope.url1 = "/AppleWeb/Apple/chain";
 			$location.path("/shopinfo");
+			
 		}else if($scope.tempChain=='undefined'){
 			
 		}else{			

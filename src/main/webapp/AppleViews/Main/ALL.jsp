@@ -20,7 +20,7 @@
                     <img class="img-responsive" src="{{x.shopimage}}" alt="{{x.shopname}}" data-ng-click="imageClick($index)" style="height: 200px;">
                 </a>
                 <h3>
-                    <a href="#"  data-ng-click="imageClick($index)">{{x.shopname}}</a> <small>{{x.shopmark}}</small>
+                    <a href=""  data-ng-click="imageClick($index)">{{x.shopname}}</a> <small>{{x.shopmark}}</small>
                 </h3>
                 <p style="height: 80px;">{{x.shopinfo}}</p>
             </div>
