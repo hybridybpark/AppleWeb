@@ -17,7 +17,7 @@
 		};
 		
 		$scope.doSubmit = function() {
-			 alert("저장하시겠습니까?");
+			 alert("가입신청 하시겠습니까?");
 			
 			boardFrm.submit();
 		};
