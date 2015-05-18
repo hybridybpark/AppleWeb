@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.Apple.Dao.BusinessDao">
+    
+     <resultMap type="com.Apple.Model.Menu" id="menuList">
+        <result property="Mname" column="MENUNAME"/>
+        <result property="Mprice" column="MENUPRICE"/>
+        <result property="Mimage" column="MENUIMAGE"/>
+        <result property="Mcategory" column="MENUCATEGORY"/>
+        <result property="Mdesc" column="MENUDESC"/>
+        <result property="Bnumber" column="BUSINESSNUMBER"/>
+        <result property="Sname" column="SHOPNAME"/>
+    </resultMap>
+    
+     <resultMap type="com.Apple.Model.ShopInfo" id="ShopList">
+	    <result property="SHOPNAME" column="SHOPNAME"/>
+		<result property="BUSINESSNUMBER" column="BUSINESSNUMBER"/>
+		<result property="SHOPADDRESS" column="SHOPADDRESS"/>
+		<result property="SHOPPHONE" column="SHOPPHONE"/>
+		<result property="SHOPCATEGORY" column="SHOPCATEGORY"/>
+		<result property="SHOPINFO" column="SHOPINFO"/>
+		<result property="SHOPCHAINNAME" column="SHOPCHAINNAME"/>
+		<result property="SHOPMARK" column="SHOPMARK"/>
+		<result property="SHOPIMAGE" column="SHOPIMAGE"/>	    
+	</resultMap>
+    
+<!--     입출력 쿼리문 -->
+	<insert id="insertMenu" parameterType="com.Apple.Model.Menu">
+	    INSERT INTO MENU values(#{Mname},#{Mprice},null,#{Mdesc},null,null,null,null)
+	</insert>
+	
+	<insert id="insertShopInfo" parameterType="com.Apple.Model.ShopInfo">
+	    INSERT INTO SHOPINFO values(#{SHOPENAME},null,#{SHOPADDRESS},null,null,null,null,null,null,null)
+	</insert>
+	
+	
+    
+    
+</mapper>

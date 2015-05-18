@@ -23,11 +23,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.Apple.Dao.QnADao;
+import com.Apple.Model.Account;
+import com.Apple.Model.Menu;
 import com.Apple.Model.QnA;
+import com.Apple.Model.ShopInfo;
+import com.Apple.Service.AccountService;
+import com.Apple.Service.BusinessService;
 import com.Apple.Service.QnAService;
 
 @Controller
 public class BusinessController {
+	
+	Logger log = Logger.getLogger(BusinessController.class);
+	
+	@Autowired
+	ApplicationContext applicationContext;
 	
 	@RequestMapping("/business")
 	public String business(){		
@@ -52,5 +62,35 @@ public class BusinessController {
 	@RequestMapping("/business/inquiry")
 	public String inquiry(){
 		return "Business/BusinessMemberInquiryPage";
+	}
+	
+	//입력
+	@RequestMapping("/Business.do")
+	public String insertBusiness(@RequestParam Map<String, Object> paramMap){
+		BusinessService service = applicationContext.getBean(BusinessService.class);
+		
+		Menu menu = new Menu();
+		
+		menu.setMname(paramMap.get("MENUNAME").toString());
+		
+		String s = paramMap.get("MENUPRICE").toString();
+		int a = Integer.parseInt(s);
+		
+		menu.setMprice(a);
+		
+		menu.setMdesc(paramMap.get("MENUDESC").toString());
+		
+		service.insertMenu(menu);
+		//
+		
+		ShopInfo shopinfo = new ShopInfo();
+		
+		shopinfo.setSHOPNAME(paramMap.get("SHOPNAME").toString());
+		
+		shopinfo.setSHOPADDRESS(paramMap.get("SHOPADDRESS").toString());
+		
+		service.insertShopInfo(shopinfo);
+		
+		return "redirect:/Apple/business";
 	}
 }

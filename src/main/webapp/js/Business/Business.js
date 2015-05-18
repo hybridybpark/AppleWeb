@@ -4,6 +4,13 @@
 
 var bsCtrl = mainApp.controller('businessCtrl',function($scope,$http,$location){
 //	alert("businessCtrl");
+	
+	$scope.Binfo = {Bname:"", Baddress:"", Mname:"", Mprice:"", Mdesc:""};
+	
+	$scop.loginClick = function() {
+		
+	};
+	
 	$scope.btabs = [
 	                {name:'예약목록',type:'active',url:'/AppleWeb/Apple/business/reservation'},
 	                {name:'상점목록',type:'',url:'/AppleWeb/Apple/business/businessshop'},
