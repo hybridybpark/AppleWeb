@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.Apple.Dao.MenuDao;
 import com.Apple.Model.Menu;
+import com.Apple.Model.MenuOption;
 
 
 @Service
@@ -20,9 +21,15 @@ public class MenuService {
 	@Autowired
 	MenuDao menuDao;
 	
+	//출력
 	public List<Menu> selectAll(){
 		List<Menu> list = menuDao.selectAll();
 		
 		return list;
+	}
+
+	//입력
+	public void insert(Menu menu) {
+		menuDao.insert(menu);
 	}
 }

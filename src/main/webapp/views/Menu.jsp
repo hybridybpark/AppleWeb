@@ -80,6 +80,9 @@
 						style="width: 200px; height: auto;" hspace="50"></th>
 				</tr>
 				<tr>
+				
+				</tr>
+				<tr>
 					<td class="text">가격</td>
 					<td class="text">가격</td>
 					<td class="text">가격</td>

@@ -4,20 +4,20 @@
 }
 
 #head {
-	height: 100px;
+	height: 0px;
 	padding: 10px;
-	border: 0.5px solid black;
+	border: 2px solid gold;
 }
 
 .container {
 	margin: 0px auto;
-	padding: 20px;
+	padding: 0px;
 }
 
 .content {
 	padding: 20px;
 	margin-bottom: 20px;
-	border: 0.5px solid orange;
+	border: 0.5px solid black;
 	overflow: hidden;
 }
 

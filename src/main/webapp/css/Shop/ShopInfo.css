@@ -1,0 +1,22 @@
+.navbar-inline {
+	margin-top: 0px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%
+}
+
+#map {
+	
+	height: 30%;
+	width: 80%;
+	height: 30%;
+}
+
+#dat {
+	margin-top: 0px;
+}

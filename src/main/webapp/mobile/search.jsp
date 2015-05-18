@@ -4,30 +4,13 @@
 <%-- <%@ include file="/WEB-INF/common.jspf"%> --%>
 
 <!DOCTYPE>
-
-<html data-ng-app="myApp">
-
+<html>
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-<title>Mobile Home</title>
-
 </head>
 
 <body data-role="page">
 <header>
-<div data-role="header" data-theme="b" data-position="fixed" data-add-back-btn="true">
-	
-	<h1>Mobile</h1>
-		
-</div>
+<jsp:include page="header.jsp"></jsp:include>
 </header>
 <section>
 <div data-role="content">
@@ -44,6 +27,9 @@
 	</ul>
 </div>
 </section>
+<footer>
+<jsp:include page="footer.jsp"></jsp:include>
+</footer>
 </body>
 
 </html>

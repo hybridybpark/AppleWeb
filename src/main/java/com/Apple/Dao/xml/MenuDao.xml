@@ -19,4 +19,8 @@
         
     </resultMap>
     
+    <!-- 	입출력 쿼리문 -->
+	<insert id="insert" parameterType="com.Apple.Model.Menu">
+	    INSERT INTO menu values(#{Mname},#{Mprice},#{Mimage},#{Mdesc},#{Mcategory},#{Sname},#{Bnumber},null)
+    </insert>
 </mapper>

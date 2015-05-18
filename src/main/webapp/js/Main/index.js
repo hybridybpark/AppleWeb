@@ -1,7 +1,7 @@
 /**
  * 
  */
-var mainApp = angular.module('MainApp',["ngRoute","ngCookies"]);
+var mainApp = angular.module('mainApp',["ngRoute","ngCookies",'ui.bootstrap']);
 
 mainApp.config(function($routeProvider) {
 
@@ -26,46 +26,114 @@ mainApp.config(function($routeProvider) {
         .when('/login', {
             templateUrl: '/AppleWeb/Apple/login',
             controller: 'loginCtrl'
-        })
-        
-         .when('/qna', {
-            templateUrl: '/AppleWeb/Apple/qna',
+        }) 
+        .when('/qna', {
+            templateUrl: '/AppleWeb/Apple/qnapage',
             controller: 'qnaCtrl'
-        })     
-        
-         .when('/qna/write', {
+        })
+        .when('/qna/write', {
             templateUrl: '/AppleWeb/Apple/qna/write',
             controller: 'qnaCtrl'
-        })   
-        
-        
-    
+        }) 
+        .when('/business', {
+            templateUrl: '/AppleWeb/Apple/business',
+            controller: 'businessCtrl'
+        })        
+         .when('/shopinfo', {
+            templateUrl: '/AppleWeb/Apple/shopinfo',
+            controller: 'shopinfoCtrl'
+        })  
 	 	// otherwise page
     	.otherwise({
-    		templateUrl: '/AppleWeb/Apple/body',
-            controller: 'indexController'
+    		redirectTo: '/'
     	});
 
 });
 
-mainApp.controller('indexController',function($scope,$http,$location,$cookieStore){	//	
+
+
+mainApp.controller('indexController',function($scope,$http,$location,$cookies,$rootScope,$templateCache){	//	
 	
-	$scope.url1 = "/AppleWeb/Apple/body"
-//	
-	$scope.url2 = "/AppleWeb/Apple/view/ALL";
+	//////////////paging//////////////////
+	  $scope.totalItems = 64;
+	  $scope.currentPage = 1;
+
+	  $scope.setPage = function (pageNo) {
+	    $scope.currentPage = pageNo;
+	  };
+
+	  $scope.pageChanged = function() {
+	    $log.log('Page changed to: ' + $scope.currentPage);
+	  };
+
+	  $scope.maxSize = 9;	  
 	
+	///////////////////////////////////////
+	
+	
+	$scope.memberID="";
+	$scope.loginshow=false;
+	$scope.rightView=true;
+	
+	$rootScope.$on('$routeChangeStart', function(event, next, current) {
+		if (typeof current != 'undefined') {
+    		$templateCache.removeAll();
+       		console.log("current.templateUrl=" + current.templateUrl);
+		}
+	});
+
+	
+//	alert($.cookie('SITE'));
 	$scope.otherClick = function(pagename) {		
 		
 		//$scope.otherUrl="/AppleWeb/Apple/"+pagename;
 		//$scope.url1="/AppleWeb/Apple/"+pagename;
 		$location.path("/"+pagename);
+		$scope.rightView=false;
+//		$location.replace();
+//		window.location.path("/AppleWeb/Apple/"+pagename);
+//		location.replace();
+//		$scope.url1 = "/AppleWeb/Apple/"+pagename;
 		
-		
-	};	
+	};
+	
+//	if($cookies.pagecount){
+//		
+//	}else{
+//		$scope.otherClick($.cookie('SITE'));
+//		$cookies.pagecount=0;
+//	}
+	
+	
+	if(window.sessionStorage){ 		
+ 		if(window.sessionStorage.getItem('MEMBERID')){ 			
+ 			$scope.memberID = window.sessionStorage.getItem('MEMBERID');
+ 			$scope.loginshow=true; 			
+ 		}else{
+			
+ 		} 		
+ 	}else{
+ 		alert("wrong");
+ 	}
+	
+	$scope.logout = function() {
+		$scope.memberID="";
+		$scope.loginshow=false;
+		window.sessionStorage.setItem('MEMBERID',"");
+		alert("로그아웃 되었습니다.");
+		$location.path("/asd");
+	}
+	
+	$scope.url1 = "/AppleWeb/Apple/body"
+//	
+	$scope.url2 = "/AppleWeb/Apple/view/ALL";	
 	
 	$http.get("/AppleWeb/Apple/list/ALL")
 	.success(function (data) {
-		$scope.shops = data;		
+		$scope.shops = data;
+		$scope.totalItems = data.length;
+//		alert($scope.totalItems);
+//		alert($scope.shops[0].shopmark);
 		});	
 	
 	function getList(text) {
@@ -84,7 +152,7 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookieStor
 		if($scope.tempChain=="NONE"){			
 			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
 			//$scope.url1 = "/AppleWeb/Apple/chain";
-			$location.path("/chain");
+			$location.path("/shopinfo");
 		}else if($scope.tempChain=='undefined'){
 			
 		}else{			
@@ -143,6 +211,7 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookieStor
    $scope.brandClick = function() {
 	   //alert("BRAND");
 	   $location.path("/");
+	   $scope.rightView=false;
    };
 	
    $scope.cancelClick = function() {

@@ -32,8 +32,8 @@ public class QnAController {
 	@Autowired
 	ApplicationContext applicationContext;
 	
-	@RequestMapping(value="/qna", method=RequestMethod.GET)
-	public String qnaGET(Model model){
+	@RequestMapping(value="/qnapage", method=RequestMethod.GET)
+	public String qnaGET(){
 		log.info("############################QNA GET");		
 		
 		return "QnA/QnA";
@@ -77,9 +77,9 @@ public class QnAController {
 		
 		qna.setWdate(date.toString());
 		
-		service.insert(qna);
+		service.insert(qna);		
 		
-		return "redirect:/Apple/qna";
+		return "redirect:/Apple/";
 	}
 	
 	// 게시글 삭제

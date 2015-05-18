@@ -4,6 +4,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +28,11 @@ import com.Apple.Service.QnAService;
 
 @Controller
 public class BusinessController {
+	
+	@RequestMapping("/business")
+	public String business(){		
+		return "Business/BusinessMember";
+	}
 	
 	@RequestMapping("/business/reservation")
 	public String reservation(){
