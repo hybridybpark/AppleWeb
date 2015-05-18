@@ -7,7 +7,7 @@
         FROM MENUOPTION
     </select>
     
-    <resultMap type="com.Apple.Model.MenuOPtion" id="menuoptionList">
+    <resultMap type="com.Apple.Model.MenuOption" id="menuoptionList">
         
         <result property="Oname" column="OPTIONNAME"/>
         <result property="OMname" column="MENUNAME"/>
@@ -17,7 +17,7 @@
     </resultMap>
     
     <!-- 	입출력 쿼리문 -->
-	<insert id="insert" parameterType="com.Apple.Model.MenuOPtion">
+	<insert id="insert" parameterType="com.Apple.Model.MenuOption">
 	    INSERT INTO menu values(#{Oname},#{OMname},#{Osid},#{Oprice},null)
     </insert>
 </mapper>
