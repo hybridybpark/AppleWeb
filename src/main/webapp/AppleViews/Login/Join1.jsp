@@ -400,12 +400,12 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" onClick="doSubmit()" data-ng-click="doSubmit()">가입 요청</button>
-			</div>
-			<div class="col-lg-offset-2 col-lg-10">
-				<button id="cancelClick" type="submit" class="btn btn-default">취소</button>
-			</div>
+			<div class="row">
+				<div class="btn-group col-lg-offset-2 col-lg-10">				
+					<button type="submit" class="btn btn-default" onClick="doSubmit()" data-ng-click="doSubmit()">가입 요청</button>
+					<button id="cancelClick" type="submit" class="btn btn-default">취소</button>
+				</div>
+			</div>			
 		</div>
 
 	</form>

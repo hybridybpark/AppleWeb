@@ -36,5 +36,8 @@ public class ShopInfoService {
 		return shopInfoDao.selectListByCategory(shopcategory);
 	}
 	
+	public List<ShopInfo> selectListByName(String shopname){
+		return shopInfoDao.selectListByName(shopname);
+	}
 	
 }

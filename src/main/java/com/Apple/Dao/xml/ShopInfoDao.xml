@@ -23,6 +23,11 @@
 	    FROM SHOPINFO
 	    WHERE SHOPCATEGORY=#{shopcategory}
 	</select>
+	<select id="selectListByName" resultMap="ShopList" parameterType="String">
+	    SELECT *
+	    FROM SHOPINFO
+	    WHERE SHOPNAME LIKE '%' || #{shopname} || '%'
+	</select>
 	
 	<resultMap type="com.Apple.Model.ShopInfo" id="ShopList">
 	    <result property="SHOPNAME" column="SHOPNAME"/>

@@ -9,12 +9,12 @@
         
         <div class="container">
         <div class="row" style="vertical-align: middle; text-align: center; height: 100px;">					
-					<div class="col-md-offset-3 col-md-6">
+					<div class="col-sm-offset-3 col-sm-6">
 						<h1><a href="/AppleWeb/Apple/"><img src="/AppleWeb/Images/Main/templogo.png" alt="Apple" style="width: 180px;" /></a></h1>
 						<div class="input-group">							
-						    <input type="text" class="form-control" placeholder="Search for...">
+						    <input type="text" class="form-control" placeholder="가게 이름을 입력해 주세요" data-ng-model="searchText">
 						      <span class="input-group-btn">
-						        <button class="btn btn-default" type="button">Go!</button>
+						        <button class="btn btn-default" type="button" data-ng-click="goSearch()">Go!</button>
 						      </span>
 					    </div><!-- /input-group -->	
 					</div>
@@ -121,7 +121,7 @@
             	
        	<hr style="border: 1px solid red;">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-sm-12">
                         <div data-ng-include="url2"></div>						
                     </div>
                     <!-- /.col-lg-12 -->

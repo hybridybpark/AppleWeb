@@ -56,13 +56,13 @@ public class AccountController {
 	@RequestMapping(value="/login", method=RequestMethod.POST)	
 	public @ResponseBody AccountResult loginPOST(@RequestBody Account login){
 		log.info("############################Login POST");
-		log.info("###########"+login.getBUSINESSNAME());
+		log.info("###########"+login.getBUSINESSNUMBER());
 		log.info("###########"+login.getPASSWORD());
 		AccountService service = applicationContext.getBean(AccountService.class);
 		
 		List<Account> list = service.selectAll();
 		Account account = list.get(0);
-		log.info("###########"+account.getBUSINESSNAME());
+		log.info("###########"+account.getBUSINESSNUMBER());
 		log.info("###########"+account.getPASSWORD());
 		
 		AccountResult result = new AccountResult();
