@@ -29,7 +29,7 @@
 
 						<div class="col-sm-4 col-lg-4 col-md-4">
 							<div class="thumbnail">
-								<img alt="" src="http://placehold.it/147x147"></img>
+								<img alt="" src=""></img>
 								<div class="caption">
 									<h4 class="pull-right">$24.99</h4>
 									<h4>
