@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html data-ng-app="mainApp">
 <title>메뉴</title>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,11 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="/AppleWeb/Frameworks/angular-1.3.15/angular.js"></script>
+	<script src="/AppleWeb/views/Menu.js"></script>
+	
 </head>
-<body>
+<body data-ng-controller="menuCtrl">
 
 	<div class="container">
 		<h2>Menu</h2>
@@ -24,12 +27,11 @@
 							href="#collapse1"> CATEGORY A</a>
 					</h4>
 				</div>
-				<div id="collapse1" class="panel-collapse collapse in">
-					<div class="panel-body" data-ng-repeat="x in list">
-
-						<div class="col-sm-4 col-lg-4 col-md-4">
+				<div id="collapse1" class="panel-collapse collapse">
+					<div class="panel-body" >
+						<div class="col-sm-4 col-lg-4 col-md-4" data-ng-repeat="x in list">
 							<div class="thumbnail">
-								<a href="">{{x.Mimage}}</a>
+								<a href=""><img alt="" src="{{x.mimage}}"></a>
 								<div class="caption">
 									<h4 class="pull-right">$24.99</h4>
 									<h4>
