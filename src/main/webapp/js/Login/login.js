@@ -6,33 +6,21 @@
 
 	mainApp.controller('loginCtrl', function($scope, $http, $location) {
 
-		//scope.$apply(function() { $location.path("/route"); });
-		$scope.loginClick = function() {
-			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
-//			window.localStorage.setItem("MEMBERID", $scope.num);
-//			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
-			
-			alert($scope.login.id);
-			alert($scope.login.pw);
-			
-			window.sessionStorage.setItem('MEMBERID',$scope.login.id);
-			$location.path("/");
-			
-		};
+		
 		$scope.cancelClick = function() {
 			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
 			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
 		};
 		
-		$scope.login = {loginid:"",loginpassword:""};
+		$scope.login = {businessnumber:"",password:""};
 		
 		$scope.doSubmit = function() {
 			
-			if($scope.login.loginid=="") {
+			if($scope.login.businessnumber=="") {
 				alert("아이디를 입력하세요");
 				return;
 			}
-			if($scope.login.loginpassword=="") {
+			if($scope.login.password=="") {
 				alert("비밀번호를 입력하세요");
 				return;
 			}
@@ -41,6 +29,7 @@
 				alert(result.status);
 				alert(result.statusText);
 				if(result.status){
+					window.sessionStorage.setItem('MEMBERID',$scope.login.businessnumber);
 					window.location = "http://localhost:8080/AppleWeb/Apple/";
 					location.replace(location);					
 				}else{
