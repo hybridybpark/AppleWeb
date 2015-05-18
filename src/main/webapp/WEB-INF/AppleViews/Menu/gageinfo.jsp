@@ -59,7 +59,7 @@ html, body {
 			<div class="col-sm-8">
 				<ul class="nav navbar-nav navbar-inline">
 					<li class="brand"><img alt="brand"
-						src="/AppleWeb/image/starbucks.jpg"></li>
+						src="/AppleWeb/Images/starbucks.jpg"></li>
 				</ul>
 			</div>
 			<div class="col-sm-2"></div>
