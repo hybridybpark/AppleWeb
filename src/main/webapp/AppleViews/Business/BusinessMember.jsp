@@ -7,7 +7,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="businessApp">
+<html data-ng-app="mainApp">
 
 <head>
 
@@ -33,21 +33,17 @@
 </head>
 
 <body class="container" data-ng-controller="businessCtrl">
-	<div class="header">
+	<div class="header"  style="border: 1px solid lightgray; margin-top: 16px;">
 		<h1>사업자 페이지</h1>
-	</div>
-	<ul class="nav navbar-nav navbar-right">
-	         <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> Main</a></li>
-	        <li><a href="/AppleWeb/Apple/"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
-	      </ul>
+	</div>	
 	<div>
-		<ul class="nav nav-pills nav-justified" >						
+		<ul class="nav nav-pills nav-justified" style="border: 1px solid lightgray;" >						
 		  	<li role="presentation" data-ng-repeat="item in btabs" class="{{item.type}}" data-ng-click="btabClick($index)" ><a href="">{{item.name}}</a></li>		  			  
 		</ul>
-	</div>
-	<hr>
+	</div>	
 	<br>
-	<div class="container" data-ng-include="url"></div>
+	<div data-ng-include="url" ></div>
+	
 		
 				
 				

@@ -14,11 +14,11 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	
-<script src="/AppleWeb/js/Shop/review.js"></script>
+<!-- <script src="/AppleWeb/js/Shop/review.js"></script> -->
 	
 <title>REVIEW</title>
 </head>
-<body data-ng-controller="reviewCtrl" class="container">
+<body data-ng-controller="shopinfoCtrl" class="container">
 <p>review</p>
 <div class="btn-group btn-group-justified">
 	<div class="btn-group">

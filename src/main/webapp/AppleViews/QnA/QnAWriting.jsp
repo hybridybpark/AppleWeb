@@ -4,7 +4,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="qnaApp">
+<html data-ng-app="mainApp">
 
 <head>
 
@@ -30,7 +30,7 @@
 </head>
 
 <!-- Title-->
-<body data-ng-controller="myController2">
+<body data-ng-controller="qnaCtrl">
 	<header class="container">
 		<h1 align="center">질문작성</h1>
 	</header>
@@ -97,8 +97,8 @@
 					</tbody>
 						<tr align="center">
 					   		<td colspan="2"> <br>
-								<input type="button" value="글쓰기" onClick="doSubmit()" data-ng-click="doSubmit()">
-								<input type="reset" value="취소" onclick="reload()">
+								<input type="button" value="글쓰기" data-ng-click="doSubmit()">
+								<input type="reset" value="취소">
 							</td>
 				 	 	</tr>
 					</table>

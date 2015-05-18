@@ -1,18 +1,41 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<div class="info">
-				<div class="date_title">
-					<dl>
-						<dt>스타벅스(이대)</dt>
-					</dl>
-				</div>
-				<div class="detail_content">
-					<ul class="place_detail">
-						<li><b>주소</b> <span>서울특별시 서대문구 대현동 성실건축</span></li>
-						<li><b>전화번호</b> <span> 02-568-9135 </span></li>
-					</ul>
-					<div id="map"></div>					
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	
+<!-- <script src="/AppleWeb/js/Shop/review.js"></script> -->
+	
+<title>INFO</title>
+</head>
+<body data-ng-controller="shopinfoCtrl" class="container">
+<p>INFO</p>    
+
+				
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<p>스타벅스(이대)</p>
+					</div>
+					<div class="panel-body">
+						<ul class="list-group">
+							<li class="list-group-item"><b>주소</b> <span>서울특별시 서대문구 대현동 성실건축</span></li>
+							<li class="list-group-item"><b>전화번호</b> <span> 02-568-9135 </span></li>
+						</ul>
+					</div>
+					<div class="panel-body">
+						<div id="map" class="col-md-6" style="height: 300px;"></div>
+					</div>
+										
 				</div>
 				<script type="text/javascript">
 				var element = document.getElementById('map');
@@ -29,37 +52,8 @@
 					map : map
 				});
 				</script>
-				<div id="dat">
-					<p>
-						<b>댓글달기</b>
-					</p>
-					<form class="form-inline">
-						<div class="form-group">
-							<label for="exampleInputName2">이름</label> <input type="text"
-								class="form-control" id="exampleInputName2">
-						</div>
-						<div class="form-group">
-							<label for="exampleInputEmail2">비밀번호</label> <input
-								type="password" class="form-control" id="exampleInputEmail2">
-						</div>
-<!-- 						Single button -->
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle"
-								data-toggle="dropdown" aria-expanded="false">
-								★ <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="">★★</a></li>
-								<li><a href="">★★★</a></li>
-								<li><a href="">★★★★</a></li>
-								<li><a href="">★★★★★</a></li>
-							</ul>
-						</div>
-					</form>
-					<textarea cols="60" id="comment" name="comment" fw-filter="isFill"
-						fw-label="댓글내용" fw-msg="" placeholder="내용을 입력하세요"></textarea>
-					<button type="submit" class="btn btn-default">확인</button>
-										
-				</div>
-			</div>
+
+</body>
+</html>		
+			
 		

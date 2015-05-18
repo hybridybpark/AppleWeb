@@ -1,11 +1,6 @@
 .navbar-inline {
-	margin-top: 20px;
+	margin-top: 0px;
 }
-
-.info {
-	margin-top: 20px;
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -16,12 +11,12 @@ html, body {
 }
 
 #map {
-	margin-left: 50px;
+	
 	height: 30%;
-	width: 100%;
+	width: 80%;
 	height: 30%;
 }
 
 #dat {
-	margin-top: 20px;
+	margin-top: 0px;
 }

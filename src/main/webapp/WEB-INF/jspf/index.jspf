@@ -57,6 +57,16 @@
 
 <script src="/AppleWeb/Frameworks/angular-1.3.15/angular-cookies.js"></script>
 
+<!-- GoogleMap JavaScript -->
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<!-- ui-bootstrap-tpls-0.13.0.min.js -->
+
+<script src="/AppleWeb/Frameworks/ui-bootstrap-tpls-0.13.0.min.js"></script>
+
+
+
 <!-- Index JavaScript -->
    
 <script src="/AppleWeb/js/Main/index.js"></script>
@@ -89,6 +99,6 @@
    
 <script src="/AppleWeb/js/Shop/ShopInfo.js"></script>
 
-<!-- GoogleMap JavaScript -->
+<!--  jquery cookies -->
 
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="/AppleWeb/Frameworks/jquery.cookies.js"></script>

@@ -32,7 +32,7 @@ public class QnAController {
 	@Autowired
 	ApplicationContext applicationContext;
 	
-	@RequestMapping(value="/qna", method=RequestMethod.GET)
+	@RequestMapping(value="/qnapage", method=RequestMethod.GET)
 	public String qnaGET(){
 		log.info("############################QNA GET");		
 		

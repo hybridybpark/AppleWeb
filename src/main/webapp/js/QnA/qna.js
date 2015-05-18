@@ -2,8 +2,8 @@
 // angularjs
 // 게시판내 목록 출력
 
-var qnaApp = angular.module('qnaApp',[]);
-qnaApp.controller('qnaCtrl',function($scope,$http,$location){	
+
+mainApp.controller('qnaCtrl',function($scope,$http,$location){	
 	
 	// 삭제 password name 선언
 	//$scope.inputpassword="w";
@@ -26,7 +26,8 @@ qnaApp.controller('qnaCtrl',function($scope,$http,$location){
 	$scope.deleteAction = function(index) {
 		$scope.title = $scope.list[index].title;
 			$http.post("/AppleWeb/Apple/QnA.delete2/"+$scope.title+"."+$scope.inputpassword).success(function() {
-				location.replace("/AppleWeb/Apple/qna");
+//				location.replace("/AppleWeb/Apple/qna");
+				$location.path("/qna");
 			});
 	};
 	
@@ -66,20 +67,21 @@ qnaApp.controller('qnaCtrl',function($scope,$http,$location){
 	};
 	
 	$scope.goWrite = function() {
-		window.location = "http://localhost:8080/AppleWeb/Apple/qna/write";
-		location.replace(location);
+//		window.location = "http://localhost:8080/AppleWeb/Apple/qna/write";
+//		location.replace(location);
+		$location.path("/qna/write");
 	};
 	
 });
 
 // JQuery 
-window.onload = function() {
-	
-	// 취소버튼 초기화
-	function reload() { 
-		document.location.reload();     
-	}
-};
+//window.onload = function() {
+//	
+//	// 취소버튼 초기화
+//	function reload() { 
+//		document.location.reload();     
+//	}
+//};
 
 //	// 보안문자
 //	document.domain = '';

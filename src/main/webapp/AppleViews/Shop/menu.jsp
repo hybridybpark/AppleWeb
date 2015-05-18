@@ -17,14 +17,14 @@
 <head>
 <meta charset="UTF-8">
 <!-- Menu css -->
-<link href="/AppleWeb/css/Menu/menu.css" rel="stylesheet">
+<!-- <link href="/AppleWeb/css/Menu/menu.css" rel="stylesheet"> -->
 <title>Menu</title>
 </head>
 
 
-<body>
+<body class="container">
  
-	<div class="container">
+	<div >
 
 		<div id="head" class="text-align: center">
 			<div class="form-group">
@@ -105,7 +105,7 @@
 		</div>
 	</div>
 	<!-- 메뉴 디테일 정보 들어가는 부분 -->
-	<div class="container">
+	<div >
 		<div class="content">
 			<table>
 				<tr>

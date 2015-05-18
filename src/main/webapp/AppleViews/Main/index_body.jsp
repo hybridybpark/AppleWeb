@@ -88,15 +88,29 @@
 		        </nav>
             		</div>
             		<div class="media-body" align="center">
-            			<img alt="" src="/AppleWeb/Images/Main/h119200_620.jpg" width="620" data-ng-show="true">
-            			<img alt="" src="/AppleWeb/Images/Main/drive_620.jpg" width="620" data-ng-show="false">
-            			<img alt="" src="/AppleWeb/Images/Main/garosugil_620.jpg" width="620" data-ng-show="false">	
-            			
-            			<div class="input-group-right"  style="margin-top: -20px; margin-right: -50%;">
-		            		<input type="radio" aria-label="..." style="margin-left: 0px;">
-		            		<input type="radio" aria-label="..." style="margin-left: 0px;">
-		            		<input type="radio" aria-label="..." style="margin-left: 0px;">
-		            	</div>
+            			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					    <!-- Indicators -->
+					    <ol class="carousel-indicators" style="bottom: -10px;">
+					      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					      <li data-target="#myCarousel" data-slide-to="1"></li>
+					      <li data-target="#myCarousel" data-slide-to="2"></li>      
+					    </ol>
+					
+					    <!-- Wrapper for slides -->
+					    <div class="carousel-inner" role="listbox">
+					      <div class="item active">
+					        <img src="/AppleWeb/Images/Main/h119200_620.jpg" alt="Chania" width="460" height="345">
+					      </div>
+					
+					      <div class="item">
+					        <img src="/AppleWeb/Images/Main/drive_620.jpg" alt="Chania" width="460" height="345">
+					      </div>
+					    
+					      <div class="item">
+					        <img src="/AppleWeb/Images/Main/garosugil_620.jpg" alt="Flower" width="460" height="345">
+					      </div>     
+					    </div>   
+					  </div>
             		</div>
             		<div class="media-right">
             			<img alt="" src="/AppleWeb/Images/Main/h119037a_z.jpg" width="180" data-ng-show="true">

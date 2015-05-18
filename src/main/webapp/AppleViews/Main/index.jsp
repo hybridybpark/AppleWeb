@@ -8,22 +8,23 @@
 	boolean login = memberId == null ? false : true;	
 %>
 <!DOCTYPE html>
-<html data-ng-app="MainApp">
+<html data-ng-app="mainApp">
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<!-- 	<meta name="viewport" content="width=800px, initial-scale=1"> -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>index</title>   
-
-<style type="text/css">
+	<title>index</title>	
 	
-</style>
+ <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  } 
+	.thumbnail {
+	    position: relative;
+	    width: 100%;
+	    max-height: 512px;    
+	}
+  </style>
 
 </head>
 
@@ -40,7 +41,7 @@
         	
 <!--         	<div class="container" data-ng-include="url1"></div> -->
         	
-        	<div class="fixed-bottom-right">
+        	<div class="fixed-bottom-right" data-ng-show="rightView">
 		   <!-- 우측광고 삽입 -->
 		   <div class="panel panel-default">
 			  <div class="panel-heading">예약목록</div>
@@ -51,7 +52,7 @@
                              <p>예약명</p>
                              <p>예약이름</p>
                              <p>3명</p>
-                             <button class="btn">상세보기</button>
+                             <button class="btn">상세보기2</button>
                          </li>                                                                
                     </ul>            
 			  </div>				  
@@ -60,7 +61,8 @@
         </section>
         
 
-    <footer>
+    <footer class="container">
+    
 	<div>
          <p class="text-center">
              <small><strong> Apple</strong></small><br>

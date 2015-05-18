@@ -17,6 +17,7 @@
 			
 			window.sessionStorage.setItem('MEMBERID',$scope.login.id);
 			$location.path("/");
+			
 		};
 		$scope.cancelClick = function() {
 			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");

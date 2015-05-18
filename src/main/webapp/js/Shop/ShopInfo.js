@@ -1,28 +1,7 @@
 /**
  * 
  */
-var ShopInfoApp = angular.module('ShopInfoApp',["ngRoute"]);
-
-ShopInfoApp.config(function($routeProvider,$locationProvider) {
-	$routeProvider.when("",{
-		templateUrl: "/AppleWeb/Apple/shopinfo/info",
-		controller: ""
-	});
-	$routeProvider.when("",{
-		templateUrl: "/AppleWeb/Apple/shopinfo/menu",
-		controller: ""
-	});
-	$routeProvider.when("",{
-		templateUrl: "/AppleWeb/Apple/shopinfo/review",
-		controller: ""
-	});
-	$routeProvider.otherwise({
-		templateUrl: "",
-		controller: ""
-	});
-});
-
-ShopInfoApp.controller('shopinfoCtrl',function($scope,$http,$location){	
+mainApp.controller('shopinfoCtrl',function($scope,$http,$location){	
 	$scope.shopname = window.sessionStorage.getItem('SHOPNAME');
 	$scope.businessnumber = window.sessionStorage.getItem('SHOPBUSINESSNUMBER');
 	
@@ -36,10 +15,17 @@ ShopInfoApp.controller('shopinfoCtrl',function($scope,$http,$location){
 	
 	$scope.stabClick = function(index) {
 		//alert(index);
-		for(var i=0;i<4;i++){
+		for(var i=0;i<3;i++){
 			if(i==index){
 				$scope.stabs[i].type="active";
 				$scope.url = $scope.stabs[i].url;
+				if(i==0){
+					
+				}else if(i==1){
+					
+				}else{
+					
+				}
 			}else{
 				$scope.stabs[i].type="";
 			}

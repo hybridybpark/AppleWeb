@@ -7,7 +7,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="businessApp">
+<html data-ng-app="mainApp">
 
 <head>
 
@@ -15,14 +15,14 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
 
 <!-- Business JavaScript -->
    
-<script src="/AppleWeb/js/Business/BusinessMemberReservationManagementPage.js"></script>
+<script src="/AppleWeb/js/Business/Business.js"></script>
 
 <!-- Business css -->
 
@@ -37,8 +37,29 @@
 	Date current = new Date();
 	pageContext.setAttribute("current", current);
 %>
+<script type="text/javascript">
 
-<body class="container" data-ng-controller="reservationCtrl">
+function changeListener() {
+	//alert(this.value);
+	var d = new Date(year.value,month.value ,1);
+	d.setDate(d.getDate()-1);		
+	var options="";
+	for(var i=0; i<d.getDate();i++){
+		options += "<option>"+(i+1)+" 일</option> \n";
+	}
+	//alert(d);
+	dateS.innerHTML = options;
+};	
+window.onload = function() {
+	var year = document.querySelector("select[name=year]");
+	var month = document.querySelector("select[name=month]");
+	var date = document.querySelector("select[name=date]");
+	
+	year.onchange = changeListener;
+	month.onchange = changeListener;
+};
+</script>
+<body class="container" data-ng-controller="businessCtrl">
 	
 	
 		<div class="panel panel-primary">

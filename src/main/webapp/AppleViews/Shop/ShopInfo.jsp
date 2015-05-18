@@ -29,42 +29,25 @@
 
 <!-- ShopInfo css -->
 
-<link href="/AppleWeb/css/Shop/ShopInfo.css" rel="stylesheet">
+<!-- <link href="/AppleWeb/css/Shop/ShopInfo.css" rel="stylesheet"> -->
 
 </head>
 
 <body data-ng-controller="shopinfoCtrl">
 
-	<header class="container"  style="border: 1px solid red;">
+	<header class="container"  style="border: 1px solid gray; margin-top: 24px;">
+		
 		<img alt="brand" src="/AppleWeb/Images/starbucks.jpg">		
 	</header>
 
-	<section class="container">
+	<section class="container" style="border: 1px solid gray;">
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">			
 				<ul class="nav nav-tabs nav-justified">
 					<li  data-ng-repeat="item in stabs" class="{{item.type}}" data-ng-click="stabClick($index)"><a href="">{{item.name}}</a></li>					
 				</ul>
 		</div>
 		<div data-ng-include="url"></div>
-			
-		
-
-		
-		
-			
-
-
-
-
-
-
-
 	</section>
-
-
-
-
-
 </body>
 
 </html>

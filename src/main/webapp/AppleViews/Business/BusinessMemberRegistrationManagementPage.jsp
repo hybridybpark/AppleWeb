@@ -5,7 +5,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="businessApp">
+<html data-ng-app="mainApp">
 
 <head>
 
@@ -13,14 +13,14 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
 
 <!-- Business JavaScript -->
    
-<script src="/AppleWeb/js/Business/BusinessMemberRegistrationManagementPage.js"></script>
+<script src="/AppleWeb/js/Business/Business.js"></script>
 
 <!-- Business css -->
 
@@ -30,7 +30,7 @@
 
 </head>
 
-<body class="container" data-ng-controller="registrationCtrl">
+<body class="container" data-ng-controller="businessCtrl">
 	
 	
 		<div class="panel panel-primary">

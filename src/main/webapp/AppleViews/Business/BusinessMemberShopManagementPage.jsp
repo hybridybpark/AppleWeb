@@ -7,7 +7,7 @@
 
 <!DOCTYPE>
 
-<html data-ng-app="businessApp">
+<html data-ng-app="mainApp">
 
 <head>
 
@@ -15,14 +15,14 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
 
 <!-- Business JavaScript -->
    
-<script src="/AppleWeb/js/Business/BusinessMemberShopManagementPage.js"></script>
+<script src="/AppleWeb/js/Business/Business.js"></script>
 
 <!-- Business css -->
 
@@ -34,7 +34,7 @@
 </head>
 
 
-<body class="container" data-ng-controller="shopCtrl">
+<body class="container" data-ng-controller="businessCtrl">
 	
 	<div class="panel panel-primary">
 		<div class="panel-heading"><h4>상점목록</h4></div>
