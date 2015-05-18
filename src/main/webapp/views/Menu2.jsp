@@ -25,11 +25,11 @@
 					</h4>
 				</div>
 				<div id="collapse1" class="panel-collapse collapse in">
-					<div class="panel-body">
+					<div class="panel-body" data-ng-repeat="x in list">
 
 						<div class="col-sm-4 col-lg-4 col-md-4">
 							<div class="thumbnail">
-								<img alt="" src=""></img>
+								<a href="">{{x.Mimage}}</a>
 								<div class="caption">
 									<h4 class="pull-right">$24.99</h4>
 									<h4>
