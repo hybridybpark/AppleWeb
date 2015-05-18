@@ -1,6 +1,7 @@
 package com.Apple.controller;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.Apple.Model.Menu;
 import com.Apple.Model.QnA;
@@ -47,5 +49,20 @@ Logger log = Logger.getLogger(IndexController.class);
 			service.insert(menu);		
 			
 			return "redirect:/Apple/Business/BusinessMemberRegistrationManagementPage";
+			
 		}
+		
+			
+		//출력
+		@ResponseBody
+		@RequestMapping(value="/Menu/list.json")
+		public List<Menu> getMenuList(){
+			MenuService service = applicationContext.getBean(MenuService.class);
+			
+			List<Menu> list = service.selectAll();
+			
+			return list;
+		}
+		
+		
 }
