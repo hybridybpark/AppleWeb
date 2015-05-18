@@ -53,6 +53,17 @@ public class IndexController {
 		
 		return list;
 	}
+	@RequestMapping(value="/search/{text}")
+	@ResponseBody
+	public List<ShopInfo> searchList(@PathVariable String text){
+		ShopInfoService infoService = applicationContext.getBean(ShopInfoService.class);
+		
+		List<ShopInfo> list = new ArrayList<ShopInfo>();
+		
+		list = infoService.selectListByName(text);
+		
+		return list;
+	}
 	
 	@RequestMapping(value="/view/{category}")
 	public String category(@PathVariable String category){

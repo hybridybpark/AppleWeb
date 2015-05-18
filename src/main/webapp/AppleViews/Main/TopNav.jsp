@@ -18,7 +18,7 @@
         	<div class="navbar-default"  style="background-color: #f5f5f5; border-bottom: 1px solid red;">
         		<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
 		            <div class="navbar-header" style="padding-left: 40px;">
-		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
 		                    <span class="sr-only">Toggle navigation</span>
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
@@ -26,6 +26,7 @@
 		                </button>
 		                <a class="navbar-brand" href="" data-ng-click="brandClick()">APPLE</a>
 		            </div>
+		            <div id="navbar" class="navbar-collapse collapse">
 		            <ul class="nav navbar-nav navbar-left"  style="padding-left: 40px;">
 		            	<li>
 		            		<img alt="" src="/AppleWeb/Images/Main/main1.jpg" style="height: 20px;">		            		
@@ -70,6 +71,7 @@
 				               
 				        <li><a href="" data-ng-click="otherClick('qna')"><span></span> Q&A</a>       
 		            </ul>
+		            </div>
 		            <!-- /.navbar-top-links -->
 		</nav>
 		</div>

@@ -24,11 +24,16 @@
 	    width: 100%;
 	    max-height: 512px;    
 	}
+	body{
+		min-width: 1024px;
+		
+  	}
   </style>
+  
 
 </head>
 
-<body data-ng-controller="indexController">
+<body data-ng-controller="indexController" style="min-width: 1024px;">
 	
     	<header>
         <!-- Navigation -->
@@ -48,11 +53,10 @@
 			  	<div class="panel-body">
 			    	<ul class="list-group">
                          <li class="list-group-item">
-                             <p>13:00</p>
-                             <p>예약명</p>
-                             <p>예약이름</p>
-                             <p>3명</p>
-                             <button class="btn">상세보기2</button>
+                             <p>{{reservationTime}}</p>
+                             <p>{{reservationName}}</p>
+                             <p>{{reservationShop}}</p>                             
+                             <button class="btn btn-primary">상세보기</button>
                          </li>                                                                
                     </ul>            
 			  </div>				  
