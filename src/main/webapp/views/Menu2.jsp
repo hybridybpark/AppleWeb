@@ -12,7 +12,7 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="/AppleWeb/Frameworks/angular-1.3.15/angular.js"></script>
-	<script src="/AppleWeb/views/Menu.js"></script>
+	<script src="/AppleWeb/js/Menu/Menu.js"></script>
 	
 </head>
 <body data-ng-controller="menuCtrl">
@@ -27,17 +27,17 @@
 							href="#collapse1"> CATEGORY A</a>
 					</h4>
 				</div>
-				<div id="collapse1" class="panel-collapse collapse">
+				<div id="collapse1" class="panel-collapse collapse in">
 					<div class="panel-body" >
-						<div class="col-sm-4 col-lg-4 col-md-4" data-ng-repeat="x in list">
+						<div class="col-sm-3 col-lg-3 col-md-3" data-ng-repeat="x in list">
 							<div class="thumbnail">
 								<a href=""><img alt="" src="{{x.mimage}}"></a>
 								<div class="caption">
-									<h4 class="pull-right">$24.99</h4>
+									<h4 class="pull-right">{{x.mprice}} 원</h4>
 									<h4>
-										<a href="#"> First Product </a>
+										<a href="#">{{x.mname}} </a>
 									</h4>
-									<p>This menu is... .</p>
+									<p>{{x.mdesc}}</p>
 								</div>
 								<div class="ratings">
 									<p class="pull-right">15 reviews</p>
@@ -47,116 +47,6 @@
 											class="glyphicon glyphicon-star"> </span> <span
 											class="glyphicon glyphicon-star"> </span> <span
 											class="glyphicon glyphicon-star"> </span>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 col-lg-4 col-md-4">
-							<div class="thumbnail">
-								<img alt="" src="http://placehold.it/147x147"></img>
-								<div class="caption">
-									<h4 class="pull-right">$64.99</h4>
-									<h4>
-										<a href="#"> Second Product </a>
-									</h4>
-									<p>This is a short description. Lorem ipsum dolor sit…</p>
-								</div>
-								<div class="ratings">
-									<p class="pull-right">12 reviews</p>
-									<p>
-										<span class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star-empty"> </span>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 col-lg-4 col-md-4">
-							<div class="thumbnail">
-								<img alt="" src="http://placehold.it/147x147"></img>
-								<div class="caption">
-									<h4 class="pull-right">$74.99</h4>
-									<h4>
-										<a href="#"> Third Product </a>
-									</h4>
-									<p>This is a short description. Lorem ipsum dolor sit…</p>
-								</div>
-								<div class="ratings">
-									<p class="pull-right">31 reviews</p>
-									<p>
-										<span class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star-empty"> </span>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 col-lg-4 col-md-4">
-							<div class="thumbnail">
-								<img alt="" src="http://placehold.it/147x147"></img>
-								<div class="caption">
-									<h4 class="pull-right">$84.99</h4>
-									<h4>
-										<a href="#"> Fourth Product </a>
-									</h4>
-									<p>This is a short description. Lorem ipsum dolor sit…</p>
-								</div>
-								<div class="ratings">
-									<p class="pull-right">6 reviews</p>
-									<p>
-										<span class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star-empty"> </span> <span
-											class="glyphicon glyphicon-star-empty"> </span>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 col-lg-4 col-md-4">
-							<div class="thumbnail">
-								<img alt="" src="http://placehold.it/147x147"></img>
-								<div class="caption">
-									<h4 class="pull-right">$94.99</h4>
-									<h4>
-										<a href="#"> Fifth Menu </a>
-									</h4>
-									<p>음식설명</p>
-								</div>
-								<div class="ratings">
-									<p class="pull-right">18 reviews</p>
-									<p>
-										<span class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star-empty"> </span>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 col-lg-4 col-md-4">
-							<div class="thumbnail">
-								<img alt="" src="http://placehold.it/147x147"></img>
-								<div class="caption">
-									<h4 class="pull-right">$94.99</h4>
-									<h4>
-										<a href="#"> Sixth Product </a>
-									</h4>
-									<p>This is a short description. Lorem ipsum dolor sit…</p>
-								</div>
-								<div class="ratings">
-									<p class="pull-right">13 reviews</p>
-									<p>
-										<span class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star"> </span> <span
-											class="glyphicon glyphicon-star-empty"> </span>
 									</p>
 								</div>
 							</div>
