@@ -17,7 +17,7 @@
 	    <result property="password" column="PASSWORD"/>
 	    <result property="replycontent" column="REPLYCONTENT"/>
 	    <result property="rdate" column="REPLYDATE"/>
-	    
+	    <result property="sid" column="SID"/>
 	        
 	</resultMap>
 	
@@ -33,7 +33,7 @@
 	
 <!-- 	삭제 쿼리문 -->
 	<delete id="delete" parameterType="com.Apple.Model.QnA" >
-	    DELETE FROM qna WHERE title = #{title} AND password = #{password}
+	    DELETE FROM qna WHERE sid = #{sid} AND password = #{password}
 	</delete>
 	
 <!-- 	수정 쿼리문 -->

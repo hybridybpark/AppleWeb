@@ -19,7 +19,7 @@
        <li class="list-group-item">
        	<div class="media">
             <div class="media-left">
-                <a href="#">
+                <a>
                     <img src="{{x.shopimage}}" class="media-object" alt="Sample Image" style="width: 700px;height: 300px;">
                 </a>
             </div>
@@ -27,7 +27,7 @@
                 <h3>{{x.shopname}}</h3>
                	<p>주소 : {{x.shopaddress}}</p>
                	<p>전화 : {{x.shopphone}}</p>
-               	<a class="btn btn-primary" href="#"  data-ng-click="goDetail($index)">상세정보 보기 <span class="glyphicon glyphicon-chevron-right"></span></a>
+               	<a class="btn btn-primary" data-ng-click="goDetail($index)">상세정보 보기 <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>        	
         </li>         

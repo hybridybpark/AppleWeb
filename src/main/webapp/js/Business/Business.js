@@ -2,15 +2,21 @@
  * 
  */
 
+
 var bsCtrl = mainApp.controller('businessCtrl',function($scope,$http,$location){
 	alert("businessCtrl");
+});
 	
+
+mainApp.controller('businessCtrl',function($scope,$http,$location){
+// alert("businessCtrl");
 	$scope.Binfo = {Bname:"", Baddress:"", Mname:"", Mprice:"", Mdesc:""};
 	
 	$scop.loginClick = function() {
 		alert("등록하시겠습니까?");
 		boardFrm.submit();
 	};
+
 	
 	$scope.btabs = [
 	                {name:'예약목록',type:'active',url:'/AppleWeb/Apple/business/reservation'},
@@ -22,12 +28,12 @@ var bsCtrl = mainApp.controller('businessCtrl',function($scope,$http,$location){
 	$scope.url = $scope.btabs[0].url;
 	
 	$scope.btabClick = function(index) {
-		//alert(index);
+		// alert(index);
 		for(var i=0;i<4;i++){
 			if(i==index){
 				$scope.btabs[i].type="active";
 				$scope.url = $scope.btabs[i].url;
-//				$location.path($scope.btabs[i].url);
+// $location.path($scope.btabs[i].url);
 				
 				if(i==0){
 					$scope.reservation = [1,2,3,4,5,6,7,8];
@@ -79,14 +85,14 @@ var bsCtrl = mainApp.controller('businessCtrl',function($scope,$http,$location){
 			}
 		}
 		
-	}
+	};
 	$scope.btabClick(0);
-//	alert("inquiryCtrl");
+// alert("inquiryCtrl");
 	
     
-//    alert('registrationCtrl');
+// alert('registrationCtrl');
 	
-//	alert('reservationCtrl');
+// alert('reservationCtrl');
 	
-//	alert('businessShopCtrl');
+// alert('businessShopCtrl');
 });
