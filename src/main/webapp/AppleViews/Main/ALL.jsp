@@ -15,12 +15,12 @@
 <div class="row">
 	<div data-ng-repeat="x in shops | orderBy :'-shopmark'">
             <div class="col-sm-4 portfolio-item" data-ng-show="($index < currentPage*maxSize) &&($index+1 > (currentPage-1)*maxSize)">
-                <a href="#">
+                <a>
 <!--                     <img class="img-responsive" src="http://placehold.it/700x400" alt=""> -->
                     <img class="img-responsive" src="{{x.shopimage}}" alt="{{x.shopname}}" data-ng-click="imageClick($index)" style="height: 200px;">
                 </a>
                 <h3>
-                    <a href=""  data-ng-click="imageClick($index)">{{x.shopname}}</a> <small>{{x.shopmark}}</small>
+                    <a data-ng-click="imageClick($index)">{{x.shopname}}</a> <small>{{x.shopmark}}</small>
                 </h3>
                 <p style="height: 80px;">{{x.shopinfo}}</p>
             </div>

@@ -10,7 +10,7 @@
         <div class="container">
         <div class="row" style="vertical-align: middle; text-align: center; height: 100px;">					
 					<div class="col-sm-offset-3 col-sm-6">
-						<h1><a href="/AppleWeb/Apple/"><img src="/AppleWeb/Images/Main/templogo.png" alt="Apple" style="width: 180px;" /></a></h1>
+						<h1><a href="/AppleWeb/Apple/"><img src="/AppleWeb/Images/Main/templogo.png" alt="Apple" /></a></h1>
 						<div class="input-group">							
 						    <input type="text" class="form-control" placeholder="가게 이름을 입력해 주세요" data-ng-model="searchText">
 						      <span class="input-group-btn">
