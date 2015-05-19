@@ -3,12 +3,13 @@
  */
 
 var bsCtrl = mainApp.controller('businessCtrl',function($scope,$http,$location){
-//	alert("businessCtrl");
+	alert("businessCtrl");
 	
 	$scope.Binfo = {Bname:"", Baddress:"", Mname:"", Mprice:"", Mdesc:""};
 	
 	$scop.loginClick = function() {
-		
+		alert("등록하시겠습니까?");
+		boardFrm.submit();
 	};
 	
 	$scope.btabs = [
