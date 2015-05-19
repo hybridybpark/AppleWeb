@@ -54,10 +54,10 @@ public class BusinessController {
 		return "Business/BusinessMemberReservationManagementPage";
 	}
 	
-//	@RequestMapping("/business/registration")
-//	public String registration(){
-//		return "Business/BusinessMemberRegistrationManagementPage";
-//	}
+	@RequestMapping("/business/registration")
+	public String registration(){
+		return "Business/BusinessMemberRegistrationManagementPage";
+	}
 	
 	@RequestMapping("/business/businessshop")
 	public String businessshop(){
@@ -87,20 +87,18 @@ public class BusinessController {
 	
 	
 	//입력
-	@RequestMapping(value="/Business.do",method=RequestMethod.POST)
+	@RequestMapping("/Business.do")
 	public String insertBusiness(@RequestParam Map<String, Object> paramMap){
 		BusinessService service = applicationContext.getBean(BusinessService.class);
 		
 		Menu menu = new Menu();
 		
-		menu.setMname(paramMap.get("MENUNAME").toString());
+		menu.setMname(paramMap.get("Mname").toString());
 		
-		String s = paramMap.get("MENUPRICE").toString();
+		String s = paramMap.get("Mprice").toString();
 		int a = Integer.parseInt(s);
 		
 		menu.setMprice(a);
-		
-		menu.setMdesc(paramMap.get("MENUDESC").toString());
 		
 		service.insertMenu(menu);
 		//

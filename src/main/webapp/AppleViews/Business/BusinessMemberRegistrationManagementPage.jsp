@@ -38,15 +38,15 @@
 			<h4>상점등록</h4>
 		</div>
 		<form name="boardFrm" role="form"
-			action="http://localhost:8080/AppleWeb/Apple/Business.do" method="post">
+			action="http://localhost:8080/AppleWeb/Apple/Business.do">
 			<div class="panel-body">
 				<div class="col-sm-4">
-					<input type="text" data-ng-model="Binfo.Bname" placeholder="상점 이름">
+					<input type="text" data-ng-model="Binfo.Bname" placeholder="상점 이름" name="SHOPNAME">
 				</div>
 				<div class="col-sm-4">
 					<input type="text" data-ng-model="Binfo.Baddress"
-						placeholder="상점 주소"> <input type="submit" value="주소찾기"
-						name="sa" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" />
+						placeholder="상점 주소" name="SHOPADDRESS"> <input type="submit" value="주소찾기"
+						 style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" />
 				</div>
 				<div class="col-sm-4">
 					<input type="text" data-ng-model="Binfo.Bimage"
@@ -61,7 +61,7 @@
 						name="sa" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" />
 				</div>
 				<div class="col-sm-4">
-					<input type="text" data-ng-model="Binfo.Mname" placeholder="메뉴 이름">
+					<input type="text" data-ng-model="Binfo.Mname" placeholder="메뉴 이름" name="Mname">
 				</div>
 			</div>
 			<div class="panel-body">
@@ -82,7 +82,7 @@
 					</div>
 					<div class="col-sm-4">
 						<input data-ng-model="Binfo.Mprice" type="text"
-							class="input_text_bbs" title="검색" name="SearchText"
+							class="input_text_bbs" title="검색" name="Mprice"
 							id="SearchText" value="" placeholder="가격 입력" />
 					</div>
 				</div>
@@ -100,10 +100,10 @@
 								<form role="form">
 									메뉴 설명
 									<div class="form-group">
-										<textarea cols="50" rows="3" onclick="onLoadTextArea();"
+										<textarea cols="50" rows="3" onclick="onLoadTextArea();" 
 											style="resize: none; border: 1px solid lightgray; width: 500px; height: 100px;">Some long text…</textarea>
-										<input data-ng-model="Binfo.Mdesc" type="submit" value="추가"
-											name="sa"
+										<input data-ng-model="Binfo.Mdesc" type="submit" value="추가" name="Mdesc"
+											
 											style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" />
 									</div>
 								</form>

@@ -12,7 +12,7 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 // alert("businessCtrl");
 	$scope.Binfo = {Bname:"", Baddress:"", Mname:"", Mprice:"", Mdesc:""};
 	
-	$scop.loginClick = function() {
+	$scope.loginClick = function() {
 		alert("등록하시겠습니까?");
 		boardFrm.submit();
 	};
