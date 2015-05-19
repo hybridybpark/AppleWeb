@@ -100,6 +100,8 @@
 				<div class="col-sm-3"></div>
 				</div>	
 				
+				
+<!-- 				에러 잡아야함 -->
 				<tr align="center">
 					<td colspan="2"> <br>
 						<a href="" data-ng-click="goWrite()"><input type="button" value="글쓰기"></a>
