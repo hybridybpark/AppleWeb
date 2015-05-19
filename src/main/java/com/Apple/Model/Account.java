@@ -4,7 +4,7 @@ public class Account {
 	public Integer BUSINESSNUMBER;
 	public String PASSWORD;
 	public String EMAIL;
-	public Integer PHONE;
+	public String PHONE;
 	public String EMAILACCEPT;
 	public String SMSACCEPT;
 	public String BUSINESSNAME;
@@ -56,10 +56,10 @@ public class Account {
 	public void setEMAIL(String eMAIL) {
 		EMAIL = eMAIL;
 	}
-	public Integer getPHONE() {
+	public String getPHONE() {
 		return PHONE;
 	}
-	public void setPHONE(Integer pHONE) {
+	public void setPHONE(String pHONE) {
 		PHONE = pHONE;
 	}
 	public String getEMAILACCEPT() {

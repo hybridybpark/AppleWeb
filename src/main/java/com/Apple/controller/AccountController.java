@@ -115,11 +115,8 @@ public class AccountController {
 		account.setBUSINESSNUMBER(a);
 		
 		account.setPASSWORD(paramMap.get("PASSWORD").toString());
-		
-		String s2 = paramMap.get("PHONE").toString();
-		int a2 = Integer.parseInt(s2);
-		
-		account.setPHONE(a2);
+				
+		account.setPHONE(paramMap.get("PHONE").toString());
 		
 		account.setEMAIL(paramMap.get("EMAIL").toString());
 		
