@@ -11,5 +11,5 @@ public interface ChainDao {
 	
 	public void insert(Chain chain);
 
-	public Chain selectChainByCategory(String category);
+	public List<Chain> selectChainByCategory(String category);
 }

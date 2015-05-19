@@ -40,15 +40,15 @@ public class IndexController {
 	
 	@RequestMapping(value="/list/{category}")
 	@ResponseBody
-	public List<ShopInfo> allList(@PathVariable String category){
-		ShopInfoService infoService = applicationContext.getBean(ShopInfoService.class);
+	public List<Chain> allList(@PathVariable String category){
+		ChainService chainService = applicationContext.getBean(ChainService.class);
 		
-		List<ShopInfo> list = new ArrayList<ShopInfo>();
+		List<Chain> list = new ArrayList<Chain>();
 		
 		if(category.equals("ALL")){
-			list = infoService.selectAll();
+			list = chainService.selectAll();
 		}else{
-			list = infoService.selectListByCategory(category);
+			list = chainService.selectChainByCategory(category);
 		}	 
 		
 		return list;

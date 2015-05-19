@@ -45,7 +45,7 @@ public class ChainService {
 	public Chain selectOneChain(String chainname){
 		return chainDao.selectOneChain(chainname);
 	}
-	public Chain selectChainByCategory(String category){
+	public List<Chain> selectChainByCategory(String category){
 		return chainDao.selectChainByCategory(category);
 	}
 	

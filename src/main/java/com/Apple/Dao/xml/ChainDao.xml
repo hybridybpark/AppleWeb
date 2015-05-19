@@ -15,6 +15,8 @@
 	    <result property="name" column="CHAINNAME"/>
 	    <result property="desc" column="CHAINDESC"/>
 	    <result property="image" column="CHAINIMAGE"/>
+	    <result property="titleimage" column="CHAINTITLEIMAGE"/>
+	    <result property="category" column="CATEGORY"/>
 	    <result property="sid" column="SID"/>
 	    
 	        
