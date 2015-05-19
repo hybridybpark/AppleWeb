@@ -122,8 +122,12 @@
 																	style="padding: 0 6px 0 6px; color: #d4d6df;">|</span><a
 																	href=""><b>회원가입</b></a></td>
 															</tr>
+															
 														</tbody>
 													</table>
+												</td>
+												<td>
+													<img src="/AppleWeb/Images/Login/140620_02.jpg"/>
 												</td>
 											</tr>
 										</tbody>
