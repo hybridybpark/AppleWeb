@@ -13,6 +13,7 @@ public class QnA {
 	public String password;
 	public String replycontent;
 	public String rdate;
+	public int sid;
 	
 	public String getName() {
 		return name;
@@ -61,6 +62,12 @@ public class QnA {
 	}
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
+	}
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
 	}
 	
 }

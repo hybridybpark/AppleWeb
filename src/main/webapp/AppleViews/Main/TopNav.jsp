@@ -24,7 +24,7 @@
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                </button>
-		                <a class="navbar-brand" href="" data-ng-click="brandClick()">APPLE</a>
+		                <a class="navbar-brand" href="" data-ng-click="brandClick()"><img alt="" src="/AppleWeb/Images/Main/MainMenu.gif"></a>
 		            </div>
 		            <div id="navbar" class="navbar-collapse collapse">
 		            <ul class="nav navbar-nav navbar-left"  style="padding-left: 40px;">
@@ -53,23 +53,22 @@
 		            	<!-- 로그인 -->		                
 					  	<li>
 						  	<a href="" data-ng-click="otherClick('business')" data-ng-show="loginshow">
-						  	<span class="glyphicon glyphicon-user"></span> {{memberID}}님 환영합니다.</a>
+						  	{{memberID}}님 환영합니다.</a>
 					  	</li>
 					  	<li>
 						  	<a href="" data-ng-click="logout()" data-ng-show="loginshow">
-						  	<span class="glyphicon glyphicon-log-out"></span> 로그아웃</a>
+						  	<img src="/AppleWeb/Images/Main/LogoutButton.gif"/></a>
 					  	</li>
 					  	<!-- 비로그인 -->
-				        <li>
+				        <li >
 					        <a href="" data-ng-click="otherClick('join')" data-ng-show="!loginshow">
-					        <span class="glyphicon glyphicon-user"></span> 회원가입</a>
+					        <img src="/AppleWeb/Images/Main/JoinButton.gif"/></a>
 				        </li>
 				        <li>
-					        <a href="" data-ng-click="otherClick('login')" data-ng-show="!loginshow">
-					        <span class="glyphicon glyphicon-log-in"></span> 로그인</a>
-				        </li>
-				               
-				        <li><a href="" data-ng-click="otherClick('qna')"><span></span> Q&A</a>       
+					        <a href="" data-ng-click="otherClick('login')" data-ng-show="!loginshow" id="login">
+					        <img src="/AppleWeb/Images/Main/LoginButton.gif"/></a>
+				        </li>				               
+				        <li><a href="" data-ng-click="otherClick('qna')"><img src="/AppleWeb/Images/Main/QnAButton.gif"/></a>       
 		            </ul>
 		            </div>
 		            <!-- /.navbar-top-links -->

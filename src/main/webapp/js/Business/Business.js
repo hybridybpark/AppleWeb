@@ -2,12 +2,12 @@
  * 
  */
 
-var bsCtrl = mainApp.controller('businessCtrl',function($scope,$http,$location){
+mainApp.controller('businessCtrl',function($scope,$http,$location){
 //	alert("businessCtrl");
 	
 	$scope.Binfo = {Bname:"", Baddress:"", Mname:"", Mprice:"", Mdesc:""};
 	
-	$scop.loginClick = function() {
+	$scope.loginClick = function() {
 		
 	};
 	
