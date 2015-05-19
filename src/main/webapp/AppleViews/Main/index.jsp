@@ -65,7 +65,7 @@
         </section>
         
 
-    <footer class="container">
+    <footer class="container" style="width: 1024px;">
     
 	<div>
          <p class="text-center">

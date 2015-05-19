@@ -4,7 +4,7 @@
 mainApp.controller('shopinfoCtrl',function($scope,$http,$location){	
 	$scope.shopname = window.sessionStorage.getItem('SHOPNAME');
 	$scope.businessnumber = window.sessionStorage.getItem('SHOPBUSINESSNUMBER');
-	
+	$scope.chainname = window.sessionStorage.getItem('CHAINNAME');
 	$scope.stabs = [
 	                {name:'정보',type:'active',url:'/AppleWeb/Apple/shopinfo/info'},
 	                {name:'메뉴',type:'',url:'/AppleWeb/Apple/shopinfo/menu'},
@@ -32,6 +32,19 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location){
 		}
 		
 	};	
+	
+	/////////////////get chain/////////////////
+//	$scope.chainname="스타벅스";
+	
+	var result = $http.post("http://localhost:8080/AppleWeb/Apple/shopinfo",$scope.chainname);
+	result.success(function(result,status,headers,config) {
+//		alert(result);
+		$scope.titleimage = result.chain.titleimage;
+//		alert(result.chain.titleimage);
+		$scope.chainShops = $http.get("http://localhost:8080/AppleWeb/Apple/chain/list/"+$scope.chainname);
+		alert($scope.chainShops);
+		
+	});
 	
 	
 });

@@ -6,11 +6,16 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.Apple.Model.Chain;
+import com.Apple.Model.ChainResult;
 import com.Apple.Model.Post;
+import com.Apple.Service.ChainService;
 import com.Apple.Service.PostService;
 
 @Controller
@@ -30,6 +35,19 @@ public class ShopInfoController {
 	public String info(){
 		log.info("############################ shopinfo");
 		return "/Shop/info";
+	}
+	
+	@RequestMapping(value="/shopinfo",method=RequestMethod.POST)
+	public @ResponseBody ChainResult getChain(@RequestBody String chainname){
+		ChainService service = applicationContext.getBean(ChainService.class);
+		
+		ChainResult result = new ChainResult();
+		
+		result.setChain(service.selectOneChain(chainname));
+		
+		log.info("#########################"+result.getChain().name);
+		
+		return result;
 	}
 	
 	@RequestMapping(value="/shopinfo/menu", method=RequestMethod.GET)

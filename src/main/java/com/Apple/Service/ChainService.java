@@ -4,11 +4,13 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.Apple.Dao.ChainDao;
 import com.Apple.Model.Chain;
+import com.Apple.controller.ShopInfoController;
 
 @Service
 public class ChainService {
@@ -18,6 +20,8 @@ public class ChainService {
 	
 	@Autowired
 	ChainDao chainDao;
+	
+	Logger log = Logger.getLogger(ChainService.class);
 	
 //	public DataSource getDataSource() {
 //		return dataSource;
@@ -43,9 +47,11 @@ public class ChainService {
 	}
 	
 	public Chain selectOneChain(String chainname){
-		return chainDao.selectOneChain(chainname);
+		Chain c = chainDao.selectOneChain(chainname);
+		log.info("###################### chain service"+c.getName());
+		return c;
 	}
-	public Chain selectChainByCategory(String category){
+	public List<Chain> selectChainByCategory(String category){
 		return chainDao.selectChainByCategory(category);
 	}
 	
