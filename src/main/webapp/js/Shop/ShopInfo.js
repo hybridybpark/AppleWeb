@@ -41,6 +41,9 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location){
 //		alert(result);
 		$scope.titleimage = result.chain.titleimage;
 //		alert(result.chain.titleimage);
+		$scope.chainShops = $http.get("http://localhost:8080/AppleWeb/Apple/chain/list/"+$scope.chainname);
+		alert($scope.chainShops);
+		
 	});
 	
 	

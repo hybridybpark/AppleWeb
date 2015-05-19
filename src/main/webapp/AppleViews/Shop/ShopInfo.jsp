@@ -35,17 +35,27 @@
 
 <body data-ng-controller="shopinfoCtrl">
 
-	<header class="container"  style="border: 1px solid gray; margin-top: 24px; width: 1024px;">
+	<header class="container"  style="margin-top: 24px; width: 1024px;">
 		
 <!-- 		<img alt="brand" src="/AppleWeb/Images/starbucks.jpg"> -->
 		<div class="media">
 			<div align="center">
-				<img class="img-responsive" alt="brand" src="{{titleimage}}" style="border: 1px solid gray;">
+				<img class="img-responsive" alt="brand" src="{{titleimage}}" >
 			</div>
 		</div>				
 	</header>
-
-	<section class="container" style="border: 1px solid gray; width: 1024px;">
+	<br>
+	<section class="container" style="width: 1024px;">
+		<div class="dropdown pull-right">
+		  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">가맹점 목록 보기
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu" data-ng-repeat="item in chainShops">
+		    <li><a>{{item.shopname}}</a></li>		    
+		  </ul>
+		</div>
+	</section>
+	<br>	
+	<section class="container" style="width: 1024px;">
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">			
 				<ul class="nav nav-tabs nav-justified">
 					<li  data-ng-repeat="item in stabs" class="{{item.type}}" data-ng-click="stabClick($index)"><a href="">{{item.name}}</a></li>					
