@@ -6,19 +6,21 @@
 		FROM chains				
 	</select>	 
 	
-	<select id="selectOneChain" parameterType="String" resultType="com.Apple.Model.Chain">
+	<select id="selectOneChain" parameterType="String" resultMap="chainList">
 	    SELECT * FROM chains WHERE CHAINNAME=#{chainname}
+	</select>
+	<select id="selectChainByCategory" parameterType="String" resultMap="chainList">
+	    SELECT * FROM chains WHERE CATEGORY=#{category}
 	</select>
 	
 	<resultMap type="com.Apple.Model.Chain" id="chainList">
 	    
 	    <result property="name" column="CHAINNAME"/>
 	    <result property="desc" column="CHAINDESC"/>
-	    <result property="image" column="CHAINIMAGE"/>
-	    <result property="titleimage" column="CHAINTITLEIMAGE"/>
-	    <result property="category" column="CATEGORY"/>
+	    <result property="image" column="CHAINIMAGE"/>	    
 	    <result property="sid" column="SID"/>
-	    
+	    <result property="titleimage" column="CHAINTITLEIMAGE"/>
+	    <result property="category" column="CATEGORY"/>	    
 	        
 	</resultMap>	
 	

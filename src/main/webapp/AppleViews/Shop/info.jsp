@@ -17,9 +17,10 @@
 <!-- <script src="/AppleWeb/js/Shop/review.js"></script> -->
 	
 <title>INFO</title>
+
 </head>
 <body data-ng-controller="shopinfoCtrl" class="container">
-<p>INFO</p>    
+<p>INFO</p>
 
 				
 				<div class="panel panel-primary">

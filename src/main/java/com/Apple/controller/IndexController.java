@@ -45,7 +45,7 @@ public class IndexController {
 		
 		List<Chain> list = new ArrayList<Chain>();
 		
-		if(category.equals("ALL")){
+		if(category.equals("종합")){
 			list = chainService.selectAll();
 		}else{
 			list = chainService.selectChainByCategory(category);

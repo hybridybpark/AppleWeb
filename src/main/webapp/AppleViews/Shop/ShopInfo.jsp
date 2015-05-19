@@ -35,12 +35,17 @@
 
 <body data-ng-controller="shopinfoCtrl">
 
-	<header class="container"  style="border: 1px solid gray; margin-top: 24px;">
+	<header class="container"  style="border: 1px solid gray; margin-top: 24px; width: 1024px;">
 		
-		<img alt="brand" src="/AppleWeb/Images/starbucks.jpg">		
+<!-- 		<img alt="brand" src="/AppleWeb/Images/starbucks.jpg"> -->
+		<div class="media">
+			<div align="center">
+				<img class="img-responsive" alt="brand" src="{{titleimage}}" style="border: 1px solid gray;">
+			</div>
+		</div>				
 	</header>
 
-	<section class="container" style="border: 1px solid gray;">
+	<section class="container" style="border: 1px solid gray; width: 1024px;">
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">			
 				<ul class="nav nav-tabs nav-justified">
 					<li  data-ng-repeat="item in stabs" class="{{item.type}}" data-ng-click="stabClick($index)"><a href="">{{item.name}}</a></li>					
