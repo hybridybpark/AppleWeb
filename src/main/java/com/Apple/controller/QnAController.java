@@ -124,8 +124,8 @@ public class QnAController {
 		
 	}
 	
-	@RequestMapping(value="/QnA.delete2/{title}.{password}", method=RequestMethod.POST)
-	public String deleteQnA2(@PathVariable String title,@PathVariable String password) {
+	@RequestMapping(value="/QnA.delete2/{sid}.{password}", method=RequestMethod.POST)
+	public @ResponseBody QnAResult deleteQnA2(@PathVariable String sid,@PathVariable String password) {
 		
 		QnAService service = applicationContext.getBean(QnAService.class);
 		
@@ -135,11 +135,17 @@ public class QnAController {
 		
 		qna.setPassword(password);
 		
-		qna.setTitle(title);
+		qna.setSid(Integer.parseInt(sid));
 		
-		//service.delete(qna);
+		log.info("##################### sid : "+qna.getSid());
+		service.delete(qna);
 		
-		return "redirect:/Apple/qna";
+		QnAResult result = new QnAResult();
+		result.setQnA(qna);
+		result.setStatus(true);
+		result.setStatusText("delete success!!");
+		
+		return result;
 		
 	}
 	

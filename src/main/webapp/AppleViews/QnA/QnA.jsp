@@ -49,7 +49,8 @@
 						</tr>
 					</thead>
 					
-					<tbody  data-ng-repeat="x in list">
+					<tbody  data-ng-repeat="x in list" data-ng-show="($index < currentPage*itemPerPage) &&($index+1 > (currentPage-1)*itemPerPage)">
+					 	
 					 	<tr align="center">			 	
 					 		<td>{{$index + 1}}</td>
 			    			<td><a href="" data-ng-click="toggle($index)" >	    					
@@ -65,7 +66,7 @@
 				  					<p>{{x.content}}</p>	
 					  					<input type="button" value="수정" />
 										<input type="button" value="삭제" data-ng-click="deleteAction($index)"/>
-										<input type="password" name="password" placeholder=" 비밀번호입력 "  data-ng-model="inputpassword"/>
+										<input type="password" name="password" placeholder=" 비밀번호입력 "  data-ng-model="x.password"/>
 				  					</div>	
 				  					<div class="panel-body">
 				  			  		&#8627<p>{{x.replycontent}}</p><p>{{x.rdate}}</p>
@@ -78,34 +79,25 @@
 				  				</form>
 				  			</td>	  			
 						</tr>
+						
 			  		</tbody> 		
 				</table>
 				
 		<!-- 		게시판 페이지 -->
 			<div class="row">
-				<div class="col-sm-4"></div>
-				<div class="col-sm-4">
-				<nav>
-				  <ul class="pagination">
-				    <li>
-				      <a href="#" aria-label="Previous">
-				        <span aria-hidden="true">&laquo;</span>
-				      </a>
-				    </li>
-				    <li><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				    <li><a href="#">4</a></li>
-				    <li><a href="#">5</a></li>
-				    <li>
-				      <a href="#" aria-label="Next">
-				        <span aria-hidden="true">&raquo;</span>
-				      </a>
-				    </li>
-				  </ul>
-				</nav>
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+				<pagination boundary-links="true"
+				 total-items="totalItems"
+				 items-per-page="itemPerPage"
+				  ng-model="currentPage"
+				   class="pagination-sm"
+				    previous-text="&lsaquo;"
+				     next-text="&rsaquo;"
+				      first-text="&laquo;" 
+				      last-text="&raquo;"></pagination>
 				</div>
-				<div class="col-sm-4"></div>
+				<div class="col-sm-3"></div>
 				</div>	
 				
 				<tr align="center">

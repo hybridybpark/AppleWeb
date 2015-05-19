@@ -9,12 +9,10 @@
     
 }
 </style>
-<h3 class="text-primary"> {{categoryName}} <small>{{categorySmallName}}</small></h3>
-<hr style="border: 1px solid red;">
 
 <div class="row">
 	<div data-ng-repeat="x in shops | orderBy :'-shopmark'">
-            <div class="col-sm-4 portfolio-item" data-ng-show="($index < currentPage*maxSize) &&($index+1 > (currentPage-1)*maxSize)">
+            <div class="col-sm-3 portfolio-item" data-ng-show="($index+1 < currentPage*maxSize) &&($index+1 > (currentPage-1)*maxSize)" style="height: 300px;">
                 <a>
 <!--                     <img class="img-responsive" src="http://placehold.it/700x400" alt=""> -->
                     <img class="img-responsive" src="{{x.shopimage}}" alt="{{x.shopname}}" data-ng-click="imageClick($index)" style="height: 200px;">
@@ -22,7 +20,7 @@
                 <h3>
                     <a data-ng-click="imageClick($index)">{{x.shopname}}</a> <small>{{x.shopmark}}</small>
                 </h3>
-                <p style="height: 80px;">{{x.shopinfo}}</p>
+                
             </div>
             </div>
  </div>
