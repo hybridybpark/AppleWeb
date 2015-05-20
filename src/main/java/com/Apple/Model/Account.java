@@ -10,33 +10,14 @@ public class Account {
 	public String BUSINESSNAME;
 	public String WDATE;
 	public String CONDITION;
+	public String ADETE;
 	
 	
-	public String getCONDITION() {
-		return CONDITION;
+	public String getADETE() {
+		return ADETE;
 	}
-	public void setCONDITION(String cONDITION) {
-		CONDITION = cONDITION;
-	}
-	public String getADATE() {
-		return ADATE;
-	}
-	public void setADATE(String aDATE) {
-		ADATE = aDATE;
-	}
-	public String ADATE;
-	
-	public String getWdate() {
-		return WDATE;
-	}
-	public void setWDATE(String wdate) {
-		WDATE = wdate;
-	}
-	public String getBUSINESSNAME() {
-		return BUSINESSNAME;
-	}
-	public void setBUSINESSNAME(String bUSINESSNAME) {
-		BUSINESSNAME = bUSINESSNAME;
+	public void setADETE(String aDETE) {
+		ADETE = aDETE;
 	}
 	public Integer getBUSINESSNUMBER() {
 		return BUSINESSNUMBER;
@@ -74,6 +55,30 @@ public class Account {
 	public void setSMSACCEPT(String sMSACCEPT) {
 		SMSACCEPT = sMSACCEPT;
 	}
+	public String getBUSINESSNAME() {
+		return BUSINESSNAME;
+	}
+	public void setBUSINESSNAME(String bUSINESSNAME) {
+		BUSINESSNAME = bUSINESSNAME;
+	}
+	public String getWDATE() {
+		return WDATE;
+	}
+	public void setWDATE(String wDATE) {
+		WDATE = wDATE;
+	}
+	public String getCONDITION() {
+		return CONDITION;
+	}
+	public void setCONDITION(String cONDITION) {
+		CONDITION = cONDITION;
+	}
+	public void setADATE(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 	
 	
 	
