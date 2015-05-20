@@ -7,3 +7,11 @@ h1 {
 	padding: 20px;
 }
 
+	.fixed-bottom-left{
+		position: fixed;
+		bottom: auto;
+		top: 105px;
+		right: 80%;
+		margin-bottom: 0 auto;
+		z-index: 900;
+	}

@@ -128,7 +128,7 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 //	
 	$scope.url2 = "/AppleWeb/Apple/view/ALL";	
 	
-	$http.get("/AppleWeb/Apple/list/ALL")
+	$http.get("/AppleWeb/Apple/list/종합")
 	.success(function (data) {
 		$scope.shops = data;
 		$scope.totalItems = data.length;
@@ -149,36 +149,35 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 	$scope.imageClick = function(index) {
 		
 		//alert(index);
+		window.sessionStorage.setItem('CHAINNAME',$scope.shops[index].name);
+		$location.path("/shopinfo");
 		
-		$scope.tempChain = $scope.shops[index].shopchainname;				
-		console.log($scope.tempChain);
-		if($scope.tempChain=="NONE"){			
-			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
-			//$scope.url1 = "/AppleWeb/Apple/chain";
-			$location.path("/shopinfo");
-			
-		}else if($scope.tempChain=='undefined'){
-			
-		}else{			
-			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
-			//$scope.url1 = "/AppleWeb/Apple/chain";
-			$location.path("/chain");
-		}
+//		$scope.tempChain = $scope.shops[index].shopchainname;				
+//		console.log($scope.tempChain);
+//		if($scope.tempChain=="NONE"){			
+//			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
+//			//$scope.url1 = "/AppleWeb/Apple/chain";
+//			$location.path("/shopinfo");
+//			
+//		}else if($scope.tempChain=='undefined'){
+//			
+//		}else{			
+//			window.sessionStorage.setItem('CHAINNAME',$scope.tempChain);
+//			//$scope.url1 = "/AppleWeb/Apple/chain";
+//			$location.path("/chain");
+//		}
 	};
 	
 	/////////////////////////////////////tabs/////////////////////////////////
 	
 	$scope.tabs = tabs = [
 	{num:0,name:'ALL',type:'',korean: '종합'},
-	{num:1,name:'CAFE',type:'',korean: '카페'},
+	{num:1,name:'CAFE',type:'',korean: '까페'},
 	{num:2,name:'KOREANFOOD',type:'',korean: '한식'},
 	{num:3,name:'CHINESEFOOD',type:'',korean: '중식'},
 	{num:4,name:'WESTERNFOOD',type:'',korean: '양식'},
 	{num:5,name:'JAPANESEFOOD',type:'',korean: '일식'},
-	{num:6,name:'FLOURFOOD',type:'',korean: '분식'}];
-	
-	$scope.categoryName = tabs[0].name;
-	$scope.categorySmallName = tabs[0].korean;
+	{num:6,name:'FLOURFOOD',type:'',korean: '분식'}];	
 	
 	$scope.tabClick = function(index) {		
 		for(var i=0;i<7;i++){
@@ -189,9 +188,9 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 			}
 		}		
 //			$scope.url2 = tabs[index].address;
-			$scope.categoryName = tabs[index].name;
-			getList(tabs[index].name);		
-			$scope.categorySmallName = tabs[index].korean;
+			
+			getList(tabs[index].korean);		
+			
 				
 	};
 //	
