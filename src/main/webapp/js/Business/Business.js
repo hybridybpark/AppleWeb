@@ -12,11 +12,6 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 // alert("businessCtrl");
 	$scope.Binfo = {Bname:"", Baddress:"", Mname:"", Mprice:"", Mdesc:""};
 	
-	$scope.loginClick = function() {
-		alert("등록하시겠습니까?");
-		boardFrm.submit();
-	};
-
 	
 	$scope.btabs = [
 	                {name:'예약목록',type:'active',url:'/AppleWeb/Apple/business/reservation'},
@@ -87,6 +82,11 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 		
 	};
 	$scope.btabClick(0);
+	
+	$scope.loginClick = function() {
+		alert("등록하시겠습니까?");
+		boardFrm.submit();
+	};
 // alert("inquiryCtrl");
 	
     

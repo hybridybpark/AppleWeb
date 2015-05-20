@@ -111,6 +111,6 @@ public class BusinessController {
 		
 		service.insertShopInfo(shopinfo);
 		
-		return "redirect:/Apple/business";
+		return "redirect:/Apple/#/business";
 	}
 }

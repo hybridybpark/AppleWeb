@@ -9,4 +9,8 @@ public interface BusinessDao {
 	
 	public void insertShopInfo(ShopInfo shopinfo);
 	
+	public void selectMenuInfo(Menu menu);
+	
+	public void selectShopInfo(ShopInfo shopinfo);
+	
 }
