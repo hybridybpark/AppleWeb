@@ -1,0 +1,18 @@
+
+.NoScroll {
+        overflow:hidden;
+    }
+
+
+th{
+	text-align: center;
+}
+td{
+	text-align: center;
+}
+
+#products
+{
+	margin-right: 250px;
+	width: 600px;
+}

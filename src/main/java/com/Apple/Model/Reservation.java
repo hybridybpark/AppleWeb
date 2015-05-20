@@ -1,62 +1,74 @@
 package com.Apple.Model;
 
 public class Reservation {
-	String NAME;
-	int PHONE;
-	String SHOPNAME;
-	int BUSINESSNUMBER;
-	String RESRVATIONMENU;
-	String RESERVATIONTIME;
-	String RESERVATIONDATE;
-	int SID;
-	public String getNAME() {
-		return NAME;
+	String name;
+	String phone;
+	String sname;
+	int bnumber;
+	String time;
+	String date;
+	int sid;
+	String state;
+	int people;
+	
+	
+	
+	public int getPeople() {
+		return people;
 	}
-	public void setNAME(String nAME) {
-		NAME = nAME;
+	public void setPeople(int people) {
+		this.people = people;
 	}
-	public int getPHONE() {
-		return PHONE;
+	public String getState() {
+		return state;
 	}
-	public void setPHONE(int pHONE) {
-		PHONE = pHONE;
+	public void setState(String state) {
+		this.state = state;
 	}
-	public String getSHOPNAME() {
-		return SHOPNAME;
+	public String getName() {
+		return name;
 	}
-	public void setSHOPNAME(String sHOPNAME) {
-		SHOPNAME = sHOPNAME;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public int getBUSINESSNUMBER() {
-		return BUSINESSNUMBER;
+	public String getPhone() {
+		return phone;
 	}
-	public void setBUSINESSNUMBER(int bUSINESSNUMBER) {
-		BUSINESSNUMBER = bUSINESSNUMBER;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getRESRVATIONMENU() {
-		return RESRVATIONMENU;
+	public String getSname() {
+		return sname;
 	}
-	public void setRESRVATIONMENU(String rESRVATIONMENU) {
-		RESRVATIONMENU = rESRVATIONMENU;
+	public void setSname(String sname) {
+		this.sname = sname;
 	}
-	public String getRESERVATIONTIME() {
-		return RESERVATIONTIME;
+	public int getBnumber() {
+		return bnumber;
 	}
-	public void setRESERVATIONTIME(String rESERVATIONTIME) {
-		RESERVATIONTIME = rESERVATIONTIME;
+	public void setBnumber(int bnumber) {
+		this.bnumber = bnumber;
 	}
-	public String getRESERVATIONDATE() {
-		return RESERVATIONDATE;
+	public String getTime() {
+		return time;
 	}
-	public void setRESERVATIONDATE(String rESERVATIONDATE) {
-		RESERVATIONDATE = rESERVATIONDATE;
+	public void setTime(String time) {
+		this.time = time;
 	}
-	public int getSID() {
-		return SID;
+	public String getDate() {
+		return date;
 	}
-	public void setSID(int sID) {
-		SID = sID;
+	public void setDate(String date) {
+		this.date = date;
 	}
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	
+	
 	
 	
 }
