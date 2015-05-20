@@ -19,9 +19,9 @@
 <script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
 
-<script src="/AppleWeb/Frameworks/angular-1.3.15/angular-route.js"></script>
+<!-- <script src="/AppleWeb/Frameworks/angular-1.3.15/angular-route.js"></script> -->
 	
 <!-- 	ShopInfo js -->
 
@@ -49,8 +49,8 @@
 		<div class="dropdown pull-right">
 		  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">가맹점 목록 보기
 		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu" data-ng-repeat="item in chainShops">
-		    <li><a>{{item.shopname}}</a></li>		    
+		  <ul class="dropdown-menu" >
+		    <li><a data-ng-click="chainDropdownClick($index)" data-ng-repeat="a in chainShops">{{a.shopname}}</a></li>		    
 		  </ul>
 		</div>
 	</section>
