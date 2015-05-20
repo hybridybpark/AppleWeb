@@ -110,21 +110,18 @@ window.onload = function() {
 					<tbody data-ng-repeat="x in reservation">
 								
 					<tr>					
-						<td>13:40</td>
-						<td>shop1</td>
-						<td><a href="" data-ng-click="toggle($index)">점심접대</a></td>
-						<td>010-0000-0000</td>
-						<td>3명</td>
-						<td>예약접수중</td>
+						<td>{{x.time}}</td>
+						<td>{{x.sname}}</td>
+						<td><a href="" data-ng-click="toggle($index)">{{x.name}}</a></td>
+						<td>{{x.phone}}</td>
+						<td>{{x.people}}</td>
+						<td>{{x.state}}</td>
 					</tr>
 					<tr data-ng-show="myVar == $index">
 						<td colspan="6">
 							<p>메뉴</p>
 							<ul class="list-group">
-								<li class="list-group-item">food</li>
-								<li class="list-group-item">food</li>
-								<li class="list-group-item">food</li>
-								<li class="list-group-item">food</li>
+								<li class="list-group-item">{{x.msid}}</li>
 							</ul>
 							<div class="btn-group">
 								<button class="btn btn-info">예약확인</button>

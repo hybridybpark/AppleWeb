@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Apple.Dao.ReservationDao">
+	<select id="selectAll" resultMap="reservationList" >
+		SELECT *
+		FROM reservation		
+	</select>	 
+	
+<!-- 	사용할 DB 변수명 설정 -->
+	<resultMap type="com.Apple.Model.Reservation" id="reservationList">
+	    
+	    <result property="name" column="NAME"/>
+	    <result property="phone" column="PHONE"/>
+	    <result property="sname" column="SHOPNAME"/>
+	    <result property="bnumber" column="BUSINESSNUMBER"/>
+	    <result property="time" column="RESERVATIONTIME"/>
+	    <result property="date" column="RESERVATIONDATE"/>
+	    <result property="sid" column="SID"/>
+	    <result property="state" column="STATE"/>
+	    <result property="people" column="PEOPLE"/>
+	        
+	</resultMap>
+	
+<!-- 	입출력 쿼리문 -->
+	<insert id="insert" parameterType="com.Apple.Model.Reservation">
+	    INSERT INTO reservation values(#{name},#{phone},#{sname},#{bnumber},#{time},#{date},null,#{state},#{people})
+	</insert>
+</mapper>
+
