@@ -67,7 +67,10 @@
 					</div>
 					<div class="panel-body">
 						<div class="col-sm-12" style="height: 400px;">
- 							<div id="map"></div>				
+<!--  							<div id="map"></div>				 -->
+							<map center="{{mapLoc.k}}, {{mapLoc.d}}" zoom="18">
+								<marker position="{{mapLoc.k}}, {{mapLoc.d}}"></marker>
+							</map>
 						</div>						
 					</div>
 					

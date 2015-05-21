@@ -17,7 +17,7 @@
 		$scope.doSubmit = function() {
 			
 			if($scope.login.businessnumber=="") {
-				alert("아이디를 입력하세요");
+				alert("사업자 번호를 입력하세요");
 				return;
 			}
 			if($scope.login.password=="") {
@@ -26,14 +26,16 @@
 			}
 			var result = $http.post("http://localhost:8080/AppleWeb/Apple/login",$scope.login);
 			result.success(function(result,status,headers,config) {
-				alert(result.status);
-				alert(result.statusText);
+//				alert(result.status);
+//				alert(result.statusText);
 				if(result.status){
 					window.sessionStorage.setItem('MEMBERID',$scope.login.businessnumber);
 					window.location = "http://localhost:8080/AppleWeb/Apple/";
 					location.replace(location);					
 				}else{
 					alert(result.statusText);
+					$scope.login.businessnumber="";
+					$scope.login.password="";
 				}
 			});
 		};	

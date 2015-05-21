@@ -59,7 +59,7 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 //	$scope.chainname="스타벅스";
 	
 	$scope.shopinfo={businessnumber:"",shopname:"",shopaddress:"",shopphone:"",shopcategory:"",shopinfo:"",shopchainname:"",shopmark:"",shopimage:""};	
-	
+	$scope.selectedShopName;
 	var result = $http.post("http://localhost:8080/AppleWeb/Apple/shopinfo",$scope.chainname);
 	result.success(function(result,status,headers,config) {
 //		alert(result);
@@ -67,11 +67,13 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 //		alert(result.chain.titleimage);
 		$http.get("http://localhost:8080/AppleWeb/Apple/chain/list/"+$scope.chainname)
 		.success(function(response) {
-//			console.log(response[0]);
+//			console.log(response);
 			$scope.chainShops = response;
 //			$scope.shopname = $scope.chainShops[0].shopname;
 			$scope.shopinfo = $scope.chainShops[0];
 			$scope.findGeo($scope.chainShops[0].shopaddress);
+			console.log($scope.shopinfo);
+			$scope.selectedShopName = $scope.shopinfo.shopname;
 		});		
 	});
 	
@@ -81,22 +83,13 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 //		$scope.shopname = $scope.chainShops[index].shopname;
 		$scope.shopinfo = $scope.chainShops[index];
 		$scope.findGeo($scope.chainShops[index].shopaddress);
+		$scope.selectedShopName = $scope.shopinfo.shopname;
 	}
 //	console.log($scope.shopinfo);
 	//////////////////info page//////////////////
 //	alert($scope.chainShops);
 	
-	var mapOptions = {
-	        zoom: 4,
-	        center: new google.maps.LatLng($scope.mapLoc.k, $scope.mapLoc.d),
-	        mapTypeId: google.maps.MapTypeId.TERRAIN
-	    }
-	$scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-	var marker = new google.maps.Marker({
-        map: $scope.map,
-        position: new google.maps.LatLng($scope.mapLoc.k, $scope.mapLoc.d),
-        title: ""
-    });
+	
 	
 	
 });

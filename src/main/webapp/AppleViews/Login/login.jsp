@@ -19,8 +19,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<!-- 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
 	
 <!-- Login JavaScript -->
    
@@ -35,114 +35,50 @@
 </head>
 
 <body class="container" data-ng-controller="loginCtrl">
-	<div class="header" style="border: 1px solid gray;">
+	<div class="header">
 		<h1 class="text-primary">로그인</h1>
-	</div>
-<!-- 	<div class="row">		 -->
-<!-- 		<div class="col-sm-offset-2 col-sm-4"> -->
-<!-- 			<table style="border: 1px solid gray;"> -->
-<!-- 				<tbody> -->
-<!-- 					<tr> -->
-<!-- 						<td width="50">아이디</td> -->
-<!-- 						<td><input type="text" name="MemberId" size="13" -->
-<!-- 							onkeypress="if(event.keyCode==13) checkVar();" -->
-<!-- 							data-ng-model="login.businessnumber" -->
-<!-- 							tabindex="1" class="input"></td> -->
-<!-- 						<td width="75" align="right" rowspan="2"><a -->
-<!-- 							href="" data-ng-click="doSubmit()"><img -->
-<!-- 								src="/AppleWeb/Images/Login/btn_login.gif" border="0" -->
-<!-- 								tabindex="5"></a></td> -->
-<!-- 					</tr> -->
-<!-- 					<tr> -->
-<!-- 						<td>비밀번호</td> -->
-<!-- 						<td><input type="password" name="MemberPw" -->
-<!-- 							size="13" -->
-<!-- 							onkeypress="if(event.keyCode==13) checkVar();" -->
-<!-- 							data-ng-model="login.password" -->
-<!-- 							tabindex="2" class="input"></td> -->
-<!-- 					</tr> -->
-<!-- 					<tr> -->
-<!-- 						<td colspan="3" align="center" valign="bottom" -->
-<!-- 							height="40"><span -->
-<!-- 							style="padding: 0 6px 0 6px; color: #d4d6df;"></span><a -->
-<!-- 							href="">비밀번호찾기</a><span -->
-<!-- 							style="padding: 0 6px 0 6px; color: #d4d6df;">|</span><a -->
-<!-- 							href=""><b>회원가입</b></a></td> -->
-<!-- 					</tr> -->
-<!-- 				</tbody> -->
-<!-- 			</table>					 -->
-<!-- 		</div> -->
-<!-- 		<div class="col-sm-4"> -->
-<!-- 			<img class="img-responsive" alt="" src="http://placehold.it/700x400">		 -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-	
-					
-						
-					
-	
-	<table align = "center" height="40%" style="border: 1px solid gray;">
-		<tbody>
-			<tr>
-				<td bgcolor="F5F5F5" align="center">
-					<table style="border: 1px solid gray;">
-						<tbody>
-							<tr>
-								<td align="center">
-									<table style="border: 1px solid gray;">
-										<tbody>
-											<tr>
-												<td align="center">
-													<table style="border: 1px solid gray;">
-														<tbody>
-															<tr>
-																<td width="50">아이디</td>
-																<td><input type="text" name="MemberId" size="13"
-																	onkeypress="if(event.keyCode==13) checkVar();"
-																	data-ng-model="login.businessnumber"
-																	tabindex="1" class="input"></td>
-																<td width="75" align="right" rowspan="2"><a
-																	href="" data-ng-click="doSubmit()"><img
-																		src="/AppleWeb/Images/Login/btn_login.gif" border="0"
-																		tabindex="5"></a></td>
-															</tr>
-															<tr>
-																<td>비밀번호</td>
-																<td><input type="password" name="MemberPw"
-																	size="13"
-																	onkeypress="if(event.keyCode==13) checkVar();"
-																	data-ng-model="login.password"
-																	tabindex="2" class="input"></td>
-															</tr>
-															<tr>
-																<td colspan="3" align="center" valign="bottom"
-																	height="40"><span
-																	style="padding: 0 6px 0 6px; color: #d4d6df;"></span><a
-																	href="">비밀번호찾기</a><span
-																	style="padding: 0 6px 0 6px; color: #d4d6df;">|</span><a
-																	href=""><b>회원가입</b></a></td>
-															</tr>
-															
-														</tbody>
-													</table>
-												</td>
-												<td>
-													<img src="/AppleWeb/Images/Login/140620_02.jpg"/>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-								<td width="410" align="right"><table width="400" border="0"
-										cellspacing="0" cellpadding="0">
-									</table></td>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	</div>	
+	<hr>
+	<section class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				 <form class="form-signin pull-right" style="width: 400px;">		        
+				 	<div class="form-group">
+				        <label for="inputBusinessNumber">Business Number</label>
+				        <input type="text" 
+				        	id="inputBusinessNumber" 
+				        	class="form-control" 
+				        	required autofocus 
+				        	data-ng-model="login.businessnumber"
+				        	>
+			        </div>		        
+			        <div class="form-group">
+			        	<label for="inputPassword">Password</label>
+			        	<input type="password" 
+			        		id="inputPassword" 
+			        		class="form-control" 
+			        		required 
+			        		data-ng-model="login.password"
+			        		>
+			        </div>
+			        <div class="checkbox">
+			          <label>
+			            <input type="checkbox" value="remember-me"> 기억하기
+			          </label>
+			        </div>
+			        <button class="btn btn-primary btn-block" type="button" data-ng-click="doSubmit()">로그인</button>
+			        <ul class="nav nav-pills">
+			        	<li><a><h5>비밀번호찾기</h5></a></li>
+			        	<li><a><h5>회원가입</h5></a></li>
+			        </ul>			        
+		        </form>			      
+			</div>
+			<div class="col-sm-6">
+				<img src="/AppleWeb/Images/Login/140620_02.jpg"/>
+			</div>	
+		</div>
+	</section>				
+	<hr>	
 </body>
 
 

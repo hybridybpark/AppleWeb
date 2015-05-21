@@ -13,11 +13,11 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-<link rel="stylesheet"	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet"	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet"	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet"	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+<!-- <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
+<!-- <script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
 	
 <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
 
@@ -47,12 +47,14 @@
 	<br>
 	<section class="container" style="width: 1024px;">
 		<div class="dropdown pull-right">
-		  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">가맹점 목록 보기
+		  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{selectedShopName}}
 		  <span class="caret"></span></button>
 		  <ul class="dropdown-menu" >
-		    <li><a data-ng-click="chainDropdownClick($index)" data-ng-repeat="a in chainShops">{{a.shopname}}</a></li>		    
+		    <li data-ng-repeat="a in chainShops">
+		    	<a data-ng-click="chainDropdownClick($index)" >{{a.shopname}}</a>
+	    	</li>		    
 		  </ul>
-		</div>
+		</div>		
 	</section>
 	<br>	
 	<section class="container" style="width: 1024px;">
