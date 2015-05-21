@@ -100,15 +100,15 @@
 					    <!-- Wrapper for slides -->
 					    <div class="carousel-inner" role="listbox">
 					      <div class="item active">
-					        <img src="/AppleWeb/Images/Main/h119200_620.jpg" alt="Chania" width="460" height="345">
+					        <img src="/AppleWeb/Images/Main/h119200_620.jpg" alt="Chania" width="460" height="240">
 					      </div>
 					
 					      <div class="item">
-					        <img src="/AppleWeb/Images/Main/drive_620.jpg" alt="Chania" width="460" height="345">
+					        <img src="/AppleWeb/Images/Main/drive_620.jpg" alt="Chania" width="460" height="240">
 					      </div>
 					    
 					      <div class="item">
-					        <img src="/AppleWeb/Images/Main/garosugil_620.jpg" alt="Flower" width="460" height="345">
+					        <img src="/AppleWeb/Images/Main/garosugil_620.jpg" alt="Flower" width="460" height="240">
 					      </div>     
 					    </div>   
 					  </div>
