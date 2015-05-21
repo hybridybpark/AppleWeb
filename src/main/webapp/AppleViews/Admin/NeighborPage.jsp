@@ -14,7 +14,7 @@
 		
 		<!-- Table -->
 		<div class="panel panel-primary">
-			<div class="panel-heading"><h4>회원목록</h4></div>
+			<div class="panel-heading"><h4>입점요청</h4></div>
 			<div class="panel-body">
 		<table style="width: 100%;" class="table table-hover">
 			<thead>

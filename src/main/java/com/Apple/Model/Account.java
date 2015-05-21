@@ -10,15 +10,8 @@ public class Account {
 	public String BUSINESSNAME;
 	public String WDATE;
 	public String CONDITION;
-	public String ADETE;
-	
-	
-	public String getADETE() {
-		return ADETE;
-	}
-	public void setADETE(String aDETE) {
-		ADETE = aDETE;
-	}
+	public String ADATE;
+		
 	public Integer getBUSINESSNUMBER() {
 		return BUSINESSNUMBER;
 	}
@@ -73,10 +66,13 @@ public class Account {
 	public void setCONDITION(String cONDITION) {
 		CONDITION = cONDITION;
 	}
-	public void setADATE(String string) {
-		// TODO Auto-generated method stub
-		
+	public String getADATE() {
+		return ADATE;
 	}
+	public void setADATE(String aDATE) {
+		ADATE = aDATE;
+	}
+	
 	
 	
 	

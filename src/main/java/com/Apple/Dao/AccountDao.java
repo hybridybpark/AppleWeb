@@ -12,4 +12,7 @@ public interface AccountDao {
 	
 	public List<Account> checkAccount(Account account);
 	
+	public List<Account> stayAccount();
+	
+	public void ARupdateAccount(Account account);
 }
