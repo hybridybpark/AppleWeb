@@ -48,8 +48,8 @@
 						</a>
 					</div>
 					<div class="media-body" data-ng-repeat="x in list">
-						<h4 class="media-heading">{{x.</h4>
-						content
+						<h4 class="media-heading">{{x.shopname}}</h4>
+						{{x.shopaddress}}
 					</div>
 					<div class="media-right">
 						<button class="btn btn-default">수정</button>
