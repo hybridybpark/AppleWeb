@@ -4,23 +4,25 @@
 <%-- <%@ include file="/WEB-INF/common.jspf"%> --%>
 
 <style>
-.portfolio-item {
-    margin-bottom: 25px;
-    
+.portfolio-item {    
+    border: 1px solid lightgray;
+}
+.portfolio-item:hover {    
+    border: 1px solid cyan;
 }
 </style>
 
 <div class="row">
 	<div data-ng-repeat="x in shops | orderBy :'sid'">
-            <div class="col-sm-3 portfolio-item" data-ng-show="($index+1 < currentPage*maxSize) &&($index+1 > (currentPage-1)*maxSize)" style="height: 300px; border: 1px solid lightgray;">
+            <div class="col-sm-3" data-ng-show="($index+1 < currentPage*maxSize) &&($index+1 > (currentPage-1)*maxSize)" style="height: 300px; ">
+            	<div class="  portfolio-item">
                 <a>
-<!--                     <img class="img-responsive" src="http://placehold.it/700x400" alt=""> -->
                     <img class="img-responsive" src="{{x.image}}" alt="{{x.name}}" data-ng-click="imageClick($index)" style="height: 200px;">
                 </a>
-                <h3 style="text-align: center;">
+                <h5 style="text-align: center;">
                     <a data-ng-click="imageClick($index)" >{{x.name}}</a> 
-                </h3>
-                
+                </h5>
+                </div>
             </div>
             </div>
  </div>
