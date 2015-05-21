@@ -31,7 +31,19 @@
 						</h3>
 					</div>
 					<div class="panel-body">
-						<img alt="" src="{{shopinfo.shopimage}}">
+						<div class="media">
+							<div class="media-left">
+								<img alt="" src="{{shopinfo.shopimage}}">	
+							</div>
+							<div class="media-body">
+								<div>
+									<h3 class="text-info">{{chainname}} <small> 정보</small></h3>
+								</div>
+								{{chainDesc}}
+							</div>
+						</div>
+						
+						
 					</div>
 					<div class="panel-body">
 						

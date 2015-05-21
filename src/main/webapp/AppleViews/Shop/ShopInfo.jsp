@@ -46,15 +46,18 @@
 	</header>
 	<br>
 	<section class="container" style="width: 1024px;">
-		<div class="dropdown pull-right">
-		  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{selectedShopName}}
-		  <span class="caret"></span></button>
-		  <ul class="dropdown-menu" >
-		    <li data-ng-repeat="a in chainShops">
-		    	<a data-ng-click="chainDropdownClick($index)" >{{a.shopname}}</a>
-	    	</li>		    
-		  </ul>
-		</div>		
+					
+				<div class="dropdown pull-right">
+				  <button class="btn btn-default dropdown-toggle btn-justified" type="button" data-toggle="dropdown">{{selectedShopName}}
+				  <span class="caret"></span></button>
+				  <ul class="dropdown-menu" >
+				    <li data-ng-repeat="a in chainShops">
+				    	<a data-ng-click="chainDropdownClick($index)" >{{a.shopname}}</a>
+			    	</li>		    
+				  </ul>
+				</div>			
+		
+		
 	</section>
 	<br>	
 	<section class="container" style="width: 1024px;">
