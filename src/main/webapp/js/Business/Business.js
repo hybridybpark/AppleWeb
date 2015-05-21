@@ -91,6 +91,10 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 		alert("등록하시겠습니까?");
 		boardFrm.submit();
 	};
+	
+	$http.get("http://localhost:8080/AppleWeb/Apple/business/shopinfolist.json").success(function(data) {
+		$scope.list = data;
+	});
 // alert("inquiryCtrl");
 	
     

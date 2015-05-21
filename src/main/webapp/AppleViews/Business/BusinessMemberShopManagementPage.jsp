@@ -47,8 +47,8 @@
 							<img class="media-object" alt="" src="http://placehold.it/100&text=shop">
 						</a>
 					</div>
-					<div class="media-body">
-						<h4 class="media-heading">heading</h4>
+					<div class="media-body" data-ng-repeat="x in list">
+						<h4 class="media-heading">{{x.</h4>
 						content
 					</div>
 					<div class="media-right">

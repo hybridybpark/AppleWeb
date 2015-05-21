@@ -116,4 +116,31 @@ public class BusinessController {
 		
 		return "redirect:/Apple/#/business";
 	}
+	
+	//출력
+	@ResponseBody
+	@RequestMapping(value="/business/menulist.json")
+	public List<Menu> getMenuList(){
+		MenuService service = applicationContext.getBean(MenuService.class);
+		
+		
+		List<Menu> list = service.selectAll();
+		
+		return list;
+		
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/business/shopinfolist.json")
+	public List<ShopInfo> getShopInfoList(){
+		ShopInfoService service = applicationContext.getBean(ShopInfoService.class);
+		
+		List<ShopInfo> list = service.selectAll();
+		
+		return list;
+		
+	}
+	
+	
+	
 }

@@ -27,6 +27,8 @@ public class MenuService {
 		
 		return list;
 	}
+	
+	
 
 	//입력
 	public void insert(Menu menu) {
