@@ -32,4 +32,8 @@ public class MenuService {
 	public void insert(Menu menu) {
 		menuDao.insert(menu);
 	}
+	
+	public void insertMenu(Menu menu){
+		menuDao.insertMenu(menu);
+	}
 }

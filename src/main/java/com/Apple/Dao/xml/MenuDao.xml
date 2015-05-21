@@ -23,4 +23,8 @@
 	<insert id="insert" parameterType="com.Apple.Model.Menu">
 	    INSERT INTO menu values(#{Mname},#{Mprice},#{Mimage},#{Mdesc},#{Mcategory},#{Sname},#{Bnumber},null)
     </insert>
+    
+	<insert id="insertMenu" parameterType="com.Apple.Model.Menu">
+	    INSERT INTO MENU values(#{Mname},#{Mprice},null,null,null,null,null,null)
+	</insert>
 </mapper>

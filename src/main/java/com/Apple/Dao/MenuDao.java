@@ -13,4 +13,6 @@ public interface MenuDao {
 	
 	public void delete(Menu menu);
 
+	public void insertMenu(Menu menu);
+
 }

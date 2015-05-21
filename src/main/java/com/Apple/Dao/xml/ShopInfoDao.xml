@@ -40,4 +40,8 @@
 		<result property="SHOPMARK" column="SHOPMARK"/>
 		<result property="SHOPIMAGE" column="SHOPIMAGE"/>	    
 	</resultMap>
+	
+	<insert id="insertShopInfo" parameterType="com.Apple.Model.ShopInfo">
+	    INSERT INTO SHOPINFO values(#{SHOPNAME},7,#{SHOPADDRESS},8,9,10,11,12,13,14)
+	</insert>
 </mapper>

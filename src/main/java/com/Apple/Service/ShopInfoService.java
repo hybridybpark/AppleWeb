@@ -40,4 +40,8 @@ public class ShopInfoService {
 		return shopInfoDao.selectListByName(shopname);
 	}
 	
+	public void insertShopInfo(ShopInfo shopinfo){
+		shopInfoDao.insertShopInfo(shopinfo);
+	}
+	
 }

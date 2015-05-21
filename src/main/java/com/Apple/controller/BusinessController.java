@@ -33,8 +33,9 @@ import com.Apple.Model.QnA;
 import com.Apple.Model.ShopInfo;
 import com.Apple.Service.AccountService;
 import com.Apple.Service.AdminLoginService;
-import com.Apple.Service.BusinessService;
+import com.Apple.Service.MenuService;
 import com.Apple.Service.QnAService;
+import com.Apple.Service.ShopInfoService;
 
 @Controller
 public class BusinessController {
@@ -89,7 +90,9 @@ public class BusinessController {
 	//입력
 	@RequestMapping("/Business.do")
 	public String insertBusiness(@RequestParam Map<String, Object> paramMap){
-		BusinessService service = applicationContext.getBean(BusinessService.class);
+		MenuService service1 = applicationContext.getBean(MenuService.class);
+		
+		ShopInfoService service2 = applicationContext.getBean(ShopInfoService.class);
 		
 		Menu menu = new Menu();
 		
@@ -100,7 +103,7 @@ public class BusinessController {
 		
 		menu.setMprice(a);
 		
-		service.insertMenu(menu);
+		service1.insertMenu(menu);
 		//
 		
 		ShopInfo shopinfo = new ShopInfo();
@@ -109,7 +112,7 @@ public class BusinessController {
 		
 		shopinfo.setSHOPADDRESS(paramMap.get("SHOPADDRESS").toString());
 		
-		service.insertShopInfo(shopinfo);
+		service2.insertShopInfo(shopinfo);
 		
 		return "redirect:/Apple/#/business";
 	}
