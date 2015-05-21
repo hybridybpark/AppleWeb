@@ -43,11 +43,10 @@
 
 	<h1>신규 회원 가입</h1>
 
-	<div class="fixed-bottom-left">
+	<div class="fixed-bottom-left" style="border-width:0">
 		<!-- 좌측 회원정보 삽입 -->
-		<div class="panel panel-default">
-			<div class="panel-body" style="border: 0;">
-				<ul class="list-group" style="border: 0;">
+		
+				<ul class="list-group" style="width: 200px;border-width: 0px;">
 					<li class="list-group-item"><a href="">
 						<img src="/AppleWeb/Images/Login/join/join.jpg" />
 					</a> <a href=""> <img src="/AppleWeb/Images/Login/join/join2.jpg" />
@@ -62,8 +61,7 @@
 							onmouseout="this.src='/AppleWeb/Images/Login/join/join5.jpg'" />
 					</a></li>
 				</ul>
-			</div>
-		</div>
+			
 	</div>
 
 
