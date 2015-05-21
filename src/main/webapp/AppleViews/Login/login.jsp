@@ -36,10 +36,26 @@
 
 <body class="container" data-ng-controller="loginCtrl">
 	<div class="header">
-		<h1 class="text-primary">로그인</h1>
-	</div>	
-	<hr>
+		<h1 class="text-primary"></h1>
+	</div>
+	<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+				<tr>
+					<td valign="bottom" style="padding:0 0 2px 0;"><img src="/AppleWeb/Images/Login/title_login.gif" style="margin:0 15px 0 0;">서비스 이용을 위해 로그인 해주세요.</td>
+					<td width="110" align="right" valign="bottom" class="text11" ><a href="http://localhost:8080/AppleWeb/Apple/admin/login">관리자</a></td>
+				</tr>
+			</table>
+			</div>	
+		</div>
+			
+	
 	<section class="container">
+	<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<hr>
+			</div>	
+		</div>
 		<div class="row">
 			<div class="col-sm-6">
 				 <form class="form-signin pull-right" style="width: 400px;">		        
@@ -77,8 +93,14 @@
 				<img src="/AppleWeb/Images/Login/140620_02.jpg"/>
 			</div>	
 		</div>
+		<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<hr>
+			</div>	
+		</div>
+		
 	</section>				
-	<hr>	
+		
 </body>
 
 
