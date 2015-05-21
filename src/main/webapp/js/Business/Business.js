@@ -30,8 +30,10 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 				$scope.url = $scope.btabs[i].url;
 // $location.path($scope.btabs[i].url);
 				
+				
+				// 비지니스 예약목록 부분
 				if(i==0){
-					$scope.reservation = [1,2,3,4,5,6,7,8];
+//					$scope.reservation = [1,2,3,4,5,6,7,8];
 					
 					$scope.myVar = -1;
 				    $scope.toggle = function(index) {
@@ -40,9 +42,11 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 				    	}else{
 				    		$scope.myVar = -1;		
 				    	}
+				    	
 				    };
-				    
-					
+				    $http.get("http://localhost:8080/AppleWeb/Apple/reservation/list.json"+"1925618800").success(function(data) {
+			    		$scope.reservation = data;
+				    });
 					
 				}else if(i==1){
 					
