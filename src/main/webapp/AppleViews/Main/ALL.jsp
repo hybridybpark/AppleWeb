@@ -14,7 +14,7 @@
 
 <div class="row">
 	<div data-ng-repeat="x in shops | orderBy :'sid'">
-            <div class="col-sm-3" data-ng-show="($index+1 < currentPage*maxSize) &&($index+1 > (currentPage-1)*maxSize)" style="height: 300px; ">
+            <div class="col-sm-3" data-ng-show="($index+1 < currentPage*maxSize) &&($index+1 > (currentPage-1)*maxSize)">
             	<div class="  portfolio-item">
                 <a>
                     <img class="img-responsive" src="{{x.image}}" alt="{{x.name}}" data-ng-click="imageClick($index)" style="height: 200px;">
@@ -32,7 +32,7 @@
 
 <div class="row">
 	
-	<div class="col-sm-offset-4">
+	<div class="col-sm-12">
 	<pagination boundary-links="true" 
 	      total-items="totalItems" 
 	      ng-model="currentPage" 

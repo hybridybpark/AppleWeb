@@ -64,6 +64,7 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 	result.success(function(result,status,headers,config) {
 //		alert(result);
 		$scope.titleimage = result.chain.titleimage;
+		$scope.chainDesc = result.chain.desc;
 //		alert(result.chain.titleimage);
 		$http.get("http://localhost:8080/AppleWeb/Apple/chain/list/"+$scope.chainname)
 		.success(function(response) {
@@ -84,6 +85,7 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 		$scope.shopinfo = $scope.chainShops[index];
 		$scope.findGeo($scope.chainShops[index].shopaddress);
 		$scope.selectedShopName = $scope.shopinfo.shopname;
+		$scope.stabClick(0);
 	}
 //	console.log($scope.shopinfo);
 	//////////////////info page//////////////////
