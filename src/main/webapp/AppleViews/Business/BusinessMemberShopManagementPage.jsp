@@ -39,15 +39,15 @@
 	<div class="panel panel-primary">
 		<div class="panel-heading"><h4>상점목록</h4></div>
 		<ul class="list-group">
-			<c:forEach var="item" begin="0" end="3">
-			<li class="list-group-item">
+<%-- 			<c:forEach var="item" begin="0" end="3"> --%>
+			<li class="list-group-item" data-ng-repeat="x in list">
 				<div class="media">
 					<div class="media-left">
 						<a href="">
 							<img class="media-object" alt="" src="http://placehold.it/100&text=shop">
 						</a>
 					</div>
-					<div class="media-body" data-ng-repeat="x in list">
+					<div class="media-body" >
 						<h4 class="media-heading">{{x.shopname}}</h4>
 						{{x.shopaddress}}
 					</div>
@@ -57,7 +57,7 @@
 					</div>
 				</div>
 			</li>
-			</c:forEach>		
+<%-- 			</c:forEach>		 --%>
 		</ul>			
 		<nav style="text-align: center;">
 		  <ul class="pagination">

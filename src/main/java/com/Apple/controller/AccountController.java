@@ -32,6 +32,8 @@ import com.Apple.Service.QnAService;
 @RequestMapping("/")
 public class AccountController {
 	
+	public Integer numCheck;
+	
 	Logger log = Logger.getLogger(AccountController.class);
 	
 	private AccountService mainService;
@@ -58,6 +60,9 @@ public class AccountController {
 		log.info("############################Login POST");
 		log.info("###########"+login.getBUSINESSNUMBER());
 		log.info("###########"+login.getPASSWORD());
+		
+		numCheck = login.getBUSINESSNUMBER();
+		
 		AccountService service = applicationContext.getBean(AccountService.class);		
 		
 		List<Account> list = service.checkAccount(login);

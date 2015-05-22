@@ -40,6 +40,10 @@ public class ShopInfoService {
 		return shopInfoDao.selectListByName(shopname);
 	}
 	
+	public List<ShopInfo> selectListByBusinessnumber(String businessnumber){
+		return shopInfoDao.selectListByBusinessnumber(businessnumber);
+	}
+	
 	public void insertShopInfo(ShopInfo shopinfo){
 		shopInfoDao.insertShopInfo(shopinfo);
 	}

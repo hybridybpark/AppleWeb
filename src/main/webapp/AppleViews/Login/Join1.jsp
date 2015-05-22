@@ -11,7 +11,6 @@
 <html>
 
 <%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
-<!DOCTYPE>
 <html>
 
 <head>
@@ -47,7 +46,7 @@
 		<!-- 좌측 회원정보 삽입 -->
 		
 				<ul class="list-group" style="width: 200px;border-width: 0px;">
-					<li class="list-group-item"><a href="">
+					<li class="list-group-item" style="border-width:0px;"><a href="">
 						<img src="/AppleWeb/Images/Login/join/join.jpg" />
 					</a> <a href=""> <img src="/AppleWeb/Images/Login/join/join2.jpg" />
 					</a> <a href=""> <img src="/AppleWeb/Images/Login/join/join3.jpg"
