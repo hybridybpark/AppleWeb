@@ -24,7 +24,11 @@
 				alert("비밀번호를 입력하세요");
 				return;
 			}
+			
+			
+			
 			var result = $http.post("http://localhost:8080/AppleWeb/Apple/login",$scope.login);
+			
 			result.success(function(result,status,headers,config) {
 //				alert(result.status);
 //				alert(result.statusText);

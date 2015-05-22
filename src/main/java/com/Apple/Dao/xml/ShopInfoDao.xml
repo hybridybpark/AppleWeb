@@ -23,6 +23,13 @@
 	    FROM SHOPINFO
 	    WHERE SHOPCATEGORY=#{shopcategory}
 	</select>
+	
+	<select id="selectListByBusinessnumber" resultMap="ShopList" parameterType="String">
+	    SELECT *
+	    FROM SHOPINFO
+	    WHERE BUSINESSNUMBER=#{businessnumber}
+	</select>
+	
 	<select id="selectListByName" resultMap="ShopList" parameterType="String">
 	    SELECT *
 	    FROM SHOPINFO

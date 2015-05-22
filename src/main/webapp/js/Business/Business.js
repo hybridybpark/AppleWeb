@@ -44,12 +44,16 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 				    	}
 				    	
 				    };
-				    $http.get("http://localhost:8080/AppleWeb/Apple/reservation/list.json"+"1925618800").success(function(data) {
+				    $http.get("http://localhost:8080/AppleWeb/Apple/reservation/list.json"+window.sessionStorage.getItem('MEMBERID')).success(function(data) {
 			    		$scope.reservation = data;
 				    });
 					
+				    //상점목록 부분
 				}else if(i==1){
-					
+					$http.get("http://localhost:8080/AppleWeb/Apple/business/numlist.json"+window.sessionStorage.getItem('MEMBERID')).success(function(data) {
+						$scope.list = data;
+					})
+					//상점등록 부분
 				}else if(i==2){
 					var writeButton = document.createElement('button');
 					writeButton.textContent = "Write";
@@ -91,10 +95,6 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 		alert("등록하시겠습니까?");
 		boardFrm.submit();
 	};
-	
-	$http.get("http://localhost:8080/AppleWeb/Apple/business/shopinfolist.json").success(function(data) {
-		$scope.list = data;
-	});
 // alert("inquiryCtrl");
 	
     
