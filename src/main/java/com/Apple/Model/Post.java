@@ -2,7 +2,7 @@ package com.Apple.Model;
 
 public class Post {
 	String WRITERNAME;
-	int WRITERPHONE;
+	String WRITERPHONE;
 	String MARK;
 	String POSTCONTENT;
 	String WRITEDATE;
@@ -16,10 +16,10 @@ public class Post {
 	public void setWRITERNAME(String wRITERNAME) {
 		WRITERNAME = wRITERNAME;
 	}
-	public int getWRITERPHONE() {
+	public String getWRITERPHONE() {
 		return WRITERPHONE;
 	}
-	public void setWRITERPHONE(int wRITERPHONE) {
+	public void setWRITERPHONE(String wRITERPHONE) {
 		WRITERPHONE = wRITERPHONE;
 	}
 	public String getMARK() {

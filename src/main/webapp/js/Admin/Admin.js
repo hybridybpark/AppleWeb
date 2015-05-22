@@ -71,7 +71,7 @@ adminApp.controller('adminCtrl',function($scope,$http,$location){
 	$scope.btabs = [
 	                {name:'가입요청',type:'active',url:'/adminpage'},
 	                {name:'입점요청',type:'',url:'/neighbor'},
-	                {name:'회원목록',type:'',url:'/member'},
+	                {name:'회원관리',type:'',url:'/member'},
 	                {name:'Q&A',type:'',url:'/qna'}
 	                ];
 	

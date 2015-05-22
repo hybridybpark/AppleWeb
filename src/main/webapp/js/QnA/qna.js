@@ -9,7 +9,7 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
 	//$scope.inputpassword="w";
 	$scope.currentPage=1;
 	$scope.itemPerPage=10;
-	$http.get("http://localhost:8080/AppleWeb/Apple/qna/list.json").success(function(data) {
+	$http.get("/AppleWeb/Apple/qna/list.json").success(function(data) {
 		$scope.list = data;
 		for(var i=0;i<$scope.list.length;i++){
 			$scope.list[i].password = "";
@@ -83,7 +83,7 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
 //		boardFrm.submit().success(){
 //			$location.path("/qna");
 //		};		
-		var result = $http.post("http://localhost:8080/AppleWeb/Apple/QnA.do",$scope.qnadata);
+		var result = $http.post("/AppleWeb/Apple/QnA.do",$scope.qnadata);
 		result.success(function(result,status,headers,config) {
 			alert(result.status);
 			alert(result.statusText);

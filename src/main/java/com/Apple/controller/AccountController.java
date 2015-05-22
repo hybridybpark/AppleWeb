@@ -120,20 +120,20 @@ public class AccountController {
 		
 		account.setEMAIL(paramMap.get("EMAIL").toString());
 		
-		account.setEMAILACCEPT("asd");
+		account.setEMAILACCEPT(paramMap.get("emailReceiveYn").toString());
 		
-		account.setSMSACCEPT("asd");
+		account.setSMSACCEPT(paramMap.get("smsReceiveYn").toString());
 		
 		Date date = new Date();
 		
 		account.setWDATE(date.toString());
 		 
-		account.setCONDITION("wait");
+		account.setCONDITION("stay");
 		account.setADATE("no date");
 		
 		service.insert(account);
 		
-		return "redirect:/Apple/join";
+		return "/Main/index";
 	}
 	
 	//삭제

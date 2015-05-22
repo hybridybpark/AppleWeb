@@ -52,7 +52,7 @@ mainApp.config(function($routeProvider) {
 
 
 
-mainApp.controller('indexController',function($scope,$http,$location,$cookies,$rootScope,$templateCache){	//	
+mainApp.controller('indexController',function($scope,$http,$location,$cookies,$rootScope,$templateCache,$window){	//	
 	
 	//////////////paging//////////////////
 	  $scope.totalItems = 64;

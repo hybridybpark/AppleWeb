@@ -70,7 +70,7 @@
 			<!-- 	<form class="form-horizontal" role="form" method="post" -->
 			<!-- 		action="javascript:alert( 'success!' );"> -->
 			<form class="form-horizontal" name="boardFrm" role="form"
-				action="http://localhost:8080/AppleWeb/Apple/Join.do">
+				action="/AppleWeb/Apple/Join.do">
 
 				<div class="form-group">
 					<label for="provision" class="col-lg-2 control-label">회원가입약관</label>

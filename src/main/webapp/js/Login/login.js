@@ -9,7 +9,7 @@
 		
 		$scope.cancelClick = function() {
 			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
-			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
+			$location.path("/");
 		};
 		
 		$scope.login = {businessnumber:"",password:""};
@@ -24,13 +24,13 @@
 				alert("비밀번호를 입력하세요");
 				return;
 			}
-			var result = $http.post("http://localhost:8080/AppleWeb/Apple/login",$scope.login);
+			var result = $http.post("/AppleWeb/Apple/login",$scope.login);
 			result.success(function(result,status,headers,config) {
 //				alert(result.status);
 //				alert(result.statusText);
 				if(result.status){
 					window.sessionStorage.setItem('MEMBERID',$scope.login.businessnumber);
-					window.location = "http://localhost:8080/AppleWeb/Apple/";
+					window.location = "/AppleWeb/Apple/";
 					location.replace(location);					
 				}else{
 					alert(result.statusText);

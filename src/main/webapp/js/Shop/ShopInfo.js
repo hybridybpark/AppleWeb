@@ -1,7 +1,7 @@
 /**
  * 
  */
-mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){	
+mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder,$window){	
 //	$scope.shopname = window.sessionStorage.getItem('SHOPNAME');
 	$scope.businessnumber = window.sessionStorage.getItem('SHOPBUSINESSNUMBER');
 	$scope.chainname = window.sessionStorage.getItem('CHAINNAME');
@@ -10,6 +10,8 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 	                {name:'메뉴',type:'',url:'/AppleWeb/Apple/shopinfo/menu'},
 	                {name:'리뷰',type:'',url:'/AppleWeb/Apple/shopinfo/review'}	                
 	                ];
+	
+	$scope.shopinfo={businessnumber:"",shopname:"",shopaddress:"",shopphone:"",shopcategory:"",shopinfo:"",shopchainname:"",shopmark:"",shopimage:""};
 	
 	$scope.url = $scope.stabs[0].url;
 	
@@ -24,7 +26,11 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 				}else if(i==1){
 					
 				}else{
-					
+					$http.get("/AppleWeb/Apple/shopinfo/review_list/"+$scope.shopinfo.businessnumber+","+ $scope.shopinfo.shopname)
+					.success(function(response) {
+						$scope.reviewList = response;
+						console.log($scope.reviewList);
+					});
 				}
 			}else{
 				$scope.stabs[i].type="";
@@ -58,15 +64,15 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 	/////////////////get chain/////////////////
 //	$scope.chainname="스타벅스";
 	
-	$scope.shopinfo={businessnumber:"",shopname:"",shopaddress:"",shopphone:"",shopcategory:"",shopinfo:"",shopchainname:"",shopmark:"",shopimage:""};	
+		
 	$scope.selectedShopName;
-	var result = $http.post("http://localhost:8080/AppleWeb/Apple/shopinfo",$scope.chainname);
+	var result = $http.post("/AppleWeb/Apple/shopinfo",$scope.chainname);
 	result.success(function(result,status,headers,config) {
 //		alert(result);
 		$scope.titleimage = result.chain.titleimage;
 		$scope.chainDesc = result.chain.desc;
 //		alert(result.chain.titleimage);
-		$http.get("http://localhost:8080/AppleWeb/Apple/chain/list/"+$scope.chainname)
+		$http.get("/AppleWeb/Apple/chain/list/"+$scope.chainname)
 		.success(function(response) {
 //			console.log(response);
 			$scope.chainShops = response;
@@ -75,6 +81,8 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 			$scope.findGeo($scope.chainShops[0].shopaddress);
 			console.log($scope.shopinfo);
 			$scope.selectedShopName = $scope.shopinfo.shopname;
+		}).error(function(error) {
+			console.log(error);
 		});		
 	});
 	
@@ -91,6 +99,48 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder){
 	//////////////////info page//////////////////
 //	alert($scope.chainShops);
 	
+	///////////////////review page//////////////////
+	
+	
+	//////////////////input review////////////////////
+	$scope.inputReviewValues = {
+			writername:"",
+			writerphone:"",
+			postcontent:"",
+			mark:"",
+			shopname:"",
+			businessnumber:""			
+	}	    
+	
+      
+	$scope.inputReview = function() {
+		if($scope.inputReviewValues.writername==""){
+			alert("이름을 입력해 주세요");
+		}else if($scope.inputReviewValues.writerphone==""){
+			alert("전화번호를 입력해 주세요");
+		}else if($scope.inputReviewValues.postcontent==""){
+			alert("내용을 써주세요");
+		}else if($scope.inputReviewValues.mark==""){
+			alert("평점을 선택해 주세요");
+		}else{
+			$scope.inputReviewValues.shopname = $scope.shopinfo.shopname;
+			$scope.inputReviewValues.businessnumber = $scope.shopinfo.businessnumber;
+			console.log(angular.toJson($scope.inputReviewValues));
+			
+			$http.post("/AppleWeb/Apple/shopinfo/review",angular.toJson($scope.inputReviewValues))
+			.success(function(result,status,headers,config) {
+				console.log(result);
+				$location.path("/shopinfo");
+				$window.location.reload();
+				$scope.stabClick(2);
+				
+			}).error(function(error) {
+				console.log(error);
+				alert(error);
+			});
+			
+		}		
+	};
 	
 	
 	

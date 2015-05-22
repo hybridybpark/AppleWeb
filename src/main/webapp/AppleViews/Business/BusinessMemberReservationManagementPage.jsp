@@ -66,37 +66,21 @@ window.onload = function() {
 			<div class="panel-heading"><h4>예약목록</h4></div>
 			<div class="panel-body">
 				<p>예약 날짜</p>				
-				<select name="year">
-					<c:forEach var="year" begin="2000" end="2100" >
-						<c:if test="${year == current.year+1900}">
-							<option value="${year}" selected="selected">${year} 년도</option>
-						</c:if>
-						<c:if test="${year != current.year+1900}">
-							<option value="${year}">${year} 년도</option>
-						</c:if>
-					</c:forEach>
-				</select>
-				<select name="month">
-					<c:forEach var="month" begin="1" end="12" >
-						<c:if test="${month == current.month+1}">
-							<option value="${month}" selected="selected">${month} 월</option>
-						</c:if>
-						<c:if test="${month != current.month+1}">
-							<option value="${month}">${month} 월</option>
-						</c:if>
-					</c:forEach>
-				</select>
-				
-				<select name="date" id="dateS">
-					<c:forEach var="date" begin="1" end="31" >
-						<c:if test="${date == current.date}">
-							<option value="${month}" selected="selected">${date} 일</option>
-						</c:if>
-						<c:if test="${date != current.date}">
-							<option value="${date}">${date} 일</option>
-						</c:if>
-					</c:forEach>
-				</select>
+				<div class="row">
+					<div class="col-sm-6">					
+					<label class="form-inline">
+						<select class="form-control" ng-model="year" ng-options="y for y in years" ng-change="yearChange(year)"><option></option></select>
+						년 </label>
+					
+						<label class="form-inline">						
+						<select class="form-control" ng-model="month" ng-options="m for m in months" ng-change="monthChange(month)"><option ></option></select>
+						월</label>
+					
+						<label class="form-inline">
+						<select class="form-control" ng-model="day" ng-options="d for d in days" ng-change="dayChange(day)"><option></option></select>
+						일</label>
+					</div>
+				</div>				
 			</div>				
 				<table class="table">			
 					<tr>					

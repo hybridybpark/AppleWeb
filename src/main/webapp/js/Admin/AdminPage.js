@@ -3,7 +3,7 @@
  */
 
 adminApp.controller('adminpageCtrl',function($scope,$http,$location,$route){	
-	$http.get("http://localhost:8080/AppleWeb/Apple/admin/stayList.json").success(function (data) {
+	$http.get("/AppleWeb/Apple/admin/stayList.json").success(function (data) {
 		$scope.stayList = data;
 		$scope.stayTotalItems = $scope.stayList.length;
 		$scope.stayCurrentPage=1;

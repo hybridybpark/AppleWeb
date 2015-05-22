@@ -7,7 +7,7 @@ adminApp.controller('qnaCtrl',function($scope,$http,$location){
 	// 삭제 password name 선언
 	//$scope.inputpassword="w";
 	
-	$http.get("http://localhost:8080/AppleWeb/Apple/qna/list.json").success(function(data) {
+	$http.get("/AppleWeb/Apple/qna/list.json").success(function(data) {
 		$scope.list = data;
 	});
 	

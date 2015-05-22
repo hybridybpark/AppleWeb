@@ -12,6 +12,7 @@ import com.Apple.Dao.PostDao;
 import com.Apple.Dao.QnADao;
 import com.Apple.Model.Post;
 import com.Apple.Model.QnA;
+import com.Apple.Model.ShopInfo;
 
 @Service
 public class PostService {
@@ -47,4 +48,7 @@ public class PostService {
 		postdao.update(post);
 	}
 	
+	public List<Post> selectShopPost(ShopInfo shopinfo) {
+		return postdao.selectShopPost(shopinfo);
+	}
 }

@@ -6,6 +6,7 @@ import java.util.Map;
 import com.Apple.Model.Chain;
 import com.Apple.Model.Post;
 import com.Apple.Model.QnA;
+import com.Apple.Model.ShopInfo;
 
 public interface PostDao {
 	public List<Post> selectAll();
@@ -15,4 +16,6 @@ public interface PostDao {
 	public void delete(Post post);
 
 	public void update(Post post);
+	
+	public List<Post> selectShopPost(ShopInfo shopinfo);
 }

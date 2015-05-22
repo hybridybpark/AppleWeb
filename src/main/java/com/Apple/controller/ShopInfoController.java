@@ -1,10 +1,12 @@
 package com.Apple.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.Apple.Model.Chain;
 import com.Apple.Model.ChainResult;
 import com.Apple.Model.Post;
+import com.Apple.Model.PostResult;
+import com.Apple.Model.ShopInfo;
 import com.Apple.Service.ChainService;
 import com.Apple.Service.PostService;
 
@@ -62,20 +66,45 @@ public class ShopInfoController {
 		return "/Shop/review";
 	}
 	
-	@RequestMapping(value="/shopinfo/review_input", method=RequestMethod.GET)
-	public String review_input(){
-		log.info("############################ shopinfo");
-		return "/Shop/review_input";
+	@RequestMapping(value="/shopinfo/review", method=RequestMethod.POST)	
+	public @ResponseBody PostResult review_input(@RequestBody Post post){
+		log.info("############################ shopinfo-review input");
+		
+		PostService service = applicationContext.getBean(PostService.class);
+		post.setWRITEDATE(new Date().toString());
+		
+		
+		PostResult result = new PostResult();
+		result.setPost(post);
+		
+		try{
+			service.insert(post);
+			result.setStatus(true);
+			result.setStatusText("OK");
+			
+		}catch(DataAccessException e){
+			
+			result.setStatus(false);
+			result.setStatusText(e.getMessage());
+		}
+		
+		
+		return result;
 	}
 	
-	@RequestMapping(value="/shopinfo/review", method=RequestMethod.POST)
+	@RequestMapping(value="/shopinfo/review_list/{businessNumber},{shopname}", method=RequestMethod.GET)
 	@ResponseBody
-	public List<Post> reviewList(){
+	public List<Post> reviewList(@PathVariable String shopname,@PathVariable String businessNumber){
 		log.info("############################ shopinfo-review");
 		
 		PostService service= applicationContext.getBean(PostService.class);
 		
-		List<Post> list = service.selectAll();
+		ShopInfo shopinfo = new ShopInfo();
+		
+		shopinfo.setBUSINESSNUMBER(Integer.parseInt(businessNumber));
+		shopinfo.setSHOPNAME(shopname);
+		
+		List<Post> list = service.selectShopPost(shopinfo);
 		
 		return list;
 	}

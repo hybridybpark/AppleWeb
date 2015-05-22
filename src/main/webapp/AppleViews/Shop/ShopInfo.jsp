@@ -25,7 +25,7 @@
 	
 <!-- 	ShopInfo js -->
 
-<script src="/AppleWeb/js/Shop/ShopInfo.js"></script>
+<!-- <script src="/AppleWeb/js/Shop/ShopInfo.js"></script> -->
 
 <!-- ShopInfo css -->
 
@@ -52,7 +52,7 @@
 				  <span class="caret"></span></button>
 				  <ul class="dropdown-menu" >
 				    <li data-ng-repeat="a in chainShops">
-				    	<a data-ng-click="chainDropdownClick($index)" >{{a.shopname}}</a>
+				    	<h3><b><a data-ng-click="chainDropdownClick($index)" >{{a.shopname}}</a></b></h3>
 			    	</li>		    
 				  </ul>
 				</div>			

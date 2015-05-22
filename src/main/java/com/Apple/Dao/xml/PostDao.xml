@@ -6,6 +6,11 @@
 		FROM post		
 	</select>	 
 	
+	<select id="selectShopPost" resultMap="postList" parameterType="com.Apple.Model.ShopInfo">
+	    SELECT * 
+	    FROM POST
+	    WHERE SHOPNAME=#{SHOPNAME} AND BUSINESSNUMBER=#{BUSINESSNUMBER}
+	</select>
 <!-- 	사용할 DB 변수명 설정 -->
 	<resultMap type="com.Apple.Model.Post" id="postList">    
 	    
@@ -25,6 +30,7 @@
 <!-- 	입출력 쿼리문 -->
 	<insert id="insert" parameterType="com.Apple.Model.Post">
 <!-- 	    INSERT INTO qna values(#{name},#{phone},#{title},#{wdate},#{content},#{password},#{replycontent},#{rdate}) -->
+	    INSERT INTO POST VALUES(#{WRITERNAME},#{WRITERPHONE},#{MARK},#{POSTCONTENT},#{WRITEDATE},#{SHOPNAME},#{BUSINESSNUMBER},null,null)
 	    
 	</insert>
 	<insert id="insertReply" parameterType="com.Apple.Model.Post">
