@@ -25,6 +25,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.Apple.Dao.QnADao;
 import com.Apple.Model.Account;
+import com.Apple.Model.AccountResult;
 import com.Apple.Model.AdminLogin;
 import com.Apple.Model.AdminLoginResult;
 import com.Apple.Model.Business;
@@ -118,27 +119,15 @@ public class BusinessController {
 	}
 	
 	//출력
-	@ResponseBody
-	@RequestMapping(value="/business/menulist.json")
-	public List<Menu> getMenuList(){
-		MenuService service = applicationContext.getBean(MenuService.class);
-		
-		
-		List<Menu> list = service.selectAll();
-		
-		return list;
-		
-	}
 	
 	@ResponseBody
-	@RequestMapping(value="/business/shopinfolist.json")
-	public List<ShopInfo> getShopInfoList(){
-		ShopInfoService service = applicationContext.getBean(ShopInfoService.class);
+	@RequestMapping(value="/business/numlist.json{businessnumber}", method=RequestMethod.GET)	
+	public List<ShopInfo> getBusinessNumCheck(@PathVariable String businessnumber){
+		ShopInfoService service = applicationContext.getBean(ShopInfoService.class);	
 		
-		List<ShopInfo> list = service.selectAll();
+		List<ShopInfo> list = service.selectListByBusinessnumber(businessnumber);
 		
 		return list;
-		
 	}
 	
 	

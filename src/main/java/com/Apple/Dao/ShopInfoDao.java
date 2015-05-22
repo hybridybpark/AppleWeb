@@ -14,6 +14,8 @@ public interface ShopInfoDao {
 	public List<ShopInfo> selectListByCategory(String shopcategory);
 	
 	public List<ShopInfo> selectListByName(String shopname);
+	
+	public List<ShopInfo> selectListByBusinessnumber(String businessnumber);
 
 	public void insertShopInfo(ShopInfo shopinfo);
 	
