@@ -3,9 +3,9 @@
  */
 
 
-var adminApp = angular.module('adminApp',[]);
 
-adminApp.controller('adminlogin', function($scope, $http, $location) {		
+
+adminApp.controller('adminloginCtrl', function($scope, $http, $location) {		
 		$scope.adminlogin = {adminid:"",adminpassword:""};
 		
 		$scope.doSubmit = function() {
@@ -23,9 +23,8 @@ adminApp.controller('adminlogin', function($scope, $http, $location) {
 				alert(result.status);
 				alert(result.statusText);
 				if(result.status){
-//					window.sessionStorage.setItem('ADMINID',$scope.login.id);
-					window.location = "http://localhost:8080/AppleWeb/Apple/admin";
-					location.replace(location);					
+					window.sessionStorage.setItem('ADMINID',$scope.adminlogin.adminid);
+					$location.path("/adminpage");
 				}else{
 					alert(result.statusText);
 				}

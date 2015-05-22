@@ -1,7 +1,6 @@
-
-// angularjs
-// 게시판내 목록 출력
-
+/**
+ * 
+ */
 
 adminApp.controller('qnaCtrl',function($scope,$http,$location){	
 	
@@ -75,80 +74,52 @@ adminApp.controller('qnaCtrl',function($scope,$http,$location){
 	};
 	
 });
-
-// JQuery 
-window.onload = function() {
-	
-	// 취소버튼 초기화
-	function reload() { 
-		document.location.reload();     
-	}
-};
-
-//	// 보안문자
-//	document.domain = '';
+//var myApp = angular.module('myApp',[]);
 //
-//	function check(upCd) {
-//		if( upCd == "LOGON" ) {	//로그인
-//			if ( !parent.chkMainValue() ) return;
-//		}
-//			
-//		var f = document.chkFrm;
-//		if( f.answer.value == "" ) {
-//			alert("보안문자를 입력하세요.");
-//			f.answer.focus();
-//	    	return ;
-//		}
-//		f.upCd.value = upCd;
-//		f.target = "iframe1";
+//myApp.controller('myController',function($scope,$http){	
+//	
+//	$http.get("http://localhost:8080/AppleWeb/Apple/admin/list.json").success(function (data) {
+//		$scope.names2 = data.records;
+//		});
+//	
+//	
+//	
+//	$scope.itemClick = function(index) {
+//		$scope.message = "Number : "+(index+1)+ " Name : "+$scope.names[index].Name
+//										      + " Country : "+$scope.names[index].Country;
+//		alert($scope.names[index].Name+" clicked");
+//		alert($scope.message);
+//	};
+//    $scope.myVar = -1;
+//    $scope.toggle = function(index) {
+//    	if($scope.myVar != index){
+//        	$scope.myVar = index;
+//    	}else{
+//    		$scope.myVar = -1;		
+//    	}
+//    };
 //
-//		f.action = "captchaSubmit.jsp";
-//
-//		f.submit();		
-//
-//	}
-//
-//
-//	function tmpEnter(event){
-//		if(event.keyCode == 13) {
-//			parent.tmpSubmit();
-//		}
-//	}		
-//
-//
-//	function audio() {
-//
-//		var f = document.chkFrm;
-//
-//		f.target = "iframe1";
-//
-//		f.action = "audioCaptcha.jsp";
-//
-//		f.submit();	
-//
-//	}
-//
-//	function tmp() {
-//
-//	}
-//
-//	// 숫자만 입력받기
-//	function onlyNumber(){
-//		var code = window.event.keyCode;
-//		
-//		if ((code > 34 && code < 41) || (code > 47 && code < 58) || (code > 95 && code < 106) || code == 8 || code == 9 || code == 13 || code == 46){
-//			window.event.returnValue = true;
-//			return;
-//		}
-//		window.event.returnValue = false;
-//	}
-//
-//	//커서 이동
-//	function checkSize(){
-//		if(document.chkFrm.answer.value.length >= 5){
-//			if(parent.document.getElementById("loginBtn")){
-//				parent.document.getElementById("loginBtn").focus();
-//			}
-//		}
-//	}
-//};
+//});
+//	
+$(document).ready(function(){
+		$("#p1").mousedown(function(){
+	        $("#p1").attr("class","active");
+	        $("#p1").siblings().attr("class","");
+	    });
+		$("#p2").mousedown(function(){
+	        $("#p2").attr("class","active");
+	        $("#p2").siblings().attr("class","");
+	    });
+		$("#p3").mousedown(function(){
+	        $("#p3").attr("class","active");
+	        $("#p3").siblings().attr("class","");
+	    });
+		$("#p4").mousedown(function(){
+	        $("#p4").attr("class","active");
+	        $("#p4").siblings().attr("class","");
+	    });
+		$("#p5").mousedown(function(){
+	        $("#p5").attr("class","active");
+	        $("#p5").siblings().attr("class","");
+	    });
+});

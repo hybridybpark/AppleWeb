@@ -7,6 +7,16 @@
 	    FROM ACCOUNT
 	</select>
 	
+	<select id="stayAccount" resultMap="accountList">
+	    SELECT *
+	    FROM ACCOUNT
+	    WHERE CONDITION = 'stay'
+	</select>
+	
+	<update id="ARupdateAccount" parameterType="com.Apple.Model.Account">
+	    UPDATE ACCOUNT SET CONDITION=#{CONDITION},ADATE=#{ADATE} WHERE BUSINESSNUMBER=#{BUSINESSNUMBER}
+	</update>
+	
 	<select id="checkAccount" resultMap="accountList" parameterType="com.Apple.Model.Account">
 	    SELECT *
 	    FROM ACCOUNT

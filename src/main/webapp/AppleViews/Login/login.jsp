@@ -43,7 +43,7 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
 				<tr>
 					<td valign="bottom" style="padding:0 0 2px 0;"><img src="/AppleWeb/Images/Login/title_login.gif" style="margin:0 15px 0 0;">서비스 이용을 위해 로그인 해주세요.</td>
-					<td width="110" align="right" valign="bottom" class="text11" ><a href="http://localhost:8080/AppleWeb/Apple/admin/login">관리자</a></td>
+					<td width="110" align="right" valign="bottom" class="text11" ><a href="http://localhost:8080/AppleWeb/Apple/admin">관리자</a></td>
 				</tr>
 			</table>
 			</div>	
@@ -66,7 +66,8 @@
 				        	class="form-control" 
 				        	required autofocus 
 				        	data-ng-model="login.businessnumber"
-				        	>
+				        	> 
+<!-- 		엔터키 이벤트	 	onKeyPress="if (event.keyCode==13){ loginLeft();event.returnValue=false}" -->
 			        </div>		        
 			        <div class="form-group">
 			        	<label for="inputPassword">Password</label>

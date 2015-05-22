@@ -1,31 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%-- <%@ include file="/WEB-INF/common.jspf" %> --%>
-
-<!DOCTYPE>
-
-<html>
-
-<head>
-
-<meta charset="UTF-8">
-
-<!-- QnA JavaScript -->
-   
-<script src="/AppleWeb/js/Admin/qna.js"></script>
-
-<!-- QnA css -->
-
-<link href="/AppleWeb/css/QnA/qna.css" rel="stylesheet">
-
-<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-<title>Q&A.jsp</title>
-
-</head>
-
-<!-- Title-->
-
 <body data-ng-controller="qnaCtrl">
 	<div class="panel panel-primary">
 			<div class="panel-heading"><h4>문의게시판</h4></div>
@@ -114,4 +88,3 @@
 		</div>
 		</div>
 	</body>
-</html>

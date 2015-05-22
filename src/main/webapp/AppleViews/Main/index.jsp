@@ -26,7 +26,7 @@
 	}
 	body{
 		min-width: 1024px;
-		
+		background-color: FFFFFF;	
   	}
   </style>
   

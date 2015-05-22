@@ -37,9 +37,17 @@ public class AccountService {
 		accountdao.insert(account);
 	}
 	
+	public void ARupdateAccount(Account account){
+		accountdao.ARupdateAccount(account);
+	}
+	
+	
 	public List<Account> checkAccount(Account account){
 		return accountdao.checkAccount(account);
 	}
 	
+	public List<Account> stayAccount(){
+		return accountdao.stayAccount();
+	};
 	
 }
