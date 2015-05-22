@@ -11,17 +11,17 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="/AppleWeb/Frameworks/angular-1.3.15/angular.js"></script>
-	
-	<!-- js 참조 -->
-	<script src="/AppleWeb/js/Menu/Menu.js"></script>
-	<!-- css참조 -->
-	<script src="/AppleWeb/css/Menu/menu.css"></script>
+<script src="/AppleWeb/Frameworks/angular-1.3.15/angular.js"></script>
+
+<!-- js 참조 -->
+<script src="/AppleWeb/js/Menu/Menu.js"></script>
+<!-- css참조 -->
+<script src="/AppleWeb/css/Menu/menu.css"></script>
 </head>
 <body data-ng-controller="menuCtrl">
 
 	<div class="container">
-	
+
 		<h2>Menu</h2>
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
@@ -32,9 +32,9 @@
 					</h4>
 				</div>
 				<div id="collapse1" class="panel-collapse collapse in">
-					<div class="panel-body" >
+					<div class="panel-body">
 						<div class="col-sm-3 col-lg-3 col-md-3" data-ng-repeat="x in list"
-						style="height: 480px;">
+							style="height: 480px;">
 							<div class="thumbnail">
 								<a href=""><img alt="" src="{{x.mimage}}"></a>
 								<div class="caption">
@@ -61,7 +61,7 @@
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title" >
+					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
 							href="#collapse2"> CATEGORY B </a>
 					</h4>
@@ -353,7 +353,7 @@
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title" >
+					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
 							href="#collapse4"> CATEGORY D </a>
 					</h4>
@@ -497,11 +497,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="nav nav-fixed-bottom">
-		
-		안뇽하세용
-		
+		<nav class="navbar navbar-fixed-bottom">
+			<div class="navbar-header">
+				<a class="navbar-brand">장바구니 목록</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">예약</a></li>
+					<li><a href="#">취소</a></li>
+				</ul>
+			</div>
+		</nav>
 		</div>
-		
 </body>
 </html>
