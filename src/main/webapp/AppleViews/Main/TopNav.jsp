@@ -66,7 +66,7 @@
 				        </li>
 				        <li>
 					        <a href="" data-ng-click="otherClick('login')" data-ng-show="!loginshow" id="login">
-					        <img src="/AppleWeb/Images/Main/LoginButton.gif"/><span style="padding:0 6px 0 6px; color:#d4d6df;">|</span></a>
+					        <img src="/AppleWeb/Images/Main/LoginButton.gif"/></a>
 				        </li>				               
 				        <li><a href="" data-ng-click="otherClick('qna')"><img src="/AppleWeb/Images/Main/QnAButton.gif"/></a>       
 		            </ul>
