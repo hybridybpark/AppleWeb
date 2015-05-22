@@ -66,7 +66,8 @@
 				        	class="form-control" 
 				        	required autofocus 
 				        	data-ng-model="login.businessnumber"
-				        	>
+				        	> 
+<!-- 		엔터키 이벤트	 	onKeyPress="if (event.keyCode==13){ loginLeft();event.returnValue=false}" -->
 			        </div>		        
 			        <div class="form-group">
 			        	<label for="inputPassword">Password</label>
