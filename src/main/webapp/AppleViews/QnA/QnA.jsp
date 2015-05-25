@@ -49,7 +49,7 @@
 						</tr>
 					</thead>
 					
-					<tbody  data-ng-repeat="x in list" data-ng-show="($index < currentPage*itemPerPage) &&($index+1 > (currentPage-1)*itemPerPage)">
+					<tbody  data-ng-repeat="x in qnalist" data-ng-show="($index < currentPage*itemPerPage) &&($index+1 > (currentPage-1)*itemPerPage)">
 					 	
 					 	<tr align="center">			 	
 					 		<td>{{$index + 1}}</td>

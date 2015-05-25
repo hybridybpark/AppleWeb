@@ -44,11 +44,9 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 				    	}
 				    	
 				    };
-<<<<<<< HEAD
+
 				    $http.get("/AppleWeb/Apple/reservation/list.json"+"1925618800").success(function(data) {
-=======
-				    $http.get("http://localhost:8080/AppleWeb/Apple/reservation/list.json"+window.sessionStorage.getItem('MEMBERID')).success(function(data) {
->>>>>>> 632593a7a8c85127072285beb08760fa6b90bc2e
+
 			    		$scope.reservation = data;
 				    });
 				    $scope.years = [];
@@ -108,11 +106,9 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 						}
 					};
 					
-<<<<<<< HEAD
+
 					$scope.monthChange($scope.month);
-=======
-				    //상점목록 부분
->>>>>>> 632593a7a8c85127072285beb08760fa6b90bc2e
+
 				}else if(i==1){
 					$http.get("http://localhost:8080/AppleWeb/Apple/business/numlist.json"+window.sessionStorage.getItem('MEMBERID')).success(function(data) {
 						$scope.list = data;
@@ -159,13 +155,12 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 		alert("등록하시겠습니까?");
 		boardFrm.submit();
 	};
-<<<<<<< HEAD
+
 	
 	$http.get("/AppleWeb/Apple/business/shopinfolist.json").success(function(data) {
 		$scope.list = data;
 	});
-=======
->>>>>>> 632593a7a8c85127072285beb08760fa6b90bc2e
+
 // alert("inquiryCtrl");
 	
     

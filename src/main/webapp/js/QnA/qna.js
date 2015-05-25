@@ -10,11 +10,12 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
 	$scope.currentPage=1;
 	$scope.itemPerPage=10;
 	$http.get("/AppleWeb/Apple/qna/list.json").success(function(data) {
-		$scope.list = data;
-		for(var i=0;i<$scope.list.length;i++){
-			$scope.list[i].password = "";
+		console.log(data);
+		$scope.qnalist = data;
+		for(var i=0;i<$scope.qnalist.length;i++){
+			$scope.qnalist[i].password = "";
 		}
-		$scope.totalItems = $scope.list.length;
+		$scope.totalItems = $scope.qnalist.length;
 	});
 	
 	// 내용확인 및 덧글
@@ -30,8 +31,8 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
     // 삭제 버튼 
 	$scope.deleteAction = function(index) {
 		
-		$scope.sid = $scope.list[index].sid;
-		$scope.pw = $scope.list[index].password;
+		$scope.sid = $scope.qnalist[index].sid;
+		$scope.pw = $scope.qnalist[index].password;
 		alert($scope.pw);
 		$http.post("/AppleWeb/Apple/QnA.delete2/"+$scope.sid+"."+$scope.pw).success(function(result) {
 			console.log(result.statusText);
@@ -85,8 +86,8 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
 //		};		
 		var result = $http.post("/AppleWeb/Apple/QnA.do",$scope.qnadata);
 		result.success(function(result,status,headers,config) {
-			alert(result.status);
-			alert(result.statusText);
+//			alert(result.status);
+//			alert(result.statusText);
 			if(result.status){
 //				window.sessionStorage.setItem('ADMINID',$scope.login.id);
 //				window.location = "http://localhost:8080/AppleWeb/Apple/admin";

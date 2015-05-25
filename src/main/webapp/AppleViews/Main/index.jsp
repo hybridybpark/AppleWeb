@@ -11,7 +11,7 @@
 <html data-ng-app="mainApp">
 
 <head>
-	<title>index</title>	
+	<title>Menu Go~</title>	
 	
  <style>
   .carousel-inner > .item > img,

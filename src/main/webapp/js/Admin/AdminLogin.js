@@ -5,7 +5,7 @@
 
 
 
-adminApp.controller('adminloginCtrl', function($scope, $http, $location) {		
+adminApp.controller('adminloginCtrl', function($scope, $http, $location,$window) {		
 		$scope.adminlogin = {adminid:"",adminpassword:""};
 		
 		$scope.doSubmit = function() {
@@ -20,11 +20,13 @@ adminApp.controller('adminloginCtrl', function($scope, $http, $location) {
 			}
 			var result = $http.post("/AppleWeb/Apple/admin/login",$scope.adminlogin);
 			result.success(function(result,status,headers,config) {
-				alert(result.status);
-				alert(result.statusText);
+//				alert(result.status);
+//				alert(result.statusText);
 				if(result.status){
 					window.sessionStorage.setItem('ADMINID',$scope.adminlogin.adminid);
+					$window.location.reload();
 					$location.path("/adminpage");
+					
 				}else{
 					alert(result.statusText);
 				}

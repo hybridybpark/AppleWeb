@@ -16,14 +16,14 @@
 <head>
 <meta charset="UTF-8">
 
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<!-- <link rel="stylesheet" -->
+<!-- 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+<!-- <script -->
+<!-- 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script -->
+<!-- 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+<!-- <script -->
+<!-- 	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
 
 <!-- Join JavaScript -->
 
@@ -68,8 +68,7 @@
 		<div>
 			<!-- 	<form class="form-horizontal" role="form" method="post" -->
 			<!-- 		action="javascript:alert( 'success!' );"> -->
-			<form class="form-horizontal" name="boardFrm" role="form"
-				action="/AppleWeb/Apple/Join.do">
+			<form class="form-horizontal" name="joinForm" role="form">
 
 				<div class="form-group">
 					<label for="provision" class="col-lg-2 control-label">회원가입약관</label>
@@ -309,7 +308,7 @@
 					<label for="inputId" class="col-lg-2 control-label">사업자명</label>
 					<div class="col-lg-4">
 						<input type="text" class="form-control onlyAlphabetAndNumber"
-							name="BUSINESSNAME" data-rule-required="true"
+							data-ng-model="joindata.BUSINESSNAME" data-rule-required="true"
 							placeholder=" 사업자명 " maxlength="30">
 					</div>
 					<div class="col-lg-6"></div>
@@ -318,7 +317,7 @@
 					<label for="inputId" class="col-lg-2 control-label">사업자번호</label>
 					<div class="col-lg-4">
 						<input type="text" class="form-control onlyAlphabetAndNumber"
-							name="BUSINESSNUMBER" data-rule-required="true"
+							data-ng-model="joindata.BUSINESSNUMBER" data-rule-required="true"
 							placeholder="- 없이 숫자만 입력하세요." maxlength="30">
 					</div>
 					<div class="col-lg-6"></div>
@@ -327,7 +326,7 @@
 					<label for="inputPassword" class="col-lg-2 control-label">패스워드</label>
 					<div class="col-lg-4">
 						<input type="password" class="form-control" id="password"
-							name="PASSWORD" data-rule-required="true" placeholder="패스워드"
+							data-ng-model="joindata.PASSWORD" data-rule-required="true" placeholder="패스워드"
 							maxlength="30">
 					</div>
 					<div class="col-lg-6"></div>
@@ -345,8 +344,10 @@
 				<div class="form-group" id="divEmail">
 					<label for="inputEmail" class="col-lg-2 control-label">이메일</label>
 					<div class="col-lg-4">
-						<input type="email" class="form-control" name="EMAIL"
+						<input type="email" class="form-control" data-ng-model="joindata.EMAIL"
+							name="EMAIL" data-ng-minlength="1"
 							data-rule-required="true" placeholder="이메일" maxlength="40">
+							
 					</div>
 					<div class="col-lg-6"></div>
 				</div>
@@ -354,7 +355,7 @@
 					<label for="inputPhoneNumber" class="col-lg-2 control-label">휴대폰
 						번호</label>
 					<div class="col-lg-4">
-						<input type="tel" class="form-control onlyNumber" name="PHONE"
+						<input type="tel" class="form-control onlyNumber" data-ng-model="joindata.PHONE"
 							data-rule-required="true" placeholder="- 없이 숫자만 입력하세요."
 							maxlength="11">
 					</div>
@@ -365,10 +366,10 @@
 						수신여부</label>
 					<div class="col-lg-10">
 						<label class="radio-inline"> <input type="radio"
-							id="emailReceiveYn" name="emailReceiveYn" value="Y" checked>
+							id="emailReceiveYn" data-ng-model="joindata.EMAILACCEPT" value="Y" checked>
 							동의합니다.
 						</label> <label class="radio-inline"> <input type="radio"
-							id="emailReceiveYn" name="emailReceiveYn" value="N"> 동의하지
+							id="emailReceiveYn" data-ng-model="joindata.EMAILACCEPT" value="N"> 동의하지
 							않습니다.
 						</label>
 					</div>
@@ -378,10 +379,10 @@
 						수신여부</label>
 					<div class="col-lg-10">
 						<label class="radio-inline"> <input type="radio"
-							id="smsReceiveYn" name="smsReceiveYn" value="Y" checked>
+							id="smsReceiveYn" data-ng-model="joindata.SMSACCEPT" value="Y" checked>
 							동의합니다.
 						</label> <label class="radio-inline"> <input type="radio"
-							id="smsReceiveYn" name="smsReceiveYn" value="N"> 동의하지
+							id="smsReceiveYn" data-ng-model="joindata.SMSACCEPT" value="N"> 동의하지
 							않습니다.
 						</label>
 					</div>
@@ -391,8 +392,9 @@
 						<div class="col-md-4"></div>
 						<div class="btn-group col-md-4">
 							<button type="submit" class="btn btn-default"
-								onClick="doSubmit()" data-ng-click="doSubmit()">가입 요청</button>
-							<button id="cancelClick" type="submit" class="btn btn-default">취소</button>
+								data-ng-disabled="joinForm.EMAIL.$dirty && joinForm.EMAIL.$invalid"
+								data-ng-click="doSubmit()">가입 요청</button>
+							<button data-ng-click="cancelClick()" type="button" class="btn btn-default">취소</button>
 						</div>
 						<div class="col-md-4"></div>
 					</div>

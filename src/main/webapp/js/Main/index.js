@@ -212,6 +212,7 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 	   //alert("BRAND");
 	   $location.path("/");
 	   $scope.rightView=false;
+	   $window.location.reload();
    };
 	
    $scope.cancelClick = function() {

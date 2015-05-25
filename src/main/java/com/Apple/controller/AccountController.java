@@ -8,6 +8,7 @@ import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -106,39 +107,57 @@ public class AccountController {
 	}
 	
 	//입력
-	@RequestMapping("/Join.do")
-	public String insertAccount(@RequestParam Map<String, Object> paramMap){
-		AccountService service = applicationContext.getBean(AccountService.class);
+	@ResponseBody
+	@RequestMapping(value="/join", method=RequestMethod.POST)
+	public AccountResult insertAccount(@RequestBody Account login){
+		log.info("########### JOIN POST #####################################");
+		log.info("###########"+login.getBUSINESSNAME());
+		log.info("###########"+login.getPASSWORD());
+		log.info("###########"+login.getEMAIL());
+		log.info("###########"+login.getBUSINESSNUMBER());
+		log.info("###########"+login.getADATE());
+		log.info("###########"+login.getCONDITION());
+		log.info("###########"+login.getPHONE());
+		log.info("###########"+login.getEMAILACCEPT());
+		log.info("###########"+login.getSMSACCEPT());
+		log.info("###########"+login.getWDATE());
 		
-		Account account = new Account();
-		
-		account.setBUSINESSNAME(paramMap.get("BUSINESSNAME").toString());
-		
-		String s = paramMap.get("BUSINESSNUMBER").toString();
-		int a = Integer.parseInt(s);
-		
-		account.setBUSINESSNUMBER(a);
-		
-		account.setPASSWORD(paramMap.get("PASSWORD").toString());
-				
-		account.setPHONE(paramMap.get("PHONE").toString());
-		
-		account.setEMAIL(paramMap.get("EMAIL").toString());
-		
-		account.setEMAILACCEPT(paramMap.get("emailReceiveYn").toString());
-		
-		account.setSMSACCEPT(paramMap.get("smsReceiveYn").toString());
+		AccountService service = applicationContext.getBean(AccountService.class);		
 		
 		Date date = new Date();
 		
-		account.setWDATE(date.toString());
+		login.setWDATE(date.toString());
 		 
-		account.setCONDITION("stay");
-		account.setADATE("no date");
+		login.setCONDITION("stay");
+		login.setADATE("no date");
 		
-		service.insert(account);
+		log.info("###########"+login.getBUSINESSNAME());
+		log.info("###########"+login.getPASSWORD());
+		log.info("###########"+login.getEMAIL());
+		log.info("###########"+login.getBUSINESSNUMBER());
+		log.info("###########"+login.getADATE());
+		log.info("###########"+login.getCONDITION());
+		log.info("###########"+login.getPHONE());
+		log.info("###########"+login.getEMAILACCEPT());
+		log.info("###########"+login.getSMSACCEPT());
+		log.info("###########"+login.getWDATE());
 		
-		return "/Main/index";
+		AccountResult result = new AccountResult();
+		
+		result.setLogin(login);
+		
+		try{
+			service.insert(login);
+			result.setStatus(true);
+			result.setStatusText("JOIN SUCCESS");
+		}catch(DataAccessException e){
+			result.setStatus(false);
+			result.setStatusText(e.getMessage());
+		}
+		
+		
+		
+		return result;
 	}
 	
 	//삭제

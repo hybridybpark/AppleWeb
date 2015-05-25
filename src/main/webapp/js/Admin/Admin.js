@@ -40,7 +40,7 @@ adminApp.config(function($routeProvider) {
 
 });
 
-adminApp.controller('adminCtrl',function($scope,$http,$location){
+adminApp.controller('adminCtrl',function($scope,$http,$location,$window){
 	
 //	$scope.memberID="";
 //	$scope.loginshow=false;
@@ -64,7 +64,9 @@ adminApp.controller('adminCtrl',function($scope,$http,$location){
 		$scope.loginshow=false;
 		window.sessionStorage.setItem('ADMINID',"");
 		alert("로그아웃 되었습니다.");
+		$window.location.reload();
 		$location.path("/");
+		
 	}
 	
 	

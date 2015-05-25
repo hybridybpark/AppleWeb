@@ -12,29 +12,32 @@ mainApp.controller('joinCtrl', function($scope, $http, $location) {
 		//scope.$apply(function() { $location.path("/route"); });	
 		$scope.cancelClick = function() {
 			//$location.path("http://localhost:8080/AppleWeb/views/start.jsp");
-<<<<<<< HEAD
-//			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
-			$location.path("/join");
-			$route.reload();
-=======
-			window.location = "http://localhost:8080/AppleWeb/Apple/#/";
 
->>>>>>> 632593a7a8c85127072285beb08760fa6b90bc2e
+//			window.location = "http://localhost:8080/AppleWeb/views/start.jsp";
+			$location.path("/");
+			$route.reload();
 		};
+		
+		$scope.joindata = {
+				BUSINESSNUMBER:"",
+				PASSWORD:"",
+				EMAIL:"",
+				PHONE:"",
+				BUSINESSNAME:"",
+				EMAILACCEPT:"",
+				SMSACCEPT:""
+		}
 		
 		$scope.doSubmit = function() {
 			 alert("가입신청 하시겠습니까?");
+			 console.log(angular.toJson($scope.joindata));
+			 $http.post("/AppleWeb/Apple/join",angular.toJson($scope.joindata)).success(function(result) {
+				 console.log(result.statusText);
+				$location.path("/");
+			}).error(function(error) {
+				console.log(error);
+			});
 			
-<<<<<<< HEAD
-			var result = boardFrm.submit();
-			
-			alert(result);
-			
-=======
-			boardFrm.submit();
-			
-			alert("가입신청이 완료되었습니다.")
->>>>>>> 632593a7a8c85127072285beb08760fa6b90bc2e
 		};
 
 	});
