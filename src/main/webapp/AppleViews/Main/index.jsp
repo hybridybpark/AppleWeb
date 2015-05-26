@@ -26,11 +26,7 @@
 	}
 	body{
 		min-width: 1024px;
-<<<<<<< HEAD
-		 
-=======
-		background-color: FFFFFF;	
->>>>>>> 632593a7a8c85127072285beb08760fa6b90bc2e
+
   	}
   </style>
   

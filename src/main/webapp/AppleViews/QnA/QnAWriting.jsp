@@ -39,34 +39,36 @@
 <!-- 	문의하기 작성하는곳 -->
 	<form name="boardFrm" role="form" action="http://localhost:8080/AppleWeb/Apple/QnA.do" method="post">
 	<div align="center">
-		<table style="width: 50%">
+		<table style="width: 80%" class="table">
 	<tbody>
 	 	<tr>
 			<th>작성자</th>
-			<td><input type="text" name="pname" size="10"></td>
+			<td><input type="text" name="pname" data-ng-model="write.name" class="form-control"></td>
 		</tr>
 		
 		<tr>
 			<th>전화번호</th>
-			<td><input type="text" name="phone" size="20"></td>
+			<td><input type="text" name="phone" size="20" data-ng-model="write.phone" class="form-control"></td>
 		</tr>
 		
 	  	<tr>
 			<th>제목</th>
-			<td><input type="text" name="title" size="20"></td>
+			<td><input type="text" name="title" size="20" data-ng-model="write.title" class="form-control"></td>
 		</tr>
 	
 		<tr align="center" >
 			<th>내용</th>
 				<td>
 					<div class="form-group">
-					<textarea name="content" class="textarea form-control" rows="5" style="overflow:scroll;resize: none;width:100%;border:1 solid lightgray;overflow:visible;text-overflow:ellipsis;" rows=30></textarea>
+					<textarea name="content" class="textarea form-control" 
+						rows="5" data-ng-model="write.content" 
+						style="overflow:scroll;resize: none;width:100%;border:1 solid lightgray; overflow:visible;text-overflow:ellipsis;" rows=30></textarea>
 					</div>
 				</td>
 		</tr>
 	<tr>
 		<th scope="row">비밀번호</th>
-	  	 <td><input id="password" name="password" type="password" /></td>
+	  	 <td><input id="password" name="password" type="password" class="form-control"/></td>
 	       </tr>
 	       
 	<tr class="">
@@ -90,6 +92,7 @@
 ■ 개인정보의 보유 및 이용 기간
 회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외없이 해당정보를 파기합니다.</textarea><br/>
 개인정보취급방침에 대하여 동의하십니까? 
+<br>
 							<input id="privacy_agreement_radio0" name="privacy_agreement_radio" value="Y" type="radio" data-ng-model="agree" /><label for="privacy_agreement_radio0" >동의함</label>
 							<input id="privacy_agreement_radio1" name="privacy_agreement_radio" value="N" type="radio" data-ng-model="agree" checked="checked"  /><label for="privacy_agreement_radio1" >동의안함</label>                    
 							</td>
@@ -97,8 +100,8 @@
 					</tbody>
 						<tr align="center">
 					   		<td colspan="2"> <br>
-								<input type="button" value="글쓰기" data-ng-click="doSubmit()">
-								<input type="reset" value="취소">
+								<input type="button" value="글쓰기" data-ng-click="doSubmit()" class="btn">
+								<input type="reset" value="취소" class="btn">
 							</td>
 				 	 	</tr>
 					</table>

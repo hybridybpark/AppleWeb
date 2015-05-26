@@ -42,7 +42,7 @@
 					<thead>
 						<tr>
 							<th>번호</th>
-							<th>내용</th>
+							<th>제목</th>
 							<th>작성자</th>
 							<th>날짜</th>
 							<th>조회수</th>
@@ -64,18 +64,19 @@
 				  				<div class="panel panel-default">
 				  					<div class="panel-body">
 				  					<p>{{x.content}}</p>	
-					  					<input type="button" value="수정" />
-										<input type="button" value="삭제" data-ng-click="deleteAction($index)"/>
-										<input type="password" name="password" placeholder=" 비밀번호입력 "  data-ng-model="x.password"/>
-				  					</div>	
-				  					<div class="panel-body">
+					  					
+				  					</div>				  					
+				  					<div class="panel-body" data-ng-show="x.rdate!=null">
 				  			  		&#8627<p>{{x.replycontent}}</p><p>{{x.rdate}}</p>
 				  			 		</div>		  				
 				  				</div>
 				  				<form>
-				  				<div class="input-group">
-				  					댓글 : <input type="text" size="40"><button class="btn">입력</button>
+				  				<div class="input-group pull-right">				  									  					
+									<input type="password" name="password" placeholder=" 비밀번호입력 "  data-ng-model="x.password"/>
+									<input type="button" value="수정" data-ng-click="rewriteAction($index)"/>
+									<input type="button" value="삭제" data-ng-click="deleteAction($index)"/>								
 				  				</div>
+				  				
 				  				</form>
 				  			</td>	  			
 						</tr>

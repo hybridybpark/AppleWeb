@@ -50,6 +50,15 @@
 		            <!-- /.navbar-header -->
 <!-- 					<ul class="nav navbar-top-links navbar-right"> -->
 		            <ul class="nav navbar-nav navbar-right" style="padding-right: 40px;">
+		            	<!-- 관리자 -->		                
+					  	<li>
+						  	<a href="/AppleWeb/Apple/admin" data-ng-show="adminshow">
+						  	{{memberID}}님 환영합니다.</a>
+					  	</li>
+					  	<li>
+						  	<a href="" data-ng-click="logout()" data-ng-show="adminshow">
+						  	<img src="/AppleWeb/Images/Main/LogoutButton.gif"/></a>
+					  	</li>
 		            	<!-- 로그인 -->		                
 					  	<li>
 						  	<a href="" data-ng-click="otherClick('business')" data-ng-show="loginshow">
@@ -61,11 +70,11 @@
 					  	</li>
 					  	<!-- 비로그인 -->
 				        <li >
-					        <a href="" data-ng-click="otherClick('join')" data-ng-show="!loginshow">
+					        <a href="" data-ng-click="otherClick('join')" data-ng-show="!loginshow && !adminshow">
 					        <img src="/AppleWeb/Images/Main/JoinButton.gif"/></a>
 				        </li>
 				        <li>
-					        <a href="" data-ng-click="otherClick('login')" data-ng-show="!loginshow" id="login">
+					        <a href="" data-ng-click="otherClick('login')" data-ng-show="!loginshow && !adminshow" id="login">
 					        <img src="/AppleWeb/Images/Main/LoginButton.gif"/></a>
 				        </li>				               
 				        <li><a href="" data-ng-click="otherClick('qna')"><img src="/AppleWeb/Images/Main/QnAButton.gif"/></a>       
