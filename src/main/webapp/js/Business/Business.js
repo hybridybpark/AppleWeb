@@ -131,6 +131,39 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 					    }
 					    textArea.className = "NoScroll";
 					}
+					$scope.shopCategorys=["CAFE / 까페","KOREAN FOOD / 한식","CHINA FOOD / 중식","WESTERN FOOD / 양식","JAPAN FOOD / 일식","SNACK FOOD / 분식"];
+					$scope.shopCategory = $scope.shopCategorys[0];
+					$scope.shopCategoryChange = function(sc) {						
+						$scope.shopCategory = sc;
+						console.log($scope.shopCategory);
+					}
+					
+					$scope.menuCategorys=["1개","2개","3개","4개","5개"];					
+					$scope.menuCategoryChange = function(mc) {
+						console.log(mc);
+						$scope.menuCategory = mc;
+						for(var i=0;i<5;i++){
+							if($scope.menuCategorys[i]==$scope.menuCategory){
+								$scope.menuCategoryCount = i+1;
+								console.log($scope.menuCategoryCount);
+							}
+						}
+					}
+					$scope.menuCategoryChange($scope.menuCategorys[0]);
+					
+					$scope.optionCategorys=["없음","1개","2개","3개","4개","5개"];					
+					$scope.optionCategoryChange = function(oc) {
+						console.log(oc);
+						$scope.optionCategory = oc;
+						for(var i=0;i<6;i++){
+							if($scope.optionCategorys[i]==$scope.optionCategory){
+								$scope.optionCategoryCount = i;
+								console.log($scope.optionCategoryCount);
+							}
+						}
+					}
+					$scope.optionCategoryChange($scope.optionCategorys[0]);
+					
 				}else{
 					$scope.inquiry = [1,2,3,4,5,6,7,8];
 					
