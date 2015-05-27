@@ -1,6 +1,5 @@
 package com.Apple.controller;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -14,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.Apple.Model.Menu;
-import com.Apple.Model.QnA;
 import com.Apple.Service.MenuService;
-import com.Apple.Service.QnAService;
 
 @Controller
 public class MenuController {
@@ -28,7 +25,7 @@ Logger log = Logger.getLogger(IndexController.class);
 	@RequestMapping(value="/menu", method=RequestMethod.GET)
 	public String index(){
 		log.info("############################index");
-		return "/Menu/Menu";
+		return "/AppleViews/Menu/Menu2";
 	}
 	
 	//입력
