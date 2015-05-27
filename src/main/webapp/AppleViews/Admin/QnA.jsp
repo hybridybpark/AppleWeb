@@ -28,7 +28,7 @@
 					<td><input type="hidden" name="seq" value="${read.seq}"></td>
 	  			</tr>
 	  			<tr data-ng-show="myVar == $index">
-		  			<td colspan="5">
+		  			<td colspan="5" align="left">
 		  				<div class="panel panel-default">
 		  					<div class="panel-body">
 		  					<p>{{x.content}}</p>			  					
@@ -46,7 +46,7 @@
   										  					
 	  						</div>
 	  						<div class="panel-footer">
-	  							<button class="btn pull-right" data-ng-click="replySubmin($index)">입력</button>
+	  							<button class="btn pull-right" data-ng-click="replySubmit($index)">입력</button>
 	  						</div>
 	  					</div>		  											  						
 			  					

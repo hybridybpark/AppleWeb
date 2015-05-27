@@ -8,6 +8,7 @@ import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -102,6 +103,62 @@ public class QnAController {
 		result.setQnA(qna);
 		result.setStatus(true);
 		result.setStatusText("QNAWRITE!!");
+				
+		return result;
+	}
+	
+	@RequestMapping(value="/QnA.update", method=RequestMethod.POST)	
+	public @ResponseBody QnAResult updateQnA2(@RequestBody QnA qna){
+		QnAService service = applicationContext.getBean(QnAService.class);		
+		
+		log.info("#####################QNA UPDATE##########");
+		
+		Date date = new Date();
+		
+		qna.setWdate(date.toString());
+		
+		QnAResult result = new QnAResult();
+		result.setQnA(qna);
+		
+		try{
+		service.update(qna);
+		result.setStatus(true);
+		result.setStatusText("QNAWRITE!!");
+		}catch(DataAccessException e){
+			result.setStatus(false);
+			result.setStatusText(e.getMessage());
+		}
+		
+		
+		
+				
+		return result;
+	}
+	
+	@RequestMapping(value="/QnA.reply", method=RequestMethod.POST)	
+	public @ResponseBody QnAResult updateReplyQnA2(@RequestBody QnA qna){
+		QnAService service = applicationContext.getBean(QnAService.class);		
+		
+		log.info("#####################QNA REPLY########## ");
+		
+		Date date = new Date();
+		
+		qna.setRdate(date.toString());
+		
+		QnAResult result = new QnAResult();
+		result.setQnA(qna);
+		
+		try{
+		service.reply(qna);
+		result.setStatus(true);
+		result.setStatusText("QNAWRITE!!");
+		}catch(DataAccessException e){
+			result.setStatus(false);
+			result.setStatusText(e.getMessage());
+		}
+		
+		
+		
 				
 		return result;
 	}

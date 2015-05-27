@@ -14,4 +14,6 @@ public interface QnADao {
 	public void delete(QnA qna);
 
 	public void update(QnA qna);
+	
+	public void reply(QnA qna);
 }

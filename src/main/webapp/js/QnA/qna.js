@@ -51,7 +51,7 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
 //		alert($scope.pw);
 		$scope.write = {
 				name:"",
-				phoen:"",
+				phone:"",
 				title:"",
 				content:""
 		}
@@ -63,77 +63,17 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
 			$scope.write.title = $scope.qnalist[index].title;
 			$scope.write.content = $scope.qnalist[index].content;
 			console.log($scope.write);
-			
+			window.sessionStorage.setItem('QNAREWRITE.NAME',$scope.write.name);
+			window.sessionStorage.setItem('QNAREWRITE.PHONE',$scope.write.phone);
+			window.sessionStorage.setItem('QNAREWRITE.TITLE',$scope.write.title);
+			window.sessionStorage.setItem('QNAREWRITE.CONTENT',$scope.write.content);
+			window.sessionStorage.setItem('QNAREWRITE.SID',$scope.qnalist[index].sid);
+			$location.path("/qna/write");
 		}else{
 			
 		}		
 	}
-	$scope.doSubmit = function() {
-		 alert("저장하시겠습니까?");
-		 
-		if(boardFrm.pname.value == "") {
-			alert("이름을 입력하세요");
-			return;
-		}
-		if(boardFrm.phone.value == "") {
-			alert("전화번호를 입력하세요");
-			return;
-		}
-		if(boardFrm.title.value == "") {
-			alert("제목을 입력해주세요");
-			return;
-		}
-		if(boardFrm.content.value == "") {
-			alert("내용을 입력하세요");
-			return;
-		}
-		if(boardFrm.password.value == "") {
-			alert("비밀번호를 입력하세요");
-			return;
-		}
-		if(boardFrm.captcha.value == "") {
-			alert("보안문자를 입력하세요");
-			return;
-		}
-		if(boardFrm.privacy_agreement_radio.value == "N") {
-			alert("약관에 동의해 주세요");
-			return;
-		}
-		
-		$scope.qnadata = {
-				name: boardFrm.pname.value,
-				phone: boardFrm.phone.value,
-				title:boardFrm.title.value,
-				content:boardFrm.content.value,
-				password:boardFrm.password.value
-					};
-		//alert($scope.agree+"Adf");
-//		boardFrm.submit().success(){
-//			$location.path("/qna");
-//		};		
-		var result = $http.post("/AppleWeb/Apple/QnA.do",$scope.qnadata);
-		result.success(function(result,status,headers,config) {
-//			alert(result.status);
-//			alert(result.statusText);
-			if(result.status){
-//				window.sessionStorage.setItem('ADMINID',$scope.login.id);
-//				window.location = "http://localhost:8080/AppleWeb/Apple/admin";
-//				location.replace(location);					
-				$location.path("/qna")
-			}else{
-				alert(result.statusText);
-			}
-//			alert(status);
-//			alert(headers);
-//			alert(config);
-//			if(data){
-//				window.location = "http://localhost:8080/AppleWeb/Apple/admin";
-//				location.replace(location);
-//			}else{
-//				alert(data);
-//			}
-		});
-	};
+	
 	
 	$scope.goWrite = function() {
 //		window.location = "http://localhost:8080/AppleWeb/Apple/qna/write";

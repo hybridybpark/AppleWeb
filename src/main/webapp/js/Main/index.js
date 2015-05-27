@@ -33,7 +33,7 @@ mainApp.config(function($routeProvider) {
         })
         .when('/qna/write', {
             templateUrl: '/AppleWeb/Apple/qna/write',
-            controller: 'qnaCtrl'
+            controller: 'qnaWriteCtrl'
         }) 
         .when('/business', {
             templateUrl: '/AppleWeb/Apple/business',
@@ -66,7 +66,7 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 	    $log.log('Page changed to: ' + $scope.currentPage);
 	  };
 
-	  $scope.maxSize = 9;	  
+	  $scope.maxSize = 8;	  
 	
 	///////////////////////////////////////
 	

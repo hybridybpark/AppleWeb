@@ -58,4 +58,8 @@ public class QnAService {
 		qnadao.update(qna);
 	}
 	
+	public void reply(QnA qna){
+		qnadao.reply(qna);
+	}
+	
 }

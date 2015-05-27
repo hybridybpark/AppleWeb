@@ -2,7 +2,7 @@
  * 
  */
 
-adminApp.controller('qnaCtrl',function($scope,$http,$location){	
+adminApp.controller('qnaCtrl',function($scope,$http,$location,$route){	
 	
 	// 삭제 password name 선언
 	//$scope.inputpassword="w";
@@ -33,6 +33,18 @@ adminApp.controller('qnaCtrl',function($scope,$http,$location){
 			//alert("worng password");
 			//alert($scope.inputpassword+"");
 		//}
+		var result = $http.post("/AppleWeb/Apple/QnA.reply",$scope.list[index]);
+		result.success(function(result,status,headers,config) {
+			if(result.status){
+//				
+				$route.reload();
+			}else{
+				alert(result.statusText);
+			}
+		});
+		result.error(function(error) {
+			console.log(error);
+		})
 	};
 	
 	

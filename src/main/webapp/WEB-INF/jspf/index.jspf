@@ -92,6 +92,8 @@
    
 <script src="/AppleWeb/js/QnA/qna.js"></script>
 
+<script src="/AppleWeb/js/QnA/qnaWrite.js"></script>
+
 <!-- Join JavaScript -->
    
 <script src="/AppleWeb/js/Login/join.js"></script>
