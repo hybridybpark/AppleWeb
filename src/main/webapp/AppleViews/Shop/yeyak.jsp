@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE>
@@ -28,148 +29,131 @@
 
 
 </head>
+<%
+	Date current = new Date();
+	pageContext.setAttribute("current", current);
+%>
+<script type="text/javascript">
+
+function changeListener() {
+	//alert(this.value);
+	var d = new Date(year.value,month.value ,1);
+	d.setDate(d.getDate()-1);		
+	var options="";
+	for(var i=0; i<d.getDate();i++){
+		options += "<option>"+(i+1)+" 일</option> \n";
+	}
+	//alert(d);
+	dateS.innerHTML = options;
+};	
+window.onload = function() {
+	var year = document.querySelector("select[name=year]");
+	var month = document.querySelector("select[name=month]");
+	var date = document.querySelector("select[name=date]");
+	
+	year.onchange = changeListener;
+	month.onchange = changeListener;
+};
+</script>
 
 	
 <!-- Title-->
 
 <body class="container" data-ng-controller="businessCtrl">
-	
-	
-		<div class="panel panel-primary">
-			<div class="panel-heading"><h4>예약하기</h4></div>
-			
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h4>주문리스트</h4>
+		</div>
+		<form name="boardFrm" role="form" action="http://localhost:8080/AppleWeb/Apple/Business.do">
 			<div class="panel-body">
-		<div align="center">
-		<table>
-			<tr>
-				<th></th>
-				<td>
-					<form role="form">
-					메뉴 등록리스트
-					<div class="form-group">
-					<textarea cols="50" rows="3" onclick="onLoadTextArea();" style="resize: none; border:1px solid lightgray; width: 900px; height: 150px;">Some long text…</textarea>
-					</div>
-				</form>
-			</td>
-		</tr>
-		</table>
-		</div>
-		</div>
-			
-			<div class="panel-body">
-			<div class="col-sm-4">
-				<input type="text" data-ng-model="Binfo.Bname" placeholder="예약자 이름">
-			</div> 
-			<div class="col-sm-4">
-				<input type="text" data-ng-model="Binfo.Baddress" placeholder="예약자 전화번호">
+			<!-- 				메뉴리스트 -->	
+						<table class="table">
+							<caption>메뉴 목록</caption>							
+							<thead>
+								<tr>
+									<td>번호</td><td>종류</td><td>이름</td><td>수량</td><td>가격</td>
+								</tr>	
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>category</td>
+									<td>name</td>
+									<td>price</td>
+								</tr>
+							</tbody>
+						</table>	
 			</div>
-		</div>
-		<div class="panel-body">
-			<div class="search_bbs">
-			<div class="col-sm-4">
-					<select name="SearchItem" Id="SearchItem" title="검색구분">
-						<option value="TOTAL" selected >인원수 선택</option>
-					</select>
-				</div>
-			<div class="col-sm-4">
-					<select name="SearchItem" Id="SearchItem" title="검색구분">
-						<option value="TOTAL" selected >날짜 선택</option>
-					</select>
-				</div>
-			<div class="col-sm-4">
-					<input type="text" data-ng-model="Binfo.Baddress" placeholder="총 주문가격">
-				</div>
-				</div>
-				</div>
-			  <br>
-		<div class="panel-body">
-<!-- 		수정 할곳  -->
-<!-- 		수정 할곳  -->
-		<div align="center">
-		<table>
-			<tr >
-				<th ></th>
-				<td>
-				
-					<form role="form">
-					추가 사항
-					<div class="form-group">
-					<textarea cols="50" rows="3" onclick="onLoadTextArea();" style="resize: none; border:1px solid lightgray; width: 500px; height: 100px;">Some long text…</textarea>
+		<!-- 				주문등록 -->
+						
+						<table class="table">
+							<caption>주문등록</caption>							
+							<tbody>
+								<tr>
+									<td class="col-sm-2"><label>주문자 이름</label></td>
+									<td class="col-sm-10">										
+										<input type="text" data-ng-model="Binfo.Mname" placeholder="메뉴 이름" name="Mname" class="form-control">										
+									</td>
+								</tr>
+								<tr>
+									<td><label>연락처</label></td>
+									<td>										
+										<input data-ng-model="Binfo.Mprice" type="text"	 class="form-control" title="검색" name="Mprice"
+									id="SearchText" value="" placeholder="가격 입력" />								
+									</td>
+								</tr>
+								
+								<tr>
+									<td><label>주문 가격</label></td>
+									<td>										
+										<input data-ng-model="Binfo.Mprice" type="text"	 class="form-control" title="검색" name="Mprice"
+									id="SearchText" value="" placeholder="가격 입력" />								
+									</td>
+								</tr>
+								<p>방문 날짜</p>				
+								<div class="row">
+									<div class="col-sm-6">					
+									<label class="form-inline">
+										<select class="form-control" ng-model="year" ng-options="y for y in years" ng-change="yearChange(year)"><option></option></select>
+										년 </label>
+									
+										<label class="form-inline">						
+										<select class="form-control" ng-model="month" ng-options="m for m in months" ng-change="monthChange(month)"><option ></option></select>
+										월</label>
+									
+										<label class="form-inline">
+										<select class="form-control" ng-model="day" ng-options="d for d in days" ng-change="dayChange(day)"><option></option></select>
+										일</label>
+									</div>
+									</div>
+								<tr>
+									<td><label>추가사항</label></td>
+									<td>										
+										<textarea rows="3" onclick="onLoadTextArea();"  class="form-control" 
+										style="resize: none; border: 1px solid lightgray; width: 500px; height: 100px;">Some long text…</textarea>					
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>		
+					<hr>		
+
+			<div class="panel-footer">
+				<div class="row">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4">
+						<div class="btn-group" role="group">
+							<button class="btn btn-success" data-ng-click="loginClick()">
+								<span class=""></span>등록
+							</button>
+						</div>
+						<div class="col-sm-4"></div>
 					</div>
-				</form>
-				
-			</td>
-		</tr>
-		</table>
-		</div>
-		
-		<div class="row">
-			<div class="col-sm-4"></div>
-			<div class="col-sm-4">
-			<div class="btn-group" role="group">
-					<button class="btn btn-success" data-ng-click="loginClick()">예약</button>
-					<button class="btn btn-danger">취소</button>
+				</div>
 			</div>
-		</div>
-		</div>
-	</div>
+		</form>
 	</div>
 </body>
 
-<!-- <body data-ng-controller="shopinfoCtrl" class="container"> -->
-
-<!-- 	<div class="panel panel-primary"> -->
-<!-- 		<div class="panel-heading"> -->
-<!-- 			<p>예약하기</p> -->
-<!-- 		</div> -->
-<!-- 		<div class="panel-body"> -->
-<!-- 			<ul class="list-group"> -->
-<!-- 				<li class="list-group-item"><label class="col-lg-2">예약자명</label> -->
-<!-- 					<input type="text" class="col-lg-4" placeholder="이름을 입력하세요" -->
-<!-- 					maxlength="30"></li> -->
-<!-- 				<li class="list-group-item"><label class="col-lg-2">전화번호</label> -->
-<!-- 					<input type="number" class="col-lg-4" placeholder="전화번호를 입력하세요" -->
-<!-- 					maxlength="30"></li> -->
-<!-- 				<li class="list-group-item"><label class="col-lg-2">추가사항</label> -->
-<!-- 					<input type="text" class="col-lg-4" placeholder="추가사항을 입력하세요" -->
-<!-- 					maxlength="30"></li> -->
-<!-- 				<li class="list-group-item"><label class="col-lg-2">날짜</label> -->
-<!-- 					<input type="date" class="col-lg-4" datepicker-popup ng-model="dt" -->
-<!-- 					is-open="opened" min-date="minDate" max-date="'2015-06-22'" -->
-<!-- 					datepicker-options="dateOptions" -->
-<!-- 					date-disabled="disabled(date, mode)" ng-required="true" -->
-<!-- 					close-text="Close" /></li> -->
-<!-- 				<li class="list-group-item"><label class="col-lg-2">메뉴</label> -->
-					
-<!-- 					<tr> -->
-<!-- 						<th><img src="/AppleWeb/Images/Menu/A2.jpg" -->
-<!-- 							style="width: 150px; height: auto;" hspace="20"></th> -->
-<!-- 						<th><img src="/AppleWeb/Images/Menu/col.jpg" -->
-<!-- 							style="width: 150px; height: auto;" hspace="20"></th> -->
-<!-- 						<th><img src="/AppleWeb/Images/Menu/A2.jpg" -->
-<!-- 							style="width: 150px; height: auto;" hspace="20"></th> -->
-<!-- 					</tr> -->
-
-<!-- 				<li class="list-group-item"></li> -->
-<!-- 				<li class="list-group-item"> -->
-<!-- 					<button class="btn btn-success">예약</button> -->
-<!-- 					<button class="btn btn-danger">취소</button> -->
-<!-- 				</li> -->
-
-<!-- 			</ul> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-
-	<!-- 	<img src="/AppleWeb/Images/Menu/A2.jpg" -->
-	<!-- 						style="width: 150px; height: auto;" hspace="20"> -->
-	<!-- 						<img src="/AppleWeb/Images/Menu/A2.jpg" -->
-	<!-- 						style="width: 150px; height: auto;" hspace="20"> -->
-	<!-- 						<img src="/AppleWeb/Images/Menu/A2.jpg" -->
-	<!-- 						style="width: 150px; height: auto;" hspace="20"> -->
-	<!-- 						<img src="/AppleWeb/Images/Menu/A2.jpg" -->
-	<!-- 						style="width: 150px; height: auto;" hspace="20"> -->
-
-
-</body>
 </html>
 
