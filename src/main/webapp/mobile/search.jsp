@@ -14,14 +14,25 @@
 </header>
 <section>
 <div data-role="content">
-	<ul data-role="listview" data-filter="true" data-filter-placeholder="Search..." data-filter-theme="b">
-		<li data-role="list-divider">A</li>
+	<ul data-role="listview" data-filter="true" data-filter-placeholder="Search..." data-filter-theme="a">
+			
+			<li data-role="list-divider">까페</li>
+			<li><a href="">CCCC</a></li>
+			<li><a href="">CCCC</a></li>
+		
+		<li data-role="list-divider">한식</li>
 		<li><a href="">AAAAAA</a></li>
 		<li><a href="">AAAAAA</a></li>
-		<li data-role="list-divider">B</li>
+		<li data-role="list-divider">중식</li>
 		<li><a href="">BBBB</a></li>
 		<li><a href="">BBBB</a></li>
-		<li data-role="list-divider">C</li>
+		<li data-role="list-divider">양식</li>
+		<li><a href="">CCCC</a></li>
+		<li><a href="">CCCC</a></li>
+		<li data-role="list-divider">일식</li>
+		<li><a href="">CCCC</a></li>
+		<li><a href="">CCCC</a></li>
+		<li data-role="list-divider">분식</li>
 		<li><a href="">CCCC</a></li>
 		<li><a href="">CCCC</a></li>
 	</ul>

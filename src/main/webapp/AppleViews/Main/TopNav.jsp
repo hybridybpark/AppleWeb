@@ -15,8 +15,8 @@
 </head>
 <body data-ng-controller="topnavCtrl">
 <div class="navbar-xs">
-        	<div class="navbar-default"  style="background-color: #f5f5f5; border-bottom: 1px solid red;">
-        		<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        	<div class="navbar-default"  style="background-color: #f5f5f5; border-bottom: 1px solid red;">        		
+        		<nav class="navbar navbar-static-top container" role="navigation" style="margin-bottom: 0">
 		            <div class="navbar-header" style="padding-left: 40px;">
 		                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
 		                    <span class="sr-only">Toggle navigation</span>
@@ -83,6 +83,7 @@
 		            <!-- /.navbar-top-links -->
 		</nav>
 		</div>
+		
 		
         </div>
         </body>

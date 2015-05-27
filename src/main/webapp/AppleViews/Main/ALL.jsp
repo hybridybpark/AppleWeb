@@ -13,14 +13,14 @@
 </style>
 
 <div class="row">
-	<div data-ng-repeat="x in shops | orderBy :'sid'">
+	<div data-ng-repeat="x in shops| orderBy :'sid'">
             <div class="col-sm-3" data-ng-show="($index < currentPage*maxSize) &&($index+1 > (currentPage-1)*maxSize)" style="margin-top: 10px;">
             	<div class="  portfolio-item">
                 <a>
-                    <img class="img-responsive" src="{{x.image}}" alt="{{x.name}}" data-ng-click="imageClick($index)" style="height: 200px;">
+                    <img class="img-responsive" src="{{x.image}}" alt="{{x.name}}" data-ng-click="imageClick(x.sid)" style="height: 200px;">
                 </a>
                 <h5 style="text-align: center;">
-                    <a data-ng-click="imageClick($index)" >{{x.name}}</a> 
+                    <a data-ng-click="imageClick(x.sid)" >{{x.name}}</a> 
                 </h5>
                 </div>
             </div>

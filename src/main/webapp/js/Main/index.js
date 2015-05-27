@@ -151,10 +151,15 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 	
 	/////////////////////////////imageclick//////////////////////////
 	
-	$scope.imageClick = function(index) {
+	$scope.imageClick = function(sid) {
 		
 		//alert(index);
-		window.sessionStorage.setItem('CHAINNAME',$scope.shops[index].name);
+		for(var i=0;i<$scope.shops.length;i++){
+			if($scope.shops[i].sid == sid){
+				window.sessionStorage.setItem('CHAINNAME',$scope.shops[i].name);
+				
+			}
+		}
 		$location.path("/shopinfo");
 		
 //		$scope.tempChain = $scope.shops[index].shopchainname;				

@@ -29,8 +29,9 @@
 
 
 
-<div data-role="navbar">		
-		<select name="category" data-inline="true">
+
+	<div data-role="navbar">		
+		<select name="category" style="width: 100%;">
 			<option value="all">ALL</option>
 			<option value="cafe">CAFE</option>
 			<option value="korean">한식</option>
@@ -38,24 +39,57 @@
 			<option value="western">양식</option>
 			<option value="japanese">일식</option>
 			<option value="flour">분식</option>			
-		</select>	
-					
+		</select>				
 	</div>
-
-
 
 	<div data-role="content">
-		<div class="ui-grid-a">
-			<div class="ui-block-a"><img alt="Shops" src="http://placehold.it/100&text=Shops"><h3>name</h3></div>
-			<div class="ui-block-b"><img alt="Shops" src="http://placehold.it/100&text=Shops"><h3>name</h3></div>
-			<div class="ui-block-a"><img alt="Shops" src="http://placehold.it/100&text=Shops"><h3>name</h3></div>
-			<div class="ui-block-b"><img alt="Shops" src="http://placehold.it/100&text=Shops"><h3>name</h3></div>
-			<div class="ui-block-a"><img alt="Shops" src="http://placehold.it/100&text=Shops"><h3>name</h3></div>
-			<div class="ui-block-b"><img alt="Shops" src="http://placehold.it/100&text=Shops"><h3>name</h3></div>
-			<div class="ui-block-a"><img alt="Shops" src="http://placehold.it/100&text=Shops"><h3>name</h3></div>
-			<div class="ui-block-b"><img alt="Shops" src="http://placehold.it/100&text=Shops"><h3>name</h3></div>
+		<div class="content-primary">	
+		<ul data-role="listview">
+			<li><a href="shopinfo.jsp">
+				<img alt="Shops" src="http://placehold.it/263&text=Shops">
+				<h3>name</h3>
+				<p>DESC</p>
+			</a></li>
+			<li><a href="shopinfo.jsp">
+				<img alt="Shops" src="http://placehold.it/263&text=Shops">
+				<h3>name</h3>
+				<p>DESC</p>
+			</a></li>
+			<li><a href="shopinfo.jsp">
+				<img alt="Shops" src="http://placehold.it/263&text=Shops">
+				<h3>name</h3>
+				<p>DESC</p>
+			</a></li>
+			<li><a href="shopinfo.jsp">
+				<img alt="Shops" src="http://placehold.it/263&text=Shops">
+				<h3>name</h3>
+				<p>DESC</p>
+			</a></li>
+			<li><a href="shopinfo.jsp">
+				<img alt="Shops" src="http://placehold.it/263&text=Shops">
+				<h3>name</h3>
+				<p>DESC</p>
+			</a></li>
+			<li><a href="shopinfo.jsp">
+				<img alt="Shops" src="http://placehold.it/263&text=Shops">
+				<h3>name</h3>
+				<p>DESC</p>
+			</a></li>
+			<li><a href="shopinfo.jsp">
+				<img alt="Shops" src="http://placehold.it/263&text=Shops">
+				<h3>name</h3>
+				<p>DESC</p>
+			</a></li>
+			<li><a href="shopinfo.jsp">
+				<img alt="Shops" src="http://placehold.it/263&text=Shops">
+				<h3>name</h3>
+				<p>DESC</p>
+			</a></li>
+		</ul>
 		</div>
 	</div>
+
+	
 
 <footer>
 <jsp:include page="footer.jsp"></jsp:include>
