@@ -25,7 +25,7 @@ Logger log = Logger.getLogger(IndexController.class);
 	@RequestMapping(value="/menu", method=RequestMethod.GET)
 	public String index(){
 		log.info("############################index");
-		return "/AppleViews/Menu/Menu2";
+		return "/AppleViews/Shop/Menu";
 	}
 	
 	//입력
@@ -61,5 +61,17 @@ Logger log = Logger.getLogger(IndexController.class);
 			return list;
 		}
 		
+		
+		@ResponseBody
+		@RequestMapping(value="/Menucategory/list.json")
+		public List<Menu> getCategoryList(){
+			MenuService service = applicationContext.getBean(MenuService.class);
+			
+			List<Menu> list = service.selectcategory();
+			
+			return list;
+		}
+		
+
 		
 }

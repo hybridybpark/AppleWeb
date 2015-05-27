@@ -21,13 +21,18 @@ public class MenuService {
 	@Autowired
 	MenuDao menuDao;
 	
-	//출력
 	public List<Menu> selectAll(){
 		List<Menu> list = menuDao.selectAll();
 		
 		return list;
 	}
 	
+	public List<Menu> selectcategory() {
+		List<Menu> list = menuDao.selectcategory();
+		return list;
+	}
+
+
 	
 
 	//입력
@@ -38,4 +43,11 @@ public class MenuService {
 	public void insertMenu(Menu menu){
 		menuDao.insertMenu(menu);
 	}
+
+
+
+
+	
+
+
 }

@@ -24,7 +24,19 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder,$wind
 				if(i==0){
 					
 				}else if(i==1){
+					$scope.shopname = window.sessionStorage.getItem('SHOPNAME');
+					$scope.businessnumber = window.sessionStorage.getItem('SHOPBUSINESSNUMBER');
 					
+					$scope.test = {};
+					
+					
+					$http.get("/AppleWeb/Apple/Menucategory/list.json").success(function(data) {
+						$scope.category = data;
+					});
+					
+					$http.get("/AppleWeb/Apple/Menu/list.json").success(function(data) {
+						$scope.menulist = data;
+					});
 				}else{
 					$http.get("/AppleWeb/Apple/shopinfo/review_list/"+$scope.shopinfo.businessnumber+","+ $scope.shopinfo.shopname)
 					.success(function(response) {
