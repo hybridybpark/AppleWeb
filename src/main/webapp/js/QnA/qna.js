@@ -9,9 +9,14 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
 	//$scope.inputpassword="w";
 	$scope.currentPage=1;
 	$scope.itemPerPage=10;
+	
+	if(window.sessionStorage.getItem('ADMINID')){
+		$scope.isADMIN = true;
+	}
 	$http.get("/AppleWeb/Apple/qna/list.json").success(function(data) {
 		console.log(data);
 		$scope.qnalist = data;
+		$scope.qnalist2 = data;
 		for(var i=0;i<$scope.qnalist.length;i++){
 			$scope.qnalist[i].password = "";
 		}
@@ -33,14 +38,36 @@ mainApp.controller('qnaCtrl',function($scope,$http,$location,$route){
 		
 		$scope.sid = $scope.qnalist[index].sid;
 		$scope.pw = $scope.qnalist[index].password;
-		alert($scope.pw);
+//		alert($scope.pw);
 		$http.post("/AppleWeb/Apple/QnA.delete2/"+$scope.sid+"."+$scope.pw).success(function(result) {
 			console.log(result.statusText);
 			$location.path("/qna");
 			$route.reload();
 		});
 	};
-	
+	$scope.rewriteAction = function(index) {
+		$scope.sid = $scope.qnalist[index].sid;
+		$scope.pw = $scope.qnalist[index].password;
+//		alert($scope.pw);
+		$scope.write = {
+				name:"",
+				phoen:"",
+				title:"",
+				content:""
+		}
+		if($scope.pw == $scope.qnalist2[index].password){
+			
+			
+			$scope.write.name = $scope.qnalist[index].name;
+			$scope.write.phone = $scope.qnalist[index].phone;
+			$scope.write.title = $scope.qnalist[index].title;
+			$scope.write.content = $scope.qnalist[index].content;
+			console.log($scope.write);
+			
+		}else{
+			
+		}		
+	}
 	$scope.doSubmit = function() {
 		 alert("저장하시겠습니까?");
 		 

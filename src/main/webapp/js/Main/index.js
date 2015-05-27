@@ -109,8 +109,11 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
  		if(window.sessionStorage.getItem('MEMBERID')){ 			
  			$scope.memberID = window.sessionStorage.getItem('MEMBERID');
  			$scope.loginshow=true; 			
+ 		}else if(window.sessionStorage.getItem('ADMINID')){
+			$scope.memberID = window.sessionStorage.getItem('ADMINID');
+			$scope.adminshow=true;
  		}else{
-			
+ 			
  		} 		
  	}else{
  		alert("wrong");
@@ -120,6 +123,8 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 		$scope.memberID="";
 		$scope.loginshow=false;
 		window.sessionStorage.setItem('MEMBERID',"");
+		$scope.adminshow=false;
+		window.sessionStorage.setItem('ADMINID',"");
 		alert("로그아웃 되었습니다.");
 		$location.path("/asd");
 	}

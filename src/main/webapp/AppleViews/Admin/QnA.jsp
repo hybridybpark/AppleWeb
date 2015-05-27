@@ -3,17 +3,15 @@
 <body data-ng-controller="qnaCtrl">
 	<div class="panel panel-primary">
 			<div class="panel-heading"><h4>문의게시판</h4></div>
-			<div class="panel-body">
-	<header class="container">
-	</header>
+			<div class="panel-body">	
 	
-	<section class="container">
+	
 		<!-- Table -->
 		<table class="table table-hover">
 			<thead>
 				<tr>
 					<th>번호</th>
-					<th>내용</th>
+					<th>제목</th>
 					<th>작성자</th>
 					<th>날짜</th>
 					<th>조회수</th>
@@ -33,20 +31,26 @@
 		  			<td colspan="5">
 		  				<div class="panel panel-default">
 		  					<div class="panel-body">
-		  					<p>{{x.content}}</p>	
-			  					<input type="button" value="수정" onClick="goURI('modify')"/>
-								<input type="button" value="삭제" onClick="goURI('delete')" data-ng-click="deleteAction($index)"/>
-								<input type="password" name="password" placeholder=" 비밀번호입력 "  data-ng-model="inputpassword"/>
+		  					<p>{{x.content}}</p>			  					
 		  					</div>	
-		  					<div class="panel-body">
+		  					<div class="panel-body" data-ng-show="x.rdate!=null">
 		  			  		&#8627<p>{{x.replycontent}}</p><p>{{x.rdate}}</p>
 		  			 		</div>		  				
-		  				</div>
-		  				<form>
-		  				<div class="input-group">
-		  					댓글 : <input type="text" size="40"><button class="btn">입력</button>
-		  				</div>
-		  				</form>
+		  				</div>	
+	  					<div class="panel">
+	  						<div class="panel-heading">	  							
+	  									<h3 class="pull-left">답변</h3>  								
+	  						</div>
+	  						<div class="panel-body">
+	  							<textarea class="form-control" rows="5" data-ng-model="x.replycontent"></textarea>
+  										  					
+	  						</div>
+	  						<div class="panel-footer">
+	  							<button class="btn pull-right" data-ng-click="replySubmin($index)">입력</button>
+	  						</div>
+	  					</div>		  											  						
+			  					
+		  				
 		  			</td>	  			
 				</tr>
 	  		</tbody> 		
@@ -79,12 +83,8 @@
 		<div class="col-sm-4"></div>
 		</div>	
 		
-		<tr align="center">
-			<td colspan="2"> <br>
-				<a href="" data-ng-click="goWrite()"><input type="button" value="글쓰기"></a>
-			</td>
-		</tr>
-		</section>
+		
+		
 		</div>
 		</div>
 	</body>
