@@ -38,7 +38,11 @@
 	
 <!-- 	수정 쿼리문 -->
 	<update id="update" parameterType="com.Apple.Model.QnA">
-	    UPDATE qna set WHERE(title = ? , content = ?, password = ?, wdate=now())
+	    UPDATE qna set WRITERNAME = #{name},WRITERPHONE = #{phone},TITLE = #{title},WRITEDATE = #{wdate},CONTENT = #{content},PASSWORD = #{password} WHERE sid = #{sid} 
+	</update>
+	
+	<update id="reply"  parameterType="com.Apple.Model.QnA">
+	    UPDATE qna set REPLYCONTENT = #{replycontent},REPLYDATE = #{rdate} WHERE sid = #{sid}
 	</update>
 	
 </mapper>

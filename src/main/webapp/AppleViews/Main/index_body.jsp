@@ -7,20 +7,21 @@
         
         
         
-        <div class="container">
+        
         <div class="row" style="vertical-align: middle; text-align: center;">					
-					<div class="col-sm-offset-3 col-sm-6">
+					<div class="col-sm-12">
 						<h1><a data-ng-click="brandClick()"><img src="/AppleWeb/Images/Main/MainTitle.gif" alt="Apple" /></a></h1>
-
-						<div class="input-group">							
+						
+						<div class="col-sm-offset-2 col-sm-8 input-group">							
 						    <input type="text" class="form-control" placeholder="가게 이름을 입력해 주세요" data-ng-model="searchText">
 						      <span class="input-group-btn">
 						        <button class="btn btn-default" type="button" data-ng-click="goSearch()">Go!</button>
 						      </span>
-					    </div><!-- /input-group -->	
+					    </div><!-- /input-group -->
+					    	
 					</div>
 		</div>
-       	</div>
+       	
         <!-- Page Content -->
         <div id="page-wrapper" style="margin-left: 0px;">
             <div class="container-fluid">            	

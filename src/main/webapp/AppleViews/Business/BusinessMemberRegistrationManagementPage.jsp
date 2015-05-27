@@ -20,13 +20,13 @@
 
 <!-- Business JavaScript -->
 
-<script src="/AppleWeb/js/Business/Business.js"></script>
+<!-- <script src="/AppleWeb/js/Business/Business.js"></script> -->
 
 <!-- Business css -->
 
-<link href="/AppleWeb/css/Business/business.css" rel="stylesheet">
+<!-- <link href="/AppleWeb/css/Business/business.css" rel="stylesheet"> -->
 
-<title>BusinessMemberRegistrationManagementPage.jsp</title>
+<!-- <title>BusinessMemberRegistrationManagementPage.jsp</title> -->
 
 </head>
 
@@ -37,99 +37,203 @@
 		<div class="panel-heading">
 			<h4>상점등록</h4>
 		</div>
-		<form name="boardFrm" role="form"
-			action="http://localhost:8080/AppleWeb/Apple/Business.do">
+		<form name="boardFrm" role="form" action="http://localhost:8080/AppleWeb/Apple/Business.do">
 			<div class="panel-body">
-				<div class="col-sm-4">
-					<input type="text" data-ng-model="Binfo.Bname" placeholder="상점 이름" name="SHOPNAME">
-				</div>
-				<div class="col-sm-4">
-					<input type="text" data-ng-model="Binfo.Baddress"
-						placeholder="상점 주소" name="SHOPADDRESS"> <input type="submit" value="주소찾기"
-						 style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" />
-				</div>
-				<div class="col-sm-4">
-					<input type="text" data-ng-model="Binfo.Bimage"
-						placeholder="대표 이미지"> <input type="submit" value="찾아보기"
-						name="sa" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" />
-				</div>
-			</div>
-			<div class="panel-body">
-				<div class="col-sm-4">
-					<input type="text" data-ng-model="Binfo.Mimage"
-						placeholder="메뉴 이미지"> <input type="submit" value="찾아보기"
-						name="sa" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" />
-				</div>
-				<div class="col-sm-4">
-					<input type="text" data-ng-model="Binfo.Mname" placeholder="메뉴 이름" name="Mname">
-				</div>
-			</div>
-			<div class="panel-body">
-				<div class="search_bbs">
-					<div class="col-sm-4">
-						<select name="SearchItem" Id="SearchItem" title="검색구분">
-							<option value="TOTAL" selected>옵션 선택</option>
-							<option value="Size">사이즈</option>
-							<option value="CONTENT">맛 종류</option>
-						</select>
-					</div>
-					<div class="col-sm-4">
-						<select name="SearchItem" Id="SearchItem" title="검색구분">
-							<option value="TOTAL" selected>옵션 내용</option>
-							<option value="TITLE">제목</option>
-							<option value="CONTENT">내용</option>
-						</select>
-					</div>
-					<div class="col-sm-4">
-						<input data-ng-model="Binfo.Mprice" type="text"
-							class="input_text_bbs" title="검색" name="Mprice"
-							id="SearchText" value="" placeholder="가격 입력" />
-					</div>
-				</div>
-			</div>
-			<br>
-			<div class="panel-body">
-				<!-- 		수정 할곳  -->
-				<!-- 		수정 할곳  -->
-				<div align="center">
-					<table>
-						<tr>
-							<th></th>
-							<td>
-
-								<form role="form">
-									메뉴 설명
-									<div class="form-group">
-										<textarea cols="50" rows="3" onclick="onLoadTextArea();" 
-											style="resize: none; border: 1px solid lightgray; width: 500px; height: 100px;">Some long text…</textarea>
-										<input data-ng-model="Binfo.Mdesc" type="submit" value="추가" name="Mdesc"
-											
-											style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" />
-									</div>
-								</form>
-
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="panel-body">
-					<div align="center">
-						<table>
-							<tr>
-								<th></th>
-								<td>
-									<form role="form">
-										메뉴 등록리스트
-										<div class="form-group">
-											<textarea cols="50" rows="3" onclick="onLoadTextArea();"
-												style="resize: none; border: 1px solid lightgray; width: 900px; height: 150px;">Some long text…</textarea>
-										</div>
-									</form>
-								</td>
-							</tr>
+<!-- 				상점등록 -->				
+					
+						<table class="table"  style="margin-bottom: 0px;">
+							<caption>상점 등록</caption>
+							<tbody>
+								<tr>
+									<td class="col-sm-2"><label>상점이름</label></td>
+									<td class="col-sm-10">										
+										<input type="text" data-ng-model="Binfo.Bname" placeholder="상점 이름" name="SHOPNAME" class="form-control">										
+									</td>
+								</tr>
+								<tr>
+									<td>								
+										<label>상점종류</label>
+									</td>
+									<td>								
+										<select class="form-control" 
+											data-ng-model="shopCategory" 
+											data-ng-options="sc for sc in shopCategorys" 
+											data-ng-change="shopCategoryChange(shopCategory)">
+<!-- 											<option></option>																						 -->
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>								
+										<label>체인점 선택</label>
+									</td>
+									<td>								
+										<select class="form-control" >
+											<option>없음</option>
+											<option>STARBUCKS</option>																						
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>								
+										<label>상점주소</label>
+									</td>
+									<td>								
+										<div class="input-group">
+											<input type="text" data-ng-model="Binfo.Baddress" placeholder="상점 주소" name="SHOPADDRESS" class="form-control">
+											<span class="input-group-btn"> 
+												<input type="button" value="주소찾기" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" class="btn btn-default"/>
+											</span>
+										</div>								
+									</td>
+								</tr>
+								<tr>
+									<td>								
+										<label>상점 이미지</label>
+									</td>
+									<td>								
+										<div class="input-group">
+											<input type="text" data-ng-model="Binfo.Bimage"	placeholder="대표 이미지" class="form-control"> 
+											<span class="input-group-btn">
+												<input type="button" value="찾아보기"	name="sa" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" class="btn btn-default"/>
+											</span>
+										</div>								
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr><td colspan="2"><button class="btn btn-primary pull-left">상점등록</button></td></tr>
+							</tfoot>							
 						</table>
-					</div>
-				</div>
+					<hr>
+<!-- 				카테고리 등록 -->
+						<table class="table">
+							<caption>메뉴 종류 등록</caption>							
+							<tbody>
+								<tr>
+									<td class="col-sm-2"><label>메뉴 종류 갯수</label></td>
+									<td class="col-sm-10">										
+										<select class="form-control" 
+											data-ng-model="menuCategory" 
+											data-ng-options="mc for mc in menuCategorys" 
+											data-ng-change="menuCategoryChange(menuCategory)">																																
+										</select>									
+									</td>
+								</tr>
+								<tr data-ng-repeat = "i in [1,2,3,4,5] | limitTo:menuCategoryCount">
+									<td class="col-sm-2"><label>종류 이름</label></td>
+									<td class="col-sm-10">										
+										<input type="text" class="form-control">										
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr><td colspan="2"><button class="btn btn-primary pull-left">메뉴 종류 등록</button></td></tr>
+							</tfoot>
+						</table>						
+					<hr>
+<!-- 				메뉴등록 -->
+						
+						<table class="table">
+							<caption>메뉴등록</caption>							
+							<tbody>
+								<tr>
+									<td class="col-sm-2"><label>메뉴 이름</label></td>
+									<td class="col-sm-10">										
+										<input type="text" data-ng-model="Binfo.Mname" placeholder="메뉴 이름" name="Mname" class="form-control">										
+									</td>
+								</tr>
+								<tr>
+									<td>								
+										<label>메뉴종류</label>
+									</td>
+									<td>								
+										<select class="form-control">
+											<option></option>																															
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td><label>메뉴 이미지</label></td>
+									<td>										
+										<div class="input-group">
+											<input type="text" data-ng-model="Binfo.Mimage"	placeholder="메뉴 이미지" class="form-control"> 
+											<span class="input-group-btn">
+												<button type="button" value="찾아보기"	name="sa" class="btn btn-default" 
+												style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;">찾아보기</button>
+											</span>
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td><label>메뉴 가격</label></td>
+									<td>										
+										<input data-ng-model="Binfo.Mprice" type="text"	 class="form-control" title="검색" name="Mprice"
+									id="SearchText" value="" placeholder="가격 입력" />								
+									</td>
+								</tr>
+								<tr>
+									<td><label>메뉴 설명</label></td>
+									<td>										
+										<textarea rows="3" onclick="onLoadTextArea();"  class="form-control" 
+										style="resize: none; border: 1px solid lightgray; width: 500px; height: 100px;">Some long text…</textarea>					
+									</td>
+								</tr>
+								<tr>
+									<td>								
+										<label>옵션 갯수</label>
+									</td>
+									<td>								
+										<select class="form-control" 
+											data-ng-model="optionCategory" 
+											data-ng-options="oc for oc in optionCategorys" 
+											data-ng-change="optionCategoryChange(optionCategory)">																																	
+										</select>
+									</td>
+									<tr data-ng-repeat="i in [1,2,3,4,5,6] | limitTo:optionCategoryCount">
+										<td colspan="2">
+											<div>
+												<div class="col-sm-2">
+													<label>옵션 이름</label>
+												</div>
+												<div class="col-sm-4">
+													<input type="text" class="form-control">
+												</div>													
+												<div class="col-sm-2">
+													<label>옵션 가격</label>
+												</div>
+												<div class="col-sm-4">
+													<input type="text" class="form-control">
+												</div>
+											</div>																				
+									</td>
+								</tr>
+								
+							</tbody>
+							<tfoot>
+								<tr><td colspan="2"><button class="btn btn-primary pull-left">메뉴 등록</button></td></tr>
+							</tfoot>
+						</table>		
+					<hr>		
+<!-- 				메뉴리스트 -->	
+						<table class="table">
+							<caption>메뉴 목록</caption>							
+							<thead>
+								<tr>
+									<td>번호</td><td>종류</td><td>이름</td><td>가격</td>
+								</tr>	
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>category</td>
+									<td>name</td>
+									<td>price</td>
+								</tr>
+							</tbody>
+						</table>	
+			</div>
+			<div class="panel-footer">
 				<div class="row">
 					<div class="col-sm-4"></div>
 					<div class="col-sm-4">
@@ -142,7 +246,7 @@
 					</div>
 				</div>
 			</div>
-			</form>
+		</form>
 	</div>
 </body>
 

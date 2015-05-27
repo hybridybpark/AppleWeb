@@ -33,7 +33,7 @@ mainApp.config(function($routeProvider) {
         })
         .when('/qna/write', {
             templateUrl: '/AppleWeb/Apple/qna/write',
-            controller: 'qnaCtrl'
+            controller: 'qnaWriteCtrl'
         }) 
         .when('/business', {
             templateUrl: '/AppleWeb/Apple/business',
@@ -66,7 +66,7 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 	    $log.log('Page changed to: ' + $scope.currentPage);
 	  };
 
-	  $scope.maxSize = 9;	  
+	  $scope.maxSize = 8;	  
 	
 	///////////////////////////////////////
 	
@@ -151,10 +151,15 @@ mainApp.controller('indexController',function($scope,$http,$location,$cookies,$r
 	
 	/////////////////////////////imageclick//////////////////////////
 	
-	$scope.imageClick = function(index) {
+	$scope.imageClick = function(sid) {
 		
 		//alert(index);
-		window.sessionStorage.setItem('CHAINNAME',$scope.shops[index].name);
+		for(var i=0;i<$scope.shops.length;i++){
+			if($scope.shops[i].sid == sid){
+				window.sessionStorage.setItem('CHAINNAME',$scope.shops[i].name);
+				
+			}
+		}
 		$location.path("/shopinfo");
 		
 //		$scope.tempChain = $scope.shops[index].shopchainname;				

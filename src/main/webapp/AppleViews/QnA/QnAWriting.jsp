@@ -10,27 +10,27 @@
 
 <meta charset="UTF-8">
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
 
-<!-- QnA JavaScript -->
+ <!-- QnA JavaScript --> 
    
-<script src="/AppleWeb/js/QnA/qna.js"></script>
+<!-- <script src="/AppleWeb/js/QnA/qna.js"></script> -->
 
-<!-- QnA css -->
+ <!-- QnA css --> 
 
-<link href="/AppleWeb/css/QnA/qna.css" rel="stylesheet">
+<!-- <link href="/AppleWeb/css/QnA/qna.css" rel="stylesheet"> -->
 
-<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<!-- <meta name="viewport" content="initial-scale=1.0, width=device-width" /> -->
 
-<title>QnAWriting.jsp</title>
+<!-- <title>QnAWriting.jsp</title> -->
 
 </head>
 
 <!-- Title-->
-<body data-ng-controller="qnaCtrl">
+<body data-ng-controller="qnaWriteCtrl">
 	<header class="container">
 		<h1 align="center">질문작성</h1>
 	</header>
@@ -68,7 +68,7 @@
 		</tr>
 	<tr>
 		<th scope="row">비밀번호</th>
-	  	 <td><input id="password" name="password" type="password" class="form-control"/></td>
+	  	 <td><input id="password" name="password" type="password" class="form-control" data-ng-model="write.password" /></td>
 	       </tr>
 	       
 	<tr class="">
