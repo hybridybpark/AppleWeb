@@ -22,11 +22,11 @@ Logger log = Logger.getLogger(IndexController.class);
 	@Autowired
 	ApplicationContext applicationContext;
 	
-	@RequestMapping(value="/menu", method=RequestMethod.GET)
-	public String index(){
-		log.info("############################index");
-		return "/AppleViews/Shop/Menu";
-	}
+//	@RequestMapping(value="/menu", method=RequestMethod.GET)
+//	public String index(){
+//		log.info("############################index");
+//		return "/AppleViews/Shop/Menu";
+//	}
 	
 	//입력
 		@RequestMapping("/Menu.do")

@@ -56,8 +56,8 @@ public class ShopInfoController {
 	
 	@RequestMapping(value="/shopinfo/menu", method=RequestMethod.GET)
 	public String menu(){
-		log.info("############################ shopinfo");
-		return "/Shop/Menu";
+		log.info("############################ shopinfo MENU");
+		return "Shop/Menu2";
 	}
 	
 	@RequestMapping(value="/shopinfo/review", method=RequestMethod.GET)
