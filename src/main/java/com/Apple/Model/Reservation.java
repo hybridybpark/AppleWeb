@@ -10,6 +10,7 @@ public class Reservation {
 	int sid;
 	String state;
 	int people;
+	String additional;
 	
 	
 	
@@ -66,6 +67,12 @@ public class Reservation {
 	}
 	public void setSid(int sid) {
 		this.sid = sid;
+	}
+	public String getAdditional() {
+		return additional;
+	}
+	public void setAdditional(String additional) {
+		this.additional = additional;
 	}
 	
 	

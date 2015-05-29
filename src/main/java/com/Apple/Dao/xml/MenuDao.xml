@@ -21,6 +21,7 @@
         <result property="Mdesc" column="MENUDESC"/>
         <result property="Bnumber" column="BUSINESSNUMBER"/>
         <result property="Sname" column="SHOPNAME"/>
+        <result property="SID" column="SID"/>
         
     </resultMap>
     

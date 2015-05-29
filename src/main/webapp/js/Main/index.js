@@ -1,7 +1,7 @@
 /**
  * 
  */
-var mainApp = angular.module('mainApp',["ngRoute","ngCookies",'ui.bootstrap','ngMap','uiGmapgoogle-maps']);
+var mainApp = angular.module('mainApp',["ngRoute","ngCookies","ngAnimate",'ui.bootstrap','ngMap','uiGmapgoogle-maps']);
 
 mainApp.config(function($routeProvider) {
 
@@ -42,6 +42,10 @@ mainApp.config(function($routeProvider) {
          .when('/shopinfo', {
             templateUrl: '/AppleWeb/Apple/shopinfo',
             controller: 'shopinfoCtrl'
+        })
+        .when('/reservation', {
+            templateUrl: '/AppleWeb/Apple/reservation',
+            controller: 'reservationCtrl'
         })  
 	 	// otherwise page
     	.otherwise({

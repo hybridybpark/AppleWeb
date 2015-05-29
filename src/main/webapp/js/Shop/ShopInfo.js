@@ -1,7 +1,7 @@
 /**
  * 
  */
-mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder,$window){	
+mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder,$window,$route){	
 //	$scope.shopname = window.sessionStorage.getItem('SHOPNAME');
 	$scope.businessnumber = window.sessionStorage.getItem('SHOPBUSINESSNUMBER');
 	$scope.chainname = window.sessionStorage.getItem('CHAINNAME');
@@ -29,6 +29,7 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder,$wind
 					
 					$scope.test = {};
 					
+										
 					
 					$http.get("/AppleWeb/Apple/Menucategory/list.json").success(function(data) {
 						$scope.category = data;
@@ -37,6 +38,56 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder,$wind
 					$http.get("/AppleWeb/Apple/Menu/list.json").success(function(data) {
 						$scope.menulist = data;
 					});
+					
+					////////////////////accordion///////////////////////////
+					
+					$scope.accordionHeadingClick = function(index) {
+						console.log(index);
+						$scope.openValue = index;
+					}
+					
+					$scope.accordionHeadingClick(0);
+					////////////////////inventory////////////////////////////
+					$scope.selectedMenuItem = [];					
+					
+					$scope.inventoryText="메뉴목록";
+					
+					$scope.menuItemClick = function(sid) {
+						console.log("sid = "+sid);
+						
+						for(var i=0;i<$scope.menulist.length;i++){
+							
+							if(sid==$scope.menulist[i].SID){								
+								console.log($scope.menulist[i]);
+																
+								$scope.selectedMenuItem.push($scope.menulist[i]);
+								
+							}
+						}
+						console.log($scope.selectedMenuItem);
+					};
+					$scope.deleteInventoryItem = function(index) {
+						
+						$scope.selectedMenuItem.splice(index,1);
+												
+					};
+					$scope.goReservation = function() {
+						window.sessionStorage.setItem('RESV_TEMP_ITEMS',angular.toJson($scope.selectedMenuItem));
+						window.sessionStorage.setItem('RESV_TEMP_SHOP',angular.toJson($scope.shopinfo));
+						$location.path("/reservation");
+						
+					};
+					$scope.clearInventory = function() {
+						$scope.selectedMenuItem=[];
+						console.log($scope.selectedMenuItem);
+					};
+					$scope.allPriceInventory = function() {
+						var result=0;
+						for(var i = 0; i < $scope.selectedMenuItem.length; i++){
+							result += $scope.selectedMenuItem[i].Mprice;
+						}
+						return result;
+					}
 				}else{
 					$http.get("/AppleWeb/Apple/shopinfo/review_list/"+$scope.shopinfo.businessnumber+","+ $scope.shopinfo.shopname)
 					.success(function(response) {
@@ -50,6 +101,12 @@ mainApp.controller('shopinfoCtrl',function($scope,$http,$location,GeoCoder,$wind
 		}
 		
 	};	
+	
+	///////////////reservation page//////////////////////
+	
+	
+	
+	
 	/////////////////////map initial/////////////////////
 
 	

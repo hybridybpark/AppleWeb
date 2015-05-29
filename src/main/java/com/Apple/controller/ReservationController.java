@@ -8,6 +8,7 @@ import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -23,6 +24,7 @@ import com.Apple.Dao.QnADao;
 import com.Apple.Model.QnA;
 import com.Apple.Model.QnAResult;
 import com.Apple.Model.Reservation;
+import com.Apple.Model.ReservationResult;
 import com.Apple.Service.QnAService;
 import com.Apple.Service.ReservationService;
 
@@ -31,7 +33,7 @@ public class ReservationController {
 	
 	Logger log = Logger.getLogger(ReservationController.class);
 	
-	private ReservationService mainService;
+	
 	
 	@Autowired
 	ApplicationContext applicationContext;
@@ -46,6 +48,31 @@ public class ReservationController {
 		
 		return list;
 	}
+	@RequestMapping("/reservation")
+	public String reservation(){		
+		log.info("######## RESERVATION ############");
+		return "Shop/yeyak";
+	}
 	
+	@ResponseBody
+	@RequestMapping(value="/reservation",method = RequestMethod.POST)
+	public ReservationResult postReservation(@RequestBody Reservation reservation){
+		ReservationService rservice = applicationContext.getBean(ReservationService.class);
+		
+		ReservationResult result = new ReservationResult();
+		
+		result.setRes(reservation);
+		
+		try{
+			rservice.insert(reservation);
+			result.setStatus(true);
+			result.setStatusText("OK");
+		}catch(DataAccessException e){
+			result.setStatus(false);
+			result.setStatusText(e.getMessage());			
+		}
+		
+		return result;
+	}
 	
 }

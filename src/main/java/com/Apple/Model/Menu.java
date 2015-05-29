@@ -8,6 +8,7 @@ public class Menu {
 	public String Mdesc;
 	public Integer Bnumber;
 	public String Sname;
+	public Integer SID;
 	
 	public String getMname() {
 		return Mname;
@@ -50,6 +51,12 @@ public class Menu {
 	}
 	public void setSname(String sname) {
 		Sname = sname;
+	}
+	public Integer getSID() {
+		return SID;
+	}
+	public void setSID(Integer sID) {
+		SID = sID;
 	}
 	
 	

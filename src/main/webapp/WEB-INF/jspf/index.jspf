@@ -49,6 +49,10 @@
 
 <script src="/AppleWeb/Frameworks/angular-1.3.15/angular.js"></script>
 
+<!-- Angular  Animate JavaScript -->
+
+<script src="/AppleWeb/Frameworks/angular-1.3.15/angular-animate.js"></script>
+
 <!-- Angular Route JavaScript -->
 
 <script src="/AppleWeb/Frameworks/angular-1.3.15/angular-route.js"></script>
@@ -109,6 +113,10 @@
 <!-- ShopInfo JavaScript -->
    
 <script src="/AppleWeb/js/Shop/ShopInfo.js"></script>
+
+<!-- Reservation JavaScript -->
+   
+<script src="/AppleWeb/js/Shop/yeyak.js"></script>
 
 <!--  jquery cookies -->
 
