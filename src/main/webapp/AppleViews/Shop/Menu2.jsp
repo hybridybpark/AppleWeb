@@ -91,7 +91,7 @@
 					    </div>
 					    
 					</div>													
-					<button class="btn btn-defult" data-ng-click="goReservation()")>예약하기</button>
+					<button class="btn btn-defult" data-ng-click="goReservation()" data-ng-disabled="selectedMenuItem.length==0">예약하기</button>
 					<button class="btn btn-defult" data-ng-click="clearInventory()">초기화</button>
 					<div class="form-group">
 						<h4 class="text-danger" style="color: #FFF8DC;">총 금액은 {{allPriceInventory()}}원 입니다.</h4>
