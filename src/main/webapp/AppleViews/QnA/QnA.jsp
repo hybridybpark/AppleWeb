@@ -15,11 +15,11 @@
 <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
 
-<!-- <!-- QnA JavaScript --> -->
+<!-- QnA JavaScript -->
    
 <!-- <script src="/AppleWeb/js/QnA/qna.js"></script> -->
 
-<!-- <!-- QnA css --> -->
+<!-- QnA css -->
 
 <!-- <link href="/AppleWeb/css/QnA/qna.css" rel="stylesheet"> -->
 
@@ -27,7 +27,15 @@
 
 <!-- <title>Q&A.jsp</title> -->
 
+<style type="text/css">
+th{
+	text-align: center;
+}
+
+</style>
+
 </head>
+
 
 <!-- Title-->
 
@@ -40,7 +48,7 @@
 				<!-- Table -->
 				<table class="table table-hover">
 					<thead>
-						<tr>
+						<tr style="text-align: center;">
 							<th>번호</th>
 							<th>제목</th>
 							<th>작성자</th>
@@ -57,7 +65,7 @@
 										{{x.title}}</a></td>
 			    			<td>{{x.name}}</td>
 							<td>{{x.wdate}}</td>
-							<td><input type="hidden" name="seq" value="${read.seq}"></td>
+							<td></td>
 			  			</tr>
 			  			<tr data-ng-show="myVar == $index">
 				  			<td colspan="5">
