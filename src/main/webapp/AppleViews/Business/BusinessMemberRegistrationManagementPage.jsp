@@ -80,9 +80,12 @@
 									</td>
 									<td>								
 										<div class="input-group">
-											<input type="text" data-ng-model="Binfo.Baddress" placeholder="상점 주소" name="SHOPADDRESS" class="form-control">
+											<input type="text" data-ng-model="Binfo.Baddress" placeholder="상점 주소" 
+											name="SHOPADDRESS" class="form-control" id="tempAdd">
 											<span class="input-group-btn"> 
-												<input type="button" value="주소찾기" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" class="btn btn-default"/>
+												<input type="button" value="주소찾기" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" class="btn btn-default"
+													data-ng-click="jusoOpen()"
+												/>
 											</span>
 										</div>								
 									</td>
@@ -93,10 +96,9 @@
 									</td>
 									<td>								
 										<div class="input-group">
-											<input type="text" data-ng-model="Binfo.Bimage"	placeholder="대표 이미지" class="form-control"> 
-											<span class="input-group-btn">
-												<input type="button" value="찾아보기"	name="sa" style="color: #000; font: 12px/1 굴림, Gulim, sans-serif;" class="btn btn-default"/>
-											</span>
+											<input type="file" data-ng-model="Binfo.Bimage"	placeholder="대표 이미지" class="form-control"> 											
+												<button data-ng-click="uploadFile()">Upload</button>
+											
 										</div>								
 									</td>
 								</tr>

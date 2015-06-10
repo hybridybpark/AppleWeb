@@ -121,3 +121,5 @@
 <!--  jquery cookies -->
 
 <script src="/AppleWeb/Frameworks/jquery.cookies.js"></script>
+
+<script src="/AppleWeb/Frameworks/ng-file-upload.min.js"></script>

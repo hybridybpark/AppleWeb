@@ -8,10 +8,10 @@ var bsCtrl = mainApp.controller('businessCtrl',function($scope,$http,$location){
 });
 	
 
-mainApp.controller('businessCtrl',function($scope,$http,$location){
+mainApp.controller('businessCtrl',function($scope,$http,$location,Upload){
 // alert("businessCtrl");
 	$scope.Binfo = {Bname:"", Baddress:"", Mname:"", Mprice:"", Mdesc:""};
-	
+	var jo=window;
 	
 	$scope.btabs = [
 	                {name:'예약목록',type:'active',url:'/AppleWeb/Apple/business/reservation'},
@@ -164,6 +164,9 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 					}
 					$scope.optionCategoryChange($scope.optionCategorys[0]);
 					
+					
+					
+					
 				}else{
 					$scope.inquiry = [1,2,3,4,5,6,7,8];
 					
@@ -188,11 +191,25 @@ mainApp.controller('businessCtrl',function($scope,$http,$location){
 		alert("등록하시겠습니까?");
 		boardFrm.submit();
 	};
-
+	$scope.jusoOpen = function() {
+		window.open("/AppleWeb/Apple/business/juso");
+	};
 	
 	$http.get("/AppleWeb/Apple/business/shopinfolist.json").success(function(data) {
 		$scope.list = data;
 	});
+	$scope.uploadFile = function() {
+		console.log($scope.Binfo.Bimage);
+//		$http.post("/AppleWeb/Apple/business/file",$scope.Binfo.Bimage,{
+//			headers:{'Content-Type':'multipart/form-data'}
+//		})
+//		.success(function(d) {
+//			console.log(d);
+//			alert(d);
+//		})
+	};
+	
+	
 
 // alert("inquiryCtrl");
 	

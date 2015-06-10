@@ -89,6 +89,8 @@ strong {
 <link rel="stylesheet" href="//xenosi.de/load/select2/select2.css" />
 <script src="//xenosi.de/load/select2/select2.min.js"></script>
 <script src="//xenosi.de/load/roadzip/roadzip.mobile.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
 
 <script>
 function zipCallback(row) {
@@ -100,53 +102,74 @@ $(function() {
 	
 	$('input.XenoFindZipMobile').each(XenoZipFinderMobile);
 });
+$(document).ready(function () {
+	$("button").click(function () {
+		console.log("click");
+		var add = 
+		$("#zipcode").val()+" "+
+		$("#address").val()+" "+
+		$("#detail").val()		
+		console.log(add);
+		
+		window.opener.document.getElementById("tempAdd").value = add;
+		
+		window.close();
+	});
+});
 </script>
 </head>
-<body>
-<h1>도로명주소 검색</h1>
-<hr />
-<form>
-	<label>
-		<input type="text" placeholder="주소를 검색하세요." class="XenoFindZip" data-callback="zipCallback">
-		<span class="XenoFindZipLabel"></span>
-	</label>
-	<hr>
-	<table>
-	<tbody>
-	<tr>
-	<td>우편번호</td>
-	<td><input type="text" name="zipcode"></td>
-	</tr>
-	<tr>
-	<td>주소</td>
-	<td><input type="text" class="addr" name="addr"></td>
-	</tr>
-	<tr>
-	<td>상세주소</td>
-	<td><input type="text" class="addr" name="addr_remain"></td>
-	</tr>
-	<tr>
-	<td>영문주소</td>
-	<td><input type="text" class="addr" name="addr_en"></td>
-	</tr>
-	<tr>
-	<td>영문상세주소</td>
-	<td><input type="text" class="addr" name="addr_remain_en"></td>
-	</tr>
-	</tbody>
-	</table>
-</form>
-	<div class="row">
+<body class="container">
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1>도로명주소 검색</h1>	
+	</div>
+	<div class="panel-body">
+		<form>
+			<label>
+				<input type="text" placeholder="주소를 검색하세요." class="XenoFindZip form-control" data-callback="zipCallback">
+				<span class="XenoFindZipLabel"></span>
+			</label>			
+			<table class="table">
+			<tbody>
+			<tr>
+			<td>우편번호 </td>
+			<td><input type="text" name="zipcode" class="form-control" id="zipcode"></td>
+			</tr>
+			<tr>
+			<td>주소</td>
+			<td><input type="text" class="addr form-control" name="addr" id="address"></td>
+			</tr>
+			<tr>
+			<td>상세주소</td>
+			<td><input type="text" class="addr form-control" name="addr_remain" id="detail"></td>
+			</tr>
+			<tr>
+			<td>영문주소</td>
+			<td><input type="text" class="addr form-control" name="addr_en" id="eng"></td>
+			</tr>
+			<tr>
+			<td>영문상세주소</td>
+			<td><input type="text" class="addr form-control" name="addr_remain_en"  id="engDetail"></td>
+			</tr>
+			</tbody>
+			</table>
+		</form>
+	</div>
+	<div class="panel-footer">
+		<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
 		<div class="btn-group" role="group">			
-			<button class="btn btn-success" data-ng-click="loginClick()">
-				<span class=""></span>주소등록
+			<button class="btn btn-success" data-ng-click="jusoClick()">
+				주소등록
 			</button>
 		</div>
 		<div class="col-sm-4">				
 		</div>			
 		</div>
 		</div>
+	</div>
+</div>
+	
 	</body>
 </html>

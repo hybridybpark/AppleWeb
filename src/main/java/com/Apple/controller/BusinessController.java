@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.Apple.Dao.QnADao;
@@ -49,6 +50,18 @@ public class BusinessController {
 	@RequestMapping("/business")
 	public String business(){		
 		return "Business/BusinessMember";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/business/file" , method=RequestMethod.POST)
+	public MultipartFile businessFile(MultipartFile multipartFile){		
+		log.info("###################### FILE UPLOAD");
+		return multipartFile;
+	}
+	
+	@RequestMapping("/business/juso")
+	public String businessJuso(){		
+		return "Business/Juso";
 	}
 	
 	@RequestMapping("/business/reservation")

@@ -1,7 +1,7 @@
 /**
  * 
  */
-var mainApp = angular.module('mainApp',["ngRoute","ngCookies","ngAnimate",'ui.bootstrap','ngMap','uiGmapgoogle-maps']);
+var mainApp = angular.module('mainApp',["ngRoute","ngCookies","ngAnimate",'ui.bootstrap','ngMap','uiGmapgoogle-maps','ngFileUpload']);
 
 mainApp.config(function($routeProvider) {
 
